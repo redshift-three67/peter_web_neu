@@ -58,6 +58,7 @@ export const dedicatedRoutes = new Set([
   "/impressum",
   "/datenschutz",
   "/rechtshinweise",
+  "/quellenhinweis",
   "/schmerztherapie-augsburg",
   "/hypnotherapie-augsburg",
   "/anamnese",

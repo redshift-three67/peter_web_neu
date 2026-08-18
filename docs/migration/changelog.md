@@ -1,5 +1,14 @@
 # Changelog — Migration
 
+## 2026-08-18 (nachmittags)
+
+- RP-01 gesetzt (`rp-01-design-tokens`).
+- Öffentliche App-Strukturen übernommen: Phone-Chip, Quote-Panel, Hinweis-Karte, Icon-Karten, zentrierter Seitentitel.
+- Alter Start-Slider: 5 Originale + Grünlayer `sage-700→500`, H1 fest, Untertitel je Motiv.
+- Neu: `/quellenhinweis` (E-E-A-T). Erstgespräch mit Kassen-Hinweis + GebüH-Karte.
+- Footer wie App (Kontakt-Icons, 4 Spalten).
+- RP-02 folgt auf diesen Stand.
+
 ## 2026-08-18 (Mittag, Design)
 
 - Schritt 1 umgesetzt: CMS-Look an Lovable-UI angeglichen (ohne App-Funktionen).

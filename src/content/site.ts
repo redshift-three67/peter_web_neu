@@ -106,6 +106,7 @@ export const footerNav = {
     { to: "/impressum", label: "Impressum" },
     { to: "/datenschutz", label: "Datenschutz" },
     { to: "/rechtshinweise", label: "Rechtshinweise" },
+    { to: "/quellenhinweis", label: "Quellen & Haftung" },
     { to: "/login", label: "Praxiszugang" },
     { to: "/archiv", label: "Seitenarchiv" },
   ],
