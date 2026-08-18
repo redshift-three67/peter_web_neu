@@ -1,8 +1,55 @@
 import { Link } from "@tanstack/react-router";
 import { ExternalLink, Leaf, Mail, MapPin, Phone } from "lucide-react";
 import { footerNav, practice } from "@/content/site";
+import { useMusterSkin } from "./DesignSkin";
 
 export function Footer() {
+  const { ac } = useMusterSkin();
+
+  if (ac) {
+    return (
+      <footer className="mt-0 bg-[#1C1B19] text-[#F4EDE3]">
+        <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-14 sm:px-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="font-display text-4xl font-medium tracking-[0.06em]">Rauch</p>
+            <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/65">
+              Naturheilpraxis Peter Rauch · Heilpraktiker und Physiotherapeut ·
+              {practice.street}, {practice.zip} {practice.city}-{practice.district}
+            </p>
+          </div>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/70">
+            <li>
+              <a href={`tel:${practice.phoneTel}`} className="hover:text-white">
+                {practice.phoneDisplay}
+              </a>
+            </li>
+            <li>
+              <Link to="/impressum" className="hover:text-white">
+                Impressum
+              </Link>
+            </li>
+            <li>
+              <Link to="/datenschutz" className="hover:text-white">
+                Datenschutz
+              </Link>
+            </li>
+            <li>
+              <Link to="/kontakt" className="hover:text-white">
+                Kontakt
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="border-t border-white/10">
+          <p className="mx-auto max-w-6xl px-4 py-4 text-xs text-white/45 sm:px-6">
+            © {new Date().getFullYear()} {practice.person}. Keine Heilversprechen.
+            Privatleistung. Stand: {practice.updated}.
+          </p>
+        </div>
+      </footer>
+    );
+  }
+
   return (
     <footer className="mt-20 border-t border-line bg-card">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-2 md:py-16 lg:grid-cols-4">

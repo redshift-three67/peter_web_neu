@@ -145,22 +145,22 @@
 .theme-ac {
   --color-bg: #f7f1e8;
   --color-paper: #f7f1e8;
-  --color-fg: #1d2c38;
-  --color-muted: #4a5863;
-  --color-line: #d9d1c4;
-  --color-sage: #3f6b52;
-  --color-sage-deep: #1d2c38;
-  --color-sage-soft: #efe8dc;
-  --color-sage-50: #efe8dc;
-  --color-sage-100: #e8e0d2;
-  --color-sage-200: #d9d1c4;
-  --color-sage-600: #274935;
-  --color-sage-700: #1d2c38;
-  --color-sand: #efe8dc;
-  --color-sand-50: #efe8dc;
-  --color-sand-100: #efe8dc;
-  --color-card: #efe8dc;
-  --color-surface: #efe8dc;
+  --color-fg: #2c2825;
+  --color-muted: #6b6560;
+  --color-line: #e0d8cc;
+  --color-sage: #6b6560;
+  --color-sage-deep: #2c2825;
+  --color-sage-soft: #efebe4;
+  --color-sage-50: #efebe4;
+  --color-sage-100: #e8e0d4;
+  --color-sage-200: #e0d8cc;
+  --color-sage-600: #3d3833;
+  --color-sage-700: #2c2825;
+  --color-sand: #efebe4;
+  --color-sand-50: #efebe4;
+  --color-sand-100: #efebe4;
+  --color-card: #f3ebe0;
+  --color-surface: #efebe4;
 }
 
 .theme-ac h3,

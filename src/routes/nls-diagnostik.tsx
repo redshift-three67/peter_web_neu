@@ -1,7 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HubFromArchive } from "@/components/site/HubFromArchive";
-import { NlsNeko } from "@/components/site/NlsNeko";
-import { useMusterSkin } from "@/components/site/DesignSkin";
 import { hubMeta } from "@/content/hubs";
 import { pageHead } from "@/lib/seo";
 
@@ -14,16 +12,6 @@ export const Route = createFileRoute("/nls-diagnostik")({
 });
 
 function Page() {
-  const { ac } = useMusterSkin();
-  if (ac) {
-    return (
-      <NlsNeko
-        heading="NLS-Diagnostik in Augsburg"
-        kicker={meta.kicker}
-        lead="Ergänzendes Hinweisverfahren in der Naturheilpraxis Rauch, Augsburg-Hochzoll. Kein Laborersatz, keine ärztliche Diagnose, kein Heilversprechen."
-      />
-    );
-  }
   return (
     <HubFromArchive
       slug="nls-diagnostik"

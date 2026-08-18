@@ -22,7 +22,7 @@ export function DesignSkinBar() {
       <span>
         {look === "alt"
           ? "Vorheriges Design (Fallback)."
-          : "Muster A+C — nur Start und NLS."}
+          : "Muster Oura — nur Start. Neko später."}
       </span>{" "}
       <button
         type="button"
