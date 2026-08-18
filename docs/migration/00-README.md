@@ -23,6 +23,7 @@ Stand des Protokolls: **18. August 2026**.
 | [13-archiv-design.md](./13-archiv-design.md) | Archiv-Rollout: Slider, UX, E-E-A-T |
 | [14-hubs-geo-seo.md](./14-hubs-geo-seo.md) | 18 Hubs, alte URLs, GEO, Wellen, Admin |
 | [changelog.md](./changelog.md) | Chronologisches Protokoll |
+| **[handover-2026-08-18/](../handover-2026-08-18/00-START-HIER.md)** | **Pause-Übergabe für Dev/Grafik/Technik** |
 
 Quelldaten des Crawls liegen unter:
 

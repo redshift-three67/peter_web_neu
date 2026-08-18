@@ -1,5 +1,10 @@
 # Changelog — Migration
 
+## 2026-08-18 (Pause / Übergabe)
+
+- Ordner `docs/handover-2026-08-18/` für Dev, Grafik, Technik.
+- Push nach GitHub `main`, Tag `rp-14-hub-rhythm`.
+
 ## 2026-08-18 (Hub-Rhythmus Startseite)
 
 - Hubs wie Start: Zitat, drei Schritte, Warnband, 2-Spalten-Karten, Bildreihe, Stimmen, FAQ+Praxis.

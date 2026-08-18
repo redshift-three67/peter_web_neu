@@ -13,6 +13,12 @@ Lokales Git-Repo. Identität nur lokal: `Rauch Migration <dev@rauch-heilpraktike
 | RP-07 | `rp-07-card-transparency` | `5a20227` | 18.08.2026 | Glas-Karten, w-fit. |
 | RP-08 | `rp-08-pre-archive-skin` | `5a20227` | 18.08.2026 | **Vor** Archiv-Rollout. |
 | RP-08b | `rp-08-archive-skin` | `2d2cab7` | 18.08.2026 | Archivseiten in Start-Haut. |
+| RP-09 | `rp-09-hubs-wave1` | `ab97cbe` | 18.08.2026 | Welle 1 Hubs, GEO, Menü. |
+| RP-10 | `rp-10-hubs-wave2` | `8427359` | 18.08.2026 | Welle 2. |
+| RP-11 | `rp-11-hubs-wave3` | `1d86301` | 18.08.2026 | 18 Hubs vollständig. |
+| RP-12 | `rp-12-hub-ux` | `8704b09` | 18.08.2026 | Start-Module auf Hubs. |
+| RP-13 | `rp-13-hub-fullwidth` | `c5e3ca2` | 18.08.2026 | Volle Breite, Scan-Karten. |
+| RP-14 | `rp-14-hub-rhythm` | `23c5751` | 18.08.2026 | Start-Rhythmus + Themenstimmung. **Pause.** |
 
 ## Zurücksetzen
 
