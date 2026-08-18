@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HubFromArchive } from "@/components/site/HubFromArchive";
+import { NlsNeko } from "@/components/site/NlsNeko";
+import { useMusterSkin } from "@/components/site/DesignSkin";
 import { hubMeta } from "@/content/hubs";
 import { pageHead } from "@/lib/seo";
 
@@ -12,12 +14,13 @@ export const Route = createFileRoute("/nls-diagnostik")({
 });
 
 function Page() {
-  return (
-    <HubFromArchive
-      slug="nls-diagnostik"
-      heading="NLS-Diagnostik in Augsburg"
-      kicker={meta.kicker}
-      lead="Ergänzendes Hinweisverfahren in der Naturheilpraxis Rauch, Augsburg-Hochzoll. Kein Laborersatz, keine ärztliche Diagnose, kein Heilversprechen."
-    />
-  );
+  const { neko } = useMusterSkin();
+  const shared = {
+    heading: "NLS-Diagnostik in Augsburg",
+    kicker: meta.kicker,
+    lead:
+      "Ergänzendes Hinweisverfahren in der Naturheilpraxis Rauch, Augsburg-Hochzoll. Kein Laborersatz, keine ärztliche Diagnose, kein Heilversprechen.",
+  };
+  if (neko) return <NlsNeko {...shared} />;
+  return <HubFromArchive slug="nls-diagnostik" {...shared} />;
 }

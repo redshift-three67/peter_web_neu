@@ -127,18 +127,26 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const { user, isPending } = useCurrentUserState();
-  const { ac } = useMusterSkin();
+  const { ac, neko } = useMusterSkin();
 
   return (
     <header
       className={
-        ac
-          ? "sticky top-0 z-50 w-full bg-[#F7F1E8]"
-          : "sticky top-0 z-50 w-full border-b border-line/50 bg-bg/95 backdrop-blur supports-[backdrop-filter]:bg-bg/80"
+        neko
+          ? "sticky top-0 z-50 w-full bg-[#3A5258] px-3 pt-3"
+          : ac
+            ? "sticky top-0 z-50 w-full bg-[#F7F1E8]"
+            : "sticky top-0 z-50 w-full border-b border-line/50 bg-bg/95 backdrop-blur supports-[backdrop-filter]:bg-bg/80"
       }
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 md:h-20 sm:px-6">
-        <BrandMark onClick={() => setOpen(false)} ac={ac} />
+      <div
+        className={
+          neko
+            ? "mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 rounded-full bg-[#F4F1EA] px-4 md:h-16 sm:px-6"
+            : "mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 md:h-20 sm:px-6"
+        }
+      >
+        <BrandMark onClick={() => setOpen(false)} ac={ac || neko} />
 
         <nav
           className="hidden items-center gap-0.5 xl:flex"
@@ -235,15 +243,23 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <a
-            href={`tel:${practice.phoneTel}`}
+            href={neko ? "/online-anamnesebogen" : `tel:${practice.phoneTel}`}
             className={
-              ac
-                ? "hidden size-10 items-center justify-center rounded-full border border-[#2C2825]/20 text-[#2C2825] hover:bg-[#2C2825] hover:text-[#F7F1E8] sm:inline-flex"
-                : "hidden h-10 items-center gap-2 rounded-full bg-sage px-4 text-sm font-medium text-paper shadow-soft hover:bg-sage-600 sm:inline-flex"
+              neko
+                ? "hidden h-10 items-center gap-2 rounded-full bg-[#2EA4B8] px-4 text-sm font-medium text-white hover:bg-[#258A9B] sm:inline-flex"
+                : ac
+                  ? "hidden size-10 items-center justify-center rounded-full border border-[#2C2825]/20 text-[#2C2825] hover:bg-[#2C2825] hover:text-[#F7F1E8] sm:inline-flex"
+                  : "hidden h-10 items-center gap-2 rounded-full bg-sage px-4 text-sm font-medium text-paper shadow-soft hover:bg-sage-600 sm:inline-flex"
             }
           >
-            <Phone className="size-4" aria-hidden />
-            {ac ? <span className="sr-only">Anrufen</span> : "Anrufen"}
+            {neko ? (
+              "Anamnesebogen"
+            ) : (
+              <>
+                <Phone className="size-4" aria-hidden />
+                {ac ? <span className="sr-only">Anrufen</span> : "Anrufen"}
+              </>
+            )}
           </a>
           {isPending ? (
             <div className="hidden size-8 animate-pulse rounded-full bg-sand md:block" />
@@ -265,7 +281,7 @@ export function Header() {
         </div>
       </div>
 
-      {!ac ? (
+      {!ac && !neko ? (
       <div className="hidden border-t border-line/60 bg-sage-50/80 md:block">
         <div className="mx-auto flex min-h-12 max-w-6xl flex-wrap items-center gap-2 px-4 py-2 sm:px-6">
           <span className="text-xs font-semibold uppercase tracking-wide text-muted">

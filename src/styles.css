@@ -170,6 +170,16 @@
   letter-spacing: 0;
 }
 
+.theme-neko {
+  --color-bg: #3a5258;
+  --color-fg: #f4f1ea;
+  --color-paper: #f4f1ea;
+  --color-muted: #c5cdc8;
+  --color-line: #5a7276;
+  --color-sage: #2ea4b8;
+  --color-sage-deep: #f4f1ea;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .theme-ac .ac-reveal {
     animation: ac-rise 0.7s ease both;

@@ -1,7 +1,7 @@
 const KEY = "rauch-look";
 export type DesignLook = "ac" | "alt";
 
-const MUSTER = new Set(["/"]);
+const MUSTER = new Set(["/", "/nls-diagnostik"]);
 
 export function isMusterPath(pathname: string) {
   return MUSTER.has(pathname);

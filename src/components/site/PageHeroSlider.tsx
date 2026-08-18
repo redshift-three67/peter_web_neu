@@ -24,7 +24,7 @@ export function PageHeroSlider({
   heading: string;
   kicker?: string;
 }) {
-  const { ac, diagnostic } = useMusterSkin();
+  const { ac, neko } = useMusterSkin();
   const items = slides.filter((s) => s.src);
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -69,7 +69,7 @@ export function PageHeroSlider({
         ))}
         <div
           className={
-            ac && diagnostic
+            ac && neko
               ? "absolute inset-0 bg-gradient-to-r from-[#1D2C38]/75 via-[#1D2C38]/22 to-transparent"
               : ac
                 ? "absolute inset-0 bg-gradient-to-r from-[#16332C]/70 via-[#16332C]/18 to-transparent"

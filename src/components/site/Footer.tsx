@@ -4,7 +4,32 @@ import { footerNav, practice } from "@/content/site";
 import { useMusterSkin } from "./DesignSkin";
 
 export function Footer() {
-  const { ac } = useMusterSkin();
+  const { ac, neko } = useMusterSkin();
+
+  if (neko) {
+    return (
+      <footer className="bg-[#2C4045] text-[#F4F1EA]">
+        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-12 sm:flex-row sm:items-end sm:justify-between sm:px-6">
+          <div>
+            <p className="font-display text-2xl">NLS · Augsburg-Hochzoll</p>
+            <p className="mt-2 max-w-sm text-sm text-white/60">
+              {practice.street}, {practice.zip} {practice.city}. Hinweisverfahren,
+              kein Laborersatz.
+            </p>
+          </div>
+          <p className="text-sm text-white/55">
+            <a href={`tel:${practice.phoneTel}`} className="hover:text-white">
+              {practice.phoneDisplay}
+            </a>
+            {" · "}
+            <Link to="/impressum" className="hover:text-white">
+              Impressum
+            </Link>
+          </p>
+        </div>
+      </footer>
+    );
+  }
 
   if (ac) {
     return (

@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import { MapPin, Phone } from "lucide-react";
 import { getArchiveBySlug } from "@/content/archive";
 import {
   blocksFromParts,
@@ -8,17 +7,13 @@ import {
   editorialParts,
 } from "@/lib/hub-blocks";
 import { practice, practiceFaqs } from "@/content/site";
-import { Button } from "@/components/ui/button";
 import {
   AuthorByline,
   Container,
-  CtaBand,
   Disclaimer,
   FaqList,
-  ReviewStrip,
 } from "@/components/site/Shared";
-import { PhoneChip, WarningNote } from "@/components/site/Design";
-import { PageHeroSlider } from "@/components/site/PageHeroSlider";
+import { WarningNote } from "@/components/site/Design";
 
 function mediaSrc(local: string | null | undefined) {
   if (!local) return "";
@@ -27,26 +22,10 @@ function mediaSrc(local: string | null | undefined) {
 }
 
 const steps = [
-  {
-    n: "01",
-    title: "Gespräch in Hochzoll",
-    text: "Zuerst die Anamnese und das, was bereits ärztlich geklärt ist.",
-  },
-  {
-    n: "02",
-    title: "Hinweisbild",
-    text: "Das Gerät liefert Anhaltspunkte. Es ersetzt kein Labor und keine Diagnose.",
-  },
-  {
-    n: "03",
-    title: "Einordnung",
-    text: "Gemeinsam lesen wir, was der Hinweis bedeuten kann – und was nicht.",
-  },
-  {
-    n: "04",
-    title: "Nächster Schritt",
-    text: "Planen – oder zuerst zur Ärztin, zum Arzt. Ohne Heilversprechen.",
-  },
+  { n: "01", title: "Gespräch", text: "Anamnese in Hochzoll. Was ist bereits ärztlich geklärt?" },
+  { n: "02", title: "Hinweisbild", text: "Das Gerät liefert Anhaltspunkte – kein Labor, keine Diagnose." },
+  { n: "03", title: "Einordnung", text: "Gemeinsam lesen, was der Hinweis bedeuten kann." },
+  { n: "04", title: "Nächster Schritt", text: "Planen – oder zuerst zur Ärztin, zum Arzt." },
 ];
 
 export function NlsNeko({
@@ -75,113 +54,108 @@ export function NlsNeko({
 
   const devices = pics.filter((p) => p.kind === "device");
   const scans = pics.filter((p) => p.kind === "scan");
-
-  const slides = (page?.slider ?? [])
-    .filter((s) => s.src && classifyImage(s.src, s.alt) === "device")
-    .map((s) => ({
-      src: mediaSrc(s.src),
-      alt: s.alt || s.title,
-      title: s.title,
-      meta: s.meta,
-    }));
-
-  const hero =
-    slides.length > 0
-      ? slides
-      : devices[0]
-        ? [{ src: devices[0].src, alt: devices[0].alt, title: devices[0].caption, meta: heading }]
-        : [
-            {
-              src: "/images/free/raum-licht.jpg",
-              alt: heading,
-              title: heading,
-              meta: kicker,
-            },
-          ];
-
+  const heroSrc = devices[0]?.src ?? scans[0]?.src ?? "/images/free/raum-licht.jpg";
   const warnings = blocks.filter((b) => b.type === "warning");
-  const prose = blocks.filter((b) => b.type === "p").slice(0, 4);
+  const prose = blocks.filter((b) => b.type === "p").slice(0, 5);
 
   return (
-    <>
-      <PageHeroSlider slides={hero} heading={heading} kicker={kicker} />
-      <PhoneChip className="border-b border-line bg-bg" />
-
-      <section className="ac-reveal border-b border-line bg-[#1D2C38] text-[#F7F1E8]">
-        <Container className="grid gap-10 py-16 md:grid-cols-2">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] opacity-70">
-              Neko-Logik · Hinweis vor der Zahl
-            </p>
-            <h2 className="mt-3 font-display text-3xl font-medium sm:text-4xl">
-              Was der Scan zeigen kann — und was er ausdrücklich nicht ersetzt.
-            </h2>
-            {lead ? <p className="mt-5 text-[1.125rem] leading-relaxed opacity-90">{lead}</p> : null}
+    <div className="bg-[#3A5258] text-[#F4F1EA]">
+      <section className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:py-20">
+        <div>
+          <p className="text-xs tracking-[0.2em] uppercase text-white/55">{kicker}</p>
+          <h1 className="mt-4 font-display text-4xl font-medium leading-[1.12] sm:text-5xl md:text-6xl">
+            Hinweis vor der Zahl.
+          </h1>
+          <p className="mt-5 max-w-md text-lg leading-relaxed text-white/75">
+            {lead ??
+              "NLS in der Naturheilpraxis Rauch, Augsburg-Hochzoll. Ergänzend, nicht statt des Arztes."}
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              to="/online-anamnesebogen"
+              className="inline-flex h-11 items-center rounded-full bg-[#2EA4B8] px-5 text-sm font-medium text-white hover:bg-[#258A9B]"
+            >
+              Anamnesebogen
+            </Link>
+            <a
+              href={`tel:${practice.phoneTel}`}
+              className="inline-flex h-11 items-center rounded-full border border-white/25 px-5 text-sm text-white/90 hover:bg-white/10"
+            >
+              {practice.phoneDisplay}
+            </a>
           </div>
-          <dl className="space-y-6 text-base leading-relaxed">
-            <div>
-              <dt className="font-semibold">Hinweis</dt>
-              <dd className="mt-1 opacity-90">
-                Ergänzendes Verfahren in der Naturheilpraxis Rauch,
-                Augsburg-Hochzoll. Anhaltspunkte für das Gespräch.
-              </dd>
-            </div>
-            <div>
-              <dt className="font-semibold">Nicht</dt>
-              <dd className="mt-1 opacity-90">
-                Kein Labor, keine ärztliche Diagnose, kein Heilversprechen, kein
-                Ersatz für Bildgebung oder Facharzt.
-              </dd>
-            </div>
-          </dl>
+        </div>
+        <figure className="overflow-hidden rounded-[1.5rem] bg-[#4A666C] p-2">
+          <img
+            src={heroSrc}
+            alt={devices[0]?.alt || heading}
+            className="aspect-[4/5] w-full rounded-[1.15rem] object-cover sm:aspect-[5/4]"
+          />
+        </figure>
+      </section>
+
+      <section className="border-t border-white/10">
+        <Container className="grid gap-10 py-14 md:grid-cols-2">
+          <div>
+            <p className="text-xs tracking-[0.18em] uppercase text-white/45">Was es ist</p>
+            <p className="mt-3 text-lg leading-relaxed text-white/85">
+              Ein Hinweisverfahren. Anhaltspunkte für das Gespräch in
+              Augsburg-Hochzoll – nicht mehr.
+            </p>
+          </div>
+          <div>
+            <p className="text-xs tracking-[0.18em] uppercase text-white/45">Was es nicht ist</p>
+            <p className="mt-3 text-lg leading-relaxed text-white/85">
+              Kein Labor, keine ärztliche Diagnose, kein Heilversprechen, kein
+              Ersatz für Bildgebung oder Facharzt.
+            </p>
+          </div>
         </Container>
       </section>
 
-      <section className="ac-reveal border-b border-line bg-paper">
-        <Container className="grid gap-8 py-16 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="bg-[#33484D]">
+        <Container className="grid gap-8 py-14 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s) => (
             <div key={s.n}>
-              <p className="font-display text-3xl font-medium text-fg/35">{s.n}</p>
-              <h3 className="mt-2 text-lg font-semibold text-fg">{s.title}</h3>
-              <p className="mt-2 text-base leading-relaxed text-muted">{s.text}</p>
+              <p className="font-display text-3xl text-white/35">{s.n}</p>
+              <h2 className="mt-2 text-lg font-semibold">{s.title}</h2>
+              <p className="mt-2 text-sm leading-relaxed text-white/70">{s.text}</p>
             </div>
           ))}
         </Container>
       </section>
 
       {warnings.length ? (
-        <section className="ac-reveal border-b border-line">
-          <Container className="max-w-3xl space-y-4 py-10">
-            {warnings.map((w, i) =>
-              w.type === "warning" ? (
-                <WarningNote key={i} title="Einordnung">
+        <Container className="space-y-4 py-10">
+          {warnings.map((w, i) =>
+            w.type === "warning" ? (
+              <div key={i} className="rounded-xl bg-[#F4F1EA] text-[#2C2825]">
+                <WarningNote title="Einordnung">
                   <p>{w.text}</p>
                 </WarningNote>
-              ) : null,
-            )}
-          </Container>
-        </section>
+              </div>
+            ) : null,
+          )}
+        </Container>
       ) : null}
 
       {devices.length ? (
-        <section className="ac-reveal border-b border-line">
-          <Container className="py-14">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-sage">
-              Geräte in der Praxis
-            </p>
-            <h2 className="mt-2 font-display text-3xl font-medium text-fg">
-              Fixe Motive – zum Einordnen, nicht zum Staunen.
+        <section className="bg-[#F4F1EA] text-[#2C2825]">
+          <Container className="py-16">
+            <p className="text-xs tracking-[0.18em] text-[#6B6560] uppercase">Geräte in der Praxis</p>
+            <h2 className="mt-2 font-display text-3xl font-medium">
+              Fixe Motive — zum Einordnen.
             </h2>
             <div className="mt-8 grid gap-5 md:grid-cols-3">
               {devices.slice(0, 6).map((pic) => (
-                <figure key={pic.src} className="overflow-hidden rounded-xl border border-line">
+                <figure key={pic.src}>
                   <img
                     src={pic.src}
                     alt={pic.alt}
-                    className="aspect-[5/3] w-full object-cover"
+                    className="aspect-[5/3] w-full rounded-2xl object-cover"
                     loading="lazy"
                   />
-                  <figcaption className="p-4 text-sm text-muted">{pic.caption}</figcaption>
+                  <figcaption className="mt-2 text-sm text-[#6B6560]">{pic.caption}</figcaption>
                 </figure>
               ))}
             </div>
@@ -190,24 +164,22 @@ export function NlsNeko({
       ) : null}
 
       {scans.length ? (
-        <section className="ac-reveal border-b border-line bg-card">
-          <Container className="py-14">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-sage">
-              Ausschnitte
-            </p>
-            <h2 className="mt-2 font-display text-3xl font-medium text-fg">
-              Zum Betrachten – nicht als Befund.
+        <section className="bg-[#E8EEF0] text-[#2C2825]">
+          <Container className="py-16">
+            <p className="text-xs tracking-[0.18em] text-[#6B6560] uppercase">Ausschnitte</p>
+            <h2 className="mt-2 font-display text-3xl font-medium">
+              Zum Betrachten — nicht als Befund.
             </h2>
             <div className="mt-8 grid gap-5 md:grid-cols-3">
               {scans.slice(0, 6).map((pic) => (
-                <figure key={pic.src} className="overflow-hidden rounded-xl border border-line bg-paper">
+                <figure key={pic.src}>
                   <img
                     src={pic.src}
                     alt={`${pic.alt} – Hinweisbild, kein medizinischer Befund`}
-                    className="aspect-[5/3] w-full object-cover"
+                    className="aspect-[5/3] w-full rounded-2xl object-cover"
                     loading="lazy"
                   />
-                  <figcaption className="p-4 text-sm text-muted">{pic.caption}</figcaption>
+                  <figcaption className="mt-2 text-sm text-[#6B6560]">{pic.caption}</figcaption>
                 </figure>
               ))}
             </div>
@@ -216,8 +188,8 @@ export function NlsNeko({
       ) : null}
 
       {prose.length ? (
-        <section className="ac-reveal border-b border-line">
-          <Container className="max-w-3xl space-y-5 py-14 text-[1.125rem] leading-relaxed text-fg">
+        <section className="bg-[#F4F1EA] text-[#2C2825]">
+          <Container className="max-w-3xl space-y-5 py-16 text-[1.125rem] leading-relaxed">
             {prose.map((b, i) =>
               b.type === "p" ? <p key={i}>{b.text}</p> : null,
             )}
@@ -225,52 +197,20 @@ export function NlsNeko({
         </section>
       ) : null}
 
-      <ReviewStrip />
-
-      <section className="ac-reveal">
-        <Container className="grid gap-10 py-16 md:grid-cols-2">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">
-              Häufige Fragen
-            </p>
-            <h2 className="mt-2 font-display text-3xl font-medium text-fg">
-              Klarheit vor dem ersten Anruf
-            </h2>
-            <div className="mt-6">
-              <FaqList items={practiceFaqs} />
-            </div>
+      <section className="bg-[#F4F1EA] text-[#2C2825]">
+        <Container className="max-w-3xl py-12">
+          <h2 className="font-display text-3xl font-medium">Fragen vor dem Anruf</h2>
+          <div className="mt-6">
+            <FaqList items={practiceFaqs} />
           </div>
-          <aside className="rounded-xl border border-line bg-card p-6">
-            <p className="flex items-center gap-2 text-sm font-medium text-sage">
-              <MapPin className="size-4" /> NLS in Augsburg-Hochzoll
-            </p>
-            <h3 className="mt-2 text-xl font-semibold">
-              {practice.street}, {practice.city}-{practice.district}
-            </h3>
-            <img
-              src="/images/anfahrt.jpg"
-              alt="Praxiszugang Friedrich-Deffner-Straße, Augsburg-Hochzoll"
-              className="mt-5 aspect-[16/10] w-full rounded-xl object-cover"
-            />
-            <div className="mt-5 flex flex-wrap gap-3">
-              <Button asChild>
-                <a href={`tel:${practice.phoneTel}`}>
-                  <Phone className="size-4" /> {practice.phoneDisplay}
-                </a>
-              </Button>
-              <Button asChild variant="clay">
-                <Link to="/online-anamnesebogen">Online-Anamnesebogen</Link>
-              </Button>
-            </div>
-          </aside>
+          <p className="mt-8 text-sm text-[#6B6560]">
+            {practice.street}, {practice.city}-{practice.district} ·{" "}
+            <a href={`tel:${practice.phoneTel}`}>{practice.phoneDisplay}</a>
+          </p>
+          <AuthorByline />
+          <Disclaimer className="mt-8" />
         </Container>
       </section>
-
-      <Container className="pb-6">
-        <AuthorByline />
-        <Disclaimer className="mt-8" />
-      </Container>
-      <CtaBand />
-    </>
+    </div>
   );
 }
