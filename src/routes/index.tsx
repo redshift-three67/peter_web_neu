@@ -44,13 +44,13 @@ const concerns = [
     image: "/images/manuelle-therapie.jpg",
   },
   {
-    to: "/allergie-augsburg",
+    to: "/naet-methode-allergie-behandlung",
     title: "Allergie & Unverträglichkeit",
     text: "Wenn der Körper auf Alltägliches reagiert. Hinweisdiagnostik und begleitende Verfahren.",
     image: "/images/naturheilkunde.jpg",
   },
   {
-    to: "/erschoepfung-augsburg",
+    to: "/psychotherapie-augsburg",
     title: "Erschöpfung & Psyche",
     text: "Burnout, innere Unruhe, Schlaf – Hypnose, Gespräch und körperliche Regulation.",
     image: "/images/ruhe.jpg",
