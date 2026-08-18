@@ -4,12 +4,14 @@ import {
   BookOpen,
   Heart,
   Leaf,
+  MapPin,
   Phone,
   Shield,
   Sparkles,
   Stethoscope,
 } from "lucide-react";
 import { getArchiveBySlug } from "@/content/archive";
+import { moodCopy, moodFor } from "@/content/hub-themes";
 import {
   blocksFromParts,
   captionFromPath,
@@ -26,8 +28,10 @@ import {
   CtaBand,
   Disclaimer,
   FaqList,
+  ReviewStrip,
 } from "@/components/site/Shared";
 import {
+  FeatureRow,
   IconCard,
   PhoneChip,
   QuotePanel,
@@ -61,17 +65,18 @@ export function HubFromArchive({
   showCta?: boolean;
 }) {
   const page = getArchiveBySlug(slug);
+  const mood = moodCopy[moodFor(slug)];
   const blocks = page ? blocksFromParts(editorialParts(page), heading) : [];
+
   const pics: Pic[] = (page?.images ?? [])
     .filter((img) => img.local)
     .map((img) => {
       const src = mediaSrc(img.local, img.url);
-      const kind = classifyImage(src, img.alt);
       return {
         src,
         alt: img.alt || heading,
         caption: captionFromPath(src, img.alt),
-        kind,
+        kind: classifyImage(src, img.alt),
       };
     })
     .filter((p) => p.kind !== "skip");
@@ -89,20 +94,31 @@ export function HubFromArchive({
       title: s.title,
       meta: s.meta,
     }));
+
   const hero =
     slides.length > 0
       ? slides
       : devices[0]
         ? [{ src: devices[0].src, alt: devices[0].alt, title: devices[0].caption, meta: heading }]
-        : atmosphere[0]
-          ? [{ src: atmosphere[0].src, alt: atmosphere[0].alt }]
-          : [];
+        : [
+            {
+              src: atmosphere[0]?.src ?? mood.image,
+              alt: heading,
+              title: heading,
+              meta: kicker,
+            },
+          ];
 
   const intro: HubBlock[] = [];
+  const warnings: HubBlock[] = [];
   const rest: HubBlock[] = [];
   let seenBreak = false;
   for (const b of blocks) {
-    if (!seenBreak && (b.type === "p" || b.type === "warning")) {
+    if (b.type === "warning") {
+      warnings.push(b);
+      continue;
+    }
+    if (!seenBreak && b.type === "p") {
       intro.push(b);
     } else {
       seenBreak = true;
@@ -110,118 +126,198 @@ export function HubFromArchive({
     }
   }
 
-  const usedScan = rest.some((b) => b.type === "scans");
+  const firstH2 = rest.find((b) => b.type === "h2");
+  const body = rest.filter((b) => b.type !== "h2" || b !== firstH2);
+  const usedScan = body.some((b) => b.type === "scans");
+  const gallery = [...scans, ...photos, ...atmosphere].slice(0, 6);
 
   return (
     <>
-      {hero.length ? (
-        <PageHeroSlider slides={hero} heading={heading} kicker={kicker} />
-      ) : (
-        <section className="border-b border-line bg-sage-50">
-          <Container className="py-12 md:py-16">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-sage">
-              {kicker}
-            </p>
-            <h1 className="mt-2 max-w-3xl font-display text-3xl font-semibold text-sage-700 md:text-5xl">
-              {heading}
-            </h1>
-          </Container>
-        </section>
-      )}
+      <PageHeroSlider slides={hero} heading={heading} kicker={kicker} />
       <PhoneChip className="border-b border-line bg-bg" />
 
-      <section className="border-b border-line bg-bg">
-        <Container className="max-w-4xl py-12 md:py-16">
-          {lead ? (
-            <p className="text-lg leading-relaxed text-muted md:text-xl">{lead}</p>
-          ) : null}
-          <div className={`space-y-5 text-[1.05rem] leading-relaxed text-fg/90 ${lead ? "mt-6" : ""}`}>
-            {intro.map((block, i) =>
-              block.type === "warning" ? (
-                <WarningNote key={i} title="Einordnung">
-                  <p>{block.text}</p>
-                </WarningNote>
-              ) : (
-                <p key={i}>{block.type === "p" ? block.text : ""}</p>
-              ),
-            )}
-          </div>
-          {atmosphere.length > 0 ? (
-            <div className="mt-10 grid gap-5 sm:grid-cols-2">
-              {atmosphere.slice(0, 2).map((pic) => (
-                <figure key={pic.src} className="overflow-hidden rounded-2xl">
-                  <img
-                    src={pic.src}
-                    alt={pic.alt}
-                    width={800}
-                    height={600}
-                    loading="lazy"
-                    className="aspect-[4/3] w-full object-cover"
-                  />
-                  <figcaption className="mt-2 text-sm text-muted">{pic.caption}</figcaption>
-                </figure>
+      <section className="border-b border-line bg-paper">
+        <Container className="grid gap-12 py-14 md:grid-cols-2 md:items-center md:py-20">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">
+              {kicker}
+            </p>
+            <h2 className="mt-2 font-display text-3xl font-semibold text-sage-700 sm:text-4xl">
+              {firstH2 && firstH2.type === "h2" ? firstH2.text : heading}
+            </h2>
+            {lead ? (
+              <p className="mt-5 text-[1.05rem] leading-relaxed text-muted">{lead}</p>
+            ) : null}
+            <div className="mt-5 space-y-4 text-[1.05rem] leading-relaxed text-fg/90">
+              {intro.slice(0, 3).map((b, i) =>
+                b.type === "p" ? <p key={i}>{b.text}</p> : null,
+              )}
+            </div>
+            <div className="mt-8 space-y-5">
+              {mood.steps.map((step) => (
+                <FeatureRow
+                  key={step.title}
+                  icon={step.title.startsWith("1") ? Heart : step.title.startsWith("2") ? Stethoscope : Leaf}
+                  title={step.title}
+                  text={step.text}
+                />
               ))}
             </div>
-          ) : null}
+          </div>
+          <QuotePanel quote={mood.quote} cite={mood.cite} />
         </Container>
       </section>
 
-      {rest.length ? (
+      {warnings.length ? (
+        <section className="border-b border-line bg-bg">
+          <Container className="max-w-4xl space-y-4 py-10">
+            {warnings.map((w, i) =>
+              w.type === "warning" ? (
+                <WarningNote key={i} title="Einordnung">
+                  <p>{w.text}</p>
+                </WarningNote>
+              ) : null,
+            )}
+          </Container>
+        </section>
+      ) : null}
+
+      {mood.steps.length ? (
+        <section className="border-b border-line bg-sage-50">
+          <Container className="py-14">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">
+              So arbeite ich hier
+            </p>
+            <h2 className="mt-2 font-display text-3xl font-semibold text-sage-700">
+              Drei ruhige Schritte
+            </h2>
+            <div className="mt-10 grid gap-5 md:grid-cols-3">
+              {mood.steps.map((step, i) => {
+                const Icon = ICONS[i];
+                return (
+                  <div
+                    key={step.title}
+                    className="rounded-2xl border border-line bg-paper p-8 shadow-card"
+                  >
+                    <span className="mb-6 inline-flex size-16 items-center justify-center rounded-2xl bg-sage-100">
+                      <Icon className="size-8 text-sage" aria-hidden />
+                    </span>
+                    <h3 className="font-display text-2xl font-semibold text-sage-700">
+                      {step.title}
+                    </h3>
+                    <p className="mt-2 text-base leading-relaxed text-muted">{step.text}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </Container>
+        </section>
+      ) : null}
+
+      {body.length ? (
         <section>
-          <Container className="max-w-4xl space-y-6 py-12 md:py-16">
-            {rest.map((block, i) => (
-              <BlockView
+          <Container className="grid gap-6 py-14 md:grid-cols-2">
+            {body.map((block, i) => (
+              <div
                 key={i}
-                block={block}
-                index={i}
-                scans={scans}
-              />
+                className={
+                  block.type === "scans" || block.type === "related" || block.type === "h2"
+                    ? "md:col-span-2"
+                    : ""
+                }
+              >
+                <BlockView block={block} index={i} scans={scans} />
+              </div>
             ))}
           </Container>
         </section>
       ) : null}
 
-      {!usedScan && (scans.length > 0 || photos.length > 0) ? (
-        <PhotoBand
-          title="Einblicke"
-          items={[...scans, ...photos].slice(0, 6)}
-        />
+      {!usedScan && gallery.length > 0 ? (
+        <section className="border-t border-line bg-sand-50">
+          <Container className="py-14 md:py-16">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-sage">
+              Bilder zu dieser Seite
+            </p>
+            <h2 className="mt-2 max-w-2xl font-display text-3xl font-semibold text-sage-700">
+              Zum Betrachten – nicht als Befund.
+            </h2>
+            <div className="mt-10 grid gap-5 md:grid-cols-3">
+              {gallery.map((pic) => (
+                <figure
+                  key={pic.src}
+                  className="overflow-hidden rounded-2xl border border-line bg-paper shadow-card"
+                >
+                  <img
+                    src={pic.src}
+                    alt={pic.alt}
+                    width={900}
+                    height={540}
+                    loading="lazy"
+                    className="aspect-[5/3] w-full object-cover"
+                  />
+                  <figcaption className="p-5">
+                    <p className="font-display text-xl text-sage-deep">{pic.caption}</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </Container>
+        </section>
       ) : null}
 
-      <section className="border-t border-line bg-sage-50">
-        <Container className="max-w-4xl py-12 md:py-16">
-          <div className="rounded-2xl border border-line bg-card p-6 shadow-card md:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-sage">
-              Praxis vor Ort
+      <ReviewStrip />
+
+      <section>
+        <Container className="grid gap-10 py-16 md:grid-cols-[1.1fr_0.9fr] md:items-start">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">
+              Häufige Fragen
             </p>
             <h2 className="mt-2 font-display text-3xl font-semibold text-sage-700">
-              Augsburg-Hochzoll
+              Klarheit vor dem ersten Anruf
             </h2>
-            <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted">
-              {practice.street}, {practice.zip} {practice.city}. Erreichbar aus{" "}
-              {practice.reach.join(", ")}. {practice.hours}
+            <div className="mt-6">
+              <FaqList items={practiceFaqs} />
+            </div>
+          </div>
+          <aside className="rounded-2xl border border-line bg-card p-6 shadow-card">
+            <p className="flex items-center gap-2 text-sm font-medium text-sage">
+              <MapPin className="size-4" /> Praxis vor Ort
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Button asChild>
-                <a href={`tel:${practice.phoneTel}`}>
-                  <Phone className="size-4" /> {practice.phoneDisplay}
-                </a>
-              </Button>
-              <Button asChild variant="outline">
-                <Link to="/kontakt">Nachricht schreiben</Link>
-              </Button>
-              <Button asChild variant="clay">
+            <h3 className="mt-2 font-display text-2xl text-sage-deep">
+              {practice.street}, {practice.city}-{practice.district}
+            </h3>
+            <p className="mt-3 text-muted">
+              Gut erreichbar aus {practice.reach.join(", ")}.
+            </p>
+            <img
+              src="/images/anfahrt.jpg"
+              alt="Praxiszugang in Augsburg-Hochzoll"
+              className="mt-5 aspect-[16/10] w-full rounded-2xl object-cover"
+            />
+            <div className="mt-5 flex flex-col gap-3">
+              <div className="flex flex-wrap gap-3">
+                <Button asChild>
+                  <a href={`tel:${practice.phoneTel}`}>
+                    <Phone className="size-4" /> {practice.phoneDisplay}
+                  </a>
+                </Button>
+                <Button asChild variant="outline">
+                  <Link to="/kontakt">Nachricht</Link>
+                </Button>
+              </div>
+              <Button asChild variant="clay" className="w-full">
                 <Link to="/online-anamnesebogen">Online-Anamnesebogen</Link>
               </Button>
             </div>
-          </div>
+          </aside>
         </Container>
       </section>
 
-      <Container className="max-w-4xl space-y-8 py-12">
-        <FaqList items={practiceFaqs} />
+      <Container className="pb-6">
         <AuthorByline />
-        <Disclaimer />
+        <Disclaimer className="mt-8" />
       </Container>
       {showCta ? <CtaBand /> : null}
     </>
@@ -239,9 +335,7 @@ function BlockView({
 }) {
   if (block.type === "h2") {
     return (
-      <h2 className="pt-2 font-display text-3xl font-semibold text-sage-700">
-        {block.text}
-      </h2>
+      <h2 className="font-display text-3xl font-semibold text-sage-700">{block.text}</h2>
     );
   }
   if (block.type === "warning") {
@@ -252,20 +346,32 @@ function BlockView({
     );
   }
   if (block.type === "quote") {
-    return (
-      <QuotePanel
-        quote={block.text.replace(/^[„"]|[”"]$/g, "")}
-        cite="Praxistext"
-      />
-    );
+    return <QuotePanel quote={block.text.replace(/^[„"]|[”"]$/g, "")} cite="Praxistext" />;
   }
   if (block.type === "scans") {
     return (
-      <div className="space-y-5">
+      <div>
         {block.hint ? (
-          <p className="text-[1.05rem] leading-relaxed text-muted">{block.hint}</p>
+          <p className="mb-6 text-[1.05rem] leading-relaxed text-muted">{block.hint}</p>
         ) : null}
-        <PhotoBand title="Scanbilder – Hinweis, keine Labordiagnose" items={scans} nested />
+        <div className="grid gap-5 md:grid-cols-3">
+          {scans.map((pic) => (
+            <figure
+              key={pic.src}
+              className="overflow-hidden rounded-2xl border border-line bg-paper shadow-card"
+            >
+              <img
+                src={pic.src}
+                alt={pic.alt}
+                className="aspect-[5/3] w-full object-cover"
+                loading="lazy"
+              />
+              <figcaption className="p-5 font-display text-xl text-sage-deep">
+                {pic.caption}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
       </div>
     );
   }
@@ -278,11 +384,14 @@ function BlockView({
           const inner = (
             <>
               <span className="grid size-11 place-items-center rounded-2xl bg-sage-50 text-sage">
-                <Icon className="size-5" aria-hidden />
+                <Icon className="size-5" />
               </span>
-              <p className="mt-3 font-display text-xl font-semibold text-sage-700">
-                {title}
-              </p>
+              <p className="mt-3 font-display text-xl font-semibold text-sage-700">{title}</p>
+              {href ? (
+                <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-sage">
+                  Weiterlesen <ArrowRight className="size-4" />
+                </span>
+              ) : null}
             </>
           );
           return href ? (
@@ -308,7 +417,7 @@ function BlockView({
       <IconCard icon={Icon} title={block.title}>
         {block.subtitle ? <p className="font-medium text-sage">{block.subtitle}</p> : null}
         {block.paragraphs.map((p) => (
-          <p key={p.slice(0, 48)}>{p}</p>
+          <p key={p.slice(0, 40)}>{p}</p>
         ))}
         {block.items.length ? (
           <ul className="mt-2 list-disc space-y-1 pl-5">
@@ -323,17 +432,17 @@ function BlockView({
   if (block.type === "list") {
     return (
       <div className="grid gap-4 sm:grid-cols-2">
-        {block.items.map((item, li) => {
-          const Icon = ICONS[li % ICONS.length];
-          return (
-            <div key={item} className="rounded-2xl border border-line bg-paper p-5 shadow-card">
-              <span className="grid size-11 place-items-center rounded-2xl bg-sage-50 text-sage">
-                <Icon className="size-5" aria-hidden />
-              </span>
-              <p className="mt-3 text-base leading-relaxed text-muted">{item}</p>
-            </div>
-          );
-        })}
+        {block.items.map((item, li) => (
+          <div key={item} className="rounded-2xl border border-line bg-paper p-5 shadow-card">
+            <span className="grid size-11 place-items-center rounded-2xl bg-sage-50 text-sage">
+              {(() => {
+                const Icon = ICONS[li % ICONS.length];
+                return <Icon className="size-5" />;
+              })()}
+            </span>
+            <p className="mt-3 text-base leading-relaxed text-muted">{item}</p>
+          </div>
+        ))}
       </div>
     );
   }
@@ -346,9 +455,7 @@ function BlockView({
             <a
               key={name}
               href={href ?? "#"}
-              className={`group overflow-hidden rounded-2xl border border-line bg-paper p-5 shadow-card ${
-                href ? "transition hover:-translate-y-1 hover:shadow-elevated" : "pointer-events-none"
-              }`}
+              className="group rounded-2xl border border-line bg-paper p-5 shadow-card transition hover:-translate-y-1 hover:shadow-elevated"
             >
               <p className="font-display text-xl font-semibold text-sage-700">{name}</p>
               {href ? (
@@ -365,60 +472,10 @@ function BlockView({
   return <p className="text-[1.05rem] leading-relaxed text-fg/90">{block.text}</p>;
 }
 
-function PhotoBand({
-  title,
-  items,
-  nested = false,
-}: {
-  title: string;
-  items: Pic[];
-  nested?: boolean;
-}) {
-  if (!items.length) return null;
-  const grid = (
-    <div className={`grid gap-5 ${items.length === 1 ? "" : "sm:grid-cols-2"}`}>
-      {items.map((pic) => (
-        <figure
-          key={pic.src}
-          className="overflow-hidden rounded-2xl border border-line bg-paper shadow-card"
-        >
-          <img
-            src={pic.src}
-            alt={pic.alt}
-            width={900}
-            height={640}
-            loading="lazy"
-            decoding="async"
-            className="aspect-[5/3] w-full object-cover"
-          />
-          <figcaption className="p-5">
-            <p className="font-display text-xl font-semibold text-sage-700">
-              {pic.caption}
-            </p>
-          </figcaption>
-        </figure>
-      ))}
-    </div>
-  );
-  if (nested) return grid;
-  return (
-    <section className="border-t border-line bg-sand-50">
-      <Container className="max-w-5xl py-12 md:py-16">
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-sage">
-          Bilder zur Seite
-        </p>
-        <h2 className="mt-2 font-display text-3xl font-semibold text-sage-700">{title}</h2>
-        <div className="mt-8">{grid}</div>
-      </Container>
-    </section>
-  );
-}
-
 function guessHref(name: string) {
   const direct = topicHref[name];
   if (direct) return direct;
-  const hit = Object.entries(topicHref).find(([key]) =>
+  return Object.entries(topicHref).find(([key]) =>
     name.toLowerCase().includes(key.toLowerCase()),
-  );
-  return hit?.[1];
+  )?.[1];
 }

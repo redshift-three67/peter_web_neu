@@ -1,5 +1,10 @@
 # Changelog — Migration
 
+## 2026-08-18 (Hub-Rhythmus Startseite)
+
+- Hubs wie Start: Zitat, drei Schritte, Warnband, 2-Spalten-Karten, Bildreihe, Stimmen, FAQ+Praxis.
+- Stimmung je Thema (Diagnostik, Natur, Hände, Psyche, Frequenz).
+
 ## 2026-08-18 (Hub-UX volle Breite)
 
 - Keine 2:1-Spalte mehr. Praxis-Karte unter dem Text.

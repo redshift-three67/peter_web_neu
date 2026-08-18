@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MapPin, Phone } from "lucide-react";
 import { ContactForm } from "@/components/site/ContactForm";
 import { PhoneChip } from "@/components/site/Design";
-import { Container, Disclaimer, PageHero } from "@/components/site/Shared";
+import { Container, Disclaimer, PageHero, ReviewStrip } from "@/components/site/Shared";
 import { Button } from "@/components/ui/button";
 import { getArchiveBySlug } from "@/content/archive";
 import { hubMeta } from "@/content/hubs";
@@ -87,6 +87,7 @@ function Page() {
         </aside>
         <Disclaimer className="lg:col-span-2" />
       </Container>
+      <ReviewStrip />
     </>
   );
 }
