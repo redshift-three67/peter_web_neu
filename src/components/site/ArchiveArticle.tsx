@@ -197,6 +197,9 @@ export function ArchiveArticle({ page }: { page: ArchivePage }) {
               <Button asChild variant="outline">
                 <Link to="/kontakt">Nachricht schreiben</Link>
               </Button>
+              <Button asChild variant="clay" className="w-full">
+                <Link to="/anamnese">Online-Anamnesebogen</Link>
+              </Button>
               <Button asChild variant="ghost">
                 <Link to="/erstgespraech">Erstgespräch & Kosten</Link>
               </Button>

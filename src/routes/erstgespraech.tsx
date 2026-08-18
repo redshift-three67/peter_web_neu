@@ -94,8 +94,8 @@ function Page() {
             <Button asChild variant="outline">
               <Link to="/kontakt">Kontaktformular</Link>
             </Button>
-            <Button asChild variant="ghost">
-              <Link to="/anamnese">Zum Anamnesebogen</Link>
+            <Button asChild variant="clay" className="w-full">
+              <Link to="/anamnese">Online-Anamnesebogen</Link>
             </Button>
           </div>
         </aside>
