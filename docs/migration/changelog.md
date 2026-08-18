@@ -1,5 +1,12 @@
 # Changelog — Migration
 
+## 2026-08-18 (Hub-UX volle Breite)
+
+- Keine 2:1-Spalte mehr. Praxis-Karte unter dem Text.
+- Scan-/Gerätebilder als große Karten (wie Anliegen auf der Startseite).
+- Lange H3-Sätze sind wieder Fließtext, nicht Kartentitel.
+- Atmosphäre-Bilder im Einleitungsteil.
+
 ## 2026-08-18 (Hub-UX)
 
 - 18 Inhalts-Hubs nutzen Start-Module: IconCards, Warnhinweise, Themenkarten, FAQ, CTA.
