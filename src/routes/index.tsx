@@ -22,6 +22,8 @@ import {
 import { FeatureRow, PhoneChip, QuotePanel } from "@/components/site/Design";
 import { HeroSlider } from "@/components/site/HeroSlider";
 import { FaqJsonLd } from "@/components/site/JsonLd";
+import { HomeAc } from "@/components/site/HomeAc";
+import { useMusterSkin } from "@/components/site/DesignSkin";
 import { practice, practiceFaqs } from "@/content/site";
 import { pageHead } from "@/lib/seo";
 
@@ -58,9 +60,18 @@ const concerns = [
 ];
 
 function Home() {
+  const { ac } = useMusterSkin();
   return (
     <>
       <FaqJsonLd items={practiceFaqs} />
+      {ac ? <HomeAc /> : <HomeLegacy />}
+    </>
+  );
+}
+
+function HomeLegacy() {
+  return (
+    <>
       <HeroSlider />
       <PhoneChip className="border-b border-line bg-bg" />
 
