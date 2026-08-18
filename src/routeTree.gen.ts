@@ -26,8 +26,11 @@ import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as ManuelleTherapieverfahrenUebersichtRouteImport } from './routes/manuelle-therapieverfahren-uebersicht'
 import { Route as NaturheilkundeRouteImport } from './routes/naturheilkunde'
+import { Route as NlsDiagnostikRouteImport } from './routes/nls-diagnostik'
 import { Route as OnlineAnamnesebogenRouteImport } from './routes/online-anamnesebogen'
+import { Route as OsteopathieTechnikenRouteImport } from './routes/osteopathie-techniken'
 import { Route as PraxisRouteImport } from './routes/praxis'
+import { Route as PsychotherapieAugsburgRouteImport } from './routes/psychotherapie-augsburg'
 import { Route as QuellenhinweisRouteImport } from './routes/quellenhinweis'
 import { Route as RechtshinweiseRouteImport } from './routes/rechtshinweise'
 import { Route as SchmerztherapieAugsburgRouteImport } from './routes/schmerztherapie-augsburg'
@@ -124,14 +127,29 @@ const NaturheilkundeRoute = NaturheilkundeRouteImport.update({
   path: '/naturheilkunde',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NlsDiagnostikRoute = NlsDiagnostikRouteImport.update({
+  id: '/nls-diagnostik',
+  path: '/nls-diagnostik',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OnlineAnamnesebogenRoute = OnlineAnamnesebogenRouteImport.update({
   id: '/online-anamnesebogen',
   path: '/online-anamnesebogen',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OsteopathieTechnikenRoute = OsteopathieTechnikenRouteImport.update({
+  id: '/osteopathie-techniken',
+  path: '/osteopathie-techniken',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PraxisRoute = PraxisRouteImport.update({
   id: '/praxis',
   path: '/praxis',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PsychotherapieAugsburgRoute = PsychotherapieAugsburgRouteImport.update({
+  id: '/psychotherapie-augsburg',
+  path: '/psychotherapie-augsburg',
   getParentRoute: () => rootRouteImport,
 } as any)
 const QuellenhinweisRoute = QuellenhinweisRouteImport.update({
@@ -198,8 +216,11 @@ export interface FileRoutesByFullPath {
   '/login': typeof LoginRoute
   '/manuelle-therapieverfahren-uebersicht': typeof ManuelleTherapieverfahrenUebersichtRoute
   '/naturheilkunde': typeof NaturheilkundeRoute
+  '/nls-diagnostik': typeof NlsDiagnostikRoute
   '/online-anamnesebogen': typeof OnlineAnamnesebogenRoute
+  '/osteopathie-techniken': typeof OsteopathieTechnikenRoute
   '/praxis': typeof PraxisRoute
+  '/psychotherapie-augsburg': typeof PsychotherapieAugsburgRoute
   '/quellenhinweis': typeof QuellenhinweisRoute
   '/rechtshinweise': typeof RechtshinweiseRoute
   '/schmerztherapie-augsburg': typeof SchmerztherapieAugsburgRoute
@@ -228,8 +249,11 @@ export interface FileRoutesByTo {
   '/login': typeof LoginRoute
   '/manuelle-therapieverfahren-uebersicht': typeof ManuelleTherapieverfahrenUebersichtRoute
   '/naturheilkunde': typeof NaturheilkundeRoute
+  '/nls-diagnostik': typeof NlsDiagnostikRoute
   '/online-anamnesebogen': typeof OnlineAnamnesebogenRoute
+  '/osteopathie-techniken': typeof OsteopathieTechnikenRoute
   '/praxis': typeof PraxisRoute
+  '/psychotherapie-augsburg': typeof PsychotherapieAugsburgRoute
   '/quellenhinweis': typeof QuellenhinweisRoute
   '/rechtshinweise': typeof RechtshinweiseRoute
   '/schmerztherapie-augsburg': typeof SchmerztherapieAugsburgRoute
@@ -259,8 +283,11 @@ export interface FileRoutesById {
   '/login': typeof LoginRoute
   '/manuelle-therapieverfahren-uebersicht': typeof ManuelleTherapieverfahrenUebersichtRoute
   '/naturheilkunde': typeof NaturheilkundeRoute
+  '/nls-diagnostik': typeof NlsDiagnostikRoute
   '/online-anamnesebogen': typeof OnlineAnamnesebogenRoute
+  '/osteopathie-techniken': typeof OsteopathieTechnikenRoute
   '/praxis': typeof PraxisRoute
+  '/psychotherapie-augsburg': typeof PsychotherapieAugsburgRoute
   '/quellenhinweis': typeof QuellenhinweisRoute
   '/rechtshinweise': typeof RechtshinweiseRoute
   '/schmerztherapie-augsburg': typeof SchmerztherapieAugsburgRoute
@@ -291,8 +318,11 @@ export interface FileRouteTypes {
     | '/login'
     | '/manuelle-therapieverfahren-uebersicht'
     | '/naturheilkunde'
+    | '/nls-diagnostik'
     | '/online-anamnesebogen'
+    | '/osteopathie-techniken'
     | '/praxis'
+    | '/psychotherapie-augsburg'
     | '/quellenhinweis'
     | '/rechtshinweise'
     | '/schmerztherapie-augsburg'
@@ -321,8 +351,11 @@ export interface FileRouteTypes {
     | '/login'
     | '/manuelle-therapieverfahren-uebersicht'
     | '/naturheilkunde'
+    | '/nls-diagnostik'
     | '/online-anamnesebogen'
+    | '/osteopathie-techniken'
     | '/praxis'
+    | '/psychotherapie-augsburg'
     | '/quellenhinweis'
     | '/rechtshinweise'
     | '/schmerztherapie-augsburg'
@@ -351,8 +384,11 @@ export interface FileRouteTypes {
     | '/login'
     | '/manuelle-therapieverfahren-uebersicht'
     | '/naturheilkunde'
+    | '/nls-diagnostik'
     | '/online-anamnesebogen'
+    | '/osteopathie-techniken'
     | '/praxis'
+    | '/psychotherapie-augsburg'
     | '/quellenhinweis'
     | '/rechtshinweise'
     | '/schmerztherapie-augsburg'
@@ -382,8 +418,11 @@ export interface RootRouteChildren {
   LoginRoute: typeof LoginRoute
   ManuelleTherapieverfahrenUebersichtRoute: typeof ManuelleTherapieverfahrenUebersichtRoute
   NaturheilkundeRoute: typeof NaturheilkundeRoute
+  NlsDiagnostikRoute: typeof NlsDiagnostikRoute
   OnlineAnamnesebogenRoute: typeof OnlineAnamnesebogenRoute
+  OsteopathieTechnikenRoute: typeof OsteopathieTechnikenRoute
   PraxisRoute: typeof PraxisRoute
+  PsychotherapieAugsburgRoute: typeof PsychotherapieAugsburgRoute
   QuellenhinweisRoute: typeof QuellenhinweisRoute
   RechtshinweiseRoute: typeof RechtshinweiseRoute
   SchmerztherapieAugsburgRoute: typeof SchmerztherapieAugsburgRoute
@@ -516,6 +555,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NaturheilkundeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/nls-diagnostik': {
+      id: '/nls-diagnostik'
+      path: '/nls-diagnostik'
+      fullPath: '/nls-diagnostik'
+      preLoaderRoute: typeof NlsDiagnostikRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/online-anamnesebogen': {
       id: '/online-anamnesebogen'
       path: '/online-anamnesebogen'
@@ -523,11 +569,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OnlineAnamnesebogenRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/osteopathie-techniken': {
+      id: '/osteopathie-techniken'
+      path: '/osteopathie-techniken'
+      fullPath: '/osteopathie-techniken'
+      preLoaderRoute: typeof OsteopathieTechnikenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/praxis': {
       id: '/praxis'
       path: '/praxis'
       fullPath: '/praxis'
       preLoaderRoute: typeof PraxisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/psychotherapie-augsburg': {
+      id: '/psychotherapie-augsburg'
+      path: '/psychotherapie-augsburg'
+      fullPath: '/psychotherapie-augsburg'
+      preLoaderRoute: typeof PsychotherapieAugsburgRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/quellenhinweis': {
@@ -615,8 +675,11 @@ const rootRouteChildren: RootRouteChildren = {
   ManuelleTherapieverfahrenUebersichtRoute:
     ManuelleTherapieverfahrenUebersichtRoute,
   NaturheilkundeRoute: NaturheilkundeRoute,
+  NlsDiagnostikRoute: NlsDiagnostikRoute,
   OnlineAnamnesebogenRoute: OnlineAnamnesebogenRoute,
+  OsteopathieTechnikenRoute: OsteopathieTechnikenRoute,
   PraxisRoute: PraxisRoute,
+  PsychotherapieAugsburgRoute: PsychotherapieAugsburgRoute,
   QuellenhinweisRoute: QuellenhinweisRoute,
   RechtshinweiseRoute: RechtshinweiseRoute,
   SchmerztherapieAugsburgRoute: SchmerztherapieAugsburgRoute,

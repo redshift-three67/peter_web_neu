@@ -1,15 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Container, PageHero, Prose } from "@/components/site/Shared";
+import { PhoneChip } from "@/components/site/Design";
+import { hubMeta } from "@/content/hubs";
 import { practice } from "@/content/site";
 import { pageHead } from "@/lib/seo";
 
+const path = "/impressum";
+const meta = hubMeta[path];
+
 export const Route = createFileRoute("/impressum")({
-  head: () =>
-    pageHead({
-      title: "Impressum – Naturheilpraxis Rauch",
-      description: "Impressum gemäß DDG der Naturheilpraxis Peter Rauch, Augsburg.",
-      path: "/impressum",
-    }),
+  head: () => pageHead({ title: meta.title, description: meta.description, path }),
   component: Page,
 });
 
@@ -17,11 +17,12 @@ function Page() {
   return (
     <>
       <PageHero
-        kicker="Recht"
-        title="Impressum"
-        lead="Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)."
+        kicker={meta.kicker}
+        title="Impressum – Heilpraktiker Augsburg"
+        lead="Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG) für die Naturheilpraxis Peter Rauch in Augsburg-Hochzoll."
       />
-      <Container className="py-14">
+      <PhoneChip />
+      <Container className="py-12 md:py-16">
         <Prose>
           <p>
             {practice.person}
@@ -30,7 +31,7 @@ function Page() {
             <br />
             {practice.street}
             <br />
-            {practice.zip} {practice.city}
+            {practice.zip} {practice.city}-{practice.district}
           </p>
           <p>
             Telefon: {practice.phoneDisplay}
@@ -48,6 +49,8 @@ function Page() {
           <p>
             {practice.authority}, Hoher Weg 8, 86152 Augsburg.
           </p>
+          <h2>Steuernummer</h2>
+          <p>Finanzamt Augsburg · {practice.taxId}</p>
           <h2>Berufsrechtliche Regelungen</h2>
           <p>
             Heilpraktikergesetz und Durchführungsverordnung, nachzulesen unter

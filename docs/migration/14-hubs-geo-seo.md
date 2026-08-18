@@ -21,9 +21,11 @@
 | `/manuelle-therapieverfahren-uebersicht` | manuelle therapie / osteopathie augsburg |
 | `/bioresonanz-therapie` | bioresonanz augsburg |
 
-### Welle 2
+### Welle 2 (umgesetzt, `rp-10-hubs-wave2`)
 
-`/psychotherapie-augsburg`, `/nls-diagnostik`, `/osteopathie-techniken`, `/kontakt`, `/online-anamnesebogen`, `/impressum`
+`/psychotherapie-augsburg`, `/nls-diagnostik`, `/osteopathie-techniken` als HubFromArchive.
+`/kontakt` Formular + Slider + NAP. `/impressum` DDG + Steuernummer.
+`/online-anamnesebogen` Archiv + Wizard; `/anamnese` leitet um.
 
 ### Welle 3
 

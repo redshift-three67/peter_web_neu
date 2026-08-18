@@ -60,6 +60,42 @@ export const hubMeta: Record<
       "Bioresonanz in der Naturheilpraxis Rauch, Augsburg-Hochzoll. Hinweisgebend, nicht als Labordiagnose. Keine Heilversprechen.",
     kicker: "Heilpraktiker Augsburg-Hochzoll",
   },
+  "/psychotherapie-augsburg": {
+    title: "Psychotherapie Augsburg – Burnout | Heilpraktiker Rauch",
+    description:
+      "Heilpraktiker-Gespräch und Burnout-Begleitung in Augsburg-Hochzoll. Ergänzend zur ärztlichen und psychotherapeutischen Versorgung, ohne Heilversprechen.",
+    kicker: "Heilpraktiker Augsburg-Hochzoll",
+  },
+  "/nls-diagnostik": {
+    title: "NLS-Diagnostik Augsburg – Hinweisverfahren | Peter Rauch",
+    description:
+      "NLS-Diagnostik in Augsburg-Hochzoll als ergänzendes Hinweisverfahren. Kein Laborersatz, keine ärztliche Diagnose, kein Heilversprechen.",
+    kicker: "Heilpraktiker Augsburg-Hochzoll",
+  },
+  "/osteopathie-techniken": {
+    title: "Osteopathie Augsburg – Manuelle Therapie | Peter Rauch",
+    description:
+      "Osteopathie in Augsburg-Hochzoll: manuelle Techniken bei Heilpraktiker und Physiotherapeut Peter Rauch. Ergänzend, ohne Heilversprechen.",
+    kicker: "Heilpraktiker Augsburg-Hochzoll",
+  },
+  "/kontakt": {
+    title: "Kontakt Heilpraktiker Augsburg – Praxis Rauch Hochzoll",
+    description:
+      "Termin bei Heilpraktiker Peter Rauch in Augsburg-Hochzoll. Telefon 0821 2621462, Friedrich-Deffner-Straße 19a. Aus Friedberg und Lechhausen erreichbar.",
+    kicker: "Naturheilpraxis Augsburg-Hochzoll",
+  },
+  "/online-anamnesebogen": {
+    title: "Online-Anamnesebogen Augsburg – Naturheilpraxis Rauch",
+    description:
+      "Patientenaufnahme vor dem Termin in Augsburg-Hochzoll. Der Bogen ist keine Diagnose und kein Notfallweg.",
+    kicker: "Patientenaufnahme · Augsburg-Hochzoll",
+  },
+  "/impressum": {
+    title: "Impressum – Heilpraktiker Peter Rauch Augsburg",
+    description:
+      "Impressum gemäß DDG: Peter Rauch, Heilpraktiker und Physiotherapeut, Friedrich-Deffner-Straße 19a, 86163 Augsburg-Hochzoll.",
+    kicker: "Recht · Augsburg-Hochzoll",
+  },
 };
 
 export const legacyRedirects: Record<string, string> = {
@@ -84,4 +120,10 @@ export const NAV_CHROME = new Set([
   "Gesundheitsrelevante Dokumentation",
   "Datenschutz",
   "Datenschutz Tools",
+  "Naturheilkundlich begleiten – Stark im Leben",
+  "Zurück zur Startseite",
+  "Zentrum für Naturheilkunde",
+  "Mein Facebook - Profil",
+  "Meine Google - Bewertung",
+  "Downloadbereich Naturheilpraxis",
 ]);
