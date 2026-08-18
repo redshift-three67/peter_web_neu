@@ -1,5 +1,11 @@
 # Changelog — Migration
 
+## 2026-08-18 (Slider-Karten)
+
+- Overlay-Karten: `rounded-2xl`, Sage-50, Sage-700-Titel, Sage-Button (Grün wie Quote-Kreis).
+- Mobil: Karte unter dem Bild (kein Überdecken), Tap-Ziele 44px, Fließtext ≥16px.
+- Fließtexte in Schritt-/Anliegen-/FAQ-Karten von `text-sm` auf `text-base`.
+
 ## 2026-08-18 (mittag, Slider-Feinschliff)
 
 - RP-03 vor Änderung (`rp-03-pre-slider-refine`).

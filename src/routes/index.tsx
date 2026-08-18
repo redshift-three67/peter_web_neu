@@ -184,7 +184,7 @@ function Home() {
                   <h3 className="font-display text-2xl text-sage-deep">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-sm text-muted">{item.text}</p>
+                  <p className="mt-2 text-base leading-relaxed text-muted">{item.text}</p>
                   <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sage">
                     Weiterlesen <ArrowRight className="size-4" />
                   </span>
@@ -224,7 +224,7 @@ function Home() {
               <h3 className="font-display text-2xl font-semibold text-sage-700">
                 {step.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
+              <p className="mt-2 text-base leading-relaxed text-muted">
                 {step.text}
               </p>
             </div>
