@@ -1,7 +1,7 @@
 # Muster Start + NLS und Fallback
 
-Tag vor dem Muster: **`rp-15-pre-aplus-c`** (`ab1d654`)  
-Muster-Tag: **`rp-15-aplus-c-muster`**
+**Aktuell sichtbar:** Muster A+C (Default).  
+Vorheriges Design: `?look=alt` oder Leiste „Zurück…“.
 
 ## Im Browser (ohne Git)
 
