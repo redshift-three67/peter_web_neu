@@ -51,7 +51,7 @@ Intuition der App-Startseite: Zugangswahl (Informieren / Neupatient / Anmelden).
 
 Aus dem App-Schema und Meta:
 
-- E-Mail im Schema: `praxis_rauch@icloud.com` (öffentlich: `info@rauch-heilpraktiker.de`)
+- E-Mail im Schema war `praxis_rauch@icloud.com` — das ist seit 18.08.2026 die gültige Praxisadresse und im CMS übernommen.
 - Geo: `48.3561, 10.9056` (Innenstadt), Praxis liegt in **Hochzoll** (`48.33937, 10.94893`)
 - Öffnungszeiten Schema: 09:00–18:00 — live: 10:00–12:30 und 13:00–19:00
 - `sameAs: []` — kein Facebook, kein Google-Profil
