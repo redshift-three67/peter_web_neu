@@ -1,7 +1,7 @@
 # Muster Start + NLS und Fallback
 
-**Aktuell sichtbar:** Muster A+C (Default).  
-Vorheriges Design: `?look=alt` oder Leiste „Zurück…“.
+**Aktuell sichtbar:** A+C plus Neko/Oura-Struktur (Default).  
+Vorheriges Design: `?look=alt` oder Leiste. Hart: Tag `rp-16-pre-neko-oura`.
 
 ## Im Browser (ohne Git)
 

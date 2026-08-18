@@ -14,13 +14,22 @@ export const Route = createFileRoute("/nls-diagnostik")({
 });
 
 function Page() {
-  const { neko } = useMusterSkin();
-  const shared = {
-    heading: "NLS-Diagnostik in Augsburg",
-    kicker: meta.kicker,
-    lead:
-      "Ergänzendes Hinweisverfahren in der Naturheilpraxis Rauch, Augsburg-Hochzoll. Kein Laborersatz, keine ärztliche Diagnose, kein Heilversprechen.",
-  };
-  if (neko) return <NlsNeko {...shared} />;
-  return <HubFromArchive slug="nls-diagnostik" {...shared} />;
+  const { ac } = useMusterSkin();
+  if (ac) {
+    return (
+      <NlsNeko
+        heading="NLS-Diagnostik in Augsburg"
+        kicker={meta.kicker}
+        lead="Ergänzendes Hinweisverfahren in der Naturheilpraxis Rauch, Augsburg-Hochzoll. Kein Laborersatz, keine ärztliche Diagnose, kein Heilversprechen."
+      />
+    );
+  }
+  return (
+    <HubFromArchive
+      slug="nls-diagnostik"
+      heading="NLS-Diagnostik in Augsburg"
+      kicker={meta.kicker}
+      lead="Ergänzendes Hinweisverfahren in der Naturheilpraxis Rauch, Augsburg-Hochzoll. Kein Laborersatz, keine ärztliche Diagnose, kein Heilversprechen."
+    />
+  );
 }
