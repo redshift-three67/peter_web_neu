@@ -21,6 +21,14 @@
 | `/manuelle-therapieverfahren-uebersicht` | manuelle therapie / osteopathie augsburg |
 | `/bioresonanz-therapie` | bioresonanz augsburg |
 
+### Welle 3 (umgesetzt, `rp-11-hubs-wave3`)
+
+Datenschutz und Rechtshinweise auf alten Slugs (moderne DSGVO/HWG-Fassung, nicht der WP-Google-Fonts-Text).
+Homöopathie, NAET, Diagnostik-Übersicht als HubFromArchive.
+Downloadbereich vorbereitet – PDF-Binaries lagen nicht im Crawl, werden 1:1 nachgelegt.
+
+Die 18 Hubs sind damit auf den WordPress-Pfaden angelegt.
+
 ### Welle 2 (umgesetzt, `rp-10-hubs-wave2`)
 
 `/psychotherapie-augsburg`, `/nls-diagnostik`, `/osteopathie-techniken` als HubFromArchive.

@@ -1,66 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Container, PageHero, Prose } from "@/components/site/Shared";
-import { practice } from "@/content/site";
-import { pageHead } from "@/lib/seo";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/datenschutz")({
-  head: () =>
-    pageHead({
-      title: "Datenschutz – Naturheilpraxis Rauch",
-      description:
-        "Datenschutzerklärung der Naturheilpraxis Peter Rauch. DSGVO, TDDDG, Formulare und Hosting.",
-      path: "/datenschutz",
-    }),
-  component: Page,
+  beforeLoad: () => {
+    throw redirect({ href: "/datenschutzerklaerung" });
+  },
 });
-
-function Page() {
-  return (
-    <>
-      <PageHero
-        kicker="Recht"
-        title="Datenschutzerklärung"
-        lead="Gesundheitsdaten sind besonders schützenswert. Diese Erklärung gilt für Website, Kontaktformular und Anamnesebogen."
-      />
-      <Container className="py-14">
-        <Prose>
-          <p>
-            Verantwortlicher: {practice.person}, {practice.street},{" "}
-            {practice.zip} {practice.city}, {practice.email}.
-          </p>
-          <h2>Hosting und Protokolle</h2>
-          <p>
-            Beim Aufruf entstehen technisch notwendige Server-Logs (IP,
-            Zeitpunkt, aufgerufene Ressource). Rechtsgrundlage: Art. 6 Abs. 1
-            lit. f DSGVO, berechtigte Interessen an Betrieb und Sicherheit.
-          </p>
-          <h2>Formulare</h2>
-          <p>
-            Kontakt- und Anamnesedaten werden ausschließlich zur
-            Terminvorbereitung und Praxisorganisation verarbeitet (Art. 6
-            Abs. 1 lit. a und lit. b DSGVO, Art. 9 Abs. 2 lit. a und h DSGVO).
-            Anamnesedaten sind Gesundheitsdaten. Die Übermittlung erfolgt über
-            diese Domain, nicht über fremde Prototyp-Hosts.
-          </p>
-          <h2>Cookies und Einwilligung</h2>
-          <p>
-            Essenzielle Cookies für Sitzung und Sicherheit. Analyse- oder
-            Werbecookies nur nach Einwilligung gemäß TDDDG und DSGVO (Consent
-            Mode, sobald Kampagnen geschaltet werden).
-          </p>
-          <h2>Schriftarten</h2>
-          <p>
-            Schriften werden lokal ausgeliefert. Es findet kein Aufruf von
-            Google Fonts statt.
-          </p>
-          <h2>Ihre Rechte</h2>
-          <p>
-            Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit
-            und Widerspruch. Beschwerde bei der zuständigen Aufsichtsbehörde
-            (BayLDA).
-          </p>
-        </Prose>
-      </Container>
-    </>
-  );
-}

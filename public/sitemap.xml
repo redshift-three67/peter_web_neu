@@ -12,5 +12,11 @@
   <url><loc>https://rauch-heilpraktiker.de/kontakt</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://rauch-heilpraktiker.de/online-anamnesebogen</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://rauch-heilpraktiker.de/impressum</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://rauch-heilpraktiker.de/datenschutzerklaerung</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://rauch-heilpraktiker.de/rechtshinweise-therapieverfahren</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://rauch-heilpraktiker.de/klassische-homoeopathie</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://rauch-heilpraktiker.de/naet-methode-allergie-behandlung</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://rauch-heilpraktiker.de/diagnostik-informationstherapie</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://rauch-heilpraktiker.de/downloadbereich-naturheilpraxis-rauch</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://rauch-heilpraktiker.de/ueber-mich</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

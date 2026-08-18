@@ -83,4 +83,8 @@ export const dedicatedRoutes = new Set([
   "/psychotherapie-augsburg",
   "/nls-diagnostik",
   "/osteopathie-techniken",
+  "/klassische-homoeopathie",
+  "/naet-methode-allergie-behandlung",
+  "/diagnostik-informationstherapie",
+  "/downloadbereich-naturheilpraxis-rauch",
 ]);

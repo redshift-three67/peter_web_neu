@@ -11,7 +11,7 @@
 
 1. **Aktivierungsreihenfolge** der Archivseiten (welche zuerst öffentlich)
 2. Optional: Rank-Math-**Seiten**-Export (Title/Description je URL)
-3. **PDFs**, die im Downloadbereich bleiben sollen
+3. **PDFs** aus dem Downloadbereich – Binaries fehlten im Crawl, Seite `/downloadbereich-naturheilpraxis-rauch` ist vorbereitet.
 4. ProvenExpert-Widget (optional)
 5. Freigabe der **HWG-Texte** Seite für Seite (Wortlaut ist noch WP-Original)
 
