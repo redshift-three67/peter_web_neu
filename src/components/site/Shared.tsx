@@ -149,7 +149,7 @@ export function FaqList({
               </span>
             </span>
           </summary>
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
+          <p className="mt-3 max-w-3xl text-base leading-relaxed text-muted">
             {item.a}
           </p>
         </details>
@@ -160,7 +160,7 @@ export function FaqList({
 
 export function Disclaimer({ className }: { className?: string }) {
   return (
-    <p className={cn("text-sm leading-relaxed text-muted", className)}>
+    <p className={cn("text-base leading-relaxed text-muted", className)}>
       Die auf dieser Website dargestellten Verfahren dienen der allgemeinen
       Aufklärung und ersetzen keine ärztliche Diagnose, Beratung oder
       Behandlung. Es werden keine Heilversprechen abgegeben. Ich bin

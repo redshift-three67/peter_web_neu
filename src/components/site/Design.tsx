@@ -116,7 +116,7 @@ export function FeatureRow({
       </span>
       <div>
         <p className="font-medium text-fg">{title}</p>
-        <p className="text-sm text-muted">{text}</p>
+        <p className="text-base leading-relaxed text-muted">{text}</p>
       </div>
     </div>
   );
@@ -159,7 +159,7 @@ export function NestedInfoGrid({
             <item.icon className="size-4 text-sage" aria-hidden />
             {item.title}
           </p>
-          <p className="mt-2 text-sm leading-relaxed text-muted">{item.text}</p>
+          <p className="mt-2 text-base leading-relaxed text-muted">{item.text}</p>
         </div>
       ))}
     </div>
