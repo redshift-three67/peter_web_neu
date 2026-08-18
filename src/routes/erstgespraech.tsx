@@ -95,7 +95,7 @@ function Page() {
               <Link to="/kontakt">Kontaktformular</Link>
             </Button>
             <Button asChild variant="clay" className="w-full">
-              <Link to="/anamnese">Online-Anamnesebogen</Link>
+              <Link to="/online-anamnesebogen">Online-Anamnesebogen</Link>
             </Button>
           </div>
         </aside>

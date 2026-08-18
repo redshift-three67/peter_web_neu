@@ -63,90 +63,43 @@ export const reviews = {
 } as const;
 
 export const nav = [
-  { to: "/", label: "Start", text: "Praxis in Augsburg-Hochzoll" },
+  { to: "/", label: "Start", text: "Heilpraktiker Augsburg-Hochzoll" },
   { to: "/ueber-mich", label: "Über mich", text: "Vita, Erlaubnis, Erfahrung" },
   {
-    label: "Anliegen",
+    label: "Diagnostik",
     children: [
-      {
-        to: "/schmerztherapie-augsburg",
-        label: "Schmerz",
-        text: "Rücken, Gelenke, chronische Schmerzen",
-      },
-      {
-        to: "/allergie-augsburg",
-        label: "Allergie",
-        text: "Unverträglichkeiten, Hinweisdiagnostik",
-      },
-      {
-        to: "/erschoepfung-augsburg",
-        label: "Erschöpfung & Psyche",
-        text: "Burnout, Unruhe, Schlaf",
-      },
+      { to: "/diagnostik-informationstherapie", label: "Übersicht Diagnostik", text: "Hinweisdiagnostik in der Praxis" },
+      { to: "/nls-diagnostik", label: "NLS-Diagnostik", text: "Metatron / NLS in Augsburg" },
+      { to: "/vieva-pro-herzratenvariabilitaet", label: "Vieva Pro", text: "HRV und Vitalfeld" },
+      { to: "/hinweisdiagnostik-eav-elektroakupunktur-nach-dr-voll", label: "EAV nach Dr. Voll", text: "Elektroakupunktur, hinweisgebend" },
     ],
   },
   {
-    label: "Verfahren",
+    label: "Manuelle Verfahren",
     children: [
-      {
-        to: "/verfahren/manuell",
-        label: "Manuell & Osteopathie",
-        text: "Hände, Bewegung, Regulation",
-      },
-      {
-        to: "/verfahren/frequenz",
-        label: "Hinweisdiagnostik & Frequenz",
-        text: "Einordnung, keine Labordiagnose",
-      },
-      {
-        to: "/verfahren/naturheilkunde",
-        label: "Naturheilkunde & Gespräch",
-        text: "Pflanze, Ernährung, Zeit",
-      },
-      {
-        to: "/hypnotherapie-augsburg",
-        label: "Hypnotherapie",
-        text: "Gesprächshypnose, ergänzend",
-      },
+      { to: "/manuelle-therapieverfahren-uebersicht", label: "Übersicht manuell", text: "Osteopathie, IMT, Lowen" },
+      { to: "/osteopathie-techniken", label: "Osteopathie", text: "Manuelle Techniken in Augsburg" },
+      { to: "/schmerztherapie-augsburg", label: "Schmerztherapie Augsburg", text: "Rücken, Gelenke, chronischer Schmerz" },
     ],
   },
   {
-    label: "Wissen",
+    label: "Naturheilkunde",
     children: [
-      {
-        to: "/quellenhinweis",
-        label: "Quellenhinweis & Haftung",
-        text: "Herkunft, Einordnung und Grenzen",
-      },
-      {
-        to: "/rechtshinweise",
-        label: "Rechtshinweise",
-        text: "Keine Heilversprechen, HWG",
-      },
-      {
-        to: "/erstgespraech",
-        label: "Patientenaufklärung",
-        text: "Kosten, Erstattung und GebüH",
-      },
-      {
-        to: "/so-arbeite-ich",
-        label: "Ihr Therapieweg",
-        text: "Ablauf Schritt für Schritt",
-      },
-      {
-        to: "/anamnese",
-        label: "Anamnesebogen",
-        text: "Patientenaufnahme vor dem Termin",
-      },
-      {
-        to: "/datenschutz",
-        label: "Datenschutzerklärung",
-        text: "Informationen zum Datenschutz",
-      },
+      { to: "/naturheilkunde", label: "Naturheilkunde Augsburg", text: "Homöopathie, Pflanzen, NAET" },
+      { to: "/klassische-homoeopathie", label: "Klassische Homöopathie", text: "Nach Hahnemann" },
+      { to: "/naet-methode-allergie-behandlung", label: "NAET / Allergie", text: "Unverträglichkeiten, ergänzend" },
+      { to: "/naturheilkundliche-darmsanierung", label: "Darmsanierung", text: "Naturheilkundliche Begleitung" },
     ],
   },
-  { to: "/erstgespraech", label: "Erstgespräch", text: "Ablauf und Kostenrahmen" },
-  { to: "/kontakt", label: "Kontakt", text: "Anruf, Nachricht, Anfahrt" },
+  {
+    label: "Bioresonanz",
+    children: [
+      { to: "/bioresonanz-therapie", label: "Bioresonanz Augsburg", text: "Hinweisgebend, kein Laborersatz" },
+      { to: "/biophysikalische-informationstherapie-bit", label: "Informationstherapie", text: "BIT in der Praxis" },
+      { to: "/hypnotherapie-augsburg", label: "Hypnotherapie Augsburg", text: "Gesprächshypnose" },
+    ],
+  },
+  { to: "/kontakt", label: "Kontakt", text: "Hochzoll, Telefon, Nachricht" },
 ] as const;
 
 export const footerNav = {
@@ -155,19 +108,19 @@ export const footerNav = {
     { to: "/so-arbeite-ich", label: "Ablauf" },
     { to: "/erstgespraech", label: "Erstgespräch & Kosten" },
     { to: "/anfahrt", label: "Anfahrt Hochzoll" },
-    { to: "/anamnese", label: "Online-Anamnese" },
+    { to: "/online-anamnesebogen", label: "Online-Anamnese" },
   ],
   anliegen: [
     { to: "/schmerztherapie-augsburg", label: "Schmerztherapie Augsburg" },
-    { to: "/allergie-augsburg", label: "Allergie Augsburg" },
-    { to: "/erschoepfung-augsburg", label: "Erschöpfung & Burnout" },
+    { to: "/naet-methode-allergie-behandlung", label: "Allergie / NAET" },
+    { to: "/psychotherapie-augsburg", label: "Psychotherapie Augsburg" },
     { to: "/hypnotherapie-augsburg", label: "Hypnotherapie Augsburg" },
-    { to: "/bioresonanz-augsburg", label: "Bioresonanz Augsburg" },
+    { to: "/bioresonanz-therapie", label: "Bioresonanz Augsburg" },
   ],
   recht: [
     { to: "/impressum", label: "Impressum" },
-    { to: "/datenschutz", label: "Datenschutz" },
-    { to: "/rechtshinweise", label: "Rechtshinweise" },
+    { to: "/datenschutzerklaerung", label: "Datenschutz" },
+    { to: "/rechtshinweise-therapieverfahren", label: "Rechtshinweise" },
     { to: "/quellenhinweis", label: "Quellen & Haftung" },
     { to: "/login", label: "Praxiszugang" },
     { to: "/archiv", label: "Seitenarchiv" },
