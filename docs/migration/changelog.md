@@ -1,5 +1,12 @@
 # Changelog — Migration
 
+## 2026-08-18 (Abend / Rollback)
+
+- Auftraggeber: zurück auf `rp-20-pre-palette` (`8af29ad`).
+- `main` zeigt Original (Lovable-Grün, alter Header, voller Slider). Default `look=alt`.
+- Oura-Rahmen, Neko-Menügrün, Farbtabelle-Live **nicht** auf `main`; Tags `rp-20-palette` … `rp-24-pre-rollback` behalten.
+- Doku: `docs/handover-2026-08-18-abend/00-STAND.md`.
+
 ## 2026-08-18 (Pause / Übergabe)
 
 - Ordner `docs/handover-2026-08-18/` für Dev, Grafik, Technik.

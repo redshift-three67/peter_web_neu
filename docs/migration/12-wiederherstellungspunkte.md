@@ -1,39 +1,44 @@
 # Wiederherstellungspunkte
 
-Lokales Git-Repo. Identität nur lokal: `Rauch Migration <dev@rauch-heilpraktiker.local>`.
+Lokales Git-Repo, Remote [redshift-three67/peter_web_neu](https://github.com/redshift-three67/peter_web_neu).
 
-| Punkt | Tag | Commit | Wann | Inhalt |
-|---|---|---|---|---|
-| RP-01 | `rp-01-design-tokens` | `ddabd0c` | 18.08.2026 | Look-Angleichung Schritt 1. |
-| RP-02 | `rp-02-slider-strukturen` | `c88df55` | 18.08.2026 | Hero-Slider, App-Strukturen. |
-| RP-03 | `rp-03-pre-slider-refine` | `f6c54fe` | 18.08.2026 | Vor Höhe/Overlays/Mail. |
-| RP-04 | `rp-04-slider-overlays` | `214920f` | 18.08.2026 | Höhe −⅓, Live-Overlays, iCloud-Mail. |
-| RP-05 | `rp-05-overlay-type` | `15d44d9` | 18.08.2026 | Sage-Karten, 16px-Fließtext. |
-| RP-06 | `rp-06-menu-type` | `b7e803d` | 18.08.2026 | Slider-H1 Sage, Infothek-Menü. |
-| RP-07 | `rp-07-card-transparency` | `5a20227` | 18.08.2026 | Glas-Karten, w-fit. |
-| RP-08 | `rp-08-pre-archive-skin` | `5a20227` | 18.08.2026 | **Vor** Archiv-Rollout. |
-| RP-08b | `rp-08-archive-skin` | `2d2cab7` | 18.08.2026 | Archivseiten in Start-Haut. |
-| RP-09 | `rp-09-hubs-wave1` | `ab97cbe` | 18.08.2026 | Welle 1 Hubs, GEO, Menü. |
-| RP-10 | `rp-10-hubs-wave2` | `8427359` | 18.08.2026 | Welle 2. |
-| RP-11 | `rp-11-hubs-wave3` | `1d86301` | 18.08.2026 | 18 Hubs vollständig. |
-| RP-12 | `rp-12-hub-ux` | `8704b09` | 18.08.2026 | Start-Module auf Hubs. |
-| RP-13 | `rp-13-hub-fullwidth` | `c5e3ca2` | 18.08.2026 | Volle Breite, Scan-Karten. |
-| RP-14 | `rp-14-hub-rhythm` | `23c5751` | 18.08.2026 | Start-Rhythmus + Themenstimmung. **Pause.** |
+**Aktueller Auftraggeber-Stand (`main`):** `rp-20-pre-palette` · `8af29ad`
+
+| Punkt | Tag | Inhalt |
+|---|---|---|
+| RP-01 … RP-14 | `rp-01-design-tokens` … `rp-14-hub-rhythm` | Hub-Rollout, Start-Rhythmus. Siehe ältere Tabelle unten. |
+| RP-15 vor | `rp-15-pre-aplus-c` | Vor A+C-Muster |
+| RP-15 | `rp-15-aplus-c-muster` | A+C auf Start + NLS, Fallback `look=alt` |
+| RP-16 vor | `rp-16-pre-neko-oura` | Vor Neko/Oura-Struktur |
+| RP-16 | `rp-16-neko-oura` | HomeAc + NlsNeko |
+| RP-17 | `rp-17-oura` | Oura nur Start |
+| RP-18 | `rp-18-neko-nls` | Neko nur NLS |
+| RP-19 | `rp-19-aplus-c` | Zurück auf A+C-Kombination |
+| **RP-20 vor = main** | **`rp-20-pre-palette`** | **Original als Default. Aktuell.** |
+| RP-20 | `rp-20-palette` | Farbtabelle global (nicht auf main) |
+| RP-21 | `rp-21-oura-chrome` | Oura-Header 3 Seiten + Wisch |
+| RP-22 | `rp-22-oura-frame` | Rahmen auf Neko-BG, Logo |
+| RP-23 | `rp-23-framed-inset` | Slider+Menü gerahmt |
+| RP-24 | `rp-24-pre-rollback` | Letzter Stand vor Reset auf RP-20 |
 
 ## Zurücksetzen
 
 ```bash
-# Nur Quellcode vor dem Archiv-Rollout
-git checkout rp-08-pre-archive-skin -- src
+# Aktueller freigegebener Stand
+git checkout rp-20-pre-palette
 
-# Früherer Designstand
-git checkout rp-07-card-transparency -- src
+# Letzter Oura/Rahmen-Versuch (nicht main)
+git checkout rp-23-framed-inset -- src
 ```
 
-`public/media/originals/` bleibt beim Checkout erhalten (meist ungetrackt).
+`public/media/originals/` bleibt beim Checkout erhalten (oft ungetrackt).
 
-## Was der Archiv-Rollout nicht anfasst
+## RP-01 bis RP-14 (Mittag)
 
-- Wortlaut der portierten Texte
-- noindex / draft
-- Login, Infothek, gesperrte App-Inhalte
+| Punkt | Tag | Inhalt |
+|---|---|---|
+| RP-01 | `rp-01-design-tokens` | Look-Angleichung Schritt 1 |
+| RP-02 | `rp-02-slider-strukturen` | Hero-Slider |
+| RP-08 | `rp-08-archive-skin` | Archivseiten in Start-Haut |
+| RP-09–11 | `rp-09-hubs-wave1` … `rp-11-hubs-wave3` | 18 Hubs |
+| RP-14 | `rp-14-hub-rhythm` | Start-Rhythmus, Pause mittags |

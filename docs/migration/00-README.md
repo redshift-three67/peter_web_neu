@@ -19,11 +19,12 @@ Stand des Protokolls: **18. August 2026**.
 | [09-uploads-inventar.md](./09-uploads-inventar.md) | Originale aus GitHub, Umlaut-Dateien, Kuratierung |
 | [10-bildzuordnung.md](./10-bildzuordnung.md) | Live-Bilder je Seite → Original + Slider |
 | [11-lovable-design-pruefung.md](./11-lovable-design-pruefung.md) | App-Look vs. CMS: was adaptierbar ist |
-| [12-wiederherstellungspunkte.md](./12-wiederherstellungspunkte.md) | Git-Tags RP-01 bis RP-08 |
+| [12-wiederherstellungspunkte.md](./12-wiederherstellungspunkte.md) | Git-Tags RP-01 bis RP-24, **main = rp-20-pre-palette** |
 | [13-archiv-design.md](./13-archiv-design.md) | Archiv-Rollout: Slider, UX, E-E-A-T |
 | [14-hubs-geo-seo.md](./14-hubs-geo-seo.md) | 18 Hubs, alte URLs, GEO, Wellen, Admin |
 | [changelog.md](./changelog.md) | Chronologisches Protokoll |
-| **[handover-2026-08-18/](../handover-2026-08-18/00-START-HIER.md)** | **Pause-Übergabe für Dev/Grafik/Technik** |
+| **[handover-2026-08-18-abend/](../handover-2026-08-18-abend/00-STAND.md)** | **Aktueller Abendstand nach Rollback** |
+| [handover-2026-08-18/](../handover-2026-08-18/00-START-HIER.md) | Mittag-Übergabe (rp-14) |
 
 Quelldaten des Crawls liegen unter:
 
