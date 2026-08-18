@@ -24,7 +24,7 @@ export function HeroSlider() {
     slide.href.includes("anamnes") || slide.href.includes("lovable");
   const ctaClass = isClay
     ? "mt-3 inline-flex min-h-11 items-center rounded-lg bg-clay px-5 text-sm font-medium text-paper hover:bg-clay-deep"
-    : "mt-3 inline-flex min-h-11 items-center rounded-lg bg-field px-5 text-sm font-medium text-paper hover:bg-ink";
+    : "mt-3 inline-flex min-h-11 items-center rounded-lg bg-[#3A6B4F] px-5 text-sm font-medium text-paper hover:opacity-90";
 
   const goPrev = () =>
     setIndex((i) => (i - 1 + homeSlides.length) % homeSlides.length);
@@ -60,8 +60,8 @@ export function HeroSlider() {
           />
         ))}
 
-        <div className="absolute inset-0 bg-gradient-to-r from-field/70 via-field/18 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-field/35 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#3A5258]/70 via-[#3A5258]/18 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#3A5258]/40 to-transparent" />
 
         <div className="absolute left-3 top-3 z-10 max-w-[min(20.5rem,calc(100%-1.5rem))] sm:left-5 sm:top-5 sm:max-w-[min(26rem,calc(100%-3rem))] md:left-6 md:top-6 lg:max-w-[28rem]">
           <div className={`${glassCard} w-fit px-3.5 py-2.5 sm:px-4 sm:py-3`}>

@@ -134,7 +134,7 @@ export function QuotePanel({
       <span className="absolute -right-6 -top-6 size-24 rounded-full bg-sand-200/80" aria-hidden />
       <span className="absolute -bottom-8 left-8 size-20 rounded-full bg-sage-200/90" aria-hidden />
       <div className="relative flex h-full flex-col items-center justify-center text-center">
-        <span className="grid size-16 place-items-center rounded-full bg-sage text-paper shadow-soft">
+        <span className="grid size-16 place-items-center rounded-full bg-[#3A6B4F] text-paper shadow-soft">
           <span className="font-display text-2xl leading-none">“</span>
         </span>
         <blockquote className="mt-6 font-display text-2xl font-medium text-sage-700">

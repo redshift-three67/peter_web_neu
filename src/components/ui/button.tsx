@@ -9,15 +9,15 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-field text-paper shadow-soft hover:bg-ink hover:shadow-card",
+          "bg-[#3A6B4F] text-paper shadow-soft hover:opacity-90 hover:shadow-card",
         secondary:
           "border border-line bg-paper text-ink hover:bg-card",
         outline:
           "border-2 border-ink/20 bg-transparent text-ink hover:border-ink hover:bg-ink hover:text-paper",
         ghost: "text-ink hover:bg-card",
         clay: "bg-clay text-paper shadow-soft hover:bg-clay-deep",
-        hero: "rounded-xl bg-field px-8 py-6 text-base text-paper shadow-elevated hover:bg-ink hover:shadow-card",
-        link: "px-0 text-sage underline-offset-4 hover:underline",
+        hero: "rounded-xl bg-[#3A6B4F] px-8 py-6 text-base text-paper shadow-elevated hover:opacity-90 hover:shadow-card",
+        link: "px-0 text-[#3A6B4F] underline-offset-4 hover:underline",
       },
       size: {
         sm: "h-9 rounded-md px-3",
