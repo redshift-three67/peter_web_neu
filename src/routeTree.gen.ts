@@ -18,13 +18,18 @@ import { Route as ArchivRouteImport } from './routes/archiv'
 import { Route as BioresonanzAugsburgRouteImport } from './routes/bioresonanz-augsburg'
 import { Route as BioresonanzTherapieRouteImport } from './routes/bioresonanz-therapie'
 import { Route as DatenschutzRouteImport } from './routes/datenschutz'
+import { Route as DatenschutzerklaerungRouteImport } from './routes/datenschutzerklaerung'
+import { Route as DiagnostikInformationstherapieRouteImport } from './routes/diagnostik-informationstherapie'
+import { Route as DownloadbereichNaturheilpraxisRauchRouteImport } from './routes/downloadbereich-naturheilpraxis-rauch'
 import { Route as ErschoepfungAugsburgRouteImport } from './routes/erschoepfung-augsburg'
 import { Route as ErstgespraechRouteImport } from './routes/erstgespraech'
 import { Route as HypnotherapieAugsburgRouteImport } from './routes/hypnotherapie-augsburg'
 import { Route as ImpressumRouteImport } from './routes/impressum'
+import { Route as KlassischeHomoeopathieRouteImport } from './routes/klassische-homoeopathie'
 import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as ManuelleTherapieverfahrenUebersichtRouteImport } from './routes/manuelle-therapieverfahren-uebersicht'
+import { Route as NaetMethodeAllergieBehandlungRouteImport } from './routes/naet-methode-allergie-behandlung'
 import { Route as NaturheilkundeRouteImport } from './routes/naturheilkunde'
 import { Route as NlsDiagnostikRouteImport } from './routes/nls-diagnostik'
 import { Route as OnlineAnamnesebogenRouteImport } from './routes/online-anamnesebogen'
@@ -33,6 +38,7 @@ import { Route as PraxisRouteImport } from './routes/praxis'
 import { Route as PsychotherapieAugsburgRouteImport } from './routes/psychotherapie-augsburg'
 import { Route as QuellenhinweisRouteImport } from './routes/quellenhinweis'
 import { Route as RechtshinweiseRouteImport } from './routes/rechtshinweise'
+import { Route as RechtshinweiseTherapieverfahrenRouteImport } from './routes/rechtshinweise-therapieverfahren'
 import { Route as SchmerztherapieAugsburgRouteImport } from './routes/schmerztherapie-augsburg'
 import { Route as SoArbeiteIchRouteImport } from './routes/so-arbeite-ich'
 import { Route as UeberMichRouteImport } from './routes/ueber-mich'
@@ -86,6 +92,23 @@ const DatenschutzRoute = DatenschutzRouteImport.update({
   path: '/datenschutz',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DatenschutzerklaerungRoute = DatenschutzerklaerungRouteImport.update({
+  id: '/datenschutzerklaerung',
+  path: '/datenschutzerklaerung',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DiagnostikInformationstherapieRoute =
+  DiagnostikInformationstherapieRouteImport.update({
+    id: '/diagnostik-informationstherapie',
+    path: '/diagnostik-informationstherapie',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DownloadbereichNaturheilpraxisRauchRoute =
+  DownloadbereichNaturheilpraxisRauchRouteImport.update({
+    id: '/downloadbereich-naturheilpraxis-rauch',
+    path: '/downloadbereich-naturheilpraxis-rauch',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ErschoepfungAugsburgRoute = ErschoepfungAugsburgRouteImport.update({
   id: '/erschoepfung-augsburg',
   path: '/erschoepfung-augsburg',
@@ -106,6 +129,11 @@ const ImpressumRoute = ImpressumRouteImport.update({
   path: '/impressum',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KlassischeHomoeopathieRoute = KlassischeHomoeopathieRouteImport.update({
+  id: '/klassische-homoeopathie',
+  path: '/klassische-homoeopathie',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const KontaktRoute = KontaktRouteImport.update({
   id: '/kontakt',
   path: '/kontakt',
@@ -120,6 +148,12 @@ const ManuelleTherapieverfahrenUebersichtRoute =
   ManuelleTherapieverfahrenUebersichtRouteImport.update({
     id: '/manuelle-therapieverfahren-uebersicht',
     path: '/manuelle-therapieverfahren-uebersicht',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const NaetMethodeAllergieBehandlungRoute =
+  NaetMethodeAllergieBehandlungRouteImport.update({
+    id: '/naet-methode-allergie-behandlung',
+    path: '/naet-methode-allergie-behandlung',
     getParentRoute: () => rootRouteImport,
   } as any)
 const NaturheilkundeRoute = NaturheilkundeRouteImport.update({
@@ -162,6 +196,12 @@ const RechtshinweiseRoute = RechtshinweiseRouteImport.update({
   path: '/rechtshinweise',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RechtshinweiseTherapieverfahrenRoute =
+  RechtshinweiseTherapieverfahrenRouteImport.update({
+    id: '/rechtshinweise-therapieverfahren',
+    path: '/rechtshinweise-therapieverfahren',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const SchmerztherapieAugsburgRoute = SchmerztherapieAugsburgRouteImport.update({
   id: '/schmerztherapie-augsburg',
   path: '/schmerztherapie-augsburg',
@@ -208,13 +248,18 @@ export interface FileRoutesByFullPath {
   '/bioresonanz-augsburg': typeof BioresonanzAugsburgRoute
   '/bioresonanz-therapie': typeof BioresonanzTherapieRoute
   '/datenschutz': typeof DatenschutzRoute
+  '/datenschutzerklaerung': typeof DatenschutzerklaerungRoute
+  '/diagnostik-informationstherapie': typeof DiagnostikInformationstherapieRoute
+  '/downloadbereich-naturheilpraxis-rauch': typeof DownloadbereichNaturheilpraxisRauchRoute
   '/erschoepfung-augsburg': typeof ErschoepfungAugsburgRoute
   '/erstgespraech': typeof ErstgespraechRoute
   '/hypnotherapie-augsburg': typeof HypnotherapieAugsburgRoute
   '/impressum': typeof ImpressumRoute
+  '/klassische-homoeopathie': typeof KlassischeHomoeopathieRoute
   '/kontakt': typeof KontaktRoute
   '/login': typeof LoginRoute
   '/manuelle-therapieverfahren-uebersicht': typeof ManuelleTherapieverfahrenUebersichtRoute
+  '/naet-methode-allergie-behandlung': typeof NaetMethodeAllergieBehandlungRoute
   '/naturheilkunde': typeof NaturheilkundeRoute
   '/nls-diagnostik': typeof NlsDiagnostikRoute
   '/online-anamnesebogen': typeof OnlineAnamnesebogenRoute
@@ -223,6 +268,7 @@ export interface FileRoutesByFullPath {
   '/psychotherapie-augsburg': typeof PsychotherapieAugsburgRoute
   '/quellenhinweis': typeof QuellenhinweisRoute
   '/rechtshinweise': typeof RechtshinweiseRoute
+  '/rechtshinweise-therapieverfahren': typeof RechtshinweiseTherapieverfahrenRoute
   '/schmerztherapie-augsburg': typeof SchmerztherapieAugsburgRoute
   '/so-arbeite-ich': typeof SoArbeiteIchRoute
   '/ueber-mich': typeof UeberMichRoute
@@ -241,13 +287,18 @@ export interface FileRoutesByTo {
   '/bioresonanz-augsburg': typeof BioresonanzAugsburgRoute
   '/bioresonanz-therapie': typeof BioresonanzTherapieRoute
   '/datenschutz': typeof DatenschutzRoute
+  '/datenschutzerklaerung': typeof DatenschutzerklaerungRoute
+  '/diagnostik-informationstherapie': typeof DiagnostikInformationstherapieRoute
+  '/downloadbereich-naturheilpraxis-rauch': typeof DownloadbereichNaturheilpraxisRauchRoute
   '/erschoepfung-augsburg': typeof ErschoepfungAugsburgRoute
   '/erstgespraech': typeof ErstgespraechRoute
   '/hypnotherapie-augsburg': typeof HypnotherapieAugsburgRoute
   '/impressum': typeof ImpressumRoute
+  '/klassische-homoeopathie': typeof KlassischeHomoeopathieRoute
   '/kontakt': typeof KontaktRoute
   '/login': typeof LoginRoute
   '/manuelle-therapieverfahren-uebersicht': typeof ManuelleTherapieverfahrenUebersichtRoute
+  '/naet-methode-allergie-behandlung': typeof NaetMethodeAllergieBehandlungRoute
   '/naturheilkunde': typeof NaturheilkundeRoute
   '/nls-diagnostik': typeof NlsDiagnostikRoute
   '/online-anamnesebogen': typeof OnlineAnamnesebogenRoute
@@ -256,6 +307,7 @@ export interface FileRoutesByTo {
   '/psychotherapie-augsburg': typeof PsychotherapieAugsburgRoute
   '/quellenhinweis': typeof QuellenhinweisRoute
   '/rechtshinweise': typeof RechtshinweiseRoute
+  '/rechtshinweise-therapieverfahren': typeof RechtshinweiseTherapieverfahrenRoute
   '/schmerztherapie-augsburg': typeof SchmerztherapieAugsburgRoute
   '/so-arbeite-ich': typeof SoArbeiteIchRoute
   '/ueber-mich': typeof UeberMichRoute
@@ -275,13 +327,18 @@ export interface FileRoutesById {
   '/bioresonanz-augsburg': typeof BioresonanzAugsburgRoute
   '/bioresonanz-therapie': typeof BioresonanzTherapieRoute
   '/datenschutz': typeof DatenschutzRoute
+  '/datenschutzerklaerung': typeof DatenschutzerklaerungRoute
+  '/diagnostik-informationstherapie': typeof DiagnostikInformationstherapieRoute
+  '/downloadbereich-naturheilpraxis-rauch': typeof DownloadbereichNaturheilpraxisRauchRoute
   '/erschoepfung-augsburg': typeof ErschoepfungAugsburgRoute
   '/erstgespraech': typeof ErstgespraechRoute
   '/hypnotherapie-augsburg': typeof HypnotherapieAugsburgRoute
   '/impressum': typeof ImpressumRoute
+  '/klassische-homoeopathie': typeof KlassischeHomoeopathieRoute
   '/kontakt': typeof KontaktRoute
   '/login': typeof LoginRoute
   '/manuelle-therapieverfahren-uebersicht': typeof ManuelleTherapieverfahrenUebersichtRoute
+  '/naet-methode-allergie-behandlung': typeof NaetMethodeAllergieBehandlungRoute
   '/naturheilkunde': typeof NaturheilkundeRoute
   '/nls-diagnostik': typeof NlsDiagnostikRoute
   '/online-anamnesebogen': typeof OnlineAnamnesebogenRoute
@@ -290,6 +347,7 @@ export interface FileRoutesById {
   '/psychotherapie-augsburg': typeof PsychotherapieAugsburgRoute
   '/quellenhinweis': typeof QuellenhinweisRoute
   '/rechtshinweise': typeof RechtshinweiseRoute
+  '/rechtshinweise-therapieverfahren': typeof RechtshinweiseTherapieverfahrenRoute
   '/schmerztherapie-augsburg': typeof SchmerztherapieAugsburgRoute
   '/so-arbeite-ich': typeof SoArbeiteIchRoute
   '/ueber-mich': typeof UeberMichRoute
@@ -310,13 +368,18 @@ export interface FileRouteTypes {
     | '/bioresonanz-augsburg'
     | '/bioresonanz-therapie'
     | '/datenschutz'
+    | '/datenschutzerklaerung'
+    | '/diagnostik-informationstherapie'
+    | '/downloadbereich-naturheilpraxis-rauch'
     | '/erschoepfung-augsburg'
     | '/erstgespraech'
     | '/hypnotherapie-augsburg'
     | '/impressum'
+    | '/klassische-homoeopathie'
     | '/kontakt'
     | '/login'
     | '/manuelle-therapieverfahren-uebersicht'
+    | '/naet-methode-allergie-behandlung'
     | '/naturheilkunde'
     | '/nls-diagnostik'
     | '/online-anamnesebogen'
@@ -325,6 +388,7 @@ export interface FileRouteTypes {
     | '/psychotherapie-augsburg'
     | '/quellenhinweis'
     | '/rechtshinweise'
+    | '/rechtshinweise-therapieverfahren'
     | '/schmerztherapie-augsburg'
     | '/so-arbeite-ich'
     | '/ueber-mich'
@@ -343,13 +407,18 @@ export interface FileRouteTypes {
     | '/bioresonanz-augsburg'
     | '/bioresonanz-therapie'
     | '/datenschutz'
+    | '/datenschutzerklaerung'
+    | '/diagnostik-informationstherapie'
+    | '/downloadbereich-naturheilpraxis-rauch'
     | '/erschoepfung-augsburg'
     | '/erstgespraech'
     | '/hypnotherapie-augsburg'
     | '/impressum'
+    | '/klassische-homoeopathie'
     | '/kontakt'
     | '/login'
     | '/manuelle-therapieverfahren-uebersicht'
+    | '/naet-methode-allergie-behandlung'
     | '/naturheilkunde'
     | '/nls-diagnostik'
     | '/online-anamnesebogen'
@@ -358,6 +427,7 @@ export interface FileRouteTypes {
     | '/psychotherapie-augsburg'
     | '/quellenhinweis'
     | '/rechtshinweise'
+    | '/rechtshinweise-therapieverfahren'
     | '/schmerztherapie-augsburg'
     | '/so-arbeite-ich'
     | '/ueber-mich'
@@ -376,13 +446,18 @@ export interface FileRouteTypes {
     | '/bioresonanz-augsburg'
     | '/bioresonanz-therapie'
     | '/datenschutz'
+    | '/datenschutzerklaerung'
+    | '/diagnostik-informationstherapie'
+    | '/downloadbereich-naturheilpraxis-rauch'
     | '/erschoepfung-augsburg'
     | '/erstgespraech'
     | '/hypnotherapie-augsburg'
     | '/impressum'
+    | '/klassische-homoeopathie'
     | '/kontakt'
     | '/login'
     | '/manuelle-therapieverfahren-uebersicht'
+    | '/naet-methode-allergie-behandlung'
     | '/naturheilkunde'
     | '/nls-diagnostik'
     | '/online-anamnesebogen'
@@ -391,6 +466,7 @@ export interface FileRouteTypes {
     | '/psychotherapie-augsburg'
     | '/quellenhinweis'
     | '/rechtshinweise'
+    | '/rechtshinweise-therapieverfahren'
     | '/schmerztherapie-augsburg'
     | '/so-arbeite-ich'
     | '/ueber-mich'
@@ -410,13 +486,18 @@ export interface RootRouteChildren {
   BioresonanzAugsburgRoute: typeof BioresonanzAugsburgRoute
   BioresonanzTherapieRoute: typeof BioresonanzTherapieRoute
   DatenschutzRoute: typeof DatenschutzRoute
+  DatenschutzerklaerungRoute: typeof DatenschutzerklaerungRoute
+  DiagnostikInformationstherapieRoute: typeof DiagnostikInformationstherapieRoute
+  DownloadbereichNaturheilpraxisRauchRoute: typeof DownloadbereichNaturheilpraxisRauchRoute
   ErschoepfungAugsburgRoute: typeof ErschoepfungAugsburgRoute
   ErstgespraechRoute: typeof ErstgespraechRoute
   HypnotherapieAugsburgRoute: typeof HypnotherapieAugsburgRoute
   ImpressumRoute: typeof ImpressumRoute
+  KlassischeHomoeopathieRoute: typeof KlassischeHomoeopathieRoute
   KontaktRoute: typeof KontaktRoute
   LoginRoute: typeof LoginRoute
   ManuelleTherapieverfahrenUebersichtRoute: typeof ManuelleTherapieverfahrenUebersichtRoute
+  NaetMethodeAllergieBehandlungRoute: typeof NaetMethodeAllergieBehandlungRoute
   NaturheilkundeRoute: typeof NaturheilkundeRoute
   NlsDiagnostikRoute: typeof NlsDiagnostikRoute
   OnlineAnamnesebogenRoute: typeof OnlineAnamnesebogenRoute
@@ -425,6 +506,7 @@ export interface RootRouteChildren {
   PsychotherapieAugsburgRoute: typeof PsychotherapieAugsburgRoute
   QuellenhinweisRoute: typeof QuellenhinweisRoute
   RechtshinweiseRoute: typeof RechtshinweiseRoute
+  RechtshinweiseTherapieverfahrenRoute: typeof RechtshinweiseTherapieverfahrenRoute
   SchmerztherapieAugsburgRoute: typeof SchmerztherapieAugsburgRoute
   SoArbeiteIchRoute: typeof SoArbeiteIchRoute
   UeberMichRoute: typeof UeberMichRoute
@@ -499,6 +581,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DatenschutzRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/datenschutzerklaerung': {
+      id: '/datenschutzerklaerung'
+      path: '/datenschutzerklaerung'
+      fullPath: '/datenschutzerklaerung'
+      preLoaderRoute: typeof DatenschutzerklaerungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/diagnostik-informationstherapie': {
+      id: '/diagnostik-informationstherapie'
+      path: '/diagnostik-informationstherapie'
+      fullPath: '/diagnostik-informationstherapie'
+      preLoaderRoute: typeof DiagnostikInformationstherapieRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/downloadbereich-naturheilpraxis-rauch': {
+      id: '/downloadbereich-naturheilpraxis-rauch'
+      path: '/downloadbereich-naturheilpraxis-rauch'
+      fullPath: '/downloadbereich-naturheilpraxis-rauch'
+      preLoaderRoute: typeof DownloadbereichNaturheilpraxisRauchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/erschoepfung-augsburg': {
       id: '/erschoepfung-augsburg'
       path: '/erschoepfung-augsburg'
@@ -527,6 +630,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ImpressumRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/klassische-homoeopathie': {
+      id: '/klassische-homoeopathie'
+      path: '/klassische-homoeopathie'
+      fullPath: '/klassische-homoeopathie'
+      preLoaderRoute: typeof KlassischeHomoeopathieRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/kontakt': {
       id: '/kontakt'
       path: '/kontakt'
@@ -546,6 +656,13 @@ declare module '@tanstack/react-router' {
       path: '/manuelle-therapieverfahren-uebersicht'
       fullPath: '/manuelle-therapieverfahren-uebersicht'
       preLoaderRoute: typeof ManuelleTherapieverfahrenUebersichtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/naet-methode-allergie-behandlung': {
+      id: '/naet-methode-allergie-behandlung'
+      path: '/naet-methode-allergie-behandlung'
+      fullPath: '/naet-methode-allergie-behandlung'
+      preLoaderRoute: typeof NaetMethodeAllergieBehandlungRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/naturheilkunde': {
@@ -602,6 +719,13 @@ declare module '@tanstack/react-router' {
       path: '/rechtshinweise'
       fullPath: '/rechtshinweise'
       preLoaderRoute: typeof RechtshinweiseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rechtshinweise-therapieverfahren': {
+      id: '/rechtshinweise-therapieverfahren'
+      path: '/rechtshinweise-therapieverfahren'
+      fullPath: '/rechtshinweise-therapieverfahren'
+      preLoaderRoute: typeof RechtshinweiseTherapieverfahrenRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/schmerztherapie-augsburg': {
@@ -666,14 +790,20 @@ const rootRouteChildren: RootRouteChildren = {
   BioresonanzAugsburgRoute: BioresonanzAugsburgRoute,
   BioresonanzTherapieRoute: BioresonanzTherapieRoute,
   DatenschutzRoute: DatenschutzRoute,
+  DatenschutzerklaerungRoute: DatenschutzerklaerungRoute,
+  DiagnostikInformationstherapieRoute: DiagnostikInformationstherapieRoute,
+  DownloadbereichNaturheilpraxisRauchRoute:
+    DownloadbereichNaturheilpraxisRauchRoute,
   ErschoepfungAugsburgRoute: ErschoepfungAugsburgRoute,
   ErstgespraechRoute: ErstgespraechRoute,
   HypnotherapieAugsburgRoute: HypnotherapieAugsburgRoute,
   ImpressumRoute: ImpressumRoute,
+  KlassischeHomoeopathieRoute: KlassischeHomoeopathieRoute,
   KontaktRoute: KontaktRoute,
   LoginRoute: LoginRoute,
   ManuelleTherapieverfahrenUebersichtRoute:
     ManuelleTherapieverfahrenUebersichtRoute,
+  NaetMethodeAllergieBehandlungRoute: NaetMethodeAllergieBehandlungRoute,
   NaturheilkundeRoute: NaturheilkundeRoute,
   NlsDiagnostikRoute: NlsDiagnostikRoute,
   OnlineAnamnesebogenRoute: OnlineAnamnesebogenRoute,
@@ -682,6 +812,7 @@ const rootRouteChildren: RootRouteChildren = {
   PsychotherapieAugsburgRoute: PsychotherapieAugsburgRoute,
   QuellenhinweisRoute: QuellenhinweisRoute,
   RechtshinweiseRoute: RechtshinweiseRoute,
+  RechtshinweiseTherapieverfahrenRoute: RechtshinweiseTherapieverfahrenRoute,
   SchmerztherapieAugsburgRoute: SchmerztherapieAugsburgRoute,
   SoArbeiteIchRoute: SoArbeiteIchRoute,
   UeberMichRoute: UeberMichRoute,

@@ -1,5 +1,11 @@
 # Changelog — Migration
 
+## 2026-08-18 (Hubs Welle 3)
+
+- 18 Hubs vollständig auf alten URLs.
+- `/datenschutz` → `/datenschutzerklaerung`, `/rechtshinweise` → `/rechtshinweise-therapieverfahren`.
+- Downloadbereich ohne PDF-Binaries (offen).
+
 ## 2026-08-18 (Hubs Welle 2)
 
 - Psychotherapie, NLS, Osteopathie auf alten URLs.

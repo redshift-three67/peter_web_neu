@@ -96,6 +96,42 @@ export const hubMeta: Record<
       "Impressum gemäß DDG: Peter Rauch, Heilpraktiker und Physiotherapeut, Friedrich-Deffner-Straße 19a, 86163 Augsburg-Hochzoll.",
     kicker: "Recht · Augsburg-Hochzoll",
   },
+  "/datenschutzerklaerung": {
+    title: "Datenschutz – Heilpraktiker Peter Rauch Augsburg",
+    description:
+      "Datenschutzerklärung der Naturheilpraxis Rauch, Augsburg-Hochzoll. DSGVO, TDDDG, Formulare. Keine Google Fonts.",
+    kicker: "Recht · Augsburg-Hochzoll",
+  },
+  "/rechtshinweise-therapieverfahren": {
+    title: "Rechtshinweise Therapieverfahren – Heilpraktiker Augsburg",
+    description:
+      "Keine Heilversprechen. Verfahren in der Naturheilpraxis Rauch ersetzen keine ärztliche Diagnose. Hinweise nach HWG.",
+    kicker: "Recht · Augsburg-Hochzoll",
+  },
+  "/klassische-homoeopathie": {
+    title: "Klassische Homöopathie Augsburg – Heilpraktiker Peter Rauch",
+    description:
+      "Klassische Homöopathie nach Hahnemann in Augsburg-Hochzoll. Ergänzend zur ärztlichen Versorgung, ohne Heilversprechen.",
+    kicker: "Naturheilkunde · Augsburg-Hochzoll",
+  },
+  "/naet-methode-allergie-behandlung": {
+    title: "NAET Allergiebehandlung Augsburg – Heilpraktiker Rauch",
+    description:
+      "NAET als ergänzender Ansatz bei Unverträglichkeiten in Augsburg-Hochzoll. Keine Allergiediagnose, kein Heilversprechen.",
+    kicker: "Naturheilkunde · Augsburg-Hochzoll",
+  },
+  "/diagnostik-informationstherapie": {
+    title: "Hinweisdiagnostik Augsburg – NLS, EAV, Bioresonanz",
+    description:
+      "Hinweisdiagnostik in der Naturheilpraxis Rauch, Augsburg-Hochzoll: NLS, EAV, Bioresonanz. Kein Laborersatz, keine ärztliche Diagnose.",
+    kicker: "Diagnostik · Augsburg-Hochzoll",
+  },
+  "/downloadbereich-naturheilpraxis-rauch": {
+    title: "Downloadbereich – Anamnese Augsburg | Praxis Rauch",
+    description:
+      "Formulare und Erstinformation vor dem Termin in der Naturheilpraxis Rauch, Augsburg-Hochzoll. Keine Diagnose per Download.",
+    kicker: "Patientenaufnahme · Augsburg-Hochzoll",
+  },
 };
 
 export const legacyRedirects: Record<string, string> = {
