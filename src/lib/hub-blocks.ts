@@ -15,7 +15,8 @@ export type HubBlock =
   | { type: "quote"; text: string }
   | { type: "p"; text: string }
   | { type: "list"; items: string[] }
-  | { type: "related"; items: string[] };
+  | { type: "related"; items: string[] }
+  | { type: "scans"; hint?: string };
 
 const SKIP_START = [
   /^E-Mail:/i,
@@ -25,12 +26,14 @@ const SKIP_START = [
   /^Hinweis: Die auf dieser Website/,
   /^Dieser Corona-Hinweis/,
   /^Ich wünsche Ihnen/,
+  /^Viel Freude/,
   /^Zum Online-Anamnesebogen/,
   /^Terminvereinbarung weiter/,
   /^Web: http/,
   /^Häufige Fragen zur Praxis$/,
   /^Kurze Angaben zu Ablauf/,
   /^Vor dem Termin können Sie den Online-Anamnesebogen/,
+  /^Zurück zur Startseite/,
 ];
 
 function skipText(text: string) {
@@ -40,14 +43,20 @@ function skipText(text: string) {
   if (/\|$/.test(t) && t.length < 50) return true;
   if (/^Mittagsruhe/.test(t)) return true;
   if (/^Datenschutzerklärung/.test(t)) return true;
-  if (t === "Psyche und Soma") return false;
   return false;
 }
 
 function isWarning(text: string) {
-  return /ersetzen keine|kein Heilversprechen|keine ärztliche|kein Labor|keine Diagnose|ergänzend zur ärztlichen|kein Notfall/i.test(
+  return /ersetzen keine|kein Heilversprechen|keine ärztliche|kein Labor|keine Diagnose|ergänzend zur ärztlichen|kein Notfall|wissenschaftlich nicht anerkannt/i.test(
     text,
   );
+}
+
+function similar(a: string, b: string) {
+  const n = (s: string) => s.toLowerCase().replace(/[^a-z0-9äöüß]+/g, "");
+  const x = n(a);
+  const y = n(b);
+  return x === y || x.includes(y) || y.includes(x);
 }
 
 export function editorialParts(page: ArchivePage): ArchivePart[] {
@@ -59,7 +68,12 @@ export function editorialParts(page: ArchivePage): ArchivePart[] {
     if (skipText(text)) continue;
     if (part.tag === "h1") continue;
     if (part.tag === "h2" && /Häufige Fragen/.test(text)) break;
+    if (part.tag === "h2" && /^mit der /i.test(text)) continue;
     if (part.tag === "li" && text.length < 90 && /Diagnostik|Hinweisdiagnostik|Download|Impressum|Kontakt \|/.test(text)) {
+      continue;
+    }
+    if (part.tag === "h3" && text.length > 90) {
+      out.push({ tag: "p", text });
       continue;
     }
     out.push({ ...part, text });
@@ -67,7 +81,7 @@ export function editorialParts(page: ArchivePage): ArchivePart[] {
   return out;
 }
 
-export function blocksFromParts(parts: ArchivePart[]): HubBlock[] {
+export function blocksFromParts(parts: ArchivePart[], heading = ""): HubBlock[] {
   const blocks: HubBlock[] = [];
   let i = 0;
   while (i < parts.length) {
@@ -82,26 +96,38 @@ export function blocksFromParts(parts: ArchivePart[]): HubBlock[] {
     if (cur.tag === "h3") {
       const titles: string[] = [];
       while (i < parts.length && parts[i].tag === "h3") {
-        titles.push(cleanHeading(parts[i].text));
+        const t = cleanHeading(parts[i].text);
+        if (!titles.some((x) => similar(x, t)) && !similar(t, heading)) {
+          titles.push(t);
+        }
         i += 1;
       }
       const paragraphs: string[] = [];
       const items: string[] = [];
       while (i < parts.length && parts[i].tag !== "h2" && parts[i].tag !== "h3") {
-        if (parts[i].tag === "li") items.push(parts[i].text);
-        else if (/^Weiterlesen:/i.test(parts[i].text)) {
-          const names = parts[i].text
+        const text = parts[i].text;
+        if (parts[i].tag === "li") items.push(text);
+        else if (/^Weiterlesen:/i.test(text) || /^Weitere (Diagnostik|Themen)/i.test(text)) {
+          const names = text
             .replace(/^Weiterlesen:\s*/i, "")
+            .replace(/^Weitere [^:]+:\s*/i, "")
             .split("·")
             .map((s) => s.trim())
             .filter(Boolean);
           if (names.length) blocks.push({ type: "related", items: names });
-        } else if (isWarning(parts[i].text)) {
-          paragraphs.push(parts[i].text);
+        } else if (/Ausschnitte von Scan|Scanbildern/i.test(text)) {
+          blocks.push({ type: "scans", hint: text });
         } else {
-          paragraphs.push(parts[i].text);
+          paragraphs.push(text);
         }
         i += 1;
+      }
+      if (!titles.length) {
+        for (const p of paragraphs) {
+          blocks.push(isWarning(p) ? { type: "warning", text: p } : { type: "p", text: p });
+        }
+        if (items.length) blocks.push({ type: "list", items });
+        continue;
       }
       if (!paragraphs.length && !items.length) {
         blocks.push({ type: "topics", items: titles });
@@ -135,13 +161,20 @@ export function blocksFromParts(parts: ArchivePart[]): HubBlock[] {
       continue;
     }
 
-    if (/^Weiterlesen:/i.test(cur.text)) {
+    if (/^Weiterlesen:/i.test(cur.text) || /^Weitere (Diagnostik|Themen)/i.test(cur.text)) {
       const names = cur.text
         .replace(/^Weiterlesen:\s*/i, "")
+        .replace(/^Weitere [^:]+:\s*/i, "")
         .split("·")
         .map((s) => s.trim())
         .filter(Boolean);
       if (names.length) blocks.push({ type: "related", items: names });
+      i += 1;
+      continue;
+    }
+
+    if (/Ausschnitte von Scan|Scanbildern/i.test(cur.text)) {
+      blocks.push({ type: "scans", hint: cur.text });
       i += 1;
       continue;
     }
@@ -152,7 +185,7 @@ export function blocksFromParts(parts: ArchivePart[]): HubBlock[] {
       continue;
     }
 
-    if (/[„"]/.test(cur.text) && cur.text.length < 280 && /Hahnemann|Schopenhauer|Hippokrates/i.test(cur.text)) {
+    if (/[„"]/.test(cur.text) && cur.text.length < 220 && /Hahnemann|Schopenhauer|Hippokrates/i.test(cur.text)) {
       blocks.push({ type: "quote", text: cur.text });
       i += 1;
       continue;
@@ -197,4 +230,34 @@ export const topicHref: Record<string, string> = {
   Naturheilkunde: "/naturheilkunde",
   "NLS-Diagnostik": "/nls-diagnostik",
   Bioresonanz: "/bioresonanz-therapie",
+  "Elektroakupunktur nach Dr. Voll": "/elektroakupunktur-nach-dr-voll-3",
+  "Vieva Pro": "/vieva-pro-herzratenvariabilitaet",
+  "Hinweisdiagnostik im Überblick": "/diagnostik-informationstherapie",
 };
+
+export function classifyImage(src: string, alt = "") {
+  const hay = `${src} ${alt}`;
+  if (/logo|icon|favicon|verband|bni|widget|Peter-Rauch-Heilpraktiker/i.test(hay)) {
+    return "skip";
+  }
+  if (/gehirn|herz_nls|3d_herz|brustkorb|darm-hunter|darm_hunter|scan/i.test(hay)) {
+    return "scan";
+  }
+  if (/zen|sanft.heilen|emotionale|wasser|waterfall|baum|sand/i.test(hay)) {
+    return "atmosphere";
+  }
+  if (/trikombin|vieva|elektroakupunktur|metatron|quickcheck|hospital_vitages/i.test(hay)) {
+    return "device";
+  }
+  return "photo";
+}
+
+export function captionFromPath(src: string, alt: string) {
+  if (alt && alt.length < 80 && !/^\S+ \S+ \S+ [a-f0-9]{6}/i.test(alt)) return alt;
+  const file = src.split("/").pop() ?? "";
+  return file
+    .replace(/\.(webp|jpe?g|png)$/i, "")
+    .replace(/[-_]+/g, " ")
+    .replace(/\b\d{4,}[a-z0-9]*\b/gi, "")
+    .trim();
+}
