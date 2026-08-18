@@ -1,6 +1,8 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useSwipe } from "@/lib/swipe";
+import { FramedHero } from "./FramedHero";
+import { useMusterSkin } from "./DesignSkin";
 
 export type HeroSlide = {
   src: string;
@@ -21,6 +23,7 @@ export function PageHeroSlider({
   heading: string;
   kicker?: string;
 }) {
+  const { oura } = useMusterSkin();
   const items = slides.filter((s) => s.src);
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -44,8 +47,9 @@ export function PageHeroSlider({
   if (!slide) return null;
 
   return (
-    <section
-      className="relative overflow-hidden"
+    <FramedHero>
+    <div
+      className="relative"
       aria-roledescription={multi ? "Karussell" : undefined}
       aria-label="Seitenmotiv"
       onPointerDown={swipe.onPointerDown}
@@ -71,10 +75,14 @@ export function PageHeroSlider({
             }`}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#3A5258]/55 via-[#3A5258]/15 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#3A5258]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/40 via-ink/10 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-ink/30 to-transparent" />
 
-        <div className="absolute left-3 top-3 z-10 max-w-[min(20.5rem,calc(100%-1.5rem))] sm:left-5 sm:top-5 sm:max-w-[min(26rem,calc(100%-3rem))] md:left-6 md:top-6 lg:max-w-[28rem]">
+        <div
+          className={`absolute left-3 z-10 max-w-[min(20.5rem,calc(100%-1.5rem))] sm:left-5 sm:max-w-[min(26rem,calc(100%-3rem))] md:left-6 lg:max-w-[28rem] ${
+            oura ? "top-[4.6rem] sm:top-[5rem]" : "top-3 sm:top-5 md:top-6"
+          }`}
+        >
           <div className={`${glassCard} w-fit px-3.5 py-2.5 sm:px-4 sm:py-3`}>
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-sage sm:text-xs">
               {kicker}
@@ -132,11 +140,12 @@ export function PageHeroSlider({
         )}
       </div>
       {(slide.meta || slide.title) && (
-        <div className="px-3 py-3 md:hidden">
+        <div className="bg-paper px-3 py-3 md:hidden">
           <SlideCaption meta={slide.meta} title={slide.title} />
         </div>
       )}
-    </section>
+    </div>
+    </FramedHero>
   );
 }
 

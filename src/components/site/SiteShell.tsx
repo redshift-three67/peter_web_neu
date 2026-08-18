@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
-import { HeaderOura } from "./HeaderOura";
+import { StickyOura } from "./StickyOura";
 import { PracticeJsonLd } from "./JsonLd";
 import { DesignSkinBar, useMusterSkin } from "./DesignSkin";
 
@@ -18,7 +18,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
         Zum Inhalt springen
       </a>
       <DesignSkinBar />
-      {oura ? <HeaderOura /> : <Header />}
+      {oura ? <StickyOura /> : <Header />}
       <main id="content" className="flex-1">
         {children}
       </main>

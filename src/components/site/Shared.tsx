@@ -62,7 +62,7 @@ export function PageHero({
 
 export function CtaBand() {
   return (
-    <section className="bg-field text-paper">
+    <section className="text-paper" style={{ background: "#3A5258" }}>
       <Container className="flex flex-col items-start justify-between gap-6 py-14 md:flex-row md:items-center">
         <div>
           <p className="font-display text-3xl font-semibold">Erstgespräch vereinbaren</p>
