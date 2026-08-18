@@ -23,5 +23,5 @@ export function persistLook(look: DesignLook) {
 }
 
 export function resolveLook(search: string): DesignLook {
-  return lookFromSearch(search) ?? "ac";
+  return lookFromSearch(search) ?? "alt";
 }
