@@ -1,5 +1,11 @@
 # Changelog — Migration
 
+## 2026-08-18 (Archiv-Haut)
+
+- RP-08 vor dem Rollout (`rp-08-pre-archive-skin`).
+- Alle 64 Archivseiten: Start-Slider-Logik, Phone-Chip, Warnkarte, CTA-Spalte.
+- Texte/Bilder unverändert, weiter noindex.
+
 ## 2026-08-18 (Slider-Karten Glas)
 
 - Titel- und Overlay-Karte: 55% Sage-50, Backdrop-Blur, Sage-700.
