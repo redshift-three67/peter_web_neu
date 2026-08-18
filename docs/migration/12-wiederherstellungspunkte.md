@@ -5,7 +5,7 @@ Lokales Git-Repo. Identität nur lokal: `Rauch Migration <dev@rauch-heilpraktike
 | Punkt | Tag | Commit | Wann | Inhalt |
 |---|---|---|---|---|
 | RP-01 | `rp-01-design-tokens` | `ddabd0c` | 18.08.2026 | Look-Angleichung Schritt 1: Tokens, Header, heller Footer, Karten. **Vor** Slider und App-Strukturen. |
-| RP-03 | `rp-03-pre-slider-refine` | `f6c54fe` | 18.08.2026 | Stand vor Slider-Höhe, Overlay-Karten und Mail-Wechsel. |
+| RP-04 | `rp-04-slider-overlays` | `214920f` | 18.08.2026 | Slider −⅓ Höhe, schwächeres Layer, Live-Overlays, Steuerung links, Mail iCloud. |
 
 ## Zurücksetzen
 
