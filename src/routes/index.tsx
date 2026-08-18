@@ -1,12 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
+  Heart,
   Leaf,
   MapPin,
-  Phone,
+  Shield,
   ShieldCheck,
   Sparkles,
   Stethoscope,
+  Users,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -17,6 +19,8 @@ import {
   FaqList,
   ReviewStrip,
 } from "@/components/site/Shared";
+import { FeatureRow, PhoneChip, QuotePanel } from "@/components/site/Design";
+import { HeroSlider } from "@/components/site/HeroSlider";
 import { FaqJsonLd } from "@/components/site/JsonLd";
 import { practice, practiceFaqs } from "@/content/site";
 import { pageHead } from "@/lib/seo";
@@ -57,59 +61,64 @@ function Home() {
   return (
     <>
       <FaqJsonLd items={practiceFaqs} />
-      <section className="relative overflow-hidden">
-        <img
-          src="/images/hero-praxis.jpg"
-          alt="Behandlungsraum der Naturheilpraxis Rauch in Augsburg-Hochzoll"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-sage-700/90 via-sage-600/80 to-sage-500/70" />
-        <Container className="relative grid min-h-[72vh] items-end py-24 md:min-h-[80vh] md:py-32">
-          <div className="max-w-2xl text-paper">
-            <p className="text-xs font-medium uppercase tracking-[0.22em] text-sand-deep">
-              Augsburg-Hochzoll · Friedberg · Lechhausen
+      <HeroSlider />
+      <PhoneChip className="border-b border-line bg-bg" />
+
+      <section className="border-b border-line bg-paper">
+        <Container className="grid gap-12 py-16 md:grid-cols-2 md:items-center md:py-20">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">
+              Über die Praxis
             </p>
-            <h1 className="mt-4 font-display text-4xl leading-[1.08] sm:text-5xl md:text-6xl">
-              Heilpraktiker Augsburg – Naturheilpraxis Peter Rauch
-            </h1>
-            <p className="mt-5 max-w-xl text-lg text-paper/85">
-              {practice.tagline}. Ich begleite Menschen, die mit Schmerz,
-              Allergie oder Erschöpfung bei der Schulmedizin nicht weiterkommen
-              – ergänzend, ohne Heilversprechen, mit klaren Grenzen.
+            <h2 className="mt-2 font-display text-3xl font-semibold text-sage-700 sm:text-4xl">
+              Naturheilkunde mit Herz und Verstand
+            </h2>
+            <p className="mt-5 text-[1.05rem] leading-relaxed text-muted">
+              Als Heilpraktiker und Physiotherapeut verbinde ich handwerkliche
+              Erfahrung mit einem ruhigen Gespräch. Mein Ziel ist es, Sie auf
+              dem Weg zu mehr Wohlbefinden zu begleiten – ergänzend zur
+              ärztlichen Versorgung, ohne Heilversprechen.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button asChild variant="clay" size="lg" className="shadow-elevated">
-                <a href={`tel:${practice.phoneTel}`}>
-                  <Phone className="size-4" /> Termin: {practice.phoneDisplay}
-                </a>
+            <div className="mt-8 space-y-5">
+              <FeatureRow
+                icon={Heart}
+                title="Ganzheitlicher Ansatz"
+                text="Ich betrachte den Menschen als Einheit von Körper, Geist und Seele."
+              />
+              <FeatureRow
+                icon={Shield}
+                title="Behutsame Verfahren"
+                text="Sanfte, individuell gewählte Methoden. Kein Ersatz für den Arzt, keine Garantie."
+              />
+              <FeatureRow
+                icon={Users}
+                title="Individuelle Betreuung"
+                text="Persönliche Planung nach dem Gespräch – passend zu Befund, Alltag und Grenzen."
+              />
+            </div>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button asChild>
+                <Link to="/ueber-mich">Vita & Qualifikation</Link>
               </Button>
-              <Button
-                asChild
-                variant="secondary"
-                size="lg"
-                className="border-paper/30 bg-paper/15 text-paper hover:bg-paper hover:text-sage-700"
-              >
-                <Link to="/erstgespraech">
-                  Erstgespräch verstehen <ArrowRight className="size-4" />
-                </Link>
+              <Button asChild variant="outline">
+                <Link to="/so-arbeite-ich">So läuft ein Termin</Link>
               </Button>
             </div>
-            <p className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-paper/75">
-              <span>Physiotherapeut seit 2001</span>
-              <span>Heilpraktiker seit 2006</span>
-              <span>{practice.experienceYears} Jahre Praxis</span>
-            </p>
           </div>
+          <QuotePanel
+            quote="Gesundheit ist nicht alles, aber ohne Gesundheit ist alles nichts."
+            cite="Arthur Schopenhauer"
+          />
         </Container>
       </section>
 
-      <section className="border-b border-line bg-paper">
+      <section className="border-b border-line bg-sand-50">
         <Container className="grid gap-10 py-16 md:grid-cols-[1.1fr_0.9fr] md:items-start">
           <div>
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-sage">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">
               Person, nicht Gerät
             </p>
-            <h2 className="mt-2 font-display text-3xl text-sage-deep sm:text-4xl">
+            <h2 className="mt-2 font-display text-3xl font-semibold text-sage-700 sm:text-4xl">
               Ich bin Heilpraktiker und Physiotherapeut – und sehe den Menschen
               als Ganzes.
             </h2>
@@ -126,14 +135,6 @@ function Home() {
                 gehört die Behandlung in eine Praxis oder Klinik. Schulmedizin
                 und Naturheilkunde müssen sich nicht widersprechen.
               </p>
-            </div>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Button asChild>
-                <Link to="/ueber-mich">Vita & Qualifikation</Link>
-              </Button>
-              <Button asChild variant="outline">
-                <Link to="/so-arbeite-ich">So läuft ein Termin</Link>
-              </Button>
             </div>
           </div>
           <aside className="rounded-2xl border border-line bg-card p-6 shadow-card">
@@ -161,10 +162,10 @@ function Home() {
 
       <section>
         <Container className="py-16">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-sage">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">
             Womit Menschen kommen
           </p>
-          <h2 className="mt-2 max-w-2xl font-display text-3xl text-sage-deep sm:text-4xl">
+          <h2 className="mt-2 max-w-2xl font-display text-3xl font-semibold text-sage-700 sm:text-4xl">
             Drei Anliegen – nicht siebenundzwanzig Geräte.
           </h2>
           <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -236,10 +237,10 @@ function Home() {
       <section>
         <Container className="grid gap-10 py-16 md:grid-cols-2">
           <div>
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-sage">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">
               Häufige Fragen
             </p>
-            <h2 className="mt-2 font-display text-3xl text-sage-deep">
+            <h2 className="mt-2 font-display text-3xl font-semibold text-sage-700">
               Klarheit vor dem ersten Anruf
             </h2>
             <div className="mt-6">
@@ -260,7 +261,7 @@ function Home() {
             <img
               src="/images/anfahrt.jpg"
               alt="Ruhiger Zugang zu einer Praxis in Augsburg-Hochzoll"
-              className="mt-5 aspect-[16/10] w-full rounded-lg object-cover"
+              className="mt-5 aspect-[16/10] w-full rounded-2xl object-cover"
             />
             <div className="mt-5 flex flex-wrap gap-3">
               <Button asChild>

@@ -19,6 +19,7 @@ Stand des Protokolls: **18. August 2026**.
 | [09-uploads-inventar.md](./09-uploads-inventar.md) | Originale aus GitHub, Umlaut-Dateien, Kuratierung |
 | [10-bildzuordnung.md](./10-bildzuordnung.md) | Live-Bilder je Seite → Original + Slider |
 | [11-lovable-design-pruefung.md](./11-lovable-design-pruefung.md) | App-Look vs. CMS: was adaptierbar ist |
+| [12-wiederherstellungspunkte.md](./12-wiederherstellungspunkte.md) | Git-Tags RP-01, RP-02, Rollback |
 | [changelog.md](./changelog.md) | Chronologisches Protokoll |
 
 Quelldaten des Crawls liegen unter:

@@ -82,7 +82,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <a
             href={`tel:${practice.phoneTel}`}
-            className="hidden h-10 items-center gap-2 rounded-lg bg-sage px-4 text-sm font-medium text-paper shadow-soft hover:bg-sage-600 sm:inline-flex"
+            className="hidden h-10 items-center gap-2 rounded-full bg-sage px-4 text-sm font-medium text-paper shadow-soft hover:bg-sage-600 sm:inline-flex"
           >
             <Phone className="size-4" aria-hidden />
             Anrufen
@@ -114,19 +114,19 @@ export function Header() {
           </span>
           <Link
             to="/erstgespraech"
-            className="rounded-md border border-line bg-paper px-3 py-1.5 text-sm text-fg/80 hover:border-sage hover:text-sage"
+            className="rounded-full border border-line bg-paper px-3 py-1.5 text-sm text-fg/80 hover:border-sage hover:text-sage"
           >
             Erstgespräch
           </Link>
           <Link
             to="/kontakt"
-            className="rounded-md border border-line bg-paper px-3 py-1.5 text-sm text-fg/80 hover:border-sage hover:text-sage"
+            className="rounded-full border border-line bg-paper px-3 py-1.5 text-sm text-fg/80 hover:border-sage hover:text-sage"
           >
             Kontakt
           </Link>
           <Link
             to="/anfahrt"
-            className="rounded-md border border-line bg-paper px-3 py-1.5 text-sm text-fg/80 hover:border-sage hover:text-sage"
+            className="rounded-full border border-line bg-paper px-3 py-1.5 text-sm text-fg/80 hover:border-sage hover:text-sage"
           >
             Anfahrt
           </Link>

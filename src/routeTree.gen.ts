@@ -25,6 +25,7 @@ import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as OnlineAnamnesebogenRouteImport } from './routes/online-anamnesebogen'
 import { Route as PraxisRouteImport } from './routes/praxis'
+import { Route as QuellenhinweisRouteImport } from './routes/quellenhinweis'
 import { Route as RechtshinweiseRouteImport } from './routes/rechtshinweise'
 import { Route as SchmerztherapieAugsburgRouteImport } from './routes/schmerztherapie-augsburg'
 import { Route as SoArbeiteIchRouteImport } from './routes/so-arbeite-ich'
@@ -114,6 +115,11 @@ const PraxisRoute = PraxisRouteImport.update({
   path: '/praxis',
   getParentRoute: () => rootRouteImport,
 } as any)
+const QuellenhinweisRoute = QuellenhinweisRouteImport.update({
+  id: '/quellenhinweis',
+  path: '/quellenhinweis',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RechtshinweiseRoute = RechtshinweiseRouteImport.update({
   id: '/rechtshinweise',
   path: '/rechtshinweise',
@@ -172,6 +178,7 @@ export interface FileRoutesByFullPath {
   '/login': typeof LoginRoute
   '/online-anamnesebogen': typeof OnlineAnamnesebogenRoute
   '/praxis': typeof PraxisRoute
+  '/quellenhinweis': typeof QuellenhinweisRoute
   '/rechtshinweise': typeof RechtshinweiseRoute
   '/schmerztherapie-augsburg': typeof SchmerztherapieAugsburgRoute
   '/so-arbeite-ich': typeof SoArbeiteIchRoute
@@ -198,6 +205,7 @@ export interface FileRoutesByTo {
   '/login': typeof LoginRoute
   '/online-anamnesebogen': typeof OnlineAnamnesebogenRoute
   '/praxis': typeof PraxisRoute
+  '/quellenhinweis': typeof QuellenhinweisRoute
   '/rechtshinweise': typeof RechtshinweiseRoute
   '/schmerztherapie-augsburg': typeof SchmerztherapieAugsburgRoute
   '/so-arbeite-ich': typeof SoArbeiteIchRoute
@@ -225,6 +233,7 @@ export interface FileRoutesById {
   '/login': typeof LoginRoute
   '/online-anamnesebogen': typeof OnlineAnamnesebogenRoute
   '/praxis': typeof PraxisRoute
+  '/quellenhinweis': typeof QuellenhinweisRoute
   '/rechtshinweise': typeof RechtshinweiseRoute
   '/schmerztherapie-augsburg': typeof SchmerztherapieAugsburgRoute
   '/so-arbeite-ich': typeof SoArbeiteIchRoute
@@ -253,6 +262,7 @@ export interface FileRouteTypes {
     | '/login'
     | '/online-anamnesebogen'
     | '/praxis'
+    | '/quellenhinweis'
     | '/rechtshinweise'
     | '/schmerztherapie-augsburg'
     | '/so-arbeite-ich'
@@ -279,6 +289,7 @@ export interface FileRouteTypes {
     | '/login'
     | '/online-anamnesebogen'
     | '/praxis'
+    | '/quellenhinweis'
     | '/rechtshinweise'
     | '/schmerztherapie-augsburg'
     | '/so-arbeite-ich'
@@ -305,6 +316,7 @@ export interface FileRouteTypes {
     | '/login'
     | '/online-anamnesebogen'
     | '/praxis'
+    | '/quellenhinweis'
     | '/rechtshinweise'
     | '/schmerztherapie-augsburg'
     | '/so-arbeite-ich'
@@ -332,6 +344,7 @@ export interface RootRouteChildren {
   LoginRoute: typeof LoginRoute
   OnlineAnamnesebogenRoute: typeof OnlineAnamnesebogenRoute
   PraxisRoute: typeof PraxisRoute
+  QuellenhinweisRoute: typeof QuellenhinweisRoute
   RechtshinweiseRoute: typeof RechtshinweiseRoute
   SchmerztherapieAugsburgRoute: typeof SchmerztherapieAugsburgRoute
   SoArbeiteIchRoute: typeof SoArbeiteIchRoute
@@ -456,6 +469,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PraxisRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/quellenhinweis': {
+      id: '/quellenhinweis'
+      path: '/quellenhinweis'
+      fullPath: '/quellenhinweis'
+      preLoaderRoute: typeof QuellenhinweisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/rechtshinweise': {
       id: '/rechtshinweise'
       path: '/rechtshinweise'
@@ -532,6 +552,7 @@ const rootRouteChildren: RootRouteChildren = {
   LoginRoute: LoginRoute,
   OnlineAnamnesebogenRoute: OnlineAnamnesebogenRoute,
   PraxisRoute: PraxisRoute,
+  QuellenhinweisRoute: QuellenhinweisRoute,
   RechtshinweiseRoute: RechtshinweiseRoute,
   SchmerztherapieAugsburgRoute: SchmerztherapieAugsburgRoute,
   SoArbeiteIchRoute: SoArbeiteIchRoute,
