@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
     pageHead({
       title: "Heilpraktiker Augsburg – Naturheilpraxis Peter Rauch",
       description:
-        "Heilpraktiker in Augsburg-Hochzoll. Peter Rauch begleitet mit Naturheilkunde, manuellen Verfahren und Gespräch – ergänzend zur ärztlichen Versorgung, ohne Heilversprechen.",
+        "Heilpraktiker in Augsburg-Hochzoll. Peter Rauch begleitet mit Naturheilkunde, manuellen Verfahren und Gespräch – für Hochzoll, Friedberg und Lechhausen, ergänzend zur ärztlichen Versorgung, ohne Heilversprechen.",
       path: "/",
     }),
   component: Home,
@@ -275,7 +275,7 @@ function Home() {
                 </Button>
               </div>
               <Button asChild variant="clay" className="w-full sm:w-auto">
-                <Link to="/anamnese">Online-Anamnesebogen</Link>
+                <Link to="/online-anamnesebogen">Online-Anamnesebogen</Link>
               </Button>
             </div>
             <p className="mt-5 flex items-start gap-2 text-sm text-muted">

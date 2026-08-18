@@ -16,6 +16,7 @@ import { Route as AnamneseRouteImport } from './routes/anamnese'
 import { Route as AnfahrtRouteImport } from './routes/anfahrt'
 import { Route as ArchivRouteImport } from './routes/archiv'
 import { Route as BioresonanzAugsburgRouteImport } from './routes/bioresonanz-augsburg'
+import { Route as BioresonanzTherapieRouteImport } from './routes/bioresonanz-therapie'
 import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as ErschoepfungAugsburgRouteImport } from './routes/erschoepfung-augsburg'
 import { Route as ErstgespraechRouteImport } from './routes/erstgespraech'
@@ -23,6 +24,8 @@ import { Route as HypnotherapieAugsburgRouteImport } from './routes/hypnotherapi
 import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as LoginRouteImport } from './routes/login'
+import { Route as ManuelleTherapieverfahrenUebersichtRouteImport } from './routes/manuelle-therapieverfahren-uebersicht'
+import { Route as NaturheilkundeRouteImport } from './routes/naturheilkunde'
 import { Route as OnlineAnamnesebogenRouteImport } from './routes/online-anamnesebogen'
 import { Route as PraxisRouteImport } from './routes/praxis'
 import { Route as QuellenhinweisRouteImport } from './routes/quellenhinweis'
@@ -70,6 +73,11 @@ const BioresonanzAugsburgRoute = BioresonanzAugsburgRouteImport.update({
   path: '/bioresonanz-augsburg',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BioresonanzTherapieRoute = BioresonanzTherapieRouteImport.update({
+  id: '/bioresonanz-therapie',
+  path: '/bioresonanz-therapie',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DatenschutzRoute = DatenschutzRouteImport.update({
   id: '/datenschutz',
   path: '/datenschutz',
@@ -103,6 +111,17 @@ const KontaktRoute = KontaktRouteImport.update({
 const LoginRoute = LoginRouteImport.update({
   id: '/login',
   path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ManuelleTherapieverfahrenUebersichtRoute =
+  ManuelleTherapieverfahrenUebersichtRouteImport.update({
+    id: '/manuelle-therapieverfahren-uebersicht',
+    path: '/manuelle-therapieverfahren-uebersicht',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const NaturheilkundeRoute = NaturheilkundeRouteImport.update({
+  id: '/naturheilkunde',
+  path: '/naturheilkunde',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OnlineAnamnesebogenRoute = OnlineAnamnesebogenRouteImport.update({
@@ -169,6 +188,7 @@ export interface FileRoutesByFullPath {
   '/anfahrt': typeof AnfahrtRoute
   '/archiv': typeof ArchivRoute
   '/bioresonanz-augsburg': typeof BioresonanzAugsburgRoute
+  '/bioresonanz-therapie': typeof BioresonanzTherapieRoute
   '/datenschutz': typeof DatenschutzRoute
   '/erschoepfung-augsburg': typeof ErschoepfungAugsburgRoute
   '/erstgespraech': typeof ErstgespraechRoute
@@ -176,6 +196,8 @@ export interface FileRoutesByFullPath {
   '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
   '/login': typeof LoginRoute
+  '/manuelle-therapieverfahren-uebersicht': typeof ManuelleTherapieverfahrenUebersichtRoute
+  '/naturheilkunde': typeof NaturheilkundeRoute
   '/online-anamnesebogen': typeof OnlineAnamnesebogenRoute
   '/praxis': typeof PraxisRoute
   '/quellenhinweis': typeof QuellenhinweisRoute
@@ -196,6 +218,7 @@ export interface FileRoutesByTo {
   '/anfahrt': typeof AnfahrtRoute
   '/archiv': typeof ArchivRoute
   '/bioresonanz-augsburg': typeof BioresonanzAugsburgRoute
+  '/bioresonanz-therapie': typeof BioresonanzTherapieRoute
   '/datenschutz': typeof DatenschutzRoute
   '/erschoepfung-augsburg': typeof ErschoepfungAugsburgRoute
   '/erstgespraech': typeof ErstgespraechRoute
@@ -203,6 +226,8 @@ export interface FileRoutesByTo {
   '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
   '/login': typeof LoginRoute
+  '/manuelle-therapieverfahren-uebersicht': typeof ManuelleTherapieverfahrenUebersichtRoute
+  '/naturheilkunde': typeof NaturheilkundeRoute
   '/online-anamnesebogen': typeof OnlineAnamnesebogenRoute
   '/praxis': typeof PraxisRoute
   '/quellenhinweis': typeof QuellenhinweisRoute
@@ -224,6 +249,7 @@ export interface FileRoutesById {
   '/anfahrt': typeof AnfahrtRoute
   '/archiv': typeof ArchivRoute
   '/bioresonanz-augsburg': typeof BioresonanzAugsburgRoute
+  '/bioresonanz-therapie': typeof BioresonanzTherapieRoute
   '/datenschutz': typeof DatenschutzRoute
   '/erschoepfung-augsburg': typeof ErschoepfungAugsburgRoute
   '/erstgespraech': typeof ErstgespraechRoute
@@ -231,6 +257,8 @@ export interface FileRoutesById {
   '/impressum': typeof ImpressumRoute
   '/kontakt': typeof KontaktRoute
   '/login': typeof LoginRoute
+  '/manuelle-therapieverfahren-uebersicht': typeof ManuelleTherapieverfahrenUebersichtRoute
+  '/naturheilkunde': typeof NaturheilkundeRoute
   '/online-anamnesebogen': typeof OnlineAnamnesebogenRoute
   '/praxis': typeof PraxisRoute
   '/quellenhinweis': typeof QuellenhinweisRoute
@@ -253,6 +281,7 @@ export interface FileRouteTypes {
     | '/anfahrt'
     | '/archiv'
     | '/bioresonanz-augsburg'
+    | '/bioresonanz-therapie'
     | '/datenschutz'
     | '/erschoepfung-augsburg'
     | '/erstgespraech'
@@ -260,6 +289,8 @@ export interface FileRouteTypes {
     | '/impressum'
     | '/kontakt'
     | '/login'
+    | '/manuelle-therapieverfahren-uebersicht'
+    | '/naturheilkunde'
     | '/online-anamnesebogen'
     | '/praxis'
     | '/quellenhinweis'
@@ -280,6 +311,7 @@ export interface FileRouteTypes {
     | '/anfahrt'
     | '/archiv'
     | '/bioresonanz-augsburg'
+    | '/bioresonanz-therapie'
     | '/datenschutz'
     | '/erschoepfung-augsburg'
     | '/erstgespraech'
@@ -287,6 +319,8 @@ export interface FileRouteTypes {
     | '/impressum'
     | '/kontakt'
     | '/login'
+    | '/manuelle-therapieverfahren-uebersicht'
+    | '/naturheilkunde'
     | '/online-anamnesebogen'
     | '/praxis'
     | '/quellenhinweis'
@@ -307,6 +341,7 @@ export interface FileRouteTypes {
     | '/anfahrt'
     | '/archiv'
     | '/bioresonanz-augsburg'
+    | '/bioresonanz-therapie'
     | '/datenschutz'
     | '/erschoepfung-augsburg'
     | '/erstgespraech'
@@ -314,6 +349,8 @@ export interface FileRouteTypes {
     | '/impressum'
     | '/kontakt'
     | '/login'
+    | '/manuelle-therapieverfahren-uebersicht'
+    | '/naturheilkunde'
     | '/online-anamnesebogen'
     | '/praxis'
     | '/quellenhinweis'
@@ -335,6 +372,7 @@ export interface RootRouteChildren {
   AnfahrtRoute: typeof AnfahrtRoute
   ArchivRoute: typeof ArchivRoute
   BioresonanzAugsburgRoute: typeof BioresonanzAugsburgRoute
+  BioresonanzTherapieRoute: typeof BioresonanzTherapieRoute
   DatenschutzRoute: typeof DatenschutzRoute
   ErschoepfungAugsburgRoute: typeof ErschoepfungAugsburgRoute
   ErstgespraechRoute: typeof ErstgespraechRoute
@@ -342,6 +380,8 @@ export interface RootRouteChildren {
   ImpressumRoute: typeof ImpressumRoute
   KontaktRoute: typeof KontaktRoute
   LoginRoute: typeof LoginRoute
+  ManuelleTherapieverfahrenUebersichtRoute: typeof ManuelleTherapieverfahrenUebersichtRoute
+  NaturheilkundeRoute: typeof NaturheilkundeRoute
   OnlineAnamnesebogenRoute: typeof OnlineAnamnesebogenRoute
   PraxisRoute: typeof PraxisRoute
   QuellenhinweisRoute: typeof QuellenhinweisRoute
@@ -406,6 +446,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BioresonanzAugsburgRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bioresonanz-therapie': {
+      id: '/bioresonanz-therapie'
+      path: '/bioresonanz-therapie'
+      fullPath: '/bioresonanz-therapie'
+      preLoaderRoute: typeof BioresonanzTherapieRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/datenschutz': {
       id: '/datenschutz'
       path: '/datenschutz'
@@ -453,6 +500,20 @@ declare module '@tanstack/react-router' {
       path: '/login'
       fullPath: '/login'
       preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manuelle-therapieverfahren-uebersicht': {
+      id: '/manuelle-therapieverfahren-uebersicht'
+      path: '/manuelle-therapieverfahren-uebersicht'
+      fullPath: '/manuelle-therapieverfahren-uebersicht'
+      preLoaderRoute: typeof ManuelleTherapieverfahrenUebersichtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/naturheilkunde': {
+      id: '/naturheilkunde'
+      path: '/naturheilkunde'
+      fullPath: '/naturheilkunde'
+      preLoaderRoute: typeof NaturheilkundeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/online-anamnesebogen': {
@@ -543,6 +604,7 @@ const rootRouteChildren: RootRouteChildren = {
   AnfahrtRoute: AnfahrtRoute,
   ArchivRoute: ArchivRoute,
   BioresonanzAugsburgRoute: BioresonanzAugsburgRoute,
+  BioresonanzTherapieRoute: BioresonanzTherapieRoute,
   DatenschutzRoute: DatenschutzRoute,
   ErschoepfungAugsburgRoute: ErschoepfungAugsburgRoute,
   ErstgespraechRoute: ErstgespraechRoute,
@@ -550,6 +612,9 @@ const rootRouteChildren: RootRouteChildren = {
   ImpressumRoute: ImpressumRoute,
   KontaktRoute: KontaktRoute,
   LoginRoute: LoginRoute,
+  ManuelleTherapieverfahrenUebersichtRoute:
+    ManuelleTherapieverfahrenUebersichtRoute,
+  NaturheilkundeRoute: NaturheilkundeRoute,
   OnlineAnamnesebogenRoute: OnlineAnamnesebogenRoute,
   PraxisRoute: PraxisRoute,
   QuellenhinweisRoute: QuellenhinweisRoute,

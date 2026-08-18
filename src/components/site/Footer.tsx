@@ -28,9 +28,9 @@ export function Footer() {
           <ul className="flex flex-col gap-2 text-sm">
             {footerNav.praxis.map((item) => (
               <li key={item.to}>
-                <Link to={item.to} className="text-muted transition-colors hover:text-sage">
+                <a href={item.to} className="text-muted transition-colors hover:text-sage">
                   {item.label}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
@@ -63,9 +63,9 @@ export function Footer() {
           <ul className="flex flex-col gap-2 text-sm">
             {footerNav.recht.map((item) => (
               <li key={item.to}>
-                <Link to={item.to} className="text-muted transition-colors hover:text-sage">
+                <a href={item.to} className="text-muted transition-colors hover:text-sage">
                   {item.label}
-                </Link>
+                </a>
               </li>
             ))}
             <li>

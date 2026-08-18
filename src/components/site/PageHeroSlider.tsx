@@ -53,6 +53,10 @@ export function PageHeroSlider({
             src={item.src}
             alt=""
             aria-hidden={i !== index}
+            fetchPriority={i === 0 ? "high" : "low"}
+            decoding="async"
+            width={1600}
+            height={1000}
             className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-700 ${
               i === index ? "opacity-100" : "opacity-0"
             }`}

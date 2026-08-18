@@ -21,6 +21,7 @@ Stand des Protokolls: **18. August 2026**.
 | [11-lovable-design-pruefung.md](./11-lovable-design-pruefung.md) | App-Look vs. CMS: was adaptierbar ist |
 | [12-wiederherstellungspunkte.md](./12-wiederherstellungspunkte.md) | Git-Tags RP-01 bis RP-08 |
 | [13-archiv-design.md](./13-archiv-design.md) | Archiv-Rollout: Slider, UX, E-E-A-T |
+| [14-hubs-geo-seo.md](./14-hubs-geo-seo.md) | 18 Hubs, alte URLs, GEO, Wellen, Admin |
 | [changelog.md](./changelog.md) | Chronologisches Protokoll |
 
 Quelldaten des Crawls liegen unter:

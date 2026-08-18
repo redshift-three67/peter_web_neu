@@ -74,5 +74,10 @@ export const dedicatedRoutes = new Set([
   "/archiv",
   "/verfahren/manuell",
   "/verfahren/frequenz",
-  "/verfahren/naturheilkunde",
+  "/naturheilkunde",
+  "/manuelle-therapieverfahren-uebersicht",
+  "/bioresonanz-therapie",
+  "/datenschutzerklaerung",
+  "/rechtshinweise-therapieverfahren",
+  "/online-anamnesebogen",
 ]);

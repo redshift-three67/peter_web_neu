@@ -1,5 +1,13 @@
 # Changelog — Migration
 
+## 2026-08-18 (Hubs Welle 1)
+
+- Plan: [14-hubs-geo-seo.md](./14-hubs-geo-seo.md)
+- Menü = alte WP-Gruppen, Ranking-URLs.
+- Hubs live: Naturheilkunde, Manuell, Bioresonanz, Schmerz, Hypnose + Start.
+- 301 von Kurz-URLs. Sitemap nur indexierte Hubs.
+- Hero fetchPriority / Dimensionen (PageSpeed).
+
 ## 2026-08-18 (Archiv-Haut)
 
 - RP-08 vor dem Rollout (`rp-08-pre-archive-skin`).
