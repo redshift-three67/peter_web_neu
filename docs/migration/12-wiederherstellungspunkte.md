@@ -12,6 +12,7 @@ Lokales Git-Repo. Identität nur lokal: `Rauch Migration <dev@rauch-heilpraktike
 | RP-06 | `rp-06-menu-type` | `b7e803d` | 18.08.2026 | Slider-H1 Sage, Infothek-Menü. |
 | RP-07 | `rp-07-card-transparency` | `5a20227` | 18.08.2026 | Glas-Karten, w-fit. |
 | RP-08 | `rp-08-pre-archive-skin` | `5a20227` | 18.08.2026 | **Vor** Archiv-Rollout. |
+| RP-08b | `rp-08-archive-skin` | `2d2cab7` | 18.08.2026 | Archivseiten in Start-Haut. |
 
 ## Zurücksetzen
 
