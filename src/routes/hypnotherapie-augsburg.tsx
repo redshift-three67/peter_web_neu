@@ -7,7 +7,10 @@ import {
   PageHero,
   Prose,
 } from "@/components/site/Shared";
+import { getArchiveBySlug } from "@/content/archive";
 import { pageHead } from "@/lib/seo";
+
+const HERO = "/media/originals/Hypnose_Behandlung_Augsburg_Heilpraltiker_Rauch_2.webp";
 
 export const Route = createFileRoute("/hypnotherapie-augsburg")({
   head: () =>
@@ -21,14 +24,21 @@ export const Route = createFileRoute("/hypnotherapie-augsburg")({
 });
 
 function Page() {
+  const archived = getArchiveBySlug("hypnotherapie-augsburg");
+  const extras = (archived?.images ?? [])
+    .map((img) => img.local)
+    .filter((src): src is string => Boolean(src))
+    .filter((src) => !/Peter-Rauch|logo/i.test(src))
+    .slice(0, 4);
+
   return (
     <>
       <PageHero
         kicker="Verfahren · Gespräch"
         title="Hypnotherapie in Augsburg"
         lead="Ein ergänzendes Verfahren. Keine Show, keine Garantie, kein Ersatz für psychiatrische Behandlung."
-        image="/images/ruhe.jpg"
-        imageAlt="Ruhiger Waldpfad"
+        image={HERO}
+        imageAlt="Hypnosebehandlung in der Naturheilpraxis Rauch"
       />
       <Container className="py-14">
         <Prose>
@@ -43,6 +53,18 @@ function Page() {
             Mensch und nicht jedes Anliegen eignet sich.
           </p>
         </Prose>
+        {extras.length ? (
+          <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
+            {extras.map((src) => (
+              <img
+                key={src}
+                src={src.replace(/\.(jpe?g|png)$/i, ".webp")}
+                alt=""
+                className="aspect-[4/3] w-full rounded-lg object-cover"
+              />
+            ))}
+          </div>
+        ) : null}
         <AuthorByline />
         <Disclaimer className="mt-8" />
       </Container>

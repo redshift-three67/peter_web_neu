@@ -34,6 +34,13 @@ export const practice = {
   licensePt: "Regierungspräsidium Gießen",
   updated: "August 2026",
   experienceYears: 20,
+  emailCanonical: "info@rauch-heilpraktiker.de",
+  social: {
+    facebook:
+      "https://www.facebook.com/heilpraktiker.naturheilpraxis.bioresonanz.rauch/",
+    googlePlaces: "https://g.page/RauchHeilpraktikerAugsburg",
+  },
+  googleSiteVerification: "Lo1lpA7DNTfaUkKiiWvDSJFJSBAsi2DDhjToUoKieWU",
 } as const;
 
 export const reviews = {

@@ -15,6 +15,10 @@ Stand des Protokolls: **18. August 2026**.
 | [05-crawl-protokoll.md](./05-crawl-protokoll.md) | Was der öffentliche Crawl holt, Grenzen, Nachziehen |
 | [06-entwickler-handbuch.md](./06-entwickler-handbuch.md) | Dateien, Routen, wie man eine Seite aktiviert |
 | [07-offene-punkte.md](./07-offene-punkte.md) | Lieferungen Auftraggeber, Wiedervorlage |
+| [08-rank-math.md](./08-rank-math.md) | Settings-Export, was übernommen wurde |
+| [09-uploads-inventar.md](./09-uploads-inventar.md) | Originale aus GitHub, Umlaut-Dateien, Kuratierung |
+| [10-bildzuordnung.md](./10-bildzuordnung.md) | Live-Bilder je Seite → Original + Slider |
+| [11-lovable-design-pruefung.md](./11-lovable-design-pruefung.md) | App-Look vs. CMS: was adaptierbar ist |
 | [changelog.md](./changelog.md) | Chronologisches Protokoll |
 
 Quelldaten des Crawls liegen unter:
@@ -23,4 +27,6 @@ Quelldaten des Crawls liegen unter:
 - `content/wordpress/html/*.html` — Roh-Snapshots
 - `content/wordpress/manifest.json` — Gesamtindex
 - `public/media/wp/` — öffentlich erreichbare Bilder (optimiert)
+- `public/media/originals/` — kuratierte WP-Originale + WebP
+- `content/wordpress/uploads-incoming/INVENTAR.json` — Upload-Maschinenindex
 - `src/content/archive/` — von der App gelesene Entwürfe

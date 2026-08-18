@@ -4,7 +4,18 @@ export type ArchiveImage = {
   url: string;
   alt: string;
   local: string | null;
+  originalName?: string | null;
   fromCache: boolean;
+  matched?: boolean;
+  inSlider?: boolean;
+};
+
+export type ArchiveSlide = {
+  src: string;
+  alt: string;
+  title: string;
+  meta: string;
+  matched?: boolean;
 };
 
 export type ArchivePart = {
@@ -25,6 +36,7 @@ export type ArchivePage = {
   wordCount: number;
   parts: ArchivePart[];
   images: ArchiveImage[];
+  slider?: ArchiveSlide[];
 };
 
 export const archivePages = catalog as ArchivePage[];

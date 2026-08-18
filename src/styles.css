@@ -37,31 +37,50 @@
 }
 
 @theme {
-  --color-bg: #f8f6f1;
-  --color-fg: #1f2b26;
-  --color-surface: #f5f2ec;
-  --color-muted: #687a72;
-  --color-line: #d4ded8;
-  --color-sage: #457a5a;
-  --color-sage-deep: #274932;
-  --color-sage-soft: #e7efe9;
-  --color-sand: #f3ebe0;
-  --color-sand-deep: #e8d9c4;
-  --color-clay: #c2754f;
-  --color-clay-deep: #9a5636;
-  --color-paper: #fffdf8;
-  --color-danger: #b42318;
+  /* Lovable tokens, hex-genau aus hsl(145/40/18 …) */
+  --color-bg: #faf8f5;
+  --color-fg: #1f2e26;
+  --color-surface: #f5f3ef;
+  --color-muted: #677e73;
+  --color-line: #d3ded8;
+  --color-sage: #457358;
+  --color-sage-deep: #274935;
+  --color-sage-soft: #e0ebe5;
+  --color-sage-50: #f2f7f4;
+  --color-sage-100: #e0ebe5;
+  --color-sage-200: #c2d6ca;
+  --color-sage-300: #94b8a3;
+  --color-sage-400: #639c7b;
+  --color-sage-500: #457358;
+  --color-sage-600: #335b44;
+  --color-sage-700: #274935;
+  --color-sand: #f2ece3;
+  --color-sand-deep: #d2c2ac;
+  --color-sand-50: #faf8f4;
+  --color-sand-100: #f2ece3;
+  --color-sand-200: #e6dbcb;
+  --color-sand-300: #d2c2ac;
+  --color-clay: #c07859;
+  --color-clay-deep: #ac5c39;
+  --color-terracotta: #c07859;
+  --color-terracotta-light: #d1a694;
+  --color-paper: #fffdf9;
+  --color-card: #f5f3ef;
+  --color-danger: #d32f2f;
 
   --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
   --font-sans: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
 
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
-  --radius-lg: 1.25rem;
-  --radius-xl: 1.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
 
-  --shadow-soft: 0 4px 20px -4px rgb(39 73 50 / 0.1);
-  --shadow-card: 0 8px 30px -8px rgb(39 73 50 / 0.12);
+  --shadow-soft: 0 4px 20px -4px rgb(39 73 53 / 0.1);
+  --shadow-card: 0 8px 30px -8px rgb(39 73 53 / 0.12);
+  --shadow-elevated: 0 20px 50px -15px rgb(39 73 53 / 0.2);
 }
 
 @layer base {
@@ -75,7 +94,7 @@
     background-color: var(--color-bg);
     color: var(--color-fg);
     font-family: var(--font-sans);
-    line-height: 1.6;
+    line-height: 1.65;
   }
 
   h1,
@@ -83,8 +102,8 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    font-weight: 500;
-    letter-spacing: -0.025em;
+    font-weight: 600;
+    letter-spacing: -0.02em;
     text-wrap: balance;
     line-height: 1.2;
   }

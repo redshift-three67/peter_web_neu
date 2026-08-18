@@ -4,7 +4,8 @@
 
 | Ort | Inhalt |
 |---|---|
-| `public/media/wp/` | öffentlich geholte Originale + WebP |
+| `public/media/originals/` | kuratierte WP-Originale + WebP |
+| `public/media/wp/` | älterer öffentlicher Crawl (Cache-Kopien, Fallback) |
 | `content/wordpress/pages/*.json` → `images[]` | Zuordnung Seite ↔ Datei |
 | `public/images/` | neue Leitbilder (kein WP, kein Portrait) |
 
@@ -26,10 +27,24 @@ editoriale Bildstrecke auf der Startseite eingesetzt werden, sobald die
 Bild-Freigabe (Phase 4) erfolgt. Bis dahin nutzt die Leit-Startseite die
 neuen atmosphärischen Fotos ohne Personenporträt.
 
-## Nachziehen des Uploads-ZIP
+## Nachziehen der Originale (GitHub, privat)
 
-1. ZIP nach `content/wordpress/uploads-incoming/` entpacken
-2. Script (folgt mit dem ZIP): Originale bevorzugen, Cache-Derivate
-   ersetzen, Umlaut-404s schließen
-3. Katalog neu bauen
-4. Freigabeliste je Bild: behalten / ersetzen / nur Archiv
+Das komplette `uploads`-ZIP ist oft zu groß (WordPress speichert pro Bild
+5–10 Zuschnitte). **Nicht den ganzen Ordner roh hochladen.**
+
+### Was wir wirklich brauchen
+
+- Originale: `.jpg` `.jpeg` `.png` `.webp` `.svg` `.pdf`
+- **Ohne** WordPress-Zuschnitte (`-150x150`, `-300x…`, `-768x…`, `-1024x…`,
+  `-scaled`, `-rotated`)
+- Besonders: Dateien mit Umlauten (die der öffentliche Crawl nicht holen konnte)
+
+### Empfohlener Weg
+
+1. Neues **privates** GitHub-Repository, z. B. `rauch-uploads-2026`
+2. Nur die gefilterten Originale hinein (siehe Handbuch)
+3. Repository-Namen hier nennen — der Import holt die Dateien von dort
+
+GitHub-Limits: einzelne Datei unter 100 MB, Repo besser unter ~1 GB.
+PDFs und große TIFFs bei Bedarf separat.
+

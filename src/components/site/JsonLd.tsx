@@ -13,6 +13,7 @@ export function PracticeJsonLd() {
         telephone: practice.phoneTel,
         email: practice.email,
         priceRange: "$$",
+        sameAs: [practice.social.facebook, practice.social.googlePlaces],
         address: {
           "@type": "PostalAddress",
           streetAddress: practice.street,
@@ -64,6 +65,7 @@ export function PracticeJsonLd() {
           "Bioresonanztherapie",
         ],
         memberOf: practice.association,
+        sameAs: [practice.social.facebook, practice.social.googlePlaces],
       },
     ],
   };

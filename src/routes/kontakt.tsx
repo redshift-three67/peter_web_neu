@@ -25,7 +25,7 @@ function Page() {
       />
       <Container className="grid gap-10 py-14 lg:grid-cols-[1.1fr_0.9fr]">
         <ContactForm />
-        <aside className="rounded-xl border border-line bg-sand/70 p-6">
+        <aside className="rounded-2xl border border-line bg-card p-6 shadow-card">
           <h2 className="font-display text-2xl text-sage-deep">Praxis</h2>
           <p className="mt-3 leading-relaxed">
             {practice.name}

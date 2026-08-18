@@ -63,8 +63,8 @@ function Home() {
           alt="Behandlungsraum der Naturheilpraxis Rauch in Augsburg-Hochzoll"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(105deg,rgb(39_73_50/0.88)_0%,rgb(39_73_50/0.62)_48%,rgb(39_73_50/0.28)_100%)]" />
-        <Container className="relative grid min-h-[78vh] items-end py-16 md:min-h-[84vh] md:py-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-sage-700/90 via-sage-600/80 to-sage-500/70" />
+        <Container className="relative grid min-h-[72vh] items-end py-24 md:min-h-[80vh] md:py-32">
           <div className="max-w-2xl text-paper">
             <p className="text-xs font-medium uppercase tracking-[0.22em] text-sand-deep">
               Augsburg-Hochzoll · Friedberg · Lechhausen
@@ -78,7 +78,7 @@ function Home() {
               – ergänzend, ohne Heilversprechen, mit klaren Grenzen.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button asChild variant="clay" size="lg">
+              <Button asChild variant="clay" size="lg" className="shadow-elevated">
                 <a href={`tel:${practice.phoneTel}`}>
                   <Phone className="size-4" /> Termin: {practice.phoneDisplay}
                 </a>
@@ -87,7 +87,7 @@ function Home() {
                 asChild
                 variant="secondary"
                 size="lg"
-                className="border-transparent"
+                className="border-paper/30 bg-paper/15 text-paper hover:bg-paper hover:text-sage-700"
               >
                 <Link to="/erstgespraech">
                   Erstgespräch verstehen <ArrowRight className="size-4" />
@@ -136,7 +136,7 @@ function Home() {
               </Button>
             </div>
           </div>
-          <aside className="rounded-xl border border-line bg-sand/80 p-6 shadow-soft">
+          <aside className="rounded-2xl border border-line bg-card p-6 shadow-card">
             <dl className="space-y-4 text-sm">
               {[
                 ["Behandler", practice.person],
@@ -172,7 +172,7 @@ function Home() {
               <Link
                 key={item.to}
                 to={item.to}
-                className="group overflow-hidden rounded-xl border border-line bg-paper shadow-soft transition hover:-translate-y-0.5 hover:shadow-card"
+                className="group overflow-hidden rounded-2xl border border-line bg-paper shadow-card transition-all duration-300 hover:-translate-y-2 hover:shadow-elevated"
               >
                 <img
                   src={item.image}
@@ -194,7 +194,7 @@ function Home() {
         </Container>
       </section>
 
-      <section className="bg-sage-soft/60">
+      <section className="bg-sage-50">
         <Container className="grid gap-8 py-16 md:grid-cols-3">
           {[
             {
@@ -215,10 +215,12 @@ function Home() {
           ].map((step) => (
             <div
               key={step.title}
-              className="rounded-xl border border-line bg-paper p-6 shadow-soft"
+              className="rounded-2xl border border-line bg-paper p-8 shadow-card"
             >
-              <step.icon className="size-6 text-sage" aria-hidden />
-              <h3 className="mt-4 font-display text-2xl text-sage-deep">
+              <span className="mb-6 inline-flex size-16 items-center justify-center rounded-2xl bg-sage-100">
+                <step.icon className="size-8 text-sage" aria-hidden />
+              </span>
+              <h3 className="font-display text-2xl font-semibold text-sage-700">
                 {step.title}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">
@@ -244,7 +246,7 @@ function Home() {
               <FaqList items={practiceFaqs} />
             </div>
           </div>
-          <div className="rounded-xl border border-line bg-paper p-6 shadow-soft">
+          <div className="rounded-2xl border border-line bg-card p-6 shadow-card">
             <p className="flex items-center gap-2 text-sm font-medium text-sage">
               <MapPin className="size-4" /> Praxis vor Ort
             </p>
