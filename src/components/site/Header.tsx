@@ -46,7 +46,7 @@ const itemIcons: Record<string, typeof Leaf> = {
 function BrandMark({ onClick }: { onClick?: () => void }) {
   return (
     <Link to="/" className="flex items-center gap-2.5" onClick={onClick}>
-      <span className="grid size-10 shrink-0 place-items-center rounded-full bg-sage text-paper shadow-soft">
+      <span className="grid size-10 shrink-0 place-items-center rounded-full bg-ink text-paper shadow-soft">
         <Leaf className="size-5" aria-hidden />
       </span>
       <span className="flex min-w-0 flex-col">
@@ -155,7 +155,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <a
             href={`tel:${practice.phoneTel}`}
-            className="hidden h-10 items-center gap-2 rounded-full bg-sage px-4 text-sm font-medium text-paper shadow-soft hover:bg-sage-600 sm:inline-flex"
+            className="hidden h-10 items-center gap-2 rounded-full border border-ink/20 px-4 text-sm font-medium text-ink hover:bg-ink hover:text-paper sm:inline-flex"
           >
             <Phone className="size-4" aria-hidden />
             Anrufen
@@ -245,7 +245,7 @@ export function Header() {
             )}
             <a
               href={`tel:${practice.phoneTel}`}
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-sage font-medium text-paper"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-ink/20 font-medium text-ink"
             >
               <Phone className="size-4" /> {practice.phoneDisplay}
             </a>

@@ -9,14 +9,14 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-sage text-paper shadow-soft hover:bg-sage-600 hover:shadow-card",
+          "bg-field text-paper shadow-soft hover:bg-ink hover:shadow-card",
         secondary:
-          "border border-line bg-sand text-sage-deep hover:bg-sand-200",
+          "border border-line bg-paper text-ink hover:bg-card",
         outline:
-          "border-2 border-sage bg-transparent text-sage hover:bg-sage hover:text-paper",
-        ghost: "text-sage-deep hover:bg-sage-100",
-        clay: "bg-clay text-paper shadow-soft hover:bg-terracotta-light",
-        hero: "rounded-xl bg-sage px-8 py-6 text-base text-paper shadow-elevated hover:bg-sage-600 hover:shadow-card",
+          "border-2 border-ink/20 bg-transparent text-ink hover:border-ink hover:bg-ink hover:text-paper",
+        ghost: "text-ink hover:bg-card",
+        clay: "bg-clay text-paper shadow-soft hover:bg-clay-deep",
+        hero: "rounded-xl bg-field px-8 py-6 text-base text-paper shadow-elevated hover:bg-ink hover:shadow-card",
         link: "px-0 text-sage underline-offset-4 hover:underline",
       },
       size: {

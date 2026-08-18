@@ -10,7 +10,7 @@ export function PhoneChip({ className }: { className?: string }) {
     <div className={cn("flex justify-center px-4 py-3", className)}>
       <a
         href={`tel:${practice.phoneTel}`}
-        className="inline-flex items-center gap-2 rounded-full border border-line bg-sage-50 px-4 py-2 text-sm text-sage-700 shadow-soft hover:bg-sage-100"
+        className="inline-flex items-center gap-2 rounded-full border border-line bg-paper px-4 py-2 text-sm text-ink shadow-soft hover:border-sage"
       >
         <Phone className="size-4" aria-hidden />
         Fragen? Rufen Sie uns gerne an: {practice.phoneDisplay}
@@ -29,9 +29,9 @@ export function CenteredPageHero({
   actions?: ReactNode;
 }) {
   return (
-    <section className="border-b border-line bg-sage-50">
+    <section className="border-b border-line bg-paper">
       <Container className="max-w-3xl py-16 text-center md:py-20">
-        <h1 className="font-display text-4xl font-semibold text-sage-700 sm:text-5xl">
+        <h1 className="font-display text-4xl font-semibold text-ink sm:text-5xl">
           {title}
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-muted">{lead}</p>
@@ -51,9 +51,9 @@ export function WarningNote({
   children: ReactNode;
 }) {
   return (
-    <aside className="rounded-2xl border border-terracotta-light/50 bg-[#fbf4ee] p-6 shadow-soft">
+    <aside className="rounded-2xl border border-signal/25 bg-paper p-6 shadow-soft">
       <div className="flex gap-4">
-        <span className="grid size-11 shrink-0 place-items-center rounded-full bg-[#f3e0d4] text-clay">
+        <span className="grid size-11 shrink-0 place-items-center rounded-full bg-signal/10 text-signal">
           <AlertTriangle className="size-5" aria-hidden />
         </span>
         <div>

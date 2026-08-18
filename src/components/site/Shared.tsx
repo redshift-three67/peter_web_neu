@@ -62,7 +62,7 @@ export function PageHero({
 
 export function CtaBand() {
   return (
-    <section className="bg-gradient-to-r from-sage-700 via-sage-600 to-sage-500 text-paper">
+    <section className="bg-field text-paper">
       <Container className="flex flex-col items-start justify-between gap-6 py-14 md:flex-row md:items-center">
         <div>
           <p className="font-display text-3xl font-semibold">Erstgespräch vereinbaren</p>
@@ -72,17 +72,17 @@ export function CtaBand() {
           </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">
-          <Button asChild variant="clay" size="lg">
+          <Button
+            asChild
+            variant="outline"
+            size="lg"
+            className="border-paper/40 text-paper hover:bg-paper hover:text-ink"
+          >
             <a href={`tel:${practice.phoneTel}`}>
               <Phone className="size-4" /> {practice.phoneDisplay}
             </a>
           </Button>
-          <Button
-            asChild
-            variant="secondary"
-            size="lg"
-            className="border-paper/30 bg-paper/15 text-paper hover:bg-paper hover:text-sage-700"
-          >
+          <Button asChild variant="clay" size="lg">
             <Link to="/kontakt">
               Nachricht schreiben <ArrowRight className="size-4" />
             </Link>
@@ -160,7 +160,12 @@ export function FaqList({
 
 export function Disclaimer({ className }: { className?: string }) {
   return (
-    <p className={cn("text-base leading-relaxed text-muted", className)}>
+    <p
+      className={cn(
+        "border-l-[3px] border-signal pl-4 text-base leading-relaxed text-muted",
+        className,
+      )}
+    >
       Die auf dieser Website dargestellten Verfahren dienen der allgemeinen
       Aufklärung und ersetzen keine ärztliche Diagnose, Beratung oder
       Behandlung. Es werden keine Heilversprechen abgegeben. Ich bin
@@ -176,7 +181,7 @@ export function Disclaimer({ className }: { className?: string }) {
 export function AuthorByline() {
   return (
     <aside className="mt-12 flex flex-col gap-3 rounded-2xl border border-line bg-sand-100 p-5 shadow-soft sm:flex-row sm:items-center">
-      <span className="grid size-14 shrink-0 place-items-center rounded-full bg-sage font-display text-lg text-paper">
+      <span className="grid size-14 shrink-0 place-items-center rounded-full bg-ink font-display text-lg text-paper">
         PR
       </span>
       <div>

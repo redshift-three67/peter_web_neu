@@ -8,7 +8,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-2 md:py-16 lg:grid-cols-4">
         <div className="space-y-4">
           <Link to="/" className="flex items-center gap-2">
-            <span className="grid size-10 place-items-center rounded-full bg-sage text-paper">
+            <span className="grid size-10 place-items-center rounded-full bg-ink text-paper">
               <Leaf className="size-5" aria-hidden />
             </span>
             <span className="flex flex-col">
