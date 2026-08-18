@@ -4,27 +4,29 @@ Lokales Git-Repo. Identität nur lokal: `Rauch Migration <dev@rauch-heilpraktike
 
 | Punkt | Tag | Commit | Wann | Inhalt |
 |---|---|---|---|---|
-| RP-01 | `rp-01-design-tokens` | `ddabd0c` | 18.08.2026 | Look-Angleichung Schritt 1: Tokens, Header, heller Footer, Karten. **Vor** Slider und App-Strukturen. |
-| RP-04 | `rp-04-slider-overlays` | `214920f` | 18.08.2026 | Slider −⅓ Höhe, schwächeres Layer, Live-Overlays, Steuerung links, Mail iCloud. |
+| RP-01 | `rp-01-design-tokens` | `ddabd0c` | 18.08.2026 | Look-Angleichung Schritt 1. |
+| RP-02 | `rp-02-slider-strukturen` | `c88df55` | 18.08.2026 | Hero-Slider, App-Strukturen. |
+| RP-03 | `rp-03-pre-slider-refine` | `f6c54fe` | 18.08.2026 | Vor Höhe/Overlays/Mail. |
+| RP-04 | `rp-04-slider-overlays` | `214920f` | 18.08.2026 | Höhe −⅓, Live-Overlays, iCloud-Mail. |
+| RP-05 | `rp-05-overlay-type` | `15d44d9` | 18.08.2026 | Sage-Karten, 16px-Fließtext. |
+| RP-06 | `rp-06-menu-type` | `b7e803d` | 18.08.2026 | Slider-H1 Sage, Infothek-Menü. |
+| RP-07 | `rp-07-card-transparency` | `5a20227` | 18.08.2026 | Glas-Karten, w-fit. |
+| RP-08 | `rp-08-pre-archive-skin` | `5a20227` | 18.08.2026 | **Vor** Archiv-Rollout. |
 
 ## Zurücksetzen
 
-Nur Dateien dieses Punkts wiederherstellen (Arbeitsbaum):
-
 ```bash
-git checkout rp-01-design-tokens -- src docs
+# Nur Quellcode vor dem Archiv-Rollout
+git checkout rp-08-pre-archive-skin -- src
+
+# Früherer Designstand
+git checkout rp-07-card-transparency -- src
 ```
 
-Kompletten Stand (vorsichtig, verwirft spätere lokale Änderungen an getrackten Dateien):
+`public/media/originals/` bleibt beim Checkout erhalten (meist ungetrackt).
 
-```bash
-git reset --hard rp-01-design-tokens
-```
+## Was der Archiv-Rollout nicht anfasst
 
-Nicht löschen: `public/media/originals/` liegt oft ungetrackt und bleibt beim Reset erhalten.
-
-## Was bewusst nicht im Slider/Design steckt
-
-- Kein Login, keine Infothek, kein DE/EN, keine gesperrten Inhalte
-- Kein Claim „ohne belastende Nebenwirkungen“
-- H1 der Startseite bleibt SEO-stabil, Slider ändert Motiv + Untertitel
+- Wortlaut der portierten Texte
+- noindex / draft
+- Login, Infothek, gesperrte App-Inhalte

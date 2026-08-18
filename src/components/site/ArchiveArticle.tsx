@@ -1,6 +1,16 @@
 import { Link } from "@tanstack/react-router";
+import { Archive, Phone } from "lucide-react";
 import type { ArchiveImage, ArchivePage, ArchiveSlide } from "@/content/archive";
-import { AuthorByline, Container, CtaBand, Disclaimer } from "@/components/site/Shared";
+import { practice } from "@/content/site";
+import { Button } from "@/components/ui/button";
+import {
+  AuthorByline,
+  Container,
+  CtaBand,
+  Disclaimer,
+} from "@/components/site/Shared";
+import { IconCard, PhoneChip, WarningNote } from "@/components/site/Design";
+import { PageHeroSlider } from "@/components/site/PageHeroSlider";
 
 function mediaSrc(local: string | null | undefined, fallback = "") {
   if (!local) return fallback;
@@ -21,62 +31,43 @@ function isPortrait(img: { local?: string | null; url?: string; src?: string }) 
   );
 }
 
-function ArchiveSlider({ slides }: { slides: ArchiveSlide[] }) {
-  const unique = slides.filter((s, i, arr) => arr.findIndex((x) => x.src === s.src) === i);
-  if (unique.length < 2) return null;
-  return (
-    <div className="mt-8">
-      <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-3">
-        {unique.map((slide) => (
-          <figure
-            key={slide.src}
-            className="min-w-[78%] snap-start overflow-hidden rounded-2xl bg-sage-50 shadow-card sm:min-w-[46%]"
-          >
-            <img
-              src={mediaSrc(slide.src, slide.src)}
-              alt={slide.alt || slide.title}
-              className="aspect-[16/10] w-full object-cover"
-            />
-            {slide.title || slide.meta ? (
-              <figcaption className="border-t border-line bg-paper px-4 py-3">
-                {slide.meta ? (
-                  <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-clay">
-                    {slide.meta}
-                  </p>
-                ) : null}
-                {slide.title ? (
-                  <p className="mt-1 font-display text-lg text-sage-deep">{slide.title}</p>
-                ) : null}
-              </figcaption>
-            ) : null}
-          </figure>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export function ArchiveArticle({ page }: { page: ArchivePage }) {
-  const slides = page.slider ?? [];
+  const slides = (page.slider ?? []).filter((s) => s.src && !isPortrait(s));
   const photos = page.images.filter(
     (img): img is ArchiveImage & { local: string } =>
       Boolean(img.local) && !isChrome(img) && !isPortrait(img),
   );
   const portrait = page.images.find((img) => img.local && isPortrait(img));
-  const hero: ArchiveImage | ArchiveSlide | undefined =
-    slides.find((s) => s.src && !isPortrait(s)) ?? photos[0] ?? portrait;
 
-  const heroSrc =
-    hero && "src" in hero
-      ? mediaSrc(hero.src, hero.src)
-      : hero && "local" in hero
-        ? mediaSrc(hero.local, hero.url)
-        : "";
-  const heroAlt =
-    (hero && "alt" in hero && hero.alt) ||
-    (hero && "title" in hero && hero.title) ||
-    page.h1;
+  const heroSlides =
+    slides.length > 0
+      ? slides.map((s: ArchiveSlide) => ({
+          src: mediaSrc(s.src, s.src),
+          alt: s.alt || s.title,
+          title: s.title,
+          meta: s.meta,
+        }))
+      : photos[0]
+        ? [
+            {
+              src: mediaSrc(photos[0].local, photos[0].url),
+              alt: photos[0].alt || page.h1,
+              title: page.description || undefined,
+              meta: undefined,
+            },
+          ]
+        : portrait?.local
+          ? [
+              {
+                src: mediaSrc(portrait.local),
+                alt: "Peter Rauch, Heilpraktiker in Augsburg",
+                title: undefined,
+                meta: undefined,
+              },
+            ]
+          : [];
 
+  const heroSrc = heroSlides[0]?.src ?? "";
   const gallery = photos
     .map((img) => img.local)
     .filter((src, i, arr) => arr.indexOf(src) === i)
@@ -85,50 +76,47 @@ export function ArchiveArticle({ page }: { page: ArchivePage }) {
 
   return (
     <>
-      <section className="border-b border-line bg-sand-50">
-        <Container className="grid gap-8 py-14 md:grid-cols-[1.15fr_0.85fr] md:items-end md:py-20">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-clay">
-              Entwurf · übernommen aus WordPress · nicht indexiert
+      {heroSlides.length > 0 ? (
+        <PageHeroSlider
+          slides={heroSlides}
+          heading={page.h1}
+          kicker="Entwurf · übernommen aus WordPress · nicht indexiert"
+        />
+      ) : (
+        <section className="border-b border-line bg-sage-50">
+          <Container className="py-12 md:py-16">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-sage">
+              Entwurf · nicht indexiert
             </p>
-            <h1 className="mt-3 font-display text-4xl font-semibold text-sage-700 sm:text-5xl">
+            <h1 className="mt-2 max-w-3xl font-display text-3xl font-semibold text-sage-700 md:text-4xl">
               {page.h1}
             </h1>
             {page.description ? (
               <p className="mt-4 max-w-2xl text-lg text-muted">{page.description}</p>
             ) : null}
-            <p className="mt-4 text-xs text-muted">
-              Quelle: {page.sourceUrl} · {page.wordCount} Wörter · {photos.length} Originale
-              {slides.length ? ` · ${slides.length} Sliderbilder` : ""}
-            </p>
-          </div>
-          {heroSrc ? (
-            <div className="overflow-hidden rounded-3xl shadow-elevated">
-              <img src={heroSrc} alt={heroAlt} className="aspect-[4/3] w-full object-cover" />
-            </div>
-          ) : null}
-        </Container>
-        {slides.length > 1 ? (
-          <Container className="pb-10">
-            <ArchiveSlider slides={slides} />
           </Container>
-        ) : null}
-      </section>
+        </section>
+      )}
 
-      <Container className="grid gap-10 py-14 lg:grid-cols-[1.2fr_0.8fr]">
-        <article className="max-w-3xl space-y-4 text-[1.05rem] leading-relaxed text-fg/90">
+      <PhoneChip className="border-b border-line bg-bg" />
+
+      <Container className="grid gap-10 py-12 lg:grid-cols-[1.2fr_0.8fr] lg:py-16">
+        <article className="max-w-3xl space-y-4 text-base leading-relaxed text-fg/90">
+          {page.description && heroSlides.length > 0 ? (
+            <p className="text-lg text-muted">{page.description}</p>
+          ) : null}
           {page.parts.map((part, i) => {
             if (part.tag === "h1") return null;
             if (part.tag === "h2") {
               return (
-                <h2 key={i} className="pt-4 font-display text-3xl text-sage-deep">
+                <h2 key={i} className="pt-4 font-display text-3xl font-semibold text-sage-700">
                   {part.text}
                 </h2>
               );
             }
             if (part.tag === "h3") {
               return (
-                <h3 key={i} className="pt-2 font-display text-2xl text-sage-deep">
+                <h3 key={i} className="pt-2 font-display text-2xl font-semibold text-sage-700">
                   {part.text}
                 </h3>
               );
@@ -145,18 +133,14 @@ export function ArchiveArticle({ page }: { page: ArchivePage }) {
         </article>
 
         <aside className="space-y-5">
-          {gallery.length > 0 ? (
-            <div className="grid grid-cols-2 gap-2">
-              {gallery.map((src) => (
-                <img
-                  key={src}
-                  src={mediaSrc(src)}
-                  alt=""
-                  className="aspect-[4/3] w-full rounded-lg object-cover"
-                />
-              ))}
-            </div>
-          ) : null}
+          <WarningNote title="Noch nicht veröffentlicht">
+            <p>
+              Texte und Bilder stammen von der bisherigen WordPress-Seite und
+              sind hier als Entwurf vorbereitet. Diese URL ist auf{" "}
+              <strong>noindex</strong> gesetzt und ersetzt die Live-Seite nicht.
+            </p>
+          </WarningNote>
+
           {portrait?.local ? (
             <figure className="overflow-hidden rounded-2xl border border-line bg-paper shadow-card">
               <img
@@ -164,22 +148,59 @@ export function ArchiveArticle({ page }: { page: ArchivePage }) {
                 alt="Peter Rauch, Heilpraktiker in Augsburg"
                 className="aspect-[4/5] w-full object-cover object-top"
               />
-              <figcaption className="px-4 py-3 text-sm text-muted">
+              <figcaption className="px-4 py-3 text-base text-muted">
                 Peter Rauch · Heilpraktiker, Augsburg-Hochzoll
               </figcaption>
             </figure>
           ) : null}
-          <div className="rounded-2xl border border-line bg-paper p-5 text-sm text-muted shadow-soft">
-            <p className="font-medium text-sage-deep">Archivstatus</p>
-            <p className="mt-2">
-              Texte und Live-Bilder dieser Seite sind portiert und an das neue
-              Design angepasst, aber noch nicht öffentlich freigegeben.
+
+          {gallery.length > 0 ? (
+            <div className="grid grid-cols-2 gap-3">
+              {gallery.map((src) => (
+                <img
+                  key={src}
+                  src={mediaSrc(src)}
+                  alt=""
+                  className="aspect-[4/3] w-full rounded-2xl object-cover shadow-soft"
+                />
+              ))}
+            </div>
+          ) : null}
+
+          <IconCard icon={Archive} title="Archivstatus">
+            <p>
+              {page.wordCount} Wörter · {photos.length} Originale
+              {slides.length ? ` · ${slides.length} Sliderbilder` : ""}. Quelle:{" "}
+              {page.sourceUrl.replace("https://rauch-heilpraktiker.de", "")}
             </p>
-            <p className="mt-3">
+            <p>
               <Link to="/archiv" className="text-sage underline-offset-4 hover:underline">
                 Zur Archivübersicht
               </Link>
             </p>
+          </IconCard>
+
+          <div className="rounded-2xl border border-line bg-card p-5 shadow-card">
+            <p className="font-display text-xl font-semibold text-sage-700">
+              Nächster Schritt
+            </p>
+            <p className="mt-2 text-base text-muted">
+              Fragen zum Inhalt dieser Seite kläre ich im Gespräch – nicht per
+              Online-Diagnose.
+            </p>
+            <div className="mt-4 flex flex-col gap-2">
+              <Button asChild>
+                <a href={`tel:${practice.phoneTel}`}>
+                  <Phone className="size-4" /> {practice.phoneDisplay}
+                </a>
+              </Button>
+              <Button asChild variant="outline">
+                <Link to="/kontakt">Nachricht schreiben</Link>
+              </Button>
+              <Button asChild variant="ghost">
+                <Link to="/erstgespraech">Erstgespräch & Kosten</Link>
+              </Button>
+            </div>
           </div>
         </aside>
 
