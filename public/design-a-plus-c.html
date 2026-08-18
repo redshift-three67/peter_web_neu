@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A+C Festlegung — Farbe und Schrift (nicht öffentlich)</title>
+    <style>
+      @font-face {
+        font-family: "Playfair Display";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url("/fonts/playfair-500.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Playfair Display";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url("/fonts/playfair-600.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Source Sans 3";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("/fonts/source-sans-400.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Source Sans 3";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url("/fonts/source-sans-500.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Source Sans 3";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url("/fonts/source-sans-600.woff2") format("woff2");
+      }
+      :root {
+        --paper: #f7f1e8;
+        --paper-deep: #efe8dc;
+        --ink: #1d2c38;
+        --ink-soft: #4a5863;
+        --line: #d9d1c4;
+        --field: #16332c;
+        --sage: #3f6b52;
+        --sage-deep: #274935;
+        --clay: #c07859;
+        --signal: #8a4b32;
+        --display: "Playfair Display", Georgia, serif;
+        --sans: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--sans);
+        font-size: 1.125rem;
+        line-height: 1.65;
+      }
+      .note {
+        font-size: 0.85rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        font-weight: 500;
+      }
+      .wrap { max-width: 1120px; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+      h1.display {
+        font-family: var(--display);
+        font-weight: 500;
+        font-size: clamp(2.2rem, 5vw, 3.25rem);
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        margin: 0.35rem 0 0.75rem;
+      }
+      h1.display em { font-style: italic; font-weight: 500; }
+      h2 {
+        font-family: var(--display);
+        font-weight: 500;
+        font-size: 1.65rem;
+        margin: 2.75rem 0 0.75rem;
+      }
+      h3 { font-family: var(--sans); font-weight: 600; font-size: 1.05rem; margin: 0 0 0.4rem; }
+      p.lead { font-size: 1.2rem; max-width: 40rem; color: var(--ink); }
+      .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.75rem; margin: 1.25rem 0 0; }
+      .swatch { border: 1px solid var(--line); border-radius: 0.75rem; overflow: hidden; background: #fff; }
+      .chip { height: 72px; }
+      .swatch figcaption { padding: 0.55rem 0.7rem 0.7rem; font-size: 0.8rem; line-height: 1.35; }
+      .swatch code { display: block; color: var(--ink-soft); font-size: 0.75rem; }
+      .pair { display: grid; gap: 1rem; margin-top: 1rem; }
+      @media (min-width: 800px) { .pair { grid-template-columns: 1fr 1fr; } }
+      .hero-a, .hero-c {
+        border-radius: 1rem;
+        padding: 2.25rem 1.75rem;
+        min-height: 220px;
+      }
+      .hero-a { background: var(--field); color: var(--paper); }
+      .hero-c { background: var(--ink); color: var(--paper); }
+      .hero-a h1, .hero-c h1 {
+        font-family: var(--display);
+        font-weight: 500;
+        font-size: clamp(1.8rem, 3vw, 2.4rem);
+        line-height: 1.15;
+        margin: 0.4rem 0 0.6rem;
+      }
+      .hero-a p, .hero-c p { margin: 0; max-width: 28rem; font-size: 1rem; opacity: 0.92; }
+      .cta {
+        display: inline-block;
+        margin-top: 1.1rem;
+        background: var(--clay);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.95rem;
+        padding: 0.65rem 1.1rem;
+        border-radius: 0.65rem;
+      }
+      .ghost {
+        display: inline-block;
+        margin: 1.1rem 0 0 0.6rem;
+        color: inherit;
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+      .card {
+        background: var(--paper-deep);
+        border-radius: 1rem;
+        padding: 1.25rem 1.3rem;
+        border: 1px solid var(--line);
+      }
+      .card p { margin: 0; font-size: 1rem; }
+      .warn {
+        border-left: 3px solid var(--signal);
+        padding: 0.9rem 1rem;
+        background: var(--paper-deep);
+        font-size: 1rem;
+      }
+      a.inline { color: var(--sage-deep); }
+      hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p class="note">Internes Muster · noindex · Live-Site unverändert</p>
+      <h1 class="display">Person zuerst,<br />Gerät <em>danach</em>.</h1>
+      <p class="lead">
+        Verbindliches Paar: Playfair Display + Source Sans 3.
+        Papier <code>#F7F1E8</code>, Tinte <code>#1D2C38</code>, Feld
+        <code>#16332C</code>. Sage nur Akzent, Clay nur ein Knopf.
+      </p>
+
+      <h2>Farben</h2>
+      <div class="swatches">
+        <figure class="swatch"><div class="chip" style="background:#F7F1E8"></div><figcaption>paper<code>#F7F1E8</code></figcaption></figure>
+        <figure class="swatch"><div class="chip" style="background:#EFE8DC"></div><figcaption>paper-deep<code>#EFE8DC</code></figcaption></figure>
+        <figure class="swatch"><div class="chip" style="background:#1D2C38"></div><figcaption>ink<code>#1D2C38</code></figcaption></figure>
+        <figure class="swatch"><div class="chip" style="background:#4A5863"></div><figcaption>ink-soft<code>#4A5863</code></figcaption></figure>
+        <figure class="swatch"><div class="chip" style="background:#16332C"></div><figcaption>field<code>#16332C</code></figcaption></figure>
+        <figure class="swatch"><div class="chip" style="background:#3F6B52"></div><figcaption>sage Akzent<code>#3F6B52</code></figcaption></figure>
+        <figure class="swatch"><div class="chip" style="background:#274935"></div><figcaption>sage-deep Link<code>#274935</code></figcaption></figure>
+        <figure class="swatch"><div class="chip" style="background:#C07859"></div><figcaption>clay 1× CTA<code>#C07859</code></figcaption></figure>
+        <figure class="swatch"><div class="chip" style="background:#8A4B32"></div><figcaption>signal HWG<code>#8A4B32</code></figcaption></figure>
+        <figure class="swatch"><div class="chip" style="background:#D9D1C4"></div><figcaption>line<code>#D9D1C4</code></figcaption></figure>
+      </div>
+
+      <h2>A Gespräch · Parsley-Feld</h2>
+      <div class="pair">
+        <div class="hero-a">
+          <p class="note" style="color:#d9d1c4">Start / Schmerz / Psyche</p>
+          <h1>Schmerz verstehen,<br />nicht überdecken.</h1>
+          <p>In Augsburg-Hochzoll. Erst das Gespräch, dann die Hände.</p>
+          <a class="cta" href="#">Nachricht</a>
+          <span class="ghost">0821 2621462</span>
+        </div>
+        <div class="card">
+          <h3>Source Sans als Kartentitel</h3>
+          <p>
+            Playfair bleibt dem Kapitel. Hier läuft der Text in 18px,
+            Zeile 1.65 — lesbar, nicht brochure-grün.
+            <a class="inline" href="#">Weiterlesen</a>
+          </p>
+        </div>
+      </div>
+
+      <h2>C Diagnose · Neko-Tinte</h2>
+      <div class="pair">
+        <div class="hero-c">
+          <p class="note" style="color:#d9d1c4">NLS / EAV / Bioresonanz</p>
+          <h1>Hinweis, keine Laborzahl.</h1>
+          <p>Was der Scan zeigen kann — und was er ausdrücklich nicht ersetzt.</p>
+        </div>
+        <div class="warn">
+          Kein Heilversprechen. Bei Verdacht auf eine behandlungsbedürftige
+          Erkrankung zuerst ärztlich abklären.
+        </div>
+      </div>
+
+      <hr />
+      <p>
+        Spezifikation:
+        <a class="inline" href="https://github.com/redshift-three67/peter_web_neu/blob/main/docs/design-a-plus-c/00-FESTLEGUNG.md"
+          >docs/design-a-plus-c/00-FESTLEGUNG.md</a>
+        · Diese Datei nicht in die Navigation.
+      </p>
+    </div>
+  </body>
+</html>

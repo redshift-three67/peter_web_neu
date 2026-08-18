@@ -1,5 +1,8 @@
 # Nächste Schritte nach der Pause
 
+**Design A+C ist festgelegt** (Live noch unverändert):
+[`docs/design-a-plus-c/00-FESTLEGUNG.md`](../design-a-plus-c/00-FESTLEGUNG.md) · Muster `/design-a-plus-c.html`
+
 Reihenfolge vorschlagen, Auftraggeber entscheidet.
 
 1. **Optik der 18 Hubs abnehmen** (NLS + Naturheilkunde als Muster).

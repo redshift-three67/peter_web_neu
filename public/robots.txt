@@ -4,5 +4,6 @@ Disallow: /login
 Disallow: /praxis
 Disallow: /archiv
 Disallow: /api/
+Disallow: /design-a-plus-c.html
 
 Sitemap: https://rauch-heilpraktiker.de/sitemap.xml
