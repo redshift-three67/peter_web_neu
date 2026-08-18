@@ -1,5 +1,10 @@
 # Changelog — Migration
 
+## 2026-08-18 (Hubs Welle 2)
+
+- Psychotherapie, NLS, Osteopathie auf alten URLs.
+- Kontakt/Impressum/Anamnesebogen live, `/anamnese` → `/online-anamnesebogen`.
+
 ## 2026-08-18 (Hubs Welle 1)
 
 - Plan: [14-hubs-geo-seo.md](./14-hubs-geo-seo.md)

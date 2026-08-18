@@ -45,11 +45,13 @@ export function HubFromArchive({
   heading,
   kicker,
   lead,
+  showCta = true,
 }: {
   slug: string;
   heading: string;
   kicker: string;
   lead?: string;
+  showCta?: boolean;
 }) {
   const page = getArchiveBySlug(slug);
   const parts = page ? editorialParts(page) : [];
@@ -168,7 +170,7 @@ export function HubFromArchive({
           <Disclaimer className="mt-8" />
         </div>
       </Container>
-      <CtaBand />
+      {showCta ? <CtaBand /> : null}
     </>
   );
 }

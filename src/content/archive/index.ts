@@ -80,4 +80,7 @@ export const dedicatedRoutes = new Set([
   "/datenschutzerklaerung",
   "/rechtshinweise-therapieverfahren",
   "/online-anamnesebogen",
+  "/psychotherapie-augsburg",
+  "/nls-diagnostik",
+  "/osteopathie-techniken",
 ]);
