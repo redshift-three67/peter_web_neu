@@ -1,0 +1,527 @@
+{
+  "slug": "osteopathie-techniken",
+  "sourceUrl": "https://rauch-heilpraktiker.de/osteopathie-techniken/",
+  "finalUrl": "https://rauch-heilpraktiker.de/osteopathie-techniken/",
+  "httpStatus": 200,
+  "class": "B-inactive-archive",
+  "status": "draft",
+  "robots": "noindex,follow",
+  "extracted": {
+    "title": "Osteopathie | Naturheilpraxis Rauch",
+    "h1": "Osteopathie",
+    "description": "Osteopathie in der Naturheilpraxis Rauch in Augsburg: manuelles Konzept der Erfahrungsheilkunde, ergänzend nach Anamnese.",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Osteopathie"
+      },
+      {
+        "tag": "h2",
+        "text": "Naturheilkundlich begleiten – Stark im Leben"
+      },
+      {
+        "tag": "h2",
+        "text": "Was ist Osteopathie:"
+      },
+      {
+        "tag": "h3",
+        "text": "Osteopathie ist eine manuelle Behandlungsform. Manuell bedeutetet, dass diese Therapie mit den Händen ausgeführt wird."
+      },
+      {
+        "tag": "h3",
+        "text": "Osteopathie Techniken"
+      },
+      {
+        "tag": "h3",
+        "text": "Osteopathie Augsburg"
+      },
+      {
+        "tag": "h3",
+        "text": "Osteopathie Augsburg – Grundgedanken zur Osteopathie:"
+      },
+      {
+        "tag": "h3",
+        "text": "Wie arbeitet der/die Therapeut/in:"
+      },
+      {
+        "tag": "h3",
+        "text": "Osteopathie Augsburg – Wann sind Osteopathie Techniken sinnvoll:"
+      },
+      {
+        "tag": "h2",
+        "text": "Häufige Fragen zur Praxis"
+      }
+    ],
+    "parts": [
+      {
+        "tag": "li",
+        "text": "Impressum"
+      },
+      {
+        "tag": "li",
+        "text": "Rechtshinweise"
+      },
+      {
+        "tag": "li",
+        "text": "Rechtshinweise Therapieverfahren"
+      },
+      {
+        "tag": "li",
+        "text": "Downloadbereich"
+      },
+      {
+        "tag": "li",
+        "text": "Praxis offen"
+      },
+      {
+        "tag": "li",
+        "text": "Online-Anamnesebogen"
+      },
+      {
+        "tag": "li",
+        "text": "Gesundheitsrelevante Dokumentation"
+      },
+      {
+        "tag": "li",
+        "text": "Diagnostik Diagnostik – Stuhluntersuchung"
+      },
+      {
+        "tag": "li",
+        "text": "Diagnose – Urinuntersuchung"
+      },
+      {
+        "tag": "li",
+        "text": "Diagnose – Labordiagnose – Biodiagnostik"
+      },
+      {
+        "tag": "li",
+        "text": "Hinweisdiagnostik – EAV – Elektroakupunktur nach Dr. Voll"
+      },
+      {
+        "tag": "li",
+        "text": "Hinweisdiagnostik – Irisdiagnose"
+      },
+      {
+        "tag": "li",
+        "text": "Hinweisdiagnostik – Frequenztherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Biophysikalische Bioresonanz Funktionsweise Bioresonanz / Elektroakupunktur"
+      },
+      {
+        "tag": "li",
+        "text": "Akupunktur ohne Nadeln"
+      },
+      {
+        "tag": "li",
+        "text": "NLS-Diagnostik"
+      },
+      {
+        "tag": "li",
+        "text": "Vieva Pro Analyse"
+      },
+      {
+        "tag": "li",
+        "text": "Elektroakupunktur nach Voll"
+      },
+      {
+        "tag": "li",
+        "text": "150 MHz nach Broers"
+      },
+      {
+        "tag": "li",
+        "text": "Manuelle +Osteopathie Allgemein"
+      },
+      {
+        "tag": "li",
+        "text": "+Integrative Manual Therapy Die Begründer"
+      },
+      {
+        "tag": "li",
+        "text": "Denk und Behandlungsansätze"
+      },
+      {
+        "tag": "li",
+        "text": "Behandlungsmöglichkeiten"
+      },
+      {
+        "tag": "li",
+        "text": "Rehabilitation"
+      },
+      {
+        "tag": "li",
+        "text": "+Lowen Systems (Biovalent System) Arbeit mit den Händen"
+      },
+      {
+        "tag": "li",
+        "text": "Begründer Frank Lowen"
+      },
+      {
+        "tag": "li",
+        "text": "Die Hände"
+      },
+      {
+        "tag": "li",
+        "text": "Die Regulatoren"
+      },
+      {
+        "tag": "li",
+        "text": "Die Koerper Rhythmen"
+      },
+      {
+        "tag": "li",
+        "text": "Die Körpersysteme"
+      },
+      {
+        "tag": "li",
+        "text": "+Microkinesi Allgemein Microkinesi Möglichkeiten"
+      },
+      {
+        "tag": "li",
+        "text": "+Physiotherapie Allgemein Physiotherapie Tätigkeitsfelder"
+      },
+      {
+        "tag": "li",
+        "text": "+Dorntherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Schmerz Entstehung von Schmerz"
+      },
+      {
+        "tag": "li",
+        "text": "Naturheilkunde Klassische Homöopathie"
+      },
+      {
+        "tag": "li",
+        "text": "Die Komplex Homöopathie"
+      },
+      {
+        "tag": "li",
+        "text": "Die Phytotherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Allergiebehandlung mit NAET Behandlungsablauf"
+      },
+      {
+        "tag": "li",
+        "text": "Naturheilkundliche Darmsanierung"
+      },
+      {
+        "tag": "li",
+        "text": "Injektionstherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Orthomolekular Kinesiologie"
+      },
+      {
+        "tag": "li",
+        "text": "Zhineng Dr Pang Ming"
+      },
+      {
+        "tag": "li",
+        "text": "Psychotherapie Hypnose"
+      },
+      {
+        "tag": "li",
+        "text": "Heilmeditation"
+      },
+      {
+        "tag": "li",
+        "text": "Kontakt"
+      },
+      {
+        "tag": "li",
+        "text": "Naturheilpraxis Rauch Osteopathische Techniken Mehr Info zu osteopathischen Techniken"
+      },
+      {
+        "tag": "li",
+        "text": "Naturheilpraxis Rauch Manuelle Therapien für Kinder Mehr Info zur Integrative Manual Therapy"
+      },
+      {
+        "tag": "li",
+        "text": "Naturheilpraxis Rauch Manuelle Therapieverfahren Mehr Info zur Schmerztherapie"
+      },
+      {
+        "tag": "h1",
+        "text": "Osteopathie"
+      },
+      {
+        "tag": "h2",
+        "text": "Naturheilkundlich begleiten – Stark im Leben"
+      },
+      {
+        "tag": "h2",
+        "text": "Was ist Osteopathie:"
+      },
+      {
+        "tag": "h3",
+        "text": "Osteopathie ist eine manuelle Behandlungsform. Manuell bedeutetet, dass diese Therapie mit den Händen ausgeführt wird."
+      },
+      {
+        "tag": "h3",
+        "text": "Osteopathie Techniken"
+      },
+      {
+        "tag": "h3",
+        "text": "Osteopathie Augsburg"
+      },
+      {
+        "tag": "p",
+        "text": "Osteopathie ist ein manuelles Konzept der Erfahrungsheilkunde. Gearbeitet wird mit den Händen, ohne Geräte und ohne Medikamente."
+      },
+      {
+        "tag": "p",
+        "text": "Beschrieben werden Zusammenhänge von Struktur und Funktion. Das ist keine Zusage, Schmerzen zu beseitigen oder Organe zu heilen."
+      },
+      {
+        "tag": "p",
+        "text": "In der Naturheilpraxis Rauch kommt Osteopathie ergänzend und nach Anamnese zum Einsatz. Den Überblick finden Sie unter Manuelle Verfahren ."
+      },
+      {
+        "tag": "h3",
+        "text": "Osteopathie Augsburg – Grundgedanken zur Osteopathie:"
+      },
+      {
+        "tag": "p",
+        "text": "Es wird davon ausgegangen, daß sich Strukturen, wie Knochen, Muskeln, Organe, Fascien, Cranium (Kopf), Nervensystem, Wirbelsäule, Gelenke und ihre Funktionen gegenseitig bedingen. So bedingt z.B. ein in seiner Funktion oder und Struktur eingeschränktes Sprunggelenk eine Kompensation durch das Knie und dieses wiederum wird eine Veränderung an der Hüftstellung bewirken usw. Oder eine Fehlstellung in den Kiefergelenken wird wahrscheinlich u.a. eine Fehlstellung im Becken hervorrufen. Oder eine fasziale Restriktion der Leber kann Probleme in der rechten Schulter sowie mannigfaltige andere Probleme hervorrufen. Zusammenfassend kann man sagen, dass die Technik das Symptom nicht als die Ursache der Beschwerden sieht, sondern das Symptom zeigt an, dass sich das System Mensch aus seiner Mitte bewegt hat. Die Osteopathie versucht nun durch manuelle (mit den Händen) Korrekturmethoden dies zu korrigieren, sowohl im craniosacralen als auch im viszeralen Bereich."
+      },
+      {
+        "tag": "h3",
+        "text": "Wie arbeitet der/die Therapeut/in:"
+      },
+      {
+        "tag": "p",
+        "text": "Ziel der osteopathischen Techniken ist es, die eingeschränkte Beweglichkeit von Gelenken, Muskeln und Organen wiederherzustellen. Im Laufe seiner Ausbildung und seiner Eigenbehandlung haben die osteopathisch arbeiteten Therapeuten ihre Hande zu hochsensiblen Instrumenten entwickelt. Um sie gezielt einzusetzen, ist es erforderlich die Anatomie des Körpers äußerst gut zu kennen."
+      },
+      {
+        "tag": "p",
+        "text": "Wie weiter oben schon erwähnt, hatten und haben verschiedenste Therapeuten an der Entwicklung der Osteopathie entscheidenden Einfluss. Und jeder von ihnen entwickelte neue Techniken aufgrund seiner speziellen Weise. All diese Techniken stehen dem Behandler zur Verfügung. Diese vielfältigen Techniken lassen sich meist auf zwei unterschiedliche Arten ausführen. Bei der so genannten direkten Methode arbeitet der Therapeut gegen die Bewegungseinschränkung. Wenn sich beispielsweise ein Wirbel nur ungenügend nach rechts drehen kann, wendet der mit osteopathischen Techniken arbeitende Therapeut Techniken an, mit denen er den Wirbel direkt nach rechts führt. Dadurch können verschobene oder unvollständige Bewegungsachsen wiederhergestellt werden. Umgekehrt funktioniert die indirekte Methode. Dabei arbeitet der mit osteopathischen Techniken arbeitende Therapeut in dem Bereich, der frei und leicht beweglich ist."
+      },
+      {
+        "tag": "p",
+        "text": "Daher wird die indirekte Methode vom Patienten häufig als sehr wohltuend und schonend empfunden. Die jeweilige Struktur, beispielsweise ein einzelner blockierter Wirbel, wird dabei nicht isoliert behandelt, sondern im Verhältnis zu den sie umgebenden Strukturen. Die indirekte Technik bietet sich an, wenn der Patient große Schmerzen hat. Außerdem dient sie als Vorbereitung, wenn anschließend direkte Methoden ausgeführt werden."
+      },
+      {
+        "tag": "h3",
+        "text": "Osteopathie Augsburg – Wann sind Osteopathie Techniken sinnvoll:"
+      },
+      {
+        "tag": "li",
+        "text": "Schmerzerkrankungen und Erkrankungen des Bewegungsapparates"
+      },
+      {
+        "tag": "li",
+        "text": "Halswirbelsäulenbeschwerden"
+      },
+      {
+        "tag": "li",
+        "text": "Wirbelsäulenbeschwerden"
+      },
+      {
+        "tag": "li",
+        "text": "Problematiken innerer Organe (in Absprache mit dem behandelnden Arzt)"
+      },
+      {
+        "tag": "li",
+        "text": "Kopfschmerz, Migräne (eine definierte Art von Kopfschmerz), Tinnitus (Ohrgeräusch)"
+      },
+      {
+        "tag": "li",
+        "text": "Fehlstellungen von Gelenken, Wirbeln, Becken, Schädelknochen …"
+      },
+      {
+        "tag": "li",
+        "text": "Nachbehandlung von Operationen"
+      },
+      {
+        "tag": "li",
+        "text": "Osteopathie bietet bei einer Vielzahl von Krankheits – Schmerzsymptomatiken Hilfe. Jedoch muss jeder Einzelfall auf die Behandlungsfähigkeit abgeklärt werden"
+      },
+      {
+        "tag": "li",
+        "text": "Vorbeugung"
+      },
+      {
+        "tag": "p",
+        "text": "Wie bei jeglicher Erkrankung muss und sollte eine gründliche Untersuchung stattfinden um eventuelle Notfälle (z.B. Herzinfarkt, Peritonitis (Bauchfellentzündung), etc.), sowie andere ernsthafte Erkrankungen auszuschliesen. Dies bedarf der Apparate Medizin und dies ist meines Erachtens nur durch einen Arzt zu erbringen."
+      },
+      {
+        "tag": "p",
+        "text": "Die osteopathische Behandlung kann in solchen Fällen mit Absprache des behandelnden Arztes als Unterstützung fungieren."
+      },
+      {
+        "tag": "p",
+        "text": "In den strukturellen Bereichen werden Dysfunktionen des gesamten Bewegungsapparats (z.B. Wirbelsäule, Gelenke, Muskeln, Sehnen und Bändern) behandelt."
+      },
+      {
+        "tag": "p",
+        "text": "In den visceralen Bereichen werden Dysfunktionen der inneren Organe behandelt."
+      },
+      {
+        "tag": "p",
+        "text": "In den cranio sacralen Bereichen werden Dysfunktionen des Schädels (knöchern) wie auch des Nervensystems, der Gehirnflüssigkeit, sowie der knöchernen und membranösen Verbindung von Schädel und Kreuzbein behandelt. Bezüglich der Unterscheidung Osteopathie und Physiotherapie möchte ich Sie auf die Unterseite “Strukturelle und Funktionelle Rehabilitation” unter dem Therapieverfahren Integrative Manual Therapy verweisen."
+      },
+      {
+        "tag": "p",
+        "text": "Anschrift: Naturheilpraxis Rauch Heilpraktiker Augsburg, Hochzoll Terminvereinbarung: Telefon: 0821 262 14 62"
+      },
+      {
+        "tag": "p",
+        "text": "E-Mail: praxis_rauch@icloud.com"
+      },
+      {
+        "tag": "p",
+        "text": "Bioresonanztherapie NLS Diagnose EAV nach Dr. Voll Vieva Plus Diagnostik Vitalfeld- und Nährstoffanalyse Osteopathie 150 MHz nach Broers"
+      },
+      {
+        "tag": "li",
+        "text": "Mittagsruhe 12:30 Uhr bis 13:00 Uhr"
+      },
+      {
+        "tag": "p",
+        "text": "Naturheilkunde"
+      },
+      {
+        "tag": "p",
+        "text": "Zentrum für Naturheilkunde"
+      },
+      {
+        "tag": "p",
+        "text": "Mein Facebook - Profil"
+      },
+      {
+        "tag": "p",
+        "text": "Meine Google - Bewertung"
+      },
+      {
+        "tag": "p",
+        "text": "Downloadbereich Naturheilpraxis"
+      },
+      {
+        "tag": "li",
+        "text": "Impressum |"
+      },
+      {
+        "tag": "li",
+        "text": "Datenschutzerklärung |"
+      },
+      {
+        "tag": "li",
+        "text": "Kontakt |"
+      },
+      {
+        "tag": "li",
+        "text": "Online-Anamnesebogen"
+      },
+      {
+        "tag": "li",
+        "text": "Rechtshinweise Therapieverfahren |"
+      },
+      {
+        "tag": "p",
+        "text": "Hinweis: Die auf dieser Website dargestellten Verfahren und Informationen dienen der allgemeinen Aufklärung und ersetzen keine ärztliche Diagnose, Beratung oder Behandlung. Es werden keine Heilversprechen abgegeben. Weitere Angaben: Heilpraktiker-Rechtshinweise und Rechtshinweise Therapieverfahren ."
+      },
+      {
+        "tag": "p",
+        "text": "Peter Rauch – Heilpraktiker Naturheilpraxis Rauch, Friedrich-Deffner-Straße 19a, 86163 Augsburg (Hochzoll) – erreichbar aus Friedberg und Lechhausen-Ost Telefon: 0821 2621462 · Kontakt Schwerpunkte: Bioresonanz, NLS-Diagnostik, Elektroakupunktur nach Dr. Voll, klassische Naturheilverfahren und biophysikalische Informationstherapie. Stand: August 2026"
+      },
+      {
+        "tag": "h2",
+        "text": "Häufige Fragen zur Praxis"
+      },
+      {
+        "tag": "p",
+        "text": "Kurze Angaben zu Ablauf, Aufnahme, Kosten und Erreichbarkeit. Keine Diagnose und keine Heilzusage."
+      },
+      {
+        "tag": "p",
+        "text": "Vor dem Termin können Sie den Online-Anamnesebogen ausfüllen. Das ist die Patientenaufnahme, keine Diagnose."
+      },
+      {
+        "tag": "p",
+        "text": "Dieser Corona-Hinweis ist ein historischer Praxistext und nicht mehr aktuell. Die Naturheilpraxis Rauch ist geöffnet. Aktuelle Fragen bitte über Kontakt oder telefonisch unter 0821 2621462 ."
+      }
+    ],
+    "bodyText": "• Impressum\n\n• Rechtshinweise\n\n• Rechtshinweise Therapieverfahren\n\n• Downloadbereich\n\n• Praxis offen\n\n• Online-Anamnesebogen\n\n• Gesundheitsrelevante Dokumentation\n\n• Diagnostik Diagnostik – Stuhluntersuchung\n\n• Diagnose – Urinuntersuchung\n\n• Diagnose – Labordiagnose – Biodiagnostik\n\n• Hinweisdiagnostik – EAV – Elektroakupunktur nach Dr. Voll\n\n• Hinweisdiagnostik – Irisdiagnose\n\n• Hinweisdiagnostik – Frequenztherapie\n\n• Biophysikalische Bioresonanz Funktionsweise Bioresonanz / Elektroakupunktur\n\n• Akupunktur ohne Nadeln\n\n• NLS-Diagnostik\n\n• Vieva Pro Analyse\n\n• Elektroakupunktur nach Voll\n\n• 150 MHz nach Broers\n\n• Manuelle +Osteopathie Allgemein\n\n• +Integrative Manual Therapy Die Begründer\n\n• Denk und Behandlungsansätze\n\n• Behandlungsmöglichkeiten\n\n• Rehabilitation\n\n• +Lowen Systems (Biovalent System) Arbeit mit den Händen\n\n• Begründer Frank Lowen\n\n• Die Hände\n\n• Die Regulatoren\n\n• Die Koerper Rhythmen\n\n• Die Körpersysteme\n\n• +Microkinesi Allgemein Microkinesi Möglichkeiten\n\n• +Physiotherapie Allgemein Physiotherapie Tätigkeitsfelder\n\n• +Dorntherapie\n\n• Schmerz Entstehung von Schmerz\n\n• Naturheilkunde Klassische Homöopathie\n\n• Die Komplex Homöopathie\n\n• Die Phytotherapie\n\n• Allergiebehandlung mit NAET Behandlungsablauf\n\n• Naturheilkundliche Darmsanierung\n\n• Injektionstherapie\n\n• Orthomolekular Kinesiologie\n\n• Zhineng Dr Pang Ming\n\n• Psychotherapie Hypnose\n\n• Heilmeditation\n\n• Kontakt\n\n• Naturheilpraxis Rauch Osteopathische Techniken Mehr Info zu osteopathischen Techniken\n\n• Naturheilpraxis Rauch Manuelle Therapien für Kinder Mehr Info zur Integrative Manual Therapy\n\n• Naturheilpraxis Rauch Manuelle Therapieverfahren Mehr Info zur Schmerztherapie\n\nOsteopathie\n\nNaturheilkundlich begleiten – Stark im Leben\n\nWas ist Osteopathie:\n\nOsteopathie ist eine manuelle Behandlungsform. Manuell bedeutetet, dass diese Therapie mit den Händen ausgeführt wird.\n\nOsteopathie Techniken\n\nOsteopathie Augsburg\n\nOsteopathie ist ein manuelles Konzept der Erfahrungsheilkunde. Gearbeitet wird mit den Händen, ohne Geräte und ohne Medikamente.\n\nBeschrieben werden Zusammenhänge von Struktur und Funktion. Das ist keine Zusage, Schmerzen zu beseitigen oder Organe zu heilen.\n\nIn der Naturheilpraxis Rauch kommt Osteopathie ergänzend und nach Anamnese zum Einsatz. Den Überblick finden Sie unter Manuelle Verfahren .\n\nOsteopathie Augsburg – Grundgedanken zur Osteopathie:\n\nEs wird davon ausgegangen, daß sich Strukturen, wie Knochen, Muskeln, Organe, Fascien, Cranium (Kopf), Nervensystem, Wirbelsäule, Gelenke und ihre Funktionen gegenseitig bedingen. So bedingt z.B. ein in seiner Funktion oder und Struktur eingeschränktes Sprunggelenk eine Kompensation durch das Knie und dieses wiederum wird eine Veränderung an der Hüftstellung bewirken usw. Oder eine Fehlstellung in den Kiefergelenken wird wahrscheinlich u.a. eine Fehlstellung im Becken hervorrufen. Oder eine fasziale Restriktion der Leber kann Probleme in der rechten Schulter sowie mannigfaltige andere Probleme hervorrufen. Zusammenfassend kann man sagen, dass die Technik das Symptom nicht als die Ursache der Beschwerden sieht, sondern das Symptom zeigt an, dass sich das System Mensch aus seiner Mitte bewegt hat. Die Osteopathie versucht nun durch manuelle (mit den Händen) Korrekturmethoden dies zu korrigieren, sowohl im craniosacralen als auch im viszeralen Bereich.\n\nWie arbeitet der/die Therapeut/in:\n\nZiel der osteopathischen Techniken ist es, die eingeschränkte Beweglichkeit von Gelenken, Muskeln und Organen wiederherzustellen. Im Laufe seiner Ausbildung und seiner Eigenbehandlung haben die osteopathisch arbeiteten Therapeuten ihre Hande zu hochsensiblen Instrumenten entwickelt. Um sie gezielt einzusetzen, ist es erforderlich die Anatomie des Körpers äußerst gut zu kennen.\n\nWie weiter oben schon erwähnt, hatten und haben verschiedenste Therapeuten an der Entwicklung der Osteopathie entscheidenden Einfluss. Und jeder von ihnen entwickelte neue Techniken aufgrund seiner speziellen Weise. All diese Techniken stehen dem Behandler zur Verfügung. Diese vielfältigen Techniken lassen sich meist auf zwei unterschiedliche Arten ausführen. Bei der so genannten direkten Methode arbeitet der Therapeut gegen die Bewegungseinschränkung. Wenn sich beispielsweise ein Wirbel nur ungenügend nach rechts drehen kann, wendet der mit osteopathischen Techniken arbeitende Therapeut Techniken an, mit denen er den Wirbel direkt nach rechts führt. Dadurch können verschobene oder unvollständige Bewegungsachsen wiederhergestellt werden. Umgekehrt funktioniert die indirekte Methode. Dabei arbeitet der mit osteopathischen Techniken arbeitende Therapeut in dem Bereich, der frei und leicht beweglich ist.\n\nDaher wird die indirekte Methode vom Patienten häufig als sehr wohltuend und schonend empfunden. Die jeweilige Struktur, beispielsweise ein einzelner blockierter Wirbel, wird dabei nicht isoliert behandelt, sondern im Verhältnis zu den sie umgebenden Strukturen. Die indirekte Technik bietet sich an, wenn der Patient große Schmerzen hat. Außerdem dient sie als Vorbereitung, wenn anschließend direkte Methoden ausgeführt werden.\n\nOsteopathie Augsburg – Wann sind Osteopathie Techniken sinnvoll:\n\n• Schmerzerkrankungen und Erkrankungen des Bewegungsapparates\n\n• Halswirbelsäulenbeschwerden\n\n• Wirbelsäulenbeschwerden\n\n• Problematiken innerer Organe (in Absprache mit dem behandelnden Arzt)\n\n• Kopfschmerz, Migräne (eine definierte Art von Kopfschmerz), Tinnitus (Ohrgeräusch)\n\n• Fehlstellungen von Gelenken, Wirbeln, Becken, Schädelknochen …\n\n• Nachbehandlung von Operationen\n\n• Osteopathie bietet bei einer Vielzahl von Krankheits – Schmerzsymptomatiken Hilfe. Jedoch muss jeder Einzelfall auf die Behandlungsfähigkeit abgeklärt werden\n\n• Vorbeugung\n\nWie bei jeglicher Erkrankung muss und sollte eine gründliche Untersuchung stattfinden um eventuelle Notfälle (z.B. Herzinfarkt, Peritonitis (Bauchfellentzündung), etc.), sowie andere ernsthafte Erkrankungen auszuschliesen. Dies bedarf der Apparate Medizin und dies ist meines Erachtens nur durch einen Arzt zu erbringen.\n\nDie osteopathische Behandlung kann in solchen Fällen mit Absprache des behandelnden Arztes als Unterstützung fungieren.\n\nIn den strukturellen Bereichen werden Dysfunktionen des gesamten Bewegungsapparats (z.B. Wirbelsäule, Gelenke, Muskeln, Sehnen und Bändern) behandelt.\n\nIn den visceralen Bereichen werden Dysfunktionen der inneren Organe behandelt.\n\nIn den cranio sacralen Bereichen werden Dysfunktionen des Schädels (knöchern) wie auch des Nervensystems, der Gehirnflüssigkeit, sowie der knöchernen und membranösen Verbindung von Schädel und Kreuzbein behandelt. Bezüglich der Unterscheidung Osteopathie und Physiotherapie möchte ich Sie auf die Unterseite “Strukturelle und Funktionelle Rehabilitation” unter dem Therapieverfahren Integrative Manual Therapy verweisen.\n\nAnschrift: Naturheilpraxis Rauch Heilpraktiker Augsburg, Hochzoll Terminvereinbarung: Telefon: 0821 262 14 62\n\nE-Mail: praxis_rauch@icloud.com\n\nBioresonanztherapie NLS Diagnose EAV nach Dr. Voll Vieva Plus Diagnostik Vitalfeld- und Nährstoffanalyse Osteopathie 150 MHz nach Broers\n\n• Mittagsruhe 12:30 Uhr bis 13:00 Uhr\n\nNaturheilkunde\n\nZentrum für Naturheilkunde\n\nMein Facebook - Profil\n\nMeine Google - Bewertung\n\nDownloadbereich Naturheilpraxis\n\n• Impressum |\n\n• Datenschutzerklärung |\n\n• Kontakt |\n\n• Online-Anamnesebogen\n\n• Rechtshinweise Therapieverfahren |\n\nHinweis: Die auf dieser Website dargestellten Verfahren und Informationen dienen der allgemeinen Aufklärung und ersetzen keine ärztliche Diagnose, Beratung oder Behandlung. Es werden keine Heilversprechen abgegeben. Weitere Angaben: Heilpraktiker-Rechtshinweise und Rechtshinweise Therapieverfahren .\n\nPeter Rauch – Heilpraktiker Naturheilpraxis Rauch, Friedrich-Deffner-Straße 19a, 86163 Augsburg (Hochzoll) – erreichbar aus Friedberg und Lechhausen-Ost Telefon: 0821 2621462 · Kontakt Schwerpunkte: Bioresonanz, NLS-Diagnostik, Elektroakupunktur nach Dr. Voll, klassische Naturheilverfahren und biophysikalische Informationstherapie. Stand: August 2026\n\nHäufige Fragen zur Praxis\n\nKurze Angaben zu Ablauf, Aufnahme, Kosten und Erreichbarkeit. Keine Diagnose und keine Heilzusage.\n\nVor dem Termin können Sie den Online-Anamnesebogen ausfüllen. Das ist die Patientenaufnahme, keine Diagnose.\n\nDieser Corona-Hinweis ist ein historischer Praxistext und nicht mehr aktuell. Die Naturheilpraxis Rauch ist geöffnet. Aktuelle Fragen bitte über Kontakt oder telefonisch unter 0821 2621462 ."
+  },
+  "images": [
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/uploads/Peter-Logo-klein.svg",
+      "alt": "Rauch Heilpraktiker",
+      "width": "60",
+      "height": "60",
+      "fromCache": false,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Osteopathische-Behandlung-in-Augsburg-df130f49.jpeg",
+      "alt": "Osteopathische Behandlung in Augsburg df130f49 - Osteopathie Techniken",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Physiotherapeutische-Behandlung-Kleinkinder-Augsburg-8aa134c0.jpeg",
+      "alt": "Physiotherapeutische Behandlung Kleinkinder Augsburg 8aa134c0 - Osteopathie Techniken",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Manuelle-Schmerztherapie-Augsburg-aa5de0d2.jpeg",
+      "alt": "Manuelle Schmerztherapie Augsburg aa5de0d2 - Osteopathie Techniken",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Schmerztherapie-Augsburg-1-092e2413.jpeg",
+      "alt": "Schmerztherapie Augsburg 1 092e2413 - Osteopathie Techniken",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Osteopathische-Behandlung-in-Augsburg-200a6220.jpeg",
+      "alt": "Osteopathische Behandlung in Augsburg 200a6220 - Osteopathie Techniken",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/haende_manuelle_therapie_schmerztherapie_1-1cebd135.jpeg",
+      "alt": "haende manuelle therapie schmerztherapie 1 1cebd135 - Osteopathie Techniken",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Peter-Rauch-Heilpraktiker-Augsburg-9ab7178c.png",
+      "alt": "Heilpraktiker Augsburg - Naturheilpraxis Peter Rauch",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/BNI-Unternehmen-Verband-cdced5ca.png",
+      "alt": "BNI Local Business Global network",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    }
+  ],
+  "wordCount": 1054,
+  "crawledAt": "2026-08-17T22:40:53.945859+00:00"
+}

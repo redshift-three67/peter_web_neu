@@ -1,0 +1,677 @@
+{
+  "slug": "home",
+  "sourceUrl": "https://rauch-heilpraktiker.de/",
+  "finalUrl": "https://rauch-heilpraktiker.de/",
+  "httpStatus": 200,
+  "class": "A-active-same-slug",
+  "status": "mapped",
+  "robots": "noindex,follow",
+  "extracted": {
+    "title": "Heilpraktiker Augsburg - Naturheilpraxis Peter Rauch",
+    "h1": "Heilpraktiker Augsburg – Naturheilpraxis Peter Rauch",
+    "description": "Heilpraktiker in Augsburg-Hochzoll – Naturheilpraxis Peter Rauch. Bioresonanz, NLS-Diagnostik, Elektroakupunktur und klassische Naturheilverfahren.",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Heilpraktiker Augsburg – Naturheilpraxis Peter Rauch"
+      },
+      {
+        "tag": "h2",
+        "text": "… das ist der zentrale Fokus der therapeutischen Arbeit in meiner Praxis."
+      },
+      {
+        "tag": "h2",
+        "text": "Herzlich willkommen in meiner Naturheilpraxis Ich arbeite als Heilpraktiker mit Naturheilverfahren und manuellen Therapieformen. Ich betrachte den Menschen als Ganzes. Ich bin Physiotherapeut und Heilpraktiker mit 20 Jahren Berufserfahrung und Hypnotherapeut. Die Praxis liegt in Augsburg-Hochzoll, Friedrich-Deffner-Straße 19a. Von Friedberg und Lechhausen-Ost ist sie gut zu erreichen."
+      },
+      {
+        "tag": "h3",
+        "text": "Naturheilpraxis mit Herz"
+      },
+      {
+        "tag": "h3",
+        "text": "Heilpraktiker Augsburg"
+      },
+      {
+        "tag": "h3",
+        "text": "Therapieverfahren von Peter Rauch Heilpraktiker in Augsburg"
+      },
+      {
+        "tag": "h3",
+        "text": "Biophysikalische Informationstherapie"
+      },
+      {
+        "tag": "h3",
+        "text": "Bioresonanztherapie nach Baklayan"
+      },
+      {
+        "tag": "h3",
+        "text": "Elektroakupunktur nach Doktor Voll"
+      },
+      {
+        "tag": "h3",
+        "text": "Bioresonanztherapie vs Elektroakupunktur"
+      },
+      {
+        "tag": "h3",
+        "text": "NLS Diagnostik"
+      },
+      {
+        "tag": "h3",
+        "text": "Vitalfeldtherapie"
+      },
+      {
+        "tag": "h3",
+        "text": "150 MHz Körperliche Befeldung nach Broers"
+      },
+      {
+        "tag": "h3",
+        "text": "Frequenz-Akupunkt oder HEAL-Therapie nach Baklayan"
+      },
+      {
+        "tag": "h3",
+        "text": "Osteopathie Techniken"
+      },
+      {
+        "tag": "h3",
+        "text": "Manuelle Therapieverfahren"
+      },
+      {
+        "tag": "h3",
+        "text": "Vitamin- und Nährstoffberatung"
+      },
+      {
+        "tag": "h3",
+        "text": "Kinesiologie Behandlung"
+      },
+      {
+        "tag": "h3",
+        "text": "Klassische | Komplexe Homöpathie"
+      },
+      {
+        "tag": "h3",
+        "text": "Schmerztherapie"
+      },
+      {
+        "tag": "h3",
+        "text": "Allergie Behandlung"
+      },
+      {
+        "tag": "h3",
+        "text": "Orthomolekulare Therapie"
+      },
+      {
+        "tag": "h3",
+        "text": "Weitere mögliche Therapieverfahren meiner Naturheilpraxis sind:"
+      },
+      {
+        "tag": "h3",
+        "text": "Denn Entwicklung bedeutet zu lernen, wie man denkt, wie man fühlt, wie der Körper mit dem Geist, mit Allem interagiert."
+      },
+      {
+        "tag": "h2",
+        "text": "Häufige Fragen zur Praxis"
+      }
+    ],
+    "parts": [
+      {
+        "tag": "li",
+        "text": "Impressum"
+      },
+      {
+        "tag": "li",
+        "text": "Rechtshinweise"
+      },
+      {
+        "tag": "li",
+        "text": "Rechtshinweise Therapieverfahren"
+      },
+      {
+        "tag": "li",
+        "text": "Downloadbereich"
+      },
+      {
+        "tag": "li",
+        "text": "Praxis offen"
+      },
+      {
+        "tag": "li",
+        "text": "Online-Anamnesebogen"
+      },
+      {
+        "tag": "li",
+        "text": "Gesundheitsrelevante Dokumentation"
+      },
+      {
+        "tag": "li",
+        "text": "Diagnostik Diagnostik – Stuhluntersuchung"
+      },
+      {
+        "tag": "li",
+        "text": "Diagnose – Urinuntersuchung"
+      },
+      {
+        "tag": "li",
+        "text": "Diagnose – Labordiagnose – Biodiagnostik"
+      },
+      {
+        "tag": "li",
+        "text": "Hinweisdiagnostik – EAV – Elektroakupunktur nach Dr. Voll"
+      },
+      {
+        "tag": "li",
+        "text": "Hinweisdiagnostik – Irisdiagnose"
+      },
+      {
+        "tag": "li",
+        "text": "Hinweisdiagnostik – Frequenztherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Biophysikalische Bioresonanz Funktionsweise Bioresonanz / Elektroakupunktur"
+      },
+      {
+        "tag": "li",
+        "text": "Akupunktur ohne Nadeln"
+      },
+      {
+        "tag": "li",
+        "text": "NLS-Diagnostik"
+      },
+      {
+        "tag": "li",
+        "text": "Vieva Pro Analyse"
+      },
+      {
+        "tag": "li",
+        "text": "Elektroakupunktur nach Voll"
+      },
+      {
+        "tag": "li",
+        "text": "150 MHz nach Broers"
+      },
+      {
+        "tag": "li",
+        "text": "Manuelle +Osteopathie Allgemein"
+      },
+      {
+        "tag": "li",
+        "text": "+Integrative Manual Therapy Die Begründer"
+      },
+      {
+        "tag": "li",
+        "text": "Denk und Behandlungsansätze"
+      },
+      {
+        "tag": "li",
+        "text": "Behandlungsmöglichkeiten"
+      },
+      {
+        "tag": "li",
+        "text": "Rehabilitation"
+      },
+      {
+        "tag": "li",
+        "text": "+Lowen Systems (Biovalent System) Arbeit mit den Händen"
+      },
+      {
+        "tag": "li",
+        "text": "Begründer Frank Lowen"
+      },
+      {
+        "tag": "li",
+        "text": "Die Hände"
+      },
+      {
+        "tag": "li",
+        "text": "Die Regulatoren"
+      },
+      {
+        "tag": "li",
+        "text": "Die Koerper Rhythmen"
+      },
+      {
+        "tag": "li",
+        "text": "Die Körpersysteme"
+      },
+      {
+        "tag": "li",
+        "text": "+Microkinesi Allgemein Microkinesi Möglichkeiten"
+      },
+      {
+        "tag": "li",
+        "text": "+Physiotherapie Allgemein Physiotherapie Tätigkeitsfelder"
+      },
+      {
+        "tag": "li",
+        "text": "+Dorntherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Schmerz Entstehung von Schmerz"
+      },
+      {
+        "tag": "li",
+        "text": "Naturheilkunde Klassische Homöopathie"
+      },
+      {
+        "tag": "li",
+        "text": "Die Komplex Homöopathie"
+      },
+      {
+        "tag": "li",
+        "text": "Die Phytotherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Allergiebehandlung mit NAET Behandlungsablauf"
+      },
+      {
+        "tag": "li",
+        "text": "Naturheilkundliche Darmsanierung"
+      },
+      {
+        "tag": "li",
+        "text": "Injektionstherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Orthomolekular Kinesiologie"
+      },
+      {
+        "tag": "li",
+        "text": "Zhineng Dr Pang Ming"
+      },
+      {
+        "tag": "li",
+        "text": "Psychotherapie Hypnose"
+      },
+      {
+        "tag": "li",
+        "text": "Heilmeditation"
+      },
+      {
+        "tag": "li",
+        "text": "Kontakt"
+      },
+      {
+        "tag": "li",
+        "text": "Ganzheitliche Therapie Naturheilkundliche Verfahren in Augsburg Info zur NLS Diagnostik"
+      },
+      {
+        "tag": "li",
+        "text": "Online-Anamnesebogen Patientenaufnahme vor dem Termin Online-Anamnesebogen"
+      },
+      {
+        "tag": "li",
+        "text": "Naturheilpraxis Rauch Naturheilkundliche Therapieverfahren Info zur klassischen Homöopathie"
+      },
+      {
+        "tag": "li",
+        "text": "Naturheilpraxis Rauch Selbstbewusstsein und emotionale Freiheit Info zur Psychotherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Heilpraktiker Rauch Naturheilkundliche Verfahren in Augsburg Info zur Informationstherapie"
+      },
+      {
+        "tag": "h1",
+        "text": "Heilpraktiker Augsburg – Naturheilpraxis Peter Rauch"
+      },
+      {
+        "tag": "h2",
+        "text": "… das ist der zentrale Fokus der therapeutischen Arbeit in meiner Praxis."
+      },
+      {
+        "tag": "h2",
+        "text": "Herzlich willkommen in meiner Naturheilpraxis Ich arbeite als Heilpraktiker mit Naturheilverfahren und manuellen Therapieformen. Ich betrachte den Menschen als Ganzes. Ich bin Physiotherapeut und Heilpraktiker mit 20 Jahren Berufserfahrung und Hypnotherapeut. Die Praxis liegt in Augsburg-Hochzoll, Friedrich-Deffner-Straße 19a. Von Friedberg und Lechhausen-Ost ist sie gut zu erreichen."
+      },
+      {
+        "tag": "h3",
+        "text": "Naturheilpraxis mit Herz"
+      },
+      {
+        "tag": "h3",
+        "text": "Heilpraktiker Augsburg"
+      },
+      {
+        "tag": "p",
+        "text": "Ich begleite meine Patientinnen und Patienten mit naturheilkundlichen Verfahren. Im Mittelpunkt stehen das Verstehen körperlicher und seelischer Beschwerden sowie Selbstbewusstsein und emotionale Freiheit."
+      },
+      {
+        "tag": "p",
+        "text": "Zuerst versuche ich, über eine naturheilkundliche Diagnostik mögliche Zusammenhänge zu erkennen. Danach ordne ich passende Verfahren zu."
+      },
+      {
+        "tag": "p",
+        "text": "Ziel der Arbeit ist mehr körperliches und seelisches Wohlbefinden im Alltag."
+      },
+      {
+        "tag": "p",
+        "text": "So läuft ein Termin typischerweise ab:"
+      },
+      {
+        "tag": "p",
+        "text": "1. Gespräch – oft mit dem ausgefüllten Online-Anamnesebogen . 2. Untersuchung mit naturheilkundlichen Verfahren. Das ersetzt keine ärztliche Diagnostik. 3. Gemeinsame Planung der nächsten Schritte – ohne Heilversprechen."
+      },
+      {
+        "tag": "p",
+        "text": "Ich bin Heilpraktiker, kein Arzt. Bei Notfällen und klar ärztlichen Fragen gehört die Behandlung in eine Praxis oder Klinik. Rechtliche Hinweise ."
+      },
+      {
+        "tag": "p",
+        "text": "Themen zum Weiterlesen: Diagnostik · Bioresonanz · Naturheilkunde · Psychotherapie · Manuelle Verfahren · Schmerztherapie · Kontakt"
+      },
+      {
+        "tag": "h3",
+        "text": "Therapieverfahren von Peter Rauch Heilpraktiker in Augsburg"
+      },
+      {
+        "tag": "h3",
+        "text": "Biophysikalische Informationstherapie"
+      },
+      {
+        "tag": "p",
+        "text": "Die Biophysikalische Informationstherapie (BIT) gehört zu der sogenannten „Holistischen Medizin“."
+      },
+      {
+        "tag": "h3",
+        "text": "Bioresonanztherapie nach Baklayan"
+      },
+      {
+        "tag": "p",
+        "text": "Entdecken Sie die positive Wirkung von Bioresonanztherapie auf Ihren Körper und Geist."
+      },
+      {
+        "tag": "h3",
+        "text": "Elektroakupunktur nach Doktor Voll"
+      },
+      {
+        "tag": "p",
+        "text": "Der Energiefluss im Körper: Wie Elektroakupunktur Ihnen helfen kann."
+      },
+      {
+        "tag": "h3",
+        "text": "Bioresonanztherapie vs Elektroakupunktur"
+      },
+      {
+        "tag": "p",
+        "text": "Körperliche Balance durch Energiefluss: Wie unterscheiden sich Bioresonanztherapie und Elektroakupunktur?"
+      },
+      {
+        "tag": "h3",
+        "text": "NLS Diagnostik"
+      },
+      {
+        "tag": "p",
+        "text": "Die NLS-Diagnostik ist ein ergänzendes Hinweisverfahren. Sie ersetzt keine ärztliche Diagnose."
+      },
+      {
+        "tag": "h3",
+        "text": "Vitalfeldtherapie"
+      },
+      {
+        "tag": "p",
+        "text": "Vital und Kraftvoll: Entdecken Sie die Vorteile der Vieva Pro Vitalfeldanalyse"
+      },
+      {
+        "tag": "h3",
+        "text": "150 MHz Körperliche Befeldung nach Broers"
+      },
+      {
+        "tag": "p",
+        "text": "Wie kann man von einer 150 MHz Befeldung profitieren?"
+      },
+      {
+        "tag": "h3",
+        "text": "Frequenz-Akupunkt oder HEAL-Therapie nach Baklayan"
+      },
+      {
+        "tag": "p",
+        "text": "Entspannen Sie sich mit Frequenz Akupunktur – Wie die HP Baklayan Heal Therapie Ihnen helfen kann."
+      },
+      {
+        "tag": "h3",
+        "text": "Osteopathie Techniken"
+      },
+      {
+        "tag": "h3",
+        "text": "Manuelle Therapieverfahren"
+      },
+      {
+        "tag": "h3",
+        "text": "Vitamin- und Nährstoffberatung"
+      },
+      {
+        "tag": "h3",
+        "text": "Kinesiologie Behandlung"
+      },
+      {
+        "tag": "h3",
+        "text": "Klassische | Komplexe Homöpathie"
+      },
+      {
+        "tag": "h3",
+        "text": "Schmerztherapie"
+      },
+      {
+        "tag": "h3",
+        "text": "Allergie Behandlung"
+      },
+      {
+        "tag": "h3",
+        "text": "Orthomolekulare Therapie"
+      },
+      {
+        "tag": "h3",
+        "text": "Weitere mögliche Therapieverfahren meiner Naturheilpraxis sind:"
+      },
+      {
+        "tag": "p",
+        "text": "Physiotherapie, Omega Health Coach, Integrative Manual Therapy, Biovalent System nach Frank Lowen, NLS Diagnostik mit dem NLS-Diagnostik nach Nesterov, Allergiebehandlung mit NAET , Naturheilkundliche und Manuelle Schmerztherapie, Osteopathische Therapieverfahren und Dorntherapie finden Sie bei mir in Augsburg, Hochzoll."
+      },
+      {
+        "tag": "p",
+        "text": "Auf meiner Webseite können Sie mich und meine Therapieverfahren gerne besser und ausführlicher kennen lernen. Verbesserungsvorschläge sind herzlich willkommen, vielen Dank dafür."
+      },
+      {
+        "tag": "p",
+        "text": "Sollten Sie in schulmedizinischer Behandlung sein, so sehe ich darin keinerlei Widerspruch zur naturheilkundlichen Behandlung, sondern eine Bereicherung – nach dem Motto “Gemeinsam ist man stark im Leben” . Rechtliche Hinweise zu Therapien und Erkrankungen ."
+      },
+      {
+        "tag": "p",
+        "text": "Gerne stehe ich Ihnen auch für alle Ihre Fragen zur Verfügung."
+      },
+      {
+        "tag": "h3",
+        "text": "Denn Entwicklung bedeutet zu lernen, wie man denkt, wie man fühlt, wie der Körper mit dem Geist, mit Allem interagiert."
+      },
+      {
+        "tag": "p",
+        "text": "Ich freue mich auf Ihren Besuch."
+      },
+      {
+        "tag": "p",
+        "text": "Ihr Peter Rauch"
+      },
+      {
+        "tag": "p",
+        "text": "Viel Freude, gute Erkenntnisse und eine gute Gesundheit wünscht Ihnen die Naturheilpraxis Peter Rauch."
+      },
+      {
+        "tag": "p",
+        "text": "Anschrift: Naturheilpraxis Rauch Heilpraktiker Augsburg, Hochzoll Terminvereinbarung: Telefon: 0821 262 14 62"
+      },
+      {
+        "tag": "p",
+        "text": "E-Mail: praxis_rauch@icloud.com"
+      },
+      {
+        "tag": "p",
+        "text": "Bioresonanztherapie NLS Diagnose EAV nach Dr. Voll Vieva Plus Diagnostik Vitalfeld- und Nährstoffanalyse Osteopathie 150 MHz nach Broers"
+      },
+      {
+        "tag": "li",
+        "text": "Mittagsruhe 12:30 Uhr bis 13:00 Uhr"
+      },
+      {
+        "tag": "p",
+        "text": "Naturheilkunde"
+      },
+      {
+        "tag": "p",
+        "text": "Zentrum für Naturheilkunde"
+      },
+      {
+        "tag": "p",
+        "text": "Mein Facebook - Profil"
+      },
+      {
+        "tag": "p",
+        "text": "Meine Google - Bewertung"
+      },
+      {
+        "tag": "p",
+        "text": "Downloadbereich Naturheilpraxis"
+      },
+      {
+        "tag": "li",
+        "text": "Impressum |"
+      },
+      {
+        "tag": "li",
+        "text": "Datenschutzerklärung |"
+      },
+      {
+        "tag": "li",
+        "text": "Kontakt |"
+      },
+      {
+        "tag": "li",
+        "text": "Online-Anamnesebogen"
+      },
+      {
+        "tag": "li",
+        "text": "Rechtshinweise Therapieverfahren |"
+      },
+      {
+        "tag": "p",
+        "text": "Hinweis: Die auf dieser Website dargestellten Verfahren und Informationen dienen der allgemeinen Aufklärung und ersetzen keine ärztliche Diagnose, Beratung oder Behandlung. Es werden keine Heilversprechen abgegeben. Weitere Angaben: Heilpraktiker-Rechtshinweise und Rechtshinweise Therapieverfahren ."
+      },
+      {
+        "tag": "p",
+        "text": "Peter Rauch – Heilpraktiker Naturheilpraxis Rauch, Friedrich-Deffner-Straße 19a, 86163 Augsburg (Hochzoll) – erreichbar aus Friedberg und Lechhausen-Ost Telefon: 0821 2621462 · Kontakt Schwerpunkte: Bioresonanz, NLS-Diagnostik, Elektroakupunktur nach Dr. Voll, klassische Naturheilverfahren und biophysikalische Informationstherapie. Stand: August 2026"
+      },
+      {
+        "tag": "h2",
+        "text": "Häufige Fragen zur Praxis"
+      },
+      {
+        "tag": "p",
+        "text": "Kurze Angaben zu Ablauf, Aufnahme, Kosten und Erreichbarkeit. Keine Diagnose und keine Heilzusage."
+      },
+      {
+        "tag": "p",
+        "text": "Vor dem Termin können Sie den Online-Anamnesebogen ausfüllen. Das ist die Patientenaufnahme, keine Diagnose."
+      },
+      {
+        "tag": "p",
+        "text": "Dieser Corona-Hinweis ist ein historischer Praxistext und nicht mehr aktuell. Die Naturheilpraxis Rauch ist geöffnet. Aktuelle Fragen bitte über Kontakt oder telefonisch unter 0821 2621462 ."
+      }
+    ],
+    "bodyText": "• Impressum\n\n• Rechtshinweise\n\n• Rechtshinweise Therapieverfahren\n\n• Downloadbereich\n\n• Praxis offen\n\n• Online-Anamnesebogen\n\n• Gesundheitsrelevante Dokumentation\n\n• Diagnostik Diagnostik – Stuhluntersuchung\n\n• Diagnose – Urinuntersuchung\n\n• Diagnose – Labordiagnose – Biodiagnostik\n\n• Hinweisdiagnostik – EAV – Elektroakupunktur nach Dr. Voll\n\n• Hinweisdiagnostik – Irisdiagnose\n\n• Hinweisdiagnostik – Frequenztherapie\n\n• Biophysikalische Bioresonanz Funktionsweise Bioresonanz / Elektroakupunktur\n\n• Akupunktur ohne Nadeln\n\n• NLS-Diagnostik\n\n• Vieva Pro Analyse\n\n• Elektroakupunktur nach Voll\n\n• 150 MHz nach Broers\n\n• Manuelle +Osteopathie Allgemein\n\n• +Integrative Manual Therapy Die Begründer\n\n• Denk und Behandlungsansätze\n\n• Behandlungsmöglichkeiten\n\n• Rehabilitation\n\n• +Lowen Systems (Biovalent System) Arbeit mit den Händen\n\n• Begründer Frank Lowen\n\n• Die Hände\n\n• Die Regulatoren\n\n• Die Koerper Rhythmen\n\n• Die Körpersysteme\n\n• +Microkinesi Allgemein Microkinesi Möglichkeiten\n\n• +Physiotherapie Allgemein Physiotherapie Tätigkeitsfelder\n\n• +Dorntherapie\n\n• Schmerz Entstehung von Schmerz\n\n• Naturheilkunde Klassische Homöopathie\n\n• Die Komplex Homöopathie\n\n• Die Phytotherapie\n\n• Allergiebehandlung mit NAET Behandlungsablauf\n\n• Naturheilkundliche Darmsanierung\n\n• Injektionstherapie\n\n• Orthomolekular Kinesiologie\n\n• Zhineng Dr Pang Ming\n\n• Psychotherapie Hypnose\n\n• Heilmeditation\n\n• Kontakt\n\n• Ganzheitliche Therapie Naturheilkundliche Verfahren in Augsburg Info zur NLS Diagnostik\n\n• Online-Anamnesebogen Patientenaufnahme vor dem Termin Online-Anamnesebogen\n\n• Naturheilpraxis Rauch Naturheilkundliche Therapieverfahren Info zur klassischen Homöopathie\n\n• Naturheilpraxis Rauch Selbstbewusstsein und emotionale Freiheit Info zur Psychotherapie\n\n• Heilpraktiker Rauch Naturheilkundliche Verfahren in Augsburg Info zur Informationstherapie\n\nHeilpraktiker Augsburg – Naturheilpraxis Peter Rauch\n\n… das ist der zentrale Fokus der therapeutischen Arbeit in meiner Praxis.\n\nHerzlich willkommen in meiner Naturheilpraxis Ich arbeite als Heilpraktiker mit Naturheilverfahren und manuellen Therapieformen. Ich betrachte den Menschen als Ganzes. Ich bin Physiotherapeut und Heilpraktiker mit 20 Jahren Berufserfahrung und Hypnotherapeut. Die Praxis liegt in Augsburg-Hochzoll, Friedrich-Deffner-Straße 19a. Von Friedberg und Lechhausen-Ost ist sie gut zu erreichen.\n\nNaturheilpraxis mit Herz\n\nHeilpraktiker Augsburg\n\nIch begleite meine Patientinnen und Patienten mit naturheilkundlichen Verfahren. Im Mittelpunkt stehen das Verstehen körperlicher und seelischer Beschwerden sowie Selbstbewusstsein und emotionale Freiheit.\n\nZuerst versuche ich, über eine naturheilkundliche Diagnostik mögliche Zusammenhänge zu erkennen. Danach ordne ich passende Verfahren zu.\n\nZiel der Arbeit ist mehr körperliches und seelisches Wohlbefinden im Alltag.\n\nSo läuft ein Termin typischerweise ab:\n\n1. Gespräch – oft mit dem ausgefüllten Online-Anamnesebogen . 2. Untersuchung mit naturheilkundlichen Verfahren. Das ersetzt keine ärztliche Diagnostik. 3. Gemeinsame Planung der nächsten Schritte – ohne Heilversprechen.\n\nIch bin Heilpraktiker, kein Arzt. Bei Notfällen und klar ärztlichen Fragen gehört die Behandlung in eine Praxis oder Klinik. Rechtliche Hinweise .\n\nThemen zum Weiterlesen: Diagnostik · Bioresonanz · Naturheilkunde · Psychotherapie · Manuelle Verfahren · Schmerztherapie · Kontakt\n\nTherapieverfahren von Peter Rauch Heilpraktiker in Augsburg\n\nBiophysikalische Informationstherapie\n\nDie Biophysikalische Informationstherapie (BIT) gehört zu der sogenannten „Holistischen Medizin“.\n\nBioresonanztherapie nach Baklayan\n\nEntdecken Sie die positive Wirkung von Bioresonanztherapie auf Ihren Körper und Geist.\n\nElektroakupunktur nach Doktor Voll\n\nDer Energiefluss im Körper: Wie Elektroakupunktur Ihnen helfen kann.\n\nBioresonanztherapie vs Elektroakupunktur\n\nKörperliche Balance durch Energiefluss: Wie unterscheiden sich Bioresonanztherapie und Elektroakupunktur?\n\nNLS Diagnostik\n\nDie NLS-Diagnostik ist ein ergänzendes Hinweisverfahren. Sie ersetzt keine ärztliche Diagnose.\n\nVitalfeldtherapie\n\nVital und Kraftvoll: Entdecken Sie die Vorteile der Vieva Pro Vitalfeldanalyse\n\n150 MHz Körperliche Befeldung nach Broers\n\nWie kann man von einer 150 MHz Befeldung profitieren?\n\nFrequenz-Akupunkt oder HEAL-Therapie nach Baklayan\n\nEntspannen Sie sich mit Frequenz Akupunktur – Wie die HP Baklayan Heal Therapie Ihnen helfen kann.\n\nOsteopathie Techniken\n\nManuelle Therapieverfahren\n\nVitamin- und Nährstoffberatung\n\nKinesiologie Behandlung\n\nKlassische | Komplexe Homöpathie\n\nSchmerztherapie\n\nAllergie Behandlung\n\nOrthomolekulare Therapie\n\nWeitere mögliche Therapieverfahren meiner Naturheilpraxis sind:\n\nPhysiotherapie, Omega Health Coach, Integrative Manual Therapy, Biovalent System nach Frank Lowen, NLS Diagnostik mit dem NLS-Diagnostik nach Nesterov, Allergiebehandlung mit NAET , Naturheilkundliche und Manuelle Schmerztherapie, Osteopathische Therapieverfahren und Dorntherapie finden Sie bei mir in Augsburg, Hochzoll.\n\nAuf meiner Webseite können Sie mich und meine Therapieverfahren gerne besser und ausführlicher kennen lernen. Verbesserungsvorschläge sind herzlich willkommen, vielen Dank dafür.\n\nSollten Sie in schulmedizinischer Behandlung sein, so sehe ich darin keinerlei Widerspruch zur naturheilkundlichen Behandlung, sondern eine Bereicherung – nach dem Motto “Gemeinsam ist man stark im Leben” . Rechtliche Hinweise zu Therapien und Erkrankungen .\n\nGerne stehe ich Ihnen auch für alle Ihre Fragen zur Verfügung.\n\nDenn Entwicklung bedeutet zu lernen, wie man denkt, wie man fühlt, wie der Körper mit dem Geist, mit Allem interagiert.\n\nIch freue mich auf Ihren Besuch.\n\nIhr Peter Rauch\n\nViel Freude, gute Erkenntnisse und eine gute Gesundheit wünscht Ihnen die Naturheilpraxis Peter Rauch.\n\nAnschrift: Naturheilpraxis Rauch Heilpraktiker Augsburg, Hochzoll Terminvereinbarung: Telefon: 0821 262 14 62\n\nE-Mail: praxis_rauch@icloud.com\n\nBioresonanztherapie NLS Diagnose EAV nach Dr. Voll Vieva Plus Diagnostik Vitalfeld- und Nährstoffanalyse Osteopathie 150 MHz nach Broers\n\n• Mittagsruhe 12:30 Uhr bis 13:00 Uhr\n\nNaturheilkunde\n\nZentrum für Naturheilkunde\n\nMein Facebook - Profil\n\nMeine Google - Bewertung\n\nDownloadbereich Naturheilpraxis\n\n• Impressum |\n\n• Datenschutzerklärung |\n\n• Kontakt |\n\n• Online-Anamnesebogen\n\n• Rechtshinweise Therapieverfahren |\n\nHinweis: Die auf dieser Website dargestellten Verfahren und Informationen dienen der allgemeinen Aufklärung und ersetzen keine ärztliche Diagnose, Beratung oder Behandlung. Es werden keine Heilversprechen abgegeben. Weitere Angaben: Heilpraktiker-Rechtshinweise und Rechtshinweise Therapieverfahren .\n\nPeter Rauch – Heilpraktiker Naturheilpraxis Rauch, Friedrich-Deffner-Straße 19a, 86163 Augsburg (Hochzoll) – erreichbar aus Friedberg und Lechhausen-Ost Telefon: 0821 2621462 · Kontakt Schwerpunkte: Bioresonanz, NLS-Diagnostik, Elektroakupunktur nach Dr. Voll, klassische Naturheilverfahren und biophysikalische Informationstherapie. Stand: August 2026\n\nHäufige Fragen zur Praxis\n\nKurze Angaben zu Ablauf, Aufnahme, Kosten und Erreichbarkeit. Keine Diagnose und keine Heilzusage.\n\nVor dem Termin können Sie den Online-Anamnesebogen ausfüllen. Das ist die Patientenaufnahme, keine Diagnose.\n\nDieser Corona-Hinweis ist ein historischer Praxistext und nicht mehr aktuell. Die Naturheilpraxis Rauch ist geöffnet. Aktuelle Fragen bitte über Kontakt oder telefonisch unter 0821 2621462 ."
+  },
+  "images": [
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/uploads/Peter-Logo-klein.svg",
+      "alt": "Rauch Heilpraktiker",
+      "width": "60",
+      "height": "60",
+      "fromCache": false,
+      "local": "/media/wp/ea40c2dfaf-Peter-Logo-klein.svg",
+      "bytes": 2517
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Naturheilpraxis_Heilpraktiker_Rauch_Augsburg_2_3-a2d2c22c.jpeg",
+      "alt": "Naturheilpraxis Heilpraktiker Rauch Augsburg 2 3 a2d2c22c - Home",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "local": "/media/wp/7170dd7512-Naturheilpraxis_Heilpraktiker_Rauch_Augsburg_2_3-a2d2c22c.jpg",
+      "bytes": 60003
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Heilpraktiker_Peter_Rauch_Augsburg_Bioresonanz_Trikombin-0fef268f.jpeg",
+      "alt": "Heilpraktiker Peter Rauch Augsburg Bioresonanz Trikombin 0fef268f - Home",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "local": "/media/wp/218de4c178-Heilpraktiker_Peter_Rauch_Augsburg_Bioresonanz_Trikombin-0fe.jpg",
+      "bytes": 73516
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Koerperliche_und_Emotionale_Gesundheit_Naturheilpraxis_Augsburg-a7f97b0f.jpeg",
+      "alt": "Koerperliche und Emotionale Gesundheit Naturheilpraxis Augsburg a7f97b0f - Home",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "local": "/media/wp/883067e238-Koerperliche_und_Emotionale_Gesundheit_Naturheilpraxis_Augsb.jpg",
+      "bytes": 44858
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Naturheilpraxis_Augsburg_Zen_1-7d63144d.jpeg",
+      "alt": "Naturheilpraxis Augsburg Zen 1 7d63144d - Home",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "local": "/media/wp/fa51741490-Naturheilpraxis_Augsburg_Zen_1-7d63144d.jpg",
+      "bytes": 98295
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Sanft-Heilen-Stark-im-Leben-983729de.jpeg",
+      "alt": "Sanft Heilen Stark im Leben 983729de - Home",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "local": "/media/wp/c9eaa8b7e2-Sanft-Heilen-Stark-im-Leben-983729de.jpg",
+      "bytes": 18137
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Ganzheitliche-naturheilkundliche-Therapieverfahren-07351f59.jpeg",
+      "alt": "Ganzheitliche naturheilkundliche Therapieverfahren 07351f59 - Home",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "local": "/media/wp/375b67cc72-Ganzheitliche-naturheilkundliche-Therapieverfahren-07351f59.jpg",
+      "bytes": 19539
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Naturheilpraxis_Heilpraktiker_Rauch_Augsburg_1-54b4eef6.jpeg",
+      "alt": "Naturheilpraxis Heilpraktiker Rauch Augsburg 1 54b4eef6 - Home",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "local": "/media/wp/71c0ee75b1-Naturheilpraxis_Heilpraktiker_Rauch_Augsburg_1-54b4eef6.jpg",
+      "bytes": 531855
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Peter-Rauch-Heilpraktiker-Augsburg-9ab7178c.png",
+      "alt": "Heilpraktiker Augsburg - Naturheilpraxis Peter Rauch",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "local": "/media/wp/a5dbc7244c-Peter-Rauch-Heilpraktiker-Augsburg-9ab7178c.png",
+      "bytes": 191062
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/BNI-Unternehmen-Verband-cdced5ca.png",
+      "alt": "BNI Local Business Global network",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "local": "/media/wp/23a137fe6a-BNI-Unternehmen-Verband-cdced5ca.png",
+      "bytes": 9917
+    }
+  ],
+  "wordCount": 903,
+  "crawledAt": "2026-08-17T22:39:59.999473+00:00"
+}

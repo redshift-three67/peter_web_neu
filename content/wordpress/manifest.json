@@ -1,0 +1,1050 @@
+{
+  "crawledAt": "2026-08-17T22:39:54.432400+00:00",
+  "origin": "https://rauch-heilpraktiker.de",
+  "method": "public-html",
+  "pages": [
+    {
+      "slug": "home",
+      "sourceUrl": "https://rauch-heilpraktiker.de/",
+      "class": "A-active-same-slug",
+      "wordCount": 903,
+      "imageCount": 10,
+      "title": "Heilpraktiker Augsburg - Naturheilpraxis Peter Rauch",
+      "h1": "Heilpraktiker Augsburg – Naturheilpraxis Peter Rauch",
+      "status": "mapped"
+    },
+    {
+      "slug": "online-anamnesebogen",
+      "sourceUrl": "https://rauch-heilpraktiker.de/online-anamnesebogen/",
+      "class": "C-special",
+      "wordCount": 546,
+      "imageCount": 7,
+      "title": "Online-Anamnesebogen in Augsburg | Naturheilpraxis Rauch",
+      "h1": "Online-Anamnesebogen in Augsburg",
+      "status": "draft"
+    },
+    {
+      "slug": "nls-diagnostik",
+      "sourceUrl": "https://rauch-heilpraktiker.de/nls-diagnostik/",
+      "class": "B-inactive-archive",
+      "wordCount": 819,
+      "imageCount": 11,
+      "title": "NLS-Diagnostik in Augsburg | Naturheilpraxis Rauch",
+      "h1": "NLS-Diagnostik in Augsburg",
+      "status": "draft"
+    },
+    {
+      "slug": "naturheilkunde",
+      "sourceUrl": "https://rauch-heilpraktiker.de/naturheilkunde/",
+      "class": "A-maps-to-new-hub",
+      "wordCount": 891,
+      "imageCount": 10,
+      "title": "Naturheilkunde Augsburg | Naturheilpraxis Rauch",
+      "h1": "Naturheilkunde in Augsburg",
+      "status": "draft"
+    },
+    {
+      "slug": "biophysikalische-informationstherapie-bit",
+      "sourceUrl": "https://rauch-heilpraktiker.de/biophysikalische-informationstherapie-bit/",
+      "class": "B-inactive-archive",
+      "wordCount": 516,
+      "imageCount": 3,
+      "title": "Biophysikalische Informationstherapie Augsburg | Naturheilpraxis Rauch",
+      "h1": "Biophysikalische Informationstherapie in Augsburg",
+      "status": "draft"
+    },
+    {
+      "slug": "manuelle-therapieverfahren-uebersicht",
+      "sourceUrl": "https://rauch-heilpraktiker.de/manuelle-therapieverfahren-uebersicht/",
+      "class": "A-maps-to-new-hub",
+      "wordCount": 962,
+      "imageCount": 4,
+      "title": "Manuelle Therapieverfahren Augsburg | Naturheilpraxis Rauch",
+      "h1": "Manuelle Therapieverfahren in Augsburg",
+      "status": "draft"
+    },
+    {
+      "slug": "bioresonanz-und-elektroakupunktur",
+      "sourceUrl": "https://rauch-heilpraktiker.de/bioresonanz-und-elektroakupunktur/",
+      "class": "B-inactive-archive",
+      "wordCount": 507,
+      "imageCount": 3,
+      "title": "Bioresonanz und Elektroakupunktur in Augsburg | Naturheilpraxis Rauch",
+      "h1": "Bioresonanz und Elektroakupunktur in Augsburg",
+      "status": "draft"
+    },
+    {
+      "slug": "naet-methode-allergie-behandlung",
+      "sourceUrl": "https://rauch-heilpraktiker.de/naet-methode-allergie-behandlung/",
+      "class": "B-inactive-archive",
+      "wordCount": 1552,
+      "imageCount": 9,
+      "title": "NAET | Naturheilpraxis Rauch",
+      "h1": "NAET",
+      "status": "draft"
+    },
+    {
+      "slug": "heilmeditation",
+      "sourceUrl": "https://rauch-heilpraktiker.de/heilmeditation/",
+      "class": "B-inactive-archive",
+      "wordCount": 653,
+      "imageCount": 9,
+      "title": "Heilmeditation in der Naturheilpraxis Rauch",
+      "h1": "Heilmeditation",
+      "status": "draft"
+    },
+    {
+      "slug": "klassische-homoeopathie",
+      "sourceUrl": "https://rauch-heilpraktiker.de/klassische-homoeopathie/",
+      "class": "B-inactive-archive",
+      "wordCount": 534,
+      "imageCount": 10,
+      "title": "Klassische Homöopathie | Naturheilpraxis Rauch",
+      "h1": "Klassische Homöopathie nach Dr. Samuel Hahnemann",
+      "status": "draft"
+    },
+    {
+      "slug": "arbeit-mit-den-regulatoren",
+      "sourceUrl": "https://rauch-heilpraktiker.de/arbeit-mit-den-regulatoren/",
+      "class": "B-inactive-archive",
+      "wordCount": 577,
+      "imageCount": 3,
+      "title": "Lowen Systems – Regulatoren | Naturheilpraxis Rauch",
+      "h1": "Lowen Systems – Regulatoren",
+      "status": "draft"
+    },
+    {
+      "slug": "lowen-systems-und-die-haende",
+      "sourceUrl": "https://rauch-heilpraktiker.de/lowen-systems-und-die-haende/",
+      "class": "B-inactive-archive",
+      "wordCount": 512,
+      "imageCount": 9,
+      "title": "Lowen Systems – Die Hände | Naturheilpraxis Rauch",
+      "h1": "Lowen Systems – Die Hände",
+      "status": "draft"
+    },
+    {
+      "slug": "lowen-systems-und-die-koerpersysteme",
+      "sourceUrl": "https://rauch-heilpraktiker.de/lowen-systems-und-die-koerpersysteme/",
+      "class": "B-inactive-archive",
+      "wordCount": 515,
+      "imageCount": 3,
+      "title": "Lowen Systems – Körpersysteme | Naturheilpraxis Rauch",
+      "h1": "Lowen Systems – Körpersysteme",
+      "status": "draft"
+    },
+    {
+      "slug": "lowen-systems-und-die-koerper-rhythmen",
+      "sourceUrl": "https://rauch-heilpraktiker.de/lowen-systems-und-die-koerper-rhythmen/",
+      "class": "B-inactive-archive",
+      "wordCount": 507,
+      "imageCount": 9,
+      "title": "Lowen Systems – Körperrhythmen | Naturheilpraxis Rauch",
+      "h1": "Lowen Systems – Körperrhythmen",
+      "status": "draft"
+    },
+    {
+      "slug": "lowen-systems-begruender-frank-lowen",
+      "sourceUrl": "https://rauch-heilpraktiker.de/lowen-systems-begruender-frank-lowen/",
+      "class": "B-inactive-archive",
+      "wordCount": 514,
+      "imageCount": 4,
+      "title": "Frank Lowen | Naturheilpraxis Rauch",
+      "h1": "Frank Lowen",
+      "status": "draft"
+    },
+    {
+      "slug": "lowen-systems-biovalent-system",
+      "sourceUrl": "https://rauch-heilpraktiker.de/lowen-systems-biovalent-system/",
+      "class": "B-inactive-archive",
+      "wordCount": 454,
+      "imageCount": 3,
+      "title": "Lowen Systems – Biovalent | Naturheilpraxis Rauch",
+      "h1": "Lowen Systems – Biovalent",
+      "status": "draft"
+    },
+    {
+      "slug": "lowen-systems-allgemeines",
+      "sourceUrl": "https://rauch-heilpraktiker.de/lowen-systems-allgemeines/",
+      "class": "B-inactive-archive",
+      "wordCount": 550,
+      "imageCount": 9,
+      "title": "Lowen Systems | Naturheilpraxis Rauch",
+      "h1": "Lowen Systems",
+      "status": "draft"
+    },
+    {
+      "slug": "integrative-manual-therapy-die-begruender",
+      "sourceUrl": "https://rauch-heilpraktiker.de/integrative-manual-therapy-die-begruender/",
+      "class": "B-inactive-archive",
+      "wordCount": 488,
+      "imageCount": 9,
+      "title": "Begründer der IMT | Naturheilpraxis Rauch",
+      "h1": "Begründer der IMT",
+      "status": "draft"
+    },
+    {
+      "slug": "dorntherapie",
+      "sourceUrl": "https://rauch-heilpraktiker.de/dorntherapie/",
+      "class": "B-inactive-archive",
+      "wordCount": 456,
+      "imageCount": 9,
+      "title": "Dorntherapie | Naturheilpraxis Rauch",
+      "h1": "Dorntherapie",
+      "status": "draft"
+    },
+    {
+      "slug": "microkinesi-therapie",
+      "sourceUrl": "https://rauch-heilpraktiker.de/microkinesi-therapie/",
+      "class": "B-inactive-archive",
+      "wordCount": 519,
+      "imageCount": 9,
+      "title": "Microkinesi | Naturheilpraxis Rauch",
+      "h1": "Microkinesi",
+      "status": "draft"
+    },
+    {
+      "slug": "imt-behandlungsmoeglichkeiten",
+      "sourceUrl": "https://rauch-heilpraktiker.de/imt-behandlungsmoeglichkeiten/",
+      "class": "B-inactive-archive",
+      "wordCount": 495,
+      "imageCount": 9,
+      "title": "IMT – Behandlungsmöglichkeiten | Naturheilpraxis Rauch",
+      "h1": "IMT – Behandlungsmöglichkeiten",
+      "status": "draft"
+    },
+    {
+      "slug": "microkinesi-behandlungsmoeglichkeiten",
+      "sourceUrl": "https://rauch-heilpraktiker.de/microkinesi-behandlungsmoeglichkeiten/",
+      "class": "B-inactive-archive",
+      "wordCount": 497,
+      "imageCount": 3,
+      "title": "Microkinesi – Möglichkeiten | Naturheilpraxis Rauch",
+      "h1": "Microkinesi – Möglichkeiten",
+      "status": "draft"
+    },
+    {
+      "slug": "funktionelle-strukturelle-rehabilitation",
+      "sourceUrl": "https://rauch-heilpraktiker.de/funktionelle-strukturelle-rehabilitation/",
+      "class": "B-inactive-archive",
+      "wordCount": 503,
+      "imageCount": 9,
+      "title": "IMT – Rehabilitation | Naturheilpraxis Rauch",
+      "h1": "IMT – Rehabilitation",
+      "status": "draft"
+    },
+    {
+      "slug": "physiotherapie-taetigkeitsfelder",
+      "sourceUrl": "https://rauch-heilpraktiker.de/physiotherapie-taetigkeitsfelder/",
+      "class": "B-inactive-archive",
+      "wordCount": 451,
+      "imageCount": 9,
+      "title": "Physiotherapie – Tätigkeitsfelder | Naturheilpraxis Rauch",
+      "h1": "Physiotherapie – Tätigkeitsfelder",
+      "status": "draft"
+    },
+    {
+      "slug": "physiotherapie-allgemeines",
+      "sourceUrl": "https://rauch-heilpraktiker.de/physiotherapie-allgemeines/",
+      "class": "B-inactive-archive",
+      "wordCount": 585,
+      "imageCount": 9,
+      "title": "Physiotherapie | Naturheilpraxis Rauch",
+      "h1": "Physiotherapie",
+      "status": "draft"
+    },
+    {
+      "slug": "integrative-manual-therapy-imt",
+      "sourceUrl": "https://rauch-heilpraktiker.de/integrative-manual-therapy-imt/",
+      "class": "B-inactive-archive",
+      "wordCount": 776,
+      "imageCount": 9,
+      "title": "Integrative Manual Therapy | Naturheilpraxis Rauch",
+      "h1": "Integrative Manual Therapy (I.M.T.)",
+      "status": "draft"
+    },
+    {
+      "slug": "imt-denk-und-behandlungsansaetze",
+      "sourceUrl": "https://rauch-heilpraktiker.de/imt-denk-und-behandlungsansaetze/",
+      "class": "B-inactive-archive",
+      "wordCount": 1104,
+      "imageCount": 3,
+      "title": "IMT – Denk- und Behandlungsansätze | Naturheilpraxis Rauch",
+      "h1": "IMT – Denk- und Behandlungsansätze",
+      "status": "draft"
+    },
+    {
+      "slug": "osteopathie-techniken",
+      "sourceUrl": "https://rauch-heilpraktiker.de/osteopathie-techniken/",
+      "class": "B-inactive-archive",
+      "wordCount": 1054,
+      "imageCount": 9,
+      "title": "Osteopathie | Naturheilpraxis Rauch",
+      "h1": "Osteopathie",
+      "status": "draft"
+    },
+    {
+      "slug": "zhineng-qigong-nach-dr-pang-ming",
+      "sourceUrl": "https://rauch-heilpraktiker.de/zhineng-qigong-nach-dr-pang-ming/",
+      "class": "B-inactive-archive",
+      "wordCount": 485,
+      "imageCount": 5,
+      "title": "Zhineng Qigong nach Dr. Pang Ming | Naturheilpraxis Rauch",
+      "h1": "Zhineng Qigong – Dr. Pang Ming",
+      "status": "draft"
+    },
+    {
+      "slug": "akupunktur-ohne-nadeln",
+      "sourceUrl": "https://rauch-heilpraktiker.de/akupunktur-ohne-nadeln/",
+      "class": "B-inactive-archive",
+      "wordCount": 505,
+      "imageCount": 3,
+      "title": "Akupunktur ohne Nadeln | Naturheilpraxis Rauch",
+      "h1": "Akupunktur ohne Nadeln",
+      "status": "draft"
+    },
+    {
+      "slug": "zhineng-qigong",
+      "sourceUrl": "https://rauch-heilpraktiker.de/zhineng-qigong/",
+      "class": "B-inactive-archive",
+      "wordCount": 507,
+      "imageCount": 5,
+      "title": "Zhineng Qigong | Naturheilpraxis Rauch",
+      "h1": "Zhineng Qigong",
+      "status": "draft"
+    },
+    {
+      "slug": "schmerztherapie-entstehung-von-schmerz",
+      "sourceUrl": "https://rauch-heilpraktiker.de/schmerztherapie-entstehung-von-schmerz/",
+      "class": "B-inactive-archive",
+      "wordCount": 466,
+      "imageCount": 3,
+      "title": "Entstehung von Schmerz | Naturheilpraxis Rauch",
+      "h1": "Entstehung und Verarbeitung von Schmerz",
+      "status": "draft"
+    },
+    {
+      "slug": "kinesiologie",
+      "sourceUrl": "https://rauch-heilpraktiker.de/kinesiologie/",
+      "class": "B-inactive-archive",
+      "wordCount": 471,
+      "imageCount": 9,
+      "title": "Kinesiologie | Naturheilpraxis Rauch",
+      "h1": "Kinesiologie",
+      "status": "draft"
+    },
+    {
+      "slug": "150-mhz-befeldung-nach-broers-3",
+      "sourceUrl": "https://rauch-heilpraktiker.de/150-mhz-befeldung-nach-broers-3/",
+      "class": "B-inactive-archive",
+      "wordCount": 569,
+      "imageCount": 3,
+      "title": "150-MHz-Befeldung nach Broers | Naturheilpraxis Rauch",
+      "h1": "150-MHz-Befeldung nach Broers",
+      "status": "draft"
+    },
+    {
+      "slug": "diagnostik-informationstherapie",
+      "sourceUrl": "https://rauch-heilpraktiker.de/diagnostik-informationstherapie/",
+      "class": "B-inactive-archive",
+      "wordCount": 583,
+      "imageCount": 11,
+      "title": "Informationstherapie | Naturheilpraxis Rauch",
+      "h1": "Informationstherapie",
+      "status": "draft"
+    },
+    {
+      "slug": "diagnose-labordiagnose-biodiagnostik",
+      "sourceUrl": "https://rauch-heilpraktiker.de/diagnose-labordiagnose-biodiagnostik/",
+      "class": "B-inactive-archive",
+      "wordCount": 427,
+      "imageCount": 4,
+      "title": "Labordiagnostik | Naturheilpraxis Rauch",
+      "h1": "Labordiagnostik",
+      "status": "draft"
+    },
+    {
+      "slug": "vieva-pro-herzratenvariabilitaet",
+      "sourceUrl": "https://rauch-heilpraktiker.de/vieva-pro-herzratenvariabilitaet/",
+      "class": "B-inactive-archive",
+      "wordCount": 648,
+      "imageCount": 11,
+      "title": "Vieva Pro Herzratenvariabilität | Naturheilpraxis Rauch",
+      "h1": "Vieva Pro",
+      "status": "draft"
+    },
+    {
+      "slug": "naturheilkundliche-gesundheitsdiagnostik",
+      "sourceUrl": "https://rauch-heilpraktiker.de/naturheilkundliche-gesundheitsdiagnostik/",
+      "class": "B-inactive-archive",
+      "wordCount": 588,
+      "imageCount": 9,
+      "title": "Naturheilkundliche Gesundheitsdiagnostik | Naturheilpraxis Rauch",
+      "h1": "Naturheilkundliche Gesundheitsdiagnostik",
+      "status": "draft"
+    },
+    {
+      "slug": "diagnostik-stuhluntersuchung",
+      "sourceUrl": "https://rauch-heilpraktiker.de/diagnostik-stuhluntersuchung/",
+      "class": "B-inactive-archive",
+      "wordCount": 427,
+      "imageCount": 3,
+      "title": "Stuhluntersuchung | Naturheilpraxis Rauch",
+      "h1": "Stuhluntersuchung",
+      "status": "draft"
+    },
+    {
+      "slug": "diagnose-urinuntersuchung",
+      "sourceUrl": "https://rauch-heilpraktiker.de/diagnose-urinuntersuchung/",
+      "class": "B-inactive-archive",
+      "wordCount": 423,
+      "imageCount": 3,
+      "title": "Urinuntersuchung | Naturheilpraxis Rauch",
+      "h1": "Urinuntersuchung",
+      "status": "draft"
+    },
+    {
+      "slug": "vital-und-naehrstoffanalyse",
+      "sourceUrl": "https://rauch-heilpraktiker.de/vital-und-naehrstoffanalyse/",
+      "class": "B-inactive-archive",
+      "wordCount": 595,
+      "imageCount": 3,
+      "title": "Vital und Nährstoffanalyse | Naturheilpraxis Rauch",
+      "h1": "Vital- und Nährstoffanalyse",
+      "status": "draft"
+    },
+    {
+      "slug": "hinweisdiagnostik-irisdiagnose",
+      "sourceUrl": "https://rauch-heilpraktiker.de/hinweisdiagnostik-irisdiagnose/",
+      "class": "B-inactive-archive",
+      "wordCount": 421,
+      "imageCount": 3,
+      "title": "Hinweisdiagnostik - Irisdiagnose | Naturheilpraxis Rauch",
+      "h1": "Hinweisdiagnostik – Irisdiagnose",
+      "status": "draft"
+    },
+    {
+      "slug": "hinweisdiagnostik-frequenztherapie",
+      "sourceUrl": "https://rauch-heilpraktiker.de/hinweisdiagnostik-frequenztherapie/",
+      "class": "B-inactive-archive",
+      "wordCount": 431,
+      "imageCount": 3,
+      "title": "Hinweisdiagnostik - Frequenztherapie | Naturheilpraxis Rauch",
+      "h1": "Hinweisdiagnostik – Frequenztherapie",
+      "status": "draft"
+    },
+    {
+      "slug": "hinweisdiagnostik-in-der-naturheilkunde",
+      "sourceUrl": "https://rauch-heilpraktiker.de/hinweisdiagnostik-in-der-naturheilkunde/",
+      "class": "B-inactive-archive",
+      "wordCount": 425,
+      "imageCount": 3,
+      "title": "Hinweisdiagnostik in der Naturheilkunde | Naturheilpraxis Rauch",
+      "h1": "Hinweisdiagnostik in der Naturheilkunde",
+      "status": "draft"
+    },
+    {
+      "slug": "elektroakupunktur-nach-dr-voll-3",
+      "sourceUrl": "https://rauch-heilpraktiker.de/elektroakupunktur-nach-dr-voll-3/",
+      "class": "B-inactive-archive",
+      "wordCount": 852,
+      "imageCount": 10,
+      "title": "Elektroakupunktur nach Dr. Voll | Naturheilpraxis Rauch",
+      "h1": "Elektroakupunktur nach Dr. Voll",
+      "status": "draft"
+    },
+    {
+      "slug": "hinweisdiagnostik-eav-elektroakupunktur-nach-dr-voll",
+      "sourceUrl": "https://rauch-heilpraktiker.de/hinweisdiagnostik-eav-elektroakupunktur-nach-dr-voll/",
+      "class": "B-inactive-archive",
+      "wordCount": 435,
+      "imageCount": 3,
+      "title": "Hinweisdiagnostik – EAV nach Dr. Voll | Naturheilpraxis Rauch",
+      "h1": "Hinweisdiagnostik – EAV nach Dr. Voll",
+      "status": "draft"
+    },
+    {
+      "slug": "orthomolekulare-therapie",
+      "sourceUrl": "https://rauch-heilpraktiker.de/orthomolekulare-therapie/",
+      "class": "B-inactive-archive",
+      "wordCount": 1305,
+      "imageCount": 9,
+      "title": "Orthomolekulare Therapie | Naturheilpraxis Rauch",
+      "h1": "Orthomolekulare Therapie",
+      "status": "draft"
+    },
+    {
+      "slug": "naturheilkundliche-darmsanierung",
+      "sourceUrl": "https://rauch-heilpraktiker.de/naturheilkundliche-darmsanierung/",
+      "class": "B-inactive-archive",
+      "wordCount": 621,
+      "imageCount": 10,
+      "title": "Darmsanierung Augsburg | Naturheilpraxis Rauch",
+      "h1": "Darmsanierung",
+      "status": "draft"
+    },
+    {
+      "slug": "allergiebehandlung-mit-naet",
+      "sourceUrl": "https://rauch-heilpraktiker.de/allergiebehandlung-mit-naet/",
+      "class": "B-inactive-archive",
+      "wordCount": 692,
+      "imageCount": 4,
+      "title": "Allergiebehandlung mit NAET | Naturheilpraxis Rauch",
+      "h1": "Allergiebehandlung mit NAET",
+      "status": "draft"
+    },
+    {
+      "slug": "die-phytotherapie",
+      "sourceUrl": "https://rauch-heilpraktiker.de/die-phytotherapie/",
+      "class": "B-inactive-archive",
+      "wordCount": 498,
+      "imageCount": 10,
+      "title": "Phytotherapie Augsburg | Naturheilpraxis Heilpraktiker Rauch",
+      "h1": "Phytotherapie",
+      "status": "draft"
+    },
+    {
+      "slug": "hypnotherapie-augsburg",
+      "sourceUrl": "https://rauch-heilpraktiker.de/hypnotherapie-augsburg/",
+      "class": "A-active-same-slug",
+      "wordCount": 714,
+      "imageCount": 9,
+      "title": "Hypnotherapie Augsburg | Naturheilpraxis Heilpraktiker Rauch",
+      "h1": "Hypnotherapie",
+      "status": "mapped"
+    },
+    {
+      "slug": "injektionstherapie",
+      "sourceUrl": "https://rauch-heilpraktiker.de/injektionstherapie/",
+      "class": "B-inactive-archive",
+      "wordCount": 693,
+      "imageCount": 10,
+      "title": "Injektionstherapie | Naturheilpraxis Rauch",
+      "h1": "Injektionstherapie",
+      "status": "draft"
+    },
+    {
+      "slug": "die-komplex-homoeopathie",
+      "sourceUrl": "https://rauch-heilpraktiker.de/die-komplex-homoeopathie/",
+      "class": "B-inactive-archive",
+      "wordCount": 516,
+      "imageCount": 10,
+      "title": "Die Komplex Homöopathie | Naturheilpraxis Rauch",
+      "h1": "Die Komplex Homöopathie",
+      "status": "draft"
+    },
+    {
+      "slug": "schmerztherapie-augsburg",
+      "sourceUrl": "https://rauch-heilpraktiker.de/schmerztherapie-augsburg/",
+      "class": "A-active-same-slug",
+      "wordCount": 955,
+      "imageCount": 3,
+      "title": "Schmerztherapie Augsburg | Naturheilpraxis Rauch",
+      "h1": "Schmerztherapie Augsburg",
+      "status": "mapped"
+    },
+    {
+      "slug": "downloadbereich-naturheilpraxis-rauch",
+      "sourceUrl": "https://rauch-heilpraktiker.de/downloadbereich-naturheilpraxis-rauch/",
+      "class": "C-special",
+      "wordCount": 1200,
+      "imageCount": 10,
+      "title": "Downloadbereich - Naturheilpraxis Rauch",
+      "h1": "Downloadbereich – Anamnese – Erstinformation",
+      "status": "draft"
+    },
+    {
+      "slug": "gesundheitsrelevante-dokumentation",
+      "sourceUrl": "https://rauch-heilpraktiker.de/gesundheitsrelevante-dokumentation/",
+      "class": "C-special",
+      "wordCount": 420,
+      "imageCount": 10,
+      "title": "Gesundheitsrelevante Dokumentation | Naturheilpraxis Rauch",
+      "h1": "Gesundheitsrelevante Dokumentation",
+      "status": "draft"
+    },
+    {
+      "slug": "rechtshinweise-therapieverfahren",
+      "sourceUrl": "https://rauch-heilpraktiker.de/rechtshinweise-therapieverfahren/",
+      "class": "A-maps-to-new-hub",
+      "wordCount": 928,
+      "imageCount": 3,
+      "title": "Rechtshinweise Therapieverfahren und Erkrankungen - Rauch",
+      "h1": "Rechtliche Hinweise – Therapieverfahren + Erkrankungen",
+      "status": "draft"
+    },
+    {
+      "slug": "heilpraktiker-rechtshinweise",
+      "sourceUrl": "https://rauch-heilpraktiker.de/heilpraktiker-rechtshinweise/",
+      "class": "A-maps-to-new-hub",
+      "wordCount": 983,
+      "imageCount": 10,
+      "title": "Heilpraktiker Rechtshinweise | Naturheilpraxis Rauch",
+      "h1": "Heilpraktiker Rauch – Rechtshinweise",
+      "status": "draft"
+    },
+    {
+      "slug": "datenschutzerklaerung-tools",
+      "sourceUrl": "https://rauch-heilpraktiker.de/datenschutzerklaerung-tools/",
+      "class": "C-special",
+      "wordCount": 429,
+      "imageCount": 3,
+      "title": "Datenschutzerklärung Tools | Naturheilpraxis Rauch",
+      "h1": "Datenschutzerklärung Tools – Naturheilpraxis",
+      "status": "draft"
+    },
+    {
+      "slug": "datenschutzerklaerung",
+      "sourceUrl": "https://rauch-heilpraktiker.de/datenschutzerklaerung/",
+      "class": "A-maps-to-new-hub",
+      "wordCount": 1935,
+      "imageCount": 3,
+      "title": "Datenschutzerklärung | Naturheilpraxis Rauch",
+      "h1": "Heilpraktiker Rauch – Datenschutzerklärung",
+      "status": "draft"
+    },
+    {
+      "slug": "bioresonanz-therapie",
+      "sourceUrl": "https://rauch-heilpraktiker.de/bioresonanz-therapie/",
+      "class": "A-maps-to-new-hub",
+      "wordCount": 640,
+      "imageCount": 3,
+      "title": "Bioresonanz-Therapie | Naturheilpraxis Rauch",
+      "h1": "Bioresonanz-Therapie",
+      "status": "draft"
+    },
+    {
+      "slug": "psychotherapie-augsburg",
+      "sourceUrl": "https://rauch-heilpraktiker.de/psychotherapie-augsburg/",
+      "class": "A-maps-to-new-hub",
+      "wordCount": 1014,
+      "imageCount": 4,
+      "title": "Psychotherapie Augsburg | Naturheilpraxis Rauch",
+      "h1": "Psychotherapie Augsburg – Burnout und Diagnostik",
+      "status": "draft"
+    },
+    {
+      "slug": "impressum",
+      "sourceUrl": "https://rauch-heilpraktiker.de/impressum/",
+      "class": "A-active-same-slug",
+      "wordCount": 875,
+      "imageCount": 10,
+      "title": "Impressum | Naturheilpraxis Rauch",
+      "h1": "Heilpraktiker Rauch – Impressum",
+      "status": "mapped"
+    },
+    {
+      "slug": "kontakt",
+      "sourceUrl": "https://rauch-heilpraktiker.de/kontakt/",
+      "class": "A-active-same-slug",
+      "wordCount": 438,
+      "imageCount": 7,
+      "title": "Kontakt | Naturheilpraxis Rauch",
+      "h1": "Heilpraktiker Rauch – Kontakt",
+      "status": "mapped"
+    }
+  ],
+  "media": [
+    {
+      "file": "/media/wp/ea40c2dfaf-Peter-Logo-klein.svg",
+      "bytes": 2517,
+      "source": "https://rauch-heilpraktiker.de/wp-content/uploads/Peter-Logo-klein.svg"
+    },
+    {
+      "file": "/media/wp/7170dd7512-Naturheilpraxis_Heilpraktiker_Rauch_Augsburg_2_3-a2d2c22c.jpg",
+      "bytes": 60003,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Naturheilpraxis_Heilpraktiker_Rauch_Augsburg_2_3-a2d2c22c.jpeg"
+    },
+    {
+      "file": "/media/wp/218de4c178-Heilpraktiker_Peter_Rauch_Augsburg_Bioresonanz_Trikombin-0fe.jpg",
+      "bytes": 73516,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Heilpraktiker_Peter_Rauch_Augsburg_Bioresonanz_Trikombin-0fef268f.jpeg"
+    },
+    {
+      "file": "/media/wp/883067e238-Koerperliche_und_Emotionale_Gesundheit_Naturheilpraxis_Augsb.jpg",
+      "bytes": 44858,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Koerperliche_und_Emotionale_Gesundheit_Naturheilpraxis_Augsburg-a7f97b0f.jpeg"
+    },
+    {
+      "file": "/media/wp/fa51741490-Naturheilpraxis_Augsburg_Zen_1-7d63144d.jpg",
+      "bytes": 98295,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Naturheilpraxis_Augsburg_Zen_1-7d63144d.jpeg"
+    },
+    {
+      "file": "/media/wp/c9eaa8b7e2-Sanft-Heilen-Stark-im-Leben-983729de.jpg",
+      "bytes": 18137,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Sanft-Heilen-Stark-im-Leben-983729de.jpeg"
+    },
+    {
+      "file": "/media/wp/375b67cc72-Ganzheitliche-naturheilkundliche-Therapieverfahren-07351f59.jpg",
+      "bytes": 19539,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Ganzheitliche-naturheilkundliche-Therapieverfahren-07351f59.jpeg"
+    },
+    {
+      "file": "/media/wp/71c0ee75b1-Naturheilpraxis_Heilpraktiker_Rauch_Augsburg_1-54b4eef6.jpg",
+      "bytes": 531855,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Naturheilpraxis_Heilpraktiker_Rauch_Augsburg_1-54b4eef6.jpeg"
+    },
+    {
+      "file": "/media/wp/a5dbc7244c-Peter-Rauch-Heilpraktiker-Augsburg-9ab7178c.png",
+      "bytes": 191062,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Peter-Rauch-Heilpraktiker-Augsburg-9ab7178c.png"
+    },
+    {
+      "file": "/media/wp/23a137fe6a-BNI-Unternehmen-Verband-cdced5ca.png",
+      "bytes": 9917,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/BNI-Unternehmen-Verband-cdced5ca.png"
+    },
+    {
+      "file": "/media/wp/73502b15ee-Heilpraktiker_Bioresonanztherapie_Trikombin_nach_Baklayan-b1.webp",
+      "bytes": 606046,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Heilpraktiker_Bioresonanztherapie_Trikombin_nach_Baklayan-b1323c1f.webp"
+    },
+    {
+      "file": "/media/wp/2128521e91-NLS_Diagnose_Metatron_Hospital_Vitages-7-aa9e6f94.webp",
+      "bytes": 629210,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/NLS_Diagnose_Metatron_Hospital_Vitages-7-aa9e6f94.webp"
+    },
+    {
+      "file": "/media/wp/e2cc48300f-Vieva_Vital_Tuning_Biofeedback_HRV-17ae442f.webp",
+      "bytes": 652702,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Vieva_Vital_Tuning_Biofeedback_HRV-17ae442f.webp"
+    },
+    {
+      "file": "/media/wp/462ec8a09a-Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S-5c6d1aec.webp",
+      "bytes": 606996,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S-5c6d1aec.webp"
+    },
+    {
+      "file": "/media/wp/cab74ced3e-NLS_Diagnose_Metatron_Hospital_Vitages-7-14601014.jpg",
+      "bytes": 424319,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/NLS_Diagnose_Metatron_Hospital_Vitages-7-14601014.jpeg"
+    },
+    {
+      "file": "/media/wp/04cbf36a3f-Heilpraktiker_Bioresonanztherapie_Trikombin_nach_Baklayan-fa.jpg",
+      "bytes": 414048,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Heilpraktiker_Bioresonanztherapie_Trikombin_nach_Baklayan-fab0f8d7.jpeg"
+    },
+    {
+      "file": "/media/wp/3e86525256-Vieva_Vital_Tuning_Biofeedback_HRV-91952082.jpg",
+      "bytes": 433100,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Vieva_Vital_Tuning_Biofeedback_HRV-91952082.jpeg"
+    },
+    {
+      "file": "/media/wp/12ed17b576-Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S-33551de0.jpg",
+      "bytes": 409681,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S-33551de0.jpeg"
+    },
+    {
+      "file": "/media/wp/75c94d20a4-NLS-Metatron-Diagnostik-Gehirn-457be14b.png",
+      "bytes": 569649,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/NLS-Metatron-Diagnostik-Gehirn-457be14b.png"
+    },
+    {
+      "file": "/media/wp/7ad0d35453-3D_Herz_NLS_Diagnose-2be9b5bb.png",
+      "bytes": 417725,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/3D_Herz_NLS_Diagnose-2be9b5bb.png"
+    },
+    {
+      "file": "/media/wp/93bf5c1c38-Brustkorb-24b1dfe6.jpg",
+      "bytes": 56976,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Brustkorb-24b1dfe6.jpeg"
+    },
+    {
+      "file": "/media/wp/5490376c14-Darm-Hunter-bfaf8bc5.jpg",
+      "bytes": 36905,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Darm-Hunter-bfaf8bc5.jpeg"
+    },
+    {
+      "file": "/media/wp/e982abc006-Klassische-Hom-opathie-nach-Hahnemann-Augsburg.jpg",
+      "bytes": 182299,
+      "source": "https://rauch-heilpraktiker.de/wp-content/uploads/Klassische-Hom%C3%B6opathie-nach-Hahnemann-Augsburg.jpg#thumbnail=1353%2C900&srcset=1&covers=1"
+    },
+    {
+      "file": "/media/wp/19595be232-Phytotherapie-Naturheilpraxis-Augsburg-52452941.jpg",
+      "bytes": 68252,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Phytotherapie-Naturheilpraxis-Augsburg-52452941.jpeg"
+    },
+    {
+      "file": "/media/wp/1c5c59745d-Naet-Allergiebehandlung-Augsburg-b5a30659.jpg",
+      "bytes": 164184,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Naet-Allergiebehandlung-Augsburg-b5a30659.jpeg"
+    },
+    {
+      "file": "/media/wp/3a4a2d8c3d-Lebensmittel-Allergien-Gluten-02ea08ab.jpg",
+      "bytes": 168725,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Lebensmittel-Allergien-Gluten-02ea08ab.jpeg"
+    },
+    {
+      "file": "/media/wp/23951a140e-Hypnose-Heilpraktiker-Augsburg-1-83d7ac78.jpg",
+      "bytes": 68204,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Hypnose-Heilpraktiker-Augsburg-1-83d7ac78.jpeg"
+    },
+    {
+      "file": "/media/wp/7bc7d58356-Peter-Rauch-Heilpraktiker-Augsburg-29924d03.webp",
+      "bytes": 56968,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Peter-Rauch-Heilpraktiker-Augsburg-29924d03.webp"
+    },
+    {
+      "file": "/media/wp/6fad3d465e-BNI-Unternehmen-Verband-cf147d9f.webp",
+      "bytes": 8406,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/BNI-Unternehmen-Verband-cf147d9f.webp"
+    },
+    {
+      "file": "/media/wp/7c437d3a79-Vital_und_N-hrstoffanalyse.jpg",
+      "bytes": 164018,
+      "source": "https://rauch-heilpraktiker.de/wp-content/uploads/Vital_und_N%C3%A4hrstoffanalyse.jpg#thumbnail=259%2C342&srcset=1"
+    },
+    {
+      "file": "/media/wp/c15c76576c-Naet-Allergiebehandlung-Pollen-Gr-ser.jpg",
+      "bytes": 182299,
+      "source": "https://rauch-heilpraktiker.de/wp-content/uploads/Naet-Allergiebehandlung-Pollen-Gr%C3%A4ser.jpg#thumbnail=1353%2C900&srcset=1&covers=1"
+    },
+    {
+      "file": "/media/wp/b2385089f2-Naturheilpraxis_Heilpraktiker_Rauch_Augsburg_2_3-18f8f10c.jpg",
+      "bytes": 109705,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Naturheilpraxis_Heilpraktiker_Rauch_Augsburg_2_3-18f8f10c.jpeg"
+    },
+    {
+      "file": "/media/wp/8fca26f5a9-Naturheilpraxis_Heilpraktiker_Sanft_Heilen_Stark_im_Leben_1.jpg",
+      "bytes": 13895,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Naturheilpraxis_Heilpraktiker_Sanft_Heilen_Stark_im_Leben_1-e1570044586920-a5c89cf5.jpeg"
+    },
+    {
+      "file": "/media/wp/ea10de5692-Basic_kit-klein-0886e853.png",
+      "bytes": 371135,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Basic_kit-klein-0886e853.png"
+    },
+    {
+      "file": "/media/wp/f44c7b353b-Bilder-Psyche-Frau-6-5ed32c0f.jpg",
+      "bytes": 73790,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Bilder-Psyche-Frau-6-5ed32c0f.jpeg"
+    },
+    {
+      "file": "/media/wp/afbbc885bf-Hypnose_Behandlung_Augsburg_Heilpraltiker_Rauch_2-6e8618d4.jpg",
+      "bytes": 129685,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Hypnose_Behandlung_Augsburg_Heilpraltiker_Rauch_2-6e8618d4.jpeg"
+    },
+    {
+      "file": "/media/wp/2135df41ac-Sanft_Heilen_Naturheilpraxis_Augsburg-9dced3ee.jpg",
+      "bytes": 102657,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Sanft_Heilen_Naturheilpraxis_Augsburg-9dced3ee.jpeg"
+    },
+    {
+      "file": "/media/wp/3a10dc39d9-Rauch-Heilpraktiker-Augsburg-Naturheilpraxis-Datenschutzvero.jpg",
+      "bytes": 49856,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Rauch-Heilpraktiker-Augsburg-Naturheilpraxis-Datenschutzverordnung-7d422b9b.jpeg"
+    },
+    {
+      "file": "/media/wp/6873e733b6-Heilpraktiker_Peter_Rauch_Augsburg_Bioresonanz_Trikombin-62e.jpg",
+      "bytes": 16344,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Heilpraktiker_Peter_Rauch_Augsburg_Bioresonanz_Trikombin-62eaa3ed.jpeg"
+    },
+    {
+      "file": "/media/wp/8ae3af9a98-Hom-opathie_Augsburg_1.jpg",
+      "bytes": 182299,
+      "source": "https://rauch-heilpraktiker.de/wp-content/uploads/Hom%C3%B6opathie_Augsburg_1.jpg#thumbnail=600%2C&srcset=1"
+    },
+    {
+      "file": "/media/wp/61f3668195-Osteopathische-Behandlung-in-Augsburg-df130f49.jpg",
+      "bytes": 82131,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Osteopathische-Behandlung-in-Augsburg-df130f49.jpeg"
+    },
+    {
+      "file": "/media/wp/ac91b60dae-Physiotherapeutische-Behandlung-Kleinkinder-Augsburg-8aa134c.jpg",
+      "bytes": 95102,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Physiotherapeutische-Behandlung-Kleinkinder-Augsburg-8aa134c0.jpeg"
+    },
+    {
+      "file": "/media/wp/9c8bccf398-Manuelle-Schmerztherapie-Augsburg-aa5de0d2.jpg",
+      "bytes": 89701,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Manuelle-Schmerztherapie-Augsburg-aa5de0d2.jpeg"
+    },
+    {
+      "file": "/media/wp/4561f90907-haende_manuelle_therapie_schmerztherapie_1-1cebd135.jpg",
+      "bytes": 28490,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/haende_manuelle_therapie_schmerztherapie_1-1cebd135.jpeg"
+    },
+    {
+      "file": "/media/wp/a0aa9baa66-Physiotherapeutische-Behandlung-Kleinkinder-Augsburg-f88515c.jpg",
+      "bytes": 11898,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Physiotherapeutische-Behandlung-Kleinkinder-Augsburg-f88515cb.jpeg"
+    },
+    {
+      "file": "/media/wp/10c2870a73-haende_manuelle_therapie_schmerztherapie_1-dece5804.jpg",
+      "bytes": 18222,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/haende_manuelle_therapie_schmerztherapie_1-dece5804.jpeg"
+    },
+    {
+      "file": "/media/wp/38ec7b037e-Schmerztherapie-Augsburg-1-580429e3.jpg",
+      "bytes": 17173,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Schmerztherapie-Augsburg-1-580429e3.jpeg"
+    },
+    {
+      "file": "/media/wp/b21805d880-Schmerztherapie-Augsburg-1-092e2413.jpg",
+      "bytes": 12233,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Schmerztherapie-Augsburg-1-092e2413.jpeg"
+    },
+    {
+      "file": "/media/wp/1f27000c0e-Physiotherapeutische-Behandlung-Kleinkinder-Augsburg-d31ba02.jpg",
+      "bytes": 27131,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Physiotherapeutische-Behandlung-Kleinkinder-Augsburg-d31ba027.jpeg"
+    },
+    {
+      "file": "/media/wp/95e5c8bc33-Manuelle-Schmerztherapie-Physio-9f8b3c76.jpg",
+      "bytes": 52660,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Manuelle-Schmerztherapie-Physio-9f8b3c76.jpeg"
+    },
+    {
+      "file": "/media/wp/4bec91f21e-Osteopathische-Behandlung-in-Augsburg-200a6220.jpg",
+      "bytes": 11772,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Osteopathische-Behandlung-in-Augsburg-200a6220.jpeg"
+    },
+    {
+      "file": "/media/wp/f7481fd902-Zhineng_Qi_Gong_-bung_Augsburg_2_1.jpg",
+      "bytes": 182299,
+      "source": "https://rauch-heilpraktiker.de/wp-content/uploads/Zhineng_Qi_Gong_%C3%9Cbung_Augsburg_2_1.jpg#thumbnail=1353%2C900&srcset=1&covers=1"
+    },
+    {
+      "file": "/media/wp/80c9f6e139-Zhineng_Qi_Gong_-bung_Augsburg_1_1.jpg",
+      "bytes": 182299,
+      "source": "https://rauch-heilpraktiker.de/wp-content/uploads/Zhineng_Qi_Gong_%C3%9Cbung_Augsburg_1_1.jpg#thumbnail=1353%2C900&srcset=1&covers=1"
+    },
+    {
+      "file": "/media/wp/13187b40a2-Kinesiologie-Augsburg-0b0b9d13.jpg",
+      "bytes": 91010,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Kinesiologie-Augsburg-0b0b9d13.jpeg"
+    },
+    {
+      "file": "/media/wp/46472f70e2-Koerperliche_und_Emotionale_Gesundheit_Naturheilpraxis_Augsb.jpg",
+      "bytes": 81603,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Koerperliche_und_Emotionale_Gesundheit_Naturheilpraxis_Augsburg-68b2f800.jpeg"
+    },
+    {
+      "file": "/media/wp/8e97e694f6-work-12-9e18e01a.jpg",
+      "bytes": 54337,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/work-12-9e18e01a.jpeg"
+    },
+    {
+      "file": "/media/wp/a97fe70d9a-work-16-7cef1d68.jpg",
+      "bytes": 48889,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/work-16-7cef1d68.jpeg"
+    },
+    {
+      "file": "/media/wp/776693e3f6-Kinesiologie-Rauch-Heilpraktiker-1-1df97a09.jpg",
+      "bytes": 75877,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Kinesiologie-Rauch-Heilpraktiker-1-1df97a09.jpeg"
+    },
+    {
+      "file": "/media/wp/8543cd3f90-Heilpraktiker_Peter_Rauch_Augsburg_Bioresonanz_Trikombin-74e.jpg",
+      "bytes": 124115,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Heilpraktiker_Peter_Rauch_Augsburg_Bioresonanz_Trikombin-74eb14de.jpeg"
+    },
+    {
+      "file": "/media/wp/687240f98f-Naturheilpraxis_Augsburg_Zen_1-415b6bc8.jpg",
+      "bytes": 175030,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Naturheilpraxis_Augsburg_Zen_1-415b6bc8.jpeg"
+    },
+    {
+      "file": "/media/wp/5cd8fdae88-Heilpraktiker_Akupunktur_ohne_Nadeln_Augsburg-bd2592b4.jpg",
+      "bytes": 41050,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Heilpraktiker_Akupunktur_ohne_Nadeln_Augsburg-bd2592b4.jpeg"
+    },
+    {
+      "file": "/media/wp/0cf137e216-company-office-icon-01.svg",
+      "bytes": 388,
+      "source": "https://rauch-heilpraktiker.de/wp-content/uploads/company-office-icon-01.svg"
+    },
+    {
+      "file": "/media/wp/2672d3075f-Rauch-Heilpraktiker-Augsburg-Naturheilpraxis-Datenschutzvero.jpg",
+      "bytes": 36738,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Rauch-Heilpraktiker-Augsburg-Naturheilpraxis-Datenschutzverordnung-19cfbbcc.jpeg"
+    },
+    {
+      "file": "/media/wp/29102f95fa-Pixapay-Kostenlostest-g0d5fe9287_1280-2-1024x678.jpg",
+      "bytes": 53832,
+      "source": "https://rauch-heilpraktiker.de/wp-content/uploads/Pixapay-Kostenlostest-g0d5fe9287_1280-2-1024x678.jpg"
+    },
+    {
+      "file": "/media/wp/33a70d1650-vieva-vitaleval-shadow-300dpi-4705fc58.png",
+      "bytes": 23570,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/vieva-vitaleval-shadow-300dpi-4705fc58.png"
+    },
+    {
+      "file": "/media/wp/f6a86e8e7b-Vieva.png",
+      "bytes": 182299,
+      "source": "https://rauch-heilpraktiker.de/wp-content/uploads/Vieva.png#thumbnail=1000%2Cauto&srcset=1"
+    },
+    {
+      "file": "/media/wp/f609c11491-NLS_Diagnose_Metatron_Hospital_Vitages-4-9a714347.jpg",
+      "bytes": 897226,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/NLS_Diagnose_Metatron_Hospital_Vitages-4-9a714347.jpeg"
+    },
+    {
+      "file": "/media/wp/f4f020d04b-Heilpraktiker_Bioresonanztherapie_Trikombin_nach_Baklayan-ac.jpg",
+      "bytes": 878489,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Heilpraktiker_Bioresonanztherapie_Trikombin_nach_Baklayan-acd7a5f9.jpeg"
+    },
+    {
+      "file": "/media/wp/7d425434f4-Vieva_Vital_Tuning_Biofeedback_HRV-c445d299.jpg",
+      "bytes": 924294,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Vieva_Vital_Tuning_Biofeedback_HRV-c445d299.jpeg"
+    },
+    {
+      "file": "/media/wp/b72888b3a7-Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S-1-bbcf6f1e.jpg",
+      "bytes": 697300,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S-1-bbcf6f1e.jpeg"
+    },
+    {
+      "file": "/media/wp/d23b545455-Elektroakupunktur-nach-Dr-Voll.png",
+      "bytes": 160779,
+      "source": "https://rauch-heilpraktiker.de/wp-content/uploads/Elektroakupunktur-nach-Dr-Voll.png#thumbnail=800%2Cauto&srcset=1"
+    },
+    {
+      "file": "/media/wp/13ab0b5e74-Orthomolekulare-Therapie-Flavonoide-593d3147.jpg",
+      "bytes": 76484,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Orthomolekulare-Therapie-Flavonoide-593d3147.jpeg"
+    },
+    {
+      "file": "/media/wp/9d2a800a26-Orthomolekulare-Therapie-Vitamin-C-afbb6c93.jpg",
+      "bytes": 88218,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Orthomolekulare-Therapie-Vitamin-C-afbb6c93.jpeg"
+    },
+    {
+      "file": "/media/wp/32caccbcfa-Vital_und_N-hrstoffanalyse.jpg",
+      "bytes": 164018,
+      "source": "https://rauch-heilpraktiker.de/wp-content/uploads/Vital_und_N%C3%A4hrstoffanalyse.jpg#thumbnail=530%2C700&srcset=1"
+    },
+    {
+      "file": "/media/wp/684a10a1af-Koerperliche_und_Emotionale_Gesundheit_Naturheilpraxis_Augsb.jpg",
+      "bytes": 10195,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Koerperliche_und_Emotionale_Gesundheit_Naturheilpraxis_Augsburg-034b42d1.jpeg"
+    },
+    {
+      "file": "/media/wp/37d11739f7-Phytotherapie-Naturheilpraxis-Augsburg-342aa728.jpg",
+      "bytes": 8276,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Phytotherapie-Naturheilpraxis-Augsburg-342aa728.jpeg"
+    },
+    {
+      "file": "/media/wp/42c1194973-Bilder-unsplash-Frauenbild-1-362b057e.jpg",
+      "bytes": 43527,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Bilder-unsplash-Frauenbild-1-362b057e.jpeg"
+    },
+    {
+      "file": "/media/wp/4b7b9795d4-Fotolia_73707269_Subscription_Monthly_M-1acb506f.jpg",
+      "bytes": 82102,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Fotolia_73707269_Subscription_Monthly_M-1acb506f.jpeg"
+    },
+    {
+      "file": "/media/wp/b2d1f9f6ec-Hypnose-Heilpraktiker-Augsburg-1-64df09df.jpg",
+      "bytes": 40899,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Hypnose-Heilpraktiker-Augsburg-1-64df09df.jpeg"
+    },
+    {
+      "file": "/media/wp/03a7142873-Rauch-Heilpraktiker-Augsburg-Naturheilpraxis-Datenschutzvero.jpg",
+      "bytes": 81777,
+      "source": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Rauch-Heilpraktiker-Augsburg-Naturheilpraxis-Datenschutzverordnung-a45a873c.jpeg"
+    }
+  ],
+  "errors": []
+}

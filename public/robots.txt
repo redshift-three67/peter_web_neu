@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /praxis
+Disallow: /archiv
+Disallow: /api/
+Disallow: /online-anamnesebogen
+
+Sitemap: https://rauch-heilpraktiker.de/sitemap.xml

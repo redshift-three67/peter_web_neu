@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /praxis
+Disallow: /api/
+
+Sitemap: https://rauch-heilpraktiker.de/sitemap.xml

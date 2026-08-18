@@ -1,0 +1,570 @@
+{
+  "slug": "orthomolekulare-therapie",
+  "sourceUrl": "https://rauch-heilpraktiker.de/orthomolekulare-therapie/",
+  "finalUrl": "https://rauch-heilpraktiker.de/orthomolekulare-therapie/",
+  "httpStatus": 200,
+  "class": "B-inactive-archive",
+  "status": "draft",
+  "robots": "noindex,follow",
+  "extracted": {
+    "title": "Orthomolekulare Therapie | Naturheilpraxis Rauch",
+    "h1": "Orthomolekulare Therapie",
+    "description": "Die Orthomolekulare Therapie nach Linus Pauling basiert auf dem gezielten Einsatz essentieller Mikronährstoffe für die Gesunderhaltung und Prävention.",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Orthomolekulare Therapie"
+      },
+      {
+        "tag": "h2",
+        "text": "Naturheilkundlich begleiten – Stark im Leben"
+      },
+      {
+        "tag": "h2",
+        "text": "Dr. Linus Pauling"
+      },
+      {
+        "tag": "h3",
+        "text": "Die Orthomolekulare Therapie wurde maßgeblich von dem Biochemiker Professor Dr. Linus Pauling (1901-1994 – 2 facher Nobelpreisträger) angestoßen."
+      },
+      {
+        "tag": "h3",
+        "text": "Orthomolekulare Therapie"
+      },
+      {
+        "tag": "h3",
+        "text": "Orthomolekulare Therapie"
+      },
+      {
+        "tag": "h3",
+        "text": "Vitamin und Mineralstoffberatung und Testung in meiner Praxis"
+      },
+      {
+        "tag": "h3",
+        "text": "Haben Sie Interesse? Dann kommen Sie doch vorbei."
+      },
+      {
+        "tag": "h2",
+        "text": "Häufige Fragen zur Praxis"
+      }
+    ],
+    "parts": [
+      {
+        "tag": "li",
+        "text": "Impressum"
+      },
+      {
+        "tag": "li",
+        "text": "Rechtshinweise"
+      },
+      {
+        "tag": "li",
+        "text": "Rechtshinweise Therapieverfahren"
+      },
+      {
+        "tag": "li",
+        "text": "Downloadbereich"
+      },
+      {
+        "tag": "li",
+        "text": "Praxis offen"
+      },
+      {
+        "tag": "li",
+        "text": "Online-Anamnesebogen"
+      },
+      {
+        "tag": "li",
+        "text": "Gesundheitsrelevante Dokumentation"
+      },
+      {
+        "tag": "li",
+        "text": "Diagnostik Diagnostik – Stuhluntersuchung"
+      },
+      {
+        "tag": "li",
+        "text": "Diagnose – Urinuntersuchung"
+      },
+      {
+        "tag": "li",
+        "text": "Diagnose – Labordiagnose – Biodiagnostik"
+      },
+      {
+        "tag": "li",
+        "text": "Hinweisdiagnostik – EAV – Elektroakupunktur nach Dr. Voll"
+      },
+      {
+        "tag": "li",
+        "text": "Hinweisdiagnostik – Irisdiagnose"
+      },
+      {
+        "tag": "li",
+        "text": "Hinweisdiagnostik – Frequenztherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Biophysikalische Bioresonanz Funktionsweise Bioresonanz / Elektroakupunktur"
+      },
+      {
+        "tag": "li",
+        "text": "Akupunktur ohne Nadeln"
+      },
+      {
+        "tag": "li",
+        "text": "NLS-Diagnostik"
+      },
+      {
+        "tag": "li",
+        "text": "Vieva Pro Analyse"
+      },
+      {
+        "tag": "li",
+        "text": "Elektroakupunktur nach Voll"
+      },
+      {
+        "tag": "li",
+        "text": "150 MHz nach Broers"
+      },
+      {
+        "tag": "li",
+        "text": "Manuelle +Osteopathie Allgemein"
+      },
+      {
+        "tag": "li",
+        "text": "+Integrative Manual Therapy Die Begründer"
+      },
+      {
+        "tag": "li",
+        "text": "Denk und Behandlungsansätze"
+      },
+      {
+        "tag": "li",
+        "text": "Behandlungsmöglichkeiten"
+      },
+      {
+        "tag": "li",
+        "text": "Rehabilitation"
+      },
+      {
+        "tag": "li",
+        "text": "+Lowen Systems (Biovalent System) Arbeit mit den Händen"
+      },
+      {
+        "tag": "li",
+        "text": "Begründer Frank Lowen"
+      },
+      {
+        "tag": "li",
+        "text": "Die Hände"
+      },
+      {
+        "tag": "li",
+        "text": "Die Regulatoren"
+      },
+      {
+        "tag": "li",
+        "text": "Die Koerper Rhythmen"
+      },
+      {
+        "tag": "li",
+        "text": "Die Körpersysteme"
+      },
+      {
+        "tag": "li",
+        "text": "+Microkinesi Allgemein Microkinesi Möglichkeiten"
+      },
+      {
+        "tag": "li",
+        "text": "+Physiotherapie Allgemein Physiotherapie Tätigkeitsfelder"
+      },
+      {
+        "tag": "li",
+        "text": "+Dorntherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Schmerz Entstehung von Schmerz"
+      },
+      {
+        "tag": "li",
+        "text": "Naturheilkunde Klassische Homöopathie"
+      },
+      {
+        "tag": "li",
+        "text": "Die Komplex Homöopathie"
+      },
+      {
+        "tag": "li",
+        "text": "Die Phytotherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Allergiebehandlung mit NAET Behandlungsablauf"
+      },
+      {
+        "tag": "li",
+        "text": "Naturheilkundliche Darmsanierung"
+      },
+      {
+        "tag": "li",
+        "text": "Injektionstherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Orthomolekular Kinesiologie"
+      },
+      {
+        "tag": "li",
+        "text": "Zhineng Dr Pang Ming"
+      },
+      {
+        "tag": "li",
+        "text": "Psychotherapie Hypnose"
+      },
+      {
+        "tag": "li",
+        "text": "Heilmeditation"
+      },
+      {
+        "tag": "li",
+        "text": "Kontakt"
+      },
+      {
+        "tag": "li",
+        "text": "Orthomolekulare Medizin mit Vitalstoffen nach Pauling Mehr Lesen"
+      },
+      {
+        "tag": "li",
+        "text": "Essentielle Mikronährstoffe als Therapieform Mehr Lesen"
+      },
+      {
+        "tag": "li",
+        "text": "Gesund und Fit durch Vitamine und Nährstoffe Mehr Lesen"
+      },
+      {
+        "tag": "h1",
+        "text": "Orthomolekulare Therapie"
+      },
+      {
+        "tag": "h2",
+        "text": "Naturheilkundlich begleiten – Stark im Leben"
+      },
+      {
+        "tag": "h2",
+        "text": "Dr. Linus Pauling"
+      },
+      {
+        "tag": "h3",
+        "text": "Die Orthomolekulare Therapie wurde maßgeblich von dem Biochemiker Professor Dr. Linus Pauling (1901-1994 – 2 facher Nobelpreisträger) angestoßen."
+      },
+      {
+        "tag": "h3",
+        "text": "Orthomolekulare Therapie"
+      },
+      {
+        "tag": "h3",
+        "text": "Orthomolekulare Therapie"
+      },
+      {
+        "tag": "p",
+        "text": "Die orthomolekulare Therapie nach Linus Pauling beschreibt den gezielten Einsatz von Vitaminen, Mineralstoffen und anderen Mikronährstoffen. Grundlage ist die Annahme, dass der Stoffwechsel ausreichende Mengen dieser Stoffe braucht."
+      },
+      {
+        "tag": "p",
+        "text": "In der Praxis stehen Labor- oder Anhaltspunkte, Ernährung und individuelle Verträglichkeit im Vordergrund. Es geht um Ergänzung, nicht um ein Ersatzkonzept für ärztliche Behandlung."
+      },
+      {
+        "tag": "p",
+        "text": "Welche Präparate infrage kommen, klären wir nach der Anamnese. Eine pauschale Hochdosis oder ein bestimmtes Ergebnis wird hier nicht zugesagt."
+      },
+      {
+        "tag": "p",
+        "text": "Sehr geehrte Damen und Herren, die momentane vorherrschende Meinung über die Einnahme von Nahrungsergänzung in der Bevölkerung und in der Ärzteschafft, ist jene, dass diese im Allgemeinen nicht von Nöten ist. Die Aussagen, Thesen und Untersuchungen der orthomolekularen Medizin hat sich bis dato nicht in den meisten Köpfen verankert noch scheint Sie hier überhaut angekommen zu sein."
+      },
+      {
+        "tag": "p",
+        "text": "Für mich persönlich und als Heilpraktiker ist diese Art der neuen Medizin logisch nachvollziehbar und meine Testungen von Vitaminen und Mineralstoffen über die Biophysikalische Informationstheorie bestätigen die Aussagen der orthomolekularen Therapie. Nun sind meine Testungen nicht wissenschaftlich anerkannt. Auch habe ich mit meiner Praxis nicht die finanziellen Möglichkeiten, selbst wissenschaftliche Studien zu fahren."
+      },
+      {
+        "tag": "p",
+        "text": "Deshalb – bitte bilden Sie sich Ihre Eigene Meinung!"
+      },
+      {
+        "tag": "p",
+        "text": "Hier vertraue ich darauf, dass Sie sich die Fragen stellen."
+      },
+      {
+        "tag": "li",
+        "text": "Kann ein Acker, der nun schon seit 70 Jahren intensiv bewirtschaftet wird, gedüngt mit einem Mineraldünger, der nur wenige Bestandteile enthält und zusätzlich mit Mist und Urin und in Bayern ggf. mit Klärschlamm (geregelt Klärschlammverordnung (AbfKlärV vom 15.04.1992)) ein Lebensmittel hervorbringen, welches die gleichen Mengen an Vitaminen, wie Mineralstoffe enthält, wie das gleiche Lebensmittel auf einem nicht intensiv bewirtschafteten Boden."
+      },
+      {
+        "tag": "li",
+        "text": "Kann es sein, dass wenn bejaht werden würde, dies alle Lebensmittel betreffen könnte, die auf konventionellen intensiv bewirtschafteten Böden angebaut werden?"
+      },
+      {
+        "tag": "li",
+        "text": "Warum wird der Nährstoffbedarf eines alten Menschen genauso definiert, wie der eines jungen Menschen ungeachtet der Tatsache, dass sich im Alter viele Faktoren ändern."
+      },
+      {
+        "tag": "li",
+        "text": "Könnte es nicht sein, dass die Einnahme von Medikamenten, den Bedarf an Mineralstoffe und Vitaminen verändern, denn Medikamente müssen in die Biochemie eingreifen, um die gewünschte Reaktion zu erhalten."
+      },
+      {
+        "tag": "li",
+        "text": "Könnte es nicht sein, dass die momentanen Angaben, über die notwendige Menge der Zufuhr von Vitaminen, wie Mineralstoffen, sich daran orientiert, dass keine Mangelzustände auftreten sollen, jedoch sich nicht daran orientiert eine optimale Gesundheit und Rekonvaleszenz zu gewähren."
+      },
+      {
+        "tag": "li",
+        "text": "Warum soll der Nährstoffbedarf eines Erkrankten (z.B. Chemotherapie, Operation, Kieferostitis etc.) der Gleiche sein, wie der eines Leistungssportlers, oder eines Rauchers, oder eines Gesunden."
+      },
+      {
+        "tag": "li",
+        "text": "Warum werden bei einem Blutbild in der Regel nicht alle Vitamine und Mineralstoffe getestet."
+      },
+      {
+        "tag": "li",
+        "text": "Könnte es sein, dass wenn das Blutbild auf alle Mineralstoffe und Vitamine getestet werden würde (was sehr gut wäre – und soweit ich weiß die Kasse nicht bezahlen würde), dies dennoch nicht alles darüber aussagen würde, welche Vitamine, wie Mineralstoff Werte in unseren Mitochondrien, in unseren Zellen vorliegen. Als Beispiel könnte man hier die Untersuchung eines Kardiologen hernehmen, der das Kalium und die Magnesiumwerte im Blut untersucht (sehr sinnig bei Herzstörungen). Könnte es sein, auch wenn die Blutwerte (Serum) bzgl. Kalium und Magnesium hier im unteren Normbereich liegen würden, die Werte in der Zelle im Mitochondrium ganz anders sind. Denn diese beiden Elektrolyte kommen überwiegend intrazellular vor und demnach wäre es logisch, dass der Wert, der im Blut gemessen wurde und als noch genügend definiert wurde, für die Zelle, das Mitochondrium zu wenig ist."
+      },
+      {
+        "tag": "p",
+        "text": "Warum wird den Vitaminen und Mineralstoffen in der Diagnostik und der orthomolekularen Therapie derart wenig Beachtung geschenkt, obwohl diese Stoffe einen Großteil unserer Biochemie ausmachen?"
+      },
+      {
+        "tag": "p",
+        "text": "Es gibt hier genügend Literatur, um sich selbst einzulesen."
+      },
+      {
+        "tag": "p",
+        "text": "Einige Empfehlungen meinerseits:"
+      },
+      {
+        "tag": "p",
+        "text": "1) Arzneimittel als Mikronährstoff Räuber – Autoren: Gröber / Kisters"
+      },
+      {
+        "tag": "p",
+        "text": "2) Symptome, Diagnose und Therapie – Autor: Dr. sc. Med. Bodo Kuklinski"
+      },
+      {
+        "tag": "p",
+        "text": "3) Orthomolekulare Medizin – Autor: Uwe Gröber"
+      },
+      {
+        "tag": "h3",
+        "text": "Vitamin und Mineralstoffberatung und Testung in meiner Praxis"
+      },
+      {
+        "tag": "p",
+        "text": "Es gibt sicherlich einige Praxen, die die Mitochondrialen Werte über das Blut testen können. Soweit ich weiß gehört die Praxis Dr. sc. Med. Bodo Kuklinski dazu."
+      },
+      {
+        "tag": "p",
+        "text": "Ich habe mich für den Weg der Biophysikalischen – Informations – Testung von Vitaminen und Mineralstoffen entschieden und spezialisiert. Wie fast bei allen Therapie- und Testverfahren im Heilpraktikerwesen (ausgeschlossen u.a. der klassische Bluttest) sind diese Test- und Therapieverfahren leider wissenschaftlich nicht anerkannt."
+      },
+      {
+        "tag": "p",
+        "text": "Viele Therapieformen und Heilungsmethoden – Ansätze, die sogenannte „Alternative“, Heilpraktiker/innen, Heiler/innen anwenden, werden immer noch von einem Großteil der Bevölkerung und der Medien als „Humbug“, esoterisch, als nicht wissenschaftlich eingestuft. Eine dieser Methoden ist sicherlich die BIT (Biophysikalische Informationstherapie). Diese ist meines Erachtens jedoch weitgehend wissenschaftlich erklärbar. Es wäre schade, wenn Ihnen durch eine ungenügende Informationspolitik diese geniale Methode verschlossen bliebe."
+      },
+      {
+        "tag": "p",
+        "text": "Ich verwende für die Diagnostik der Vitamin und Mineralstoffe im Mitochondrium und im Zellverband drei Geräte aus dem großen Gebiet der Biophysikalischen Informationstherapie:"
+      },
+      {
+        "tag": "p",
+        "text": "Das Vieva Pro Vitalanalyse System ist für eine allgemeine Auswertung (Zellhaufentestung) das Gerät der Wahl, für die Testung der gängigen Vitamine und Mineralstoffe und anderen Gesundheistwerten. Für eine spezifischere (Testung in der Zelle, im Mitochondrium) Austestung der Mineral- und Vitaminwerte können aus der Bioresonanz das Trikombin und das Metatron Hospital System zusätzlich eingesetzt werden."
+      },
+      {
+        "tag": "p",
+        "text": "Die Orthomolekulare Therapie gibt folgende Empfehlung für Vitamine und Mineralstoffe."
+      },
+      {
+        "tag": "p",
+        "text": "Insgesamt gilt dabei jedoch nicht “Viel hilft viel”, sondern folgende Punkte sollten beachtet werden:"
+      },
+      {
+        "tag": "p",
+        "text": "Welche Dosis"
+      },
+      {
+        "tag": "p",
+        "text": "Bioverfügbarkeit"
+      },
+      {
+        "tag": "p",
+        "text": "Wirkungsketten (z.B. Antioxidatives Netzwerk)"
+      },
+      {
+        "tag": "p",
+        "text": "Vermeidung von Wechselwirkungen"
+      },
+      {
+        "tag": "p",
+        "text": "Qualität der eingesetzten Produkte"
+      },
+      {
+        "tag": "h3",
+        "text": "Haben Sie Interesse? Dann kommen Sie doch vorbei."
+      },
+      {
+        "tag": "p",
+        "text": "Anschrift: Naturheilpraxis Rauch Heilpraktiker Augsburg, Hochzoll Terminvereinbarung: Telefon: 0821 262 14 62"
+      },
+      {
+        "tag": "p",
+        "text": "E-Mail: praxis_rauch@icloud.com"
+      },
+      {
+        "tag": "p",
+        "text": "Bioresonanztherapie NLS Diagnose EAV nach Dr. Voll Vieva Plus Diagnostik Vitalfeld- und Nährstoffanalyse Osteopathie 150 MHz nach Broers"
+      },
+      {
+        "tag": "li",
+        "text": "Mittagsruhe 12:30 Uhr bis 13:00 Uhr"
+      },
+      {
+        "tag": "p",
+        "text": "Naturheilkunde"
+      },
+      {
+        "tag": "p",
+        "text": "Zentrum für Naturheilkunde"
+      },
+      {
+        "tag": "p",
+        "text": "Mein Facebook - Profil"
+      },
+      {
+        "tag": "p",
+        "text": "Meine Google - Bewertung"
+      },
+      {
+        "tag": "p",
+        "text": "Downloadbereich Naturheilpraxis"
+      },
+      {
+        "tag": "li",
+        "text": "Impressum |"
+      },
+      {
+        "tag": "li",
+        "text": "Datenschutzerklärung |"
+      },
+      {
+        "tag": "li",
+        "text": "Kontakt |"
+      },
+      {
+        "tag": "li",
+        "text": "Online-Anamnesebogen"
+      },
+      {
+        "tag": "li",
+        "text": "Rechtshinweise Therapieverfahren |"
+      },
+      {
+        "tag": "p",
+        "text": "Hinweis: Die auf dieser Website dargestellten Verfahren und Informationen dienen der allgemeinen Aufklärung und ersetzen keine ärztliche Diagnose, Beratung oder Behandlung. Es werden keine Heilversprechen abgegeben. Weitere Angaben: Heilpraktiker-Rechtshinweise und Rechtshinweise Therapieverfahren ."
+      },
+      {
+        "tag": "p",
+        "text": "Peter Rauch – Heilpraktiker Naturheilpraxis Rauch, Friedrich-Deffner-Straße 19a, 86163 Augsburg (Hochzoll) – erreichbar aus Friedberg und Lechhausen-Ost Telefon: 0821 2621462 · Kontakt Schwerpunkte: Bioresonanz, NLS-Diagnostik, Elektroakupunktur nach Dr. Voll, klassische Naturheilverfahren und biophysikalische Informationstherapie. Stand: August 2026"
+      },
+      {
+        "tag": "h2",
+        "text": "Häufige Fragen zur Praxis"
+      },
+      {
+        "tag": "p",
+        "text": "Kurze Angaben zu Ablauf, Aufnahme, Kosten und Erreichbarkeit. Keine Diagnose und keine Heilzusage."
+      },
+      {
+        "tag": "p",
+        "text": "Vor dem Termin können Sie den Online-Anamnesebogen ausfüllen. Das ist die Patientenaufnahme, keine Diagnose."
+      },
+      {
+        "tag": "p",
+        "text": "Dieser Corona-Hinweis ist ein historischer Praxistext und nicht mehr aktuell. Die Naturheilpraxis Rauch ist geöffnet. Aktuelle Fragen bitte über Kontakt oder telefonisch unter 0821 2621462 ."
+      }
+    ],
+    "bodyText": "• Impressum\n\n• Rechtshinweise\n\n• Rechtshinweise Therapieverfahren\n\n• Downloadbereich\n\n• Praxis offen\n\n• Online-Anamnesebogen\n\n• Gesundheitsrelevante Dokumentation\n\n• Diagnostik Diagnostik – Stuhluntersuchung\n\n• Diagnose – Urinuntersuchung\n\n• Diagnose – Labordiagnose – Biodiagnostik\n\n• Hinweisdiagnostik – EAV – Elektroakupunktur nach Dr. Voll\n\n• Hinweisdiagnostik – Irisdiagnose\n\n• Hinweisdiagnostik – Frequenztherapie\n\n• Biophysikalische Bioresonanz Funktionsweise Bioresonanz / Elektroakupunktur\n\n• Akupunktur ohne Nadeln\n\n• NLS-Diagnostik\n\n• Vieva Pro Analyse\n\n• Elektroakupunktur nach Voll\n\n• 150 MHz nach Broers\n\n• Manuelle +Osteopathie Allgemein\n\n• +Integrative Manual Therapy Die Begründer\n\n• Denk und Behandlungsansätze\n\n• Behandlungsmöglichkeiten\n\n• Rehabilitation\n\n• +Lowen Systems (Biovalent System) Arbeit mit den Händen\n\n• Begründer Frank Lowen\n\n• Die Hände\n\n• Die Regulatoren\n\n• Die Koerper Rhythmen\n\n• Die Körpersysteme\n\n• +Microkinesi Allgemein Microkinesi Möglichkeiten\n\n• +Physiotherapie Allgemein Physiotherapie Tätigkeitsfelder\n\n• +Dorntherapie\n\n• Schmerz Entstehung von Schmerz\n\n• Naturheilkunde Klassische Homöopathie\n\n• Die Komplex Homöopathie\n\n• Die Phytotherapie\n\n• Allergiebehandlung mit NAET Behandlungsablauf\n\n• Naturheilkundliche Darmsanierung\n\n• Injektionstherapie\n\n• Orthomolekular Kinesiologie\n\n• Zhineng Dr Pang Ming\n\n• Psychotherapie Hypnose\n\n• Heilmeditation\n\n• Kontakt\n\n• Orthomolekulare Medizin mit Vitalstoffen nach Pauling Mehr Lesen\n\n• Essentielle Mikronährstoffe als Therapieform Mehr Lesen\n\n• Gesund und Fit durch Vitamine und Nährstoffe Mehr Lesen\n\nOrthomolekulare Therapie\n\nNaturheilkundlich begleiten – Stark im Leben\n\nDr. Linus Pauling\n\nDie Orthomolekulare Therapie wurde maßgeblich von dem Biochemiker Professor Dr. Linus Pauling (1901-1994 – 2 facher Nobelpreisträger) angestoßen.\n\nOrthomolekulare Therapie\n\nOrthomolekulare Therapie\n\nDie orthomolekulare Therapie nach Linus Pauling beschreibt den gezielten Einsatz von Vitaminen, Mineralstoffen und anderen Mikronährstoffen. Grundlage ist die Annahme, dass der Stoffwechsel ausreichende Mengen dieser Stoffe braucht.\n\nIn der Praxis stehen Labor- oder Anhaltspunkte, Ernährung und individuelle Verträglichkeit im Vordergrund. Es geht um Ergänzung, nicht um ein Ersatzkonzept für ärztliche Behandlung.\n\nWelche Präparate infrage kommen, klären wir nach der Anamnese. Eine pauschale Hochdosis oder ein bestimmtes Ergebnis wird hier nicht zugesagt.\n\nSehr geehrte Damen und Herren, die momentane vorherrschende Meinung über die Einnahme von Nahrungsergänzung in der Bevölkerung und in der Ärzteschafft, ist jene, dass diese im Allgemeinen nicht von Nöten ist. Die Aussagen, Thesen und Untersuchungen der orthomolekularen Medizin hat sich bis dato nicht in den meisten Köpfen verankert noch scheint Sie hier überhaut angekommen zu sein.\n\nFür mich persönlich und als Heilpraktiker ist diese Art der neuen Medizin logisch nachvollziehbar und meine Testungen von Vitaminen und Mineralstoffen über die Biophysikalische Informationstheorie bestätigen die Aussagen der orthomolekularen Therapie. Nun sind meine Testungen nicht wissenschaftlich anerkannt. Auch habe ich mit meiner Praxis nicht die finanziellen Möglichkeiten, selbst wissenschaftliche Studien zu fahren.\n\nDeshalb – bitte bilden Sie sich Ihre Eigene Meinung!\n\nHier vertraue ich darauf, dass Sie sich die Fragen stellen.\n\n• Kann ein Acker, der nun schon seit 70 Jahren intensiv bewirtschaftet wird, gedüngt mit einem Mineraldünger, der nur wenige Bestandteile enthält und zusätzlich mit Mist und Urin und in Bayern ggf. mit Klärschlamm (geregelt Klärschlammverordnung (AbfKlärV vom 15.04.1992)) ein Lebensmittel hervorbringen, welches die gleichen Mengen an Vitaminen, wie Mineralstoffe enthält, wie das gleiche Lebensmittel auf einem nicht intensiv bewirtschafteten Boden.\n\n• Kann es sein, dass wenn bejaht werden würde, dies alle Lebensmittel betreffen könnte, die auf konventionellen intensiv bewirtschafteten Böden angebaut werden?\n\n• Warum wird der Nährstoffbedarf eines alten Menschen genauso definiert, wie der eines jungen Menschen ungeachtet der Tatsache, dass sich im Alter viele Faktoren ändern.\n\n• Könnte es nicht sein, dass die Einnahme von Medikamenten, den Bedarf an Mineralstoffe und Vitaminen verändern, denn Medikamente müssen in die Biochemie eingreifen, um die gewünschte Reaktion zu erhalten.\n\n• Könnte es nicht sein, dass die momentanen Angaben, über die notwendige Menge der Zufuhr von Vitaminen, wie Mineralstoffen, sich daran orientiert, dass keine Mangelzustände auftreten sollen, jedoch sich nicht daran orientiert eine optimale Gesundheit und Rekonvaleszenz zu gewähren.\n\n• Warum soll der Nährstoffbedarf eines Erkrankten (z.B. Chemotherapie, Operation, Kieferostitis etc.) der Gleiche sein, wie der eines Leistungssportlers, oder eines Rauchers, oder eines Gesunden.\n\n• Warum werden bei einem Blutbild in der Regel nicht alle Vitamine und Mineralstoffe getestet.\n\n• Könnte es sein, dass wenn das Blutbild auf alle Mineralstoffe und Vitamine getestet werden würde (was sehr gut wäre – und soweit ich weiß die Kasse nicht bezahlen würde), dies dennoch nicht alles darüber aussagen würde, welche Vitamine, wie Mineralstoff Werte in unseren Mitochondrien, in unseren Zellen vorliegen. Als Beispiel könnte man hier die Untersuchung eines Kardiologen hernehmen, der das Kalium und die Magnesiumwerte im Blut untersucht (sehr sinnig bei Herzstörungen). Könnte es sein, auch wenn die Blutwerte (Serum) bzgl. Kalium und Magnesium hier im unteren Normbereich liegen würden, die Werte in der Zelle im Mitochondrium ganz anders sind. Denn diese beiden Elektrolyte kommen überwiegend intrazellular vor und demnach wäre es logisch, dass der Wert, der im Blut gemessen wurde und als noch genügend definiert wurde, für die Zelle, das Mitochondrium zu wenig ist.\n\nWarum wird den Vitaminen und Mineralstoffen in der Diagnostik und der orthomolekularen Therapie derart wenig Beachtung geschenkt, obwohl diese Stoffe einen Großteil unserer Biochemie ausmachen?\n\nEs gibt hier genügend Literatur, um sich selbst einzulesen.\n\nEinige Empfehlungen meinerseits:\n\n1) Arzneimittel als Mikronährstoff Räuber – Autoren: Gröber / Kisters\n\n2) Symptome, Diagnose und Therapie – Autor: Dr. sc. Med. Bodo Kuklinski\n\n3) Orthomolekulare Medizin – Autor: Uwe Gröber\n\nVitamin und Mineralstoffberatung und Testung in meiner Praxis\n\nEs gibt sicherlich einige Praxen, die die Mitochondrialen Werte über das Blut testen können. Soweit ich weiß gehört die Praxis Dr. sc. Med. Bodo Kuklinski dazu.\n\nIch habe mich für den Weg der Biophysikalischen – Informations – Testung von Vitaminen und Mineralstoffen entschieden und spezialisiert. Wie fast bei allen Therapie- und Testverfahren im Heilpraktikerwesen (ausgeschlossen u.a. der klassische Bluttest) sind diese Test- und Therapieverfahren leider wissenschaftlich nicht anerkannt.\n\nViele Therapieformen und Heilungsmethoden – Ansätze, die sogenannte „Alternative“, Heilpraktiker/innen, Heiler/innen anwenden, werden immer noch von einem Großteil der Bevölkerung und der Medien als „Humbug“, esoterisch, als nicht wissenschaftlich eingestuft. Eine dieser Methoden ist sicherlich die BIT (Biophysikalische Informationstherapie). Diese ist meines Erachtens jedoch weitgehend wissenschaftlich erklärbar. Es wäre schade, wenn Ihnen durch eine ungenügende Informationspolitik diese geniale Methode verschlossen bliebe.\n\nIch verwende für die Diagnostik der Vitamin und Mineralstoffe im Mitochondrium und im Zellverband drei Geräte aus dem großen Gebiet der Biophysikalischen Informationstherapie:\n\nDas Vieva Pro Vitalanalyse System ist für eine allgemeine Auswertung (Zellhaufentestung) das Gerät der Wahl, für die Testung der gängigen Vitamine und Mineralstoffe und anderen Gesundheistwerten. Für eine spezifischere (Testung in der Zelle, im Mitochondrium) Austestung der Mineral- und Vitaminwerte können aus der Bioresonanz das Trikombin und das Metatron Hospital System zusätzlich eingesetzt werden.\n\nDie Orthomolekulare Therapie gibt folgende Empfehlung für Vitamine und Mineralstoffe.\n\nInsgesamt gilt dabei jedoch nicht “Viel hilft viel”, sondern folgende Punkte sollten beachtet werden:\n\nWelche Dosis\n\nBioverfügbarkeit\n\nWirkungsketten (z.B. Antioxidatives Netzwerk)\n\nVermeidung von Wechselwirkungen\n\nQualität der eingesetzten Produkte\n\nHaben Sie Interesse? Dann kommen Sie doch vorbei.\n\nAnschrift: Naturheilpraxis Rauch Heilpraktiker Augsburg, Hochzoll Terminvereinbarung: Telefon: 0821 262 14 62\n\nE-Mail: praxis_rauch@icloud.com\n\nBioresonanztherapie NLS Diagnose EAV nach Dr. Voll Vieva Plus Diagnostik Vitalfeld- und Nährstoffanalyse Osteopathie 150 MHz nach Broers\n\n• Mittagsruhe 12:30 Uhr bis 13:00 Uhr\n\nNaturheilkunde\n\nZentrum für Naturheilkunde\n\nMein Facebook - Profil\n\nMeine Google - Bewertung\n\nDownloadbereich Naturheilpraxis\n\n• Impressum |\n\n• Datenschutzerklärung |\n\n• Kontakt |\n\n• Online-Anamnesebogen\n\n• Rechtshinweise Therapieverfahren |\n\nHinweis: Die auf dieser Website dargestellten Verfahren und Informationen dienen der allgemeinen Aufklärung und ersetzen keine ärztliche Diagnose, Beratung oder Behandlung. Es werden keine Heilversprechen abgegeben. Weitere Angaben: Heilpraktiker-Rechtshinweise und Rechtshinweise Therapieverfahren .\n\nPeter Rauch – Heilpraktiker Naturheilpraxis Rauch, Friedrich-Deffner-Straße 19a, 86163 Augsburg (Hochzoll) – erreichbar aus Friedberg und Lechhausen-Ost Telefon: 0821 2621462 · Kontakt Schwerpunkte: Bioresonanz, NLS-Diagnostik, Elektroakupunktur nach Dr. Voll, klassische Naturheilverfahren und biophysikalische Informationstherapie. Stand: August 2026\n\nHäufige Fragen zur Praxis\n\nKurze Angaben zu Ablauf, Aufnahme, Kosten und Erreichbarkeit. Keine Diagnose und keine Heilzusage.\n\nVor dem Termin können Sie den Online-Anamnesebogen ausfüllen. Das ist die Patientenaufnahme, keine Diagnose.\n\nDieser Corona-Hinweis ist ein historischer Praxistext und nicht mehr aktuell. Die Naturheilpraxis Rauch ist geöffnet. Aktuelle Fragen bitte über Kontakt oder telefonisch unter 0821 2621462 ."
+  },
+  "images": [
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/uploads/Peter-Logo-klein.svg",
+      "alt": "Rauch Heilpraktiker",
+      "width": "60",
+      "height": "60",
+      "fromCache": false,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Orthomolekulare-Therapie-Flavonoide-593d3147.jpeg",
+      "alt": "Orthomolekulare Therapie Flavonoide 593d3147 - Orthomolekulare Therapie",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "local": "/media/wp/13ab0b5e74-Orthomolekulare-Therapie-Flavonoide-593d3147.jpg",
+      "bytes": 76484
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Orthomolekulare-Therapie-Vitamin-C-afbb6c93.jpeg",
+      "alt": "Orthomolekulare Therapie Vitamin C afbb6c93 - Orthomolekulare Therapie",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "local": "/media/wp/9d2a800a26-Orthomolekulare-Therapie-Vitamin-C-afbb6c93.jpg",
+      "bytes": 88218
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Sanft_Heilen_Naturheilpraxis_Augsburg-9dced3ee.jpeg",
+      "alt": "Sanft Heilen Naturheilpraxis Augsburg 9dced3ee - Orthomolekulare Therapie",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/work-12-9e18e01a.jpeg",
+      "alt": "work 12 9e18e01a - Orthomolekulare Therapie",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/uploads/Vital_und_N%C3%A4hrstoffanalyse.jpg#thumbnail=530%2C700&srcset=1",
+      "alt": "Vital und N%C3%A4hrstoffanalyse - Orthomolekulare Therapie",
+      "width": null,
+      "height": null,
+      "fromCache": false,
+      "local": "/media/wp/32caccbcfa-Vital_und_N-hrstoffanalyse.jpg",
+      "bytes": 164018
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Hypnose-Heilpraktiker-Augsburg-1-83d7ac78.jpeg",
+      "alt": "Hypnose Heilpraktiker Augsburg 1 83d7ac78 - Orthomolekulare Therapie",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Peter-Rauch-Heilpraktiker-Augsburg-9ab7178c.png",
+      "alt": "Heilpraktiker Augsburg - Naturheilpraxis Peter Rauch",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/BNI-Unternehmen-Verband-cdced5ca.png",
+      "alt": "BNI Local Business Global network",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    }
+  ],
+  "wordCount": 1305,
+  "crawledAt": "2026-08-17T22:41:27.945796+00:00"
+}

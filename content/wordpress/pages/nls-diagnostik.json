@@ -1,0 +1,539 @@
+{
+  "slug": "nls-diagnostik",
+  "sourceUrl": "https://rauch-heilpraktiker.de/nls-diagnostik/",
+  "finalUrl": "https://rauch-heilpraktiker.de/nls-diagnostik/",
+  "httpStatus": 200,
+  "class": "B-inactive-archive",
+  "status": "draft",
+  "robots": "noindex,follow",
+  "extracted": {
+    "title": "NLS-Diagnostik in Augsburg | Naturheilpraxis Rauch",
+    "h1": "NLS-Diagnostik in Augsburg",
+    "description": "NLS-Diagnostik in Augsburg – sanfte Hinweisdiagnostik in der Naturheilpraxis Rauch. Information und Terminvereinbarung.",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "NLS-Diagnostik in Augsburg"
+      },
+      {
+        "tag": "h2",
+        "text": "Naturheilkundlich begleiten – Stark im Leben"
+      },
+      {
+        "tag": "h2",
+        "text": "mit der NLS-Diagnostik"
+      },
+      {
+        "tag": "h3",
+        "text": "NLS-Diagnostik"
+      },
+      {
+        "tag": "h3",
+        "text": "NLS Diagnostik"
+      },
+      {
+        "tag": "h3",
+        "text": "Anwendungsmöglichkeiten der NLS-Diagnostik im Überblick"
+      },
+      {
+        "tag": "h3",
+        "text": "Die NLS Diagnose und Therapie zählt zur Komplementärmedizin. Es handelt sich um ein Verfahren aus der Informationsmedizin ( nicht lineare Systeme ) und ist wissenschaftlich nicht anerkannt. Die Ergebnisse aus der NLS-Analyse (auch Oberon NLS Diagnostik) ergänzen die Fakten aus der Anamnese und anderen Untersuchungsverfahren. Die NLS Methode kann schulmedizinsche Diagnose und Therapie nicht ersetzen, jedoch begleitend angewendet werden."
+      },
+      {
+        "tag": "h3",
+        "text": "NLS Diagnose Körper"
+      },
+      {
+        "tag": "h3",
+        "text": "NLS Diagnose Darm"
+      },
+      {
+        "tag": "h2",
+        "text": "Häufige Fragen zur Praxis"
+      }
+    ],
+    "parts": [
+      {
+        "tag": "li",
+        "text": "Impressum"
+      },
+      {
+        "tag": "li",
+        "text": "Rechtshinweise"
+      },
+      {
+        "tag": "li",
+        "text": "Rechtshinweise Therapieverfahren"
+      },
+      {
+        "tag": "li",
+        "text": "Downloadbereich"
+      },
+      {
+        "tag": "li",
+        "text": "Praxis offen"
+      },
+      {
+        "tag": "li",
+        "text": "Online-Anamnesebogen"
+      },
+      {
+        "tag": "li",
+        "text": "Gesundheitsrelevante Dokumentation"
+      },
+      {
+        "tag": "li",
+        "text": "Diagnostik Diagnostik – Stuhluntersuchung"
+      },
+      {
+        "tag": "li",
+        "text": "Diagnose – Urinuntersuchung"
+      },
+      {
+        "tag": "li",
+        "text": "Diagnose – Labordiagnose – Biodiagnostik"
+      },
+      {
+        "tag": "li",
+        "text": "Hinweisdiagnostik – EAV – Elektroakupunktur nach Dr. Voll"
+      },
+      {
+        "tag": "li",
+        "text": "Hinweisdiagnostik – Irisdiagnose"
+      },
+      {
+        "tag": "li",
+        "text": "Hinweisdiagnostik – Frequenztherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Biophysikalische Bioresonanz Funktionsweise Bioresonanz / Elektroakupunktur"
+      },
+      {
+        "tag": "li",
+        "text": "Akupunktur ohne Nadeln"
+      },
+      {
+        "tag": "li",
+        "text": "NLS-Diagnostik"
+      },
+      {
+        "tag": "li",
+        "text": "Vieva Pro Analyse"
+      },
+      {
+        "tag": "li",
+        "text": "Elektroakupunktur nach Voll"
+      },
+      {
+        "tag": "li",
+        "text": "150 MHz nach Broers"
+      },
+      {
+        "tag": "li",
+        "text": "Manuelle +Osteopathie Allgemein"
+      },
+      {
+        "tag": "li",
+        "text": "+Integrative Manual Therapy Die Begründer"
+      },
+      {
+        "tag": "li",
+        "text": "Denk und Behandlungsansätze"
+      },
+      {
+        "tag": "li",
+        "text": "Behandlungsmöglichkeiten"
+      },
+      {
+        "tag": "li",
+        "text": "Rehabilitation"
+      },
+      {
+        "tag": "li",
+        "text": "+Lowen Systems (Biovalent System) Arbeit mit den Händen"
+      },
+      {
+        "tag": "li",
+        "text": "Begründer Frank Lowen"
+      },
+      {
+        "tag": "li",
+        "text": "Die Hände"
+      },
+      {
+        "tag": "li",
+        "text": "Die Regulatoren"
+      },
+      {
+        "tag": "li",
+        "text": "Die Koerper Rhythmen"
+      },
+      {
+        "tag": "li",
+        "text": "Die Körpersysteme"
+      },
+      {
+        "tag": "li",
+        "text": "+Microkinesi Allgemein Microkinesi Möglichkeiten"
+      },
+      {
+        "tag": "li",
+        "text": "+Physiotherapie Allgemein Physiotherapie Tätigkeitsfelder"
+      },
+      {
+        "tag": "li",
+        "text": "+Dorntherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Schmerz Entstehung von Schmerz"
+      },
+      {
+        "tag": "li",
+        "text": "Naturheilkunde Klassische Homöopathie"
+      },
+      {
+        "tag": "li",
+        "text": "Die Komplex Homöopathie"
+      },
+      {
+        "tag": "li",
+        "text": "Die Phytotherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Allergiebehandlung mit NAET Behandlungsablauf"
+      },
+      {
+        "tag": "li",
+        "text": "Naturheilkundliche Darmsanierung"
+      },
+      {
+        "tag": "li",
+        "text": "Injektionstherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Orthomolekular Kinesiologie"
+      },
+      {
+        "tag": "li",
+        "text": "Zhineng Dr Pang Ming"
+      },
+      {
+        "tag": "li",
+        "text": "Psychotherapie Hypnose"
+      },
+      {
+        "tag": "li",
+        "text": "Heilmeditation"
+      },
+      {
+        "tag": "li",
+        "text": "Kontakt"
+      },
+      {
+        "tag": "li",
+        "text": "NLS – Diagnostik NLS-Diagnostik – Metatron Hospital Mehr Info zur NLS Diagnostik"
+      },
+      {
+        "tag": "li",
+        "text": "Bioresonanz – Therapie Trikombin nach Heilpraktiker Baklayan Mehr Info zur Bioresonanz"
+      },
+      {
+        "tag": "li",
+        "text": "Vieva – Pro Vitaltfeldanalyse Biofeedback und Herzratenvariabilität Mehr Info zu Vieva Pro"
+      },
+      {
+        "tag": "li",
+        "text": "Elektro – Akupunktur nach Dr Voll, MBA Easy-Quick-Check Mehr Info zur Elektroakupunktur"
+      },
+      {
+        "tag": "h1",
+        "text": "NLS-Diagnostik in Augsburg"
+      },
+      {
+        "tag": "h2",
+        "text": "Naturheilkundlich begleiten – Stark im Leben"
+      },
+      {
+        "tag": "h2",
+        "text": "mit der NLS-Diagnostik"
+      },
+      {
+        "tag": "p",
+        "text": "Die NLS-Methode wird in der Praxis als ergänzender Check genutzt. Sie steht im Zusammenhang mit Verfahren wie der EAV und der Bioresonanz und gehört zur Komplementärmedizin."
+      },
+      {
+        "tag": "p",
+        "text": "Das Gerät arbeitet mit elektromagnetischen Signalen. Es ersetzt keine ärztliche Untersuchung."
+      },
+      {
+        "tag": "h3",
+        "text": "NLS-Diagnostik"
+      },
+      {
+        "tag": "h3",
+        "text": "NLS Diagnostik"
+      },
+      {
+        "tag": "p",
+        "text": "Entwickelt wurde das System in Omsk (Russland) von Vladimir Nesterov. In der Praxis nenne ich es NLS-Diagnostik; früher war der Gerätename Metatron bekannt."
+      },
+      {
+        "tag": "p",
+        "text": "Frühere Gerätebezeichnungen waren Metatron Hunter bzw. Metatron. Für Patientinnen und Patienten ist der Name NLS-Diagnostik maßgeblich."
+      },
+      {
+        "tag": "p",
+        "text": "Das NLS-System gehört zu den sogenannten nicht-linearen Verfahren. Über einen kopfhörerähnlichen Aufnehmer werden körpereigene Signale erfasst – ohne Röntgenstrahlung und ohne Nadel."
+      },
+      {
+        "tag": "p",
+        "text": "NLS ist ein ergänzendes Hinweisverfahren. Es ersetzt keine Laborwerte und keine ärztliche Diagnose."
+      },
+      {
+        "tag": "p",
+        "text": "Weitere Diagnostik in der Praxis: Hinweisdiagnostik im Überblick · Elektroakupunktur nach Dr. Voll · Vieva Pro / Herzratenvariabilität · Labor- und Biodiagnostik · Irisdiagnose · Bioresonanz und EAV im Vergleich ."
+      },
+      {
+        "tag": "p",
+        "text": "Zurück zur Startseite"
+      },
+      {
+        "tag": "p",
+        "text": "Die Messung läuft ohne Eingriff des Therapeuten. Das Signal kann dadurch nicht durch Handhabung verschoben werden."
+      },
+      {
+        "tag": "p",
+        "text": "Das NLS-System stellt ein Hinweisbild aus Frequenzmustern dar – zu Organen, Funktionssystemen und möglichen Belastungen. Es ist keine Laboranalyse und keine ärztliche Diagnose. Eine Behandlung erkrankter Bereiche durch das Gerät wird hier nicht zugesagt."
+      },
+      {
+        "tag": "p",
+        "text": "Wie bei der Bioresonanz beruht der Ansatz auf der Annahme, dass Gewebe und Erreger eigene Frequenzmuster haben. Gespeicherte Muster werden mit dem aktuellen Bild verglichen. Das Ergebnis ist ein Hinweisbild auf Bildschirm oder Beamer."
+      },
+      {
+        "tag": "p",
+        "text": "Eine sogenannte Differentialdarstellung zeigt, welche gespeicherten Muster dem gemessenen Bild nahekommen. Das kann mehrere Möglichkeiten betreffen."
+      },
+      {
+        "tag": "h3",
+        "text": "Anwendungsmöglichkeiten der NLS-Diagnostik im Überblick"
+      },
+      {
+        "tag": "p",
+        "text": "Das System vergleicht ein Eingangssignal mit der Rückmeldung des Organismus und stellt Abweichungen vom angenommenen energetischen Referenzzustand dar."
+      },
+      {
+        "tag": "p",
+        "text": "Zum Beispiel in nosologischer Form (Bakterien, Viren, Schwermetalle, Parasiten) – als Hinweisbild, nicht als Labordiagnose."
+      },
+      {
+        "tag": "p",
+        "text": "Nahrungsergänzung, pflanzliche und homöopathische Mittel können energetisch gegen das aktuelle Bild gehalten werden. Das ist keine Aussage zur pharmakologischen Wirksamkeit."
+      },
+      {
+        "tag": "p",
+        "text": "Im Folgenden Ausschnitte von Scanbildern, die das NLS-System anfertigt."
+      },
+      {
+        "tag": "h3",
+        "text": "Die NLS Diagnose und Therapie zählt zur Komplementärmedizin. Es handelt sich um ein Verfahren aus der Informationsmedizin ( nicht lineare Systeme ) und ist wissenschaftlich nicht anerkannt. Die Ergebnisse aus der NLS-Analyse (auch Oberon NLS Diagnostik) ergänzen die Fakten aus der Anamnese und anderen Untersuchungsverfahren. Die NLS Methode kann schulmedizinsche Diagnose und Therapie nicht ersetzen, jedoch begleitend angewendet werden."
+      },
+      {
+        "tag": "h3",
+        "text": "NLS Diagnose Körper"
+      },
+      {
+        "tag": "h3",
+        "text": "NLS Diagnose Darm"
+      },
+      {
+        "tag": "p",
+        "text": "Viel Freude und gute Erkenntnisse mit den verschiedenen Therapieverfahren…"
+      },
+      {
+        "tag": "p",
+        "text": "Anschrift: Naturheilpraxis Rauch Heilpraktiker Augsburg, Hochzoll Terminvereinbarung: Telefon: 0821 262 14 62"
+      },
+      {
+        "tag": "p",
+        "text": "E-Mail: praxis_rauch@icloud.com"
+      },
+      {
+        "tag": "p",
+        "text": "Bioresonanztherapie NLS Diagnose EAV nach Dr. Voll Vieva Plus Diagnostik Vitalfeld- und Nährstoffanalyse Osteopathie 150 MHz nach Broers"
+      },
+      {
+        "tag": "li",
+        "text": "Mittagsruhe 12:30 Uhr bis 13:00 Uhr"
+      },
+      {
+        "tag": "p",
+        "text": "Naturheilkunde"
+      },
+      {
+        "tag": "p",
+        "text": "Zentrum für Naturheilkunde"
+      },
+      {
+        "tag": "p",
+        "text": "Mein Facebook - Profil"
+      },
+      {
+        "tag": "p",
+        "text": "Meine Google - Bewertung"
+      },
+      {
+        "tag": "p",
+        "text": "Downloadbereich Naturheilpraxis"
+      },
+      {
+        "tag": "li",
+        "text": "Impressum |"
+      },
+      {
+        "tag": "li",
+        "text": "Datenschutzerklärung |"
+      },
+      {
+        "tag": "li",
+        "text": "Kontakt |"
+      },
+      {
+        "tag": "li",
+        "text": "Online-Anamnesebogen"
+      },
+      {
+        "tag": "li",
+        "text": "Rechtshinweise Therapieverfahren |"
+      },
+      {
+        "tag": "p",
+        "text": "Hinweis: Die auf dieser Website dargestellten Verfahren und Informationen dienen der allgemeinen Aufklärung und ersetzen keine ärztliche Diagnose, Beratung oder Behandlung. Es werden keine Heilversprechen abgegeben. Weitere Angaben: Heilpraktiker-Rechtshinweise und Rechtshinweise Therapieverfahren ."
+      },
+      {
+        "tag": "p",
+        "text": "Peter Rauch – Heilpraktiker Naturheilpraxis Rauch, Friedrich-Deffner-Straße 19a, 86163 Augsburg (Hochzoll) – erreichbar aus Friedberg und Lechhausen-Ost Telefon: 0821 2621462 · Kontakt Schwerpunkte: Bioresonanz, NLS-Diagnostik, Elektroakupunktur nach Dr. Voll, klassische Naturheilverfahren und biophysikalische Informationstherapie. Stand: August 2026"
+      },
+      {
+        "tag": "h2",
+        "text": "Häufige Fragen zur Praxis"
+      },
+      {
+        "tag": "p",
+        "text": "Kurze Angaben zu Ablauf, Aufnahme, Kosten und Erreichbarkeit. Keine Diagnose und keine Heilzusage."
+      },
+      {
+        "tag": "p",
+        "text": "Vor dem Termin können Sie den Online-Anamnesebogen ausfüllen. Das ist die Patientenaufnahme, keine Diagnose."
+      },
+      {
+        "tag": "p",
+        "text": "Dieser Corona-Hinweis ist ein historischer Praxistext und nicht mehr aktuell. Die Naturheilpraxis Rauch ist geöffnet. Aktuelle Fragen bitte über Kontakt oder telefonisch unter 0821 2621462 ."
+      }
+    ],
+    "bodyText": "• Impressum\n\n• Rechtshinweise\n\n• Rechtshinweise Therapieverfahren\n\n• Downloadbereich\n\n• Praxis offen\n\n• Online-Anamnesebogen\n\n• Gesundheitsrelevante Dokumentation\n\n• Diagnostik Diagnostik – Stuhluntersuchung\n\n• Diagnose – Urinuntersuchung\n\n• Diagnose – Labordiagnose – Biodiagnostik\n\n• Hinweisdiagnostik – EAV – Elektroakupunktur nach Dr. Voll\n\n• Hinweisdiagnostik – Irisdiagnose\n\n• Hinweisdiagnostik – Frequenztherapie\n\n• Biophysikalische Bioresonanz Funktionsweise Bioresonanz / Elektroakupunktur\n\n• Akupunktur ohne Nadeln\n\n• NLS-Diagnostik\n\n• Vieva Pro Analyse\n\n• Elektroakupunktur nach Voll\n\n• 150 MHz nach Broers\n\n• Manuelle +Osteopathie Allgemein\n\n• +Integrative Manual Therapy Die Begründer\n\n• Denk und Behandlungsansätze\n\n• Behandlungsmöglichkeiten\n\n• Rehabilitation\n\n• +Lowen Systems (Biovalent System) Arbeit mit den Händen\n\n• Begründer Frank Lowen\n\n• Die Hände\n\n• Die Regulatoren\n\n• Die Koerper Rhythmen\n\n• Die Körpersysteme\n\n• +Microkinesi Allgemein Microkinesi Möglichkeiten\n\n• +Physiotherapie Allgemein Physiotherapie Tätigkeitsfelder\n\n• +Dorntherapie\n\n• Schmerz Entstehung von Schmerz\n\n• Naturheilkunde Klassische Homöopathie\n\n• Die Komplex Homöopathie\n\n• Die Phytotherapie\n\n• Allergiebehandlung mit NAET Behandlungsablauf\n\n• Naturheilkundliche Darmsanierung\n\n• Injektionstherapie\n\n• Orthomolekular Kinesiologie\n\n• Zhineng Dr Pang Ming\n\n• Psychotherapie Hypnose\n\n• Heilmeditation\n\n• Kontakt\n\n• NLS – Diagnostik NLS-Diagnostik – Metatron Hospital Mehr Info zur NLS Diagnostik\n\n• Bioresonanz – Therapie Trikombin nach Heilpraktiker Baklayan Mehr Info zur Bioresonanz\n\n• Vieva – Pro Vitaltfeldanalyse Biofeedback und Herzratenvariabilität Mehr Info zu Vieva Pro\n\n• Elektro – Akupunktur nach Dr Voll, MBA Easy-Quick-Check Mehr Info zur Elektroakupunktur\n\nNLS-Diagnostik in Augsburg\n\nNaturheilkundlich begleiten – Stark im Leben\n\nmit der NLS-Diagnostik\n\nDie NLS-Methode wird in der Praxis als ergänzender Check genutzt. Sie steht im Zusammenhang mit Verfahren wie der EAV und der Bioresonanz und gehört zur Komplementärmedizin.\n\nDas Gerät arbeitet mit elektromagnetischen Signalen. Es ersetzt keine ärztliche Untersuchung.\n\nNLS-Diagnostik\n\nNLS Diagnostik\n\nEntwickelt wurde das System in Omsk (Russland) von Vladimir Nesterov. In der Praxis nenne ich es NLS-Diagnostik; früher war der Gerätename Metatron bekannt.\n\nFrühere Gerätebezeichnungen waren Metatron Hunter bzw. Metatron. Für Patientinnen und Patienten ist der Name NLS-Diagnostik maßgeblich.\n\nDas NLS-System gehört zu den sogenannten nicht-linearen Verfahren. Über einen kopfhörerähnlichen Aufnehmer werden körpereigene Signale erfasst – ohne Röntgenstrahlung und ohne Nadel.\n\nNLS ist ein ergänzendes Hinweisverfahren. Es ersetzt keine Laborwerte und keine ärztliche Diagnose.\n\nWeitere Diagnostik in der Praxis: Hinweisdiagnostik im Überblick · Elektroakupunktur nach Dr. Voll · Vieva Pro / Herzratenvariabilität · Labor- und Biodiagnostik · Irisdiagnose · Bioresonanz und EAV im Vergleich .\n\nZurück zur Startseite\n\nDie Messung läuft ohne Eingriff des Therapeuten. Das Signal kann dadurch nicht durch Handhabung verschoben werden.\n\nDas NLS-System stellt ein Hinweisbild aus Frequenzmustern dar – zu Organen, Funktionssystemen und möglichen Belastungen. Es ist keine Laboranalyse und keine ärztliche Diagnose. Eine Behandlung erkrankter Bereiche durch das Gerät wird hier nicht zugesagt.\n\nWie bei der Bioresonanz beruht der Ansatz auf der Annahme, dass Gewebe und Erreger eigene Frequenzmuster haben. Gespeicherte Muster werden mit dem aktuellen Bild verglichen. Das Ergebnis ist ein Hinweisbild auf Bildschirm oder Beamer.\n\nEine sogenannte Differentialdarstellung zeigt, welche gespeicherten Muster dem gemessenen Bild nahekommen. Das kann mehrere Möglichkeiten betreffen.\n\nAnwendungsmöglichkeiten der NLS-Diagnostik im Überblick\n\nDas System vergleicht ein Eingangssignal mit der Rückmeldung des Organismus und stellt Abweichungen vom angenommenen energetischen Referenzzustand dar.\n\nZum Beispiel in nosologischer Form (Bakterien, Viren, Schwermetalle, Parasiten) – als Hinweisbild, nicht als Labordiagnose.\n\nNahrungsergänzung, pflanzliche und homöopathische Mittel können energetisch gegen das aktuelle Bild gehalten werden. Das ist keine Aussage zur pharmakologischen Wirksamkeit.\n\nIm Folgenden Ausschnitte von Scanbildern, die das NLS-System anfertigt.\n\nDie NLS Diagnose und Therapie zählt zur Komplementärmedizin. Es handelt sich um ein Verfahren aus der Informationsmedizin ( nicht lineare Systeme ) und ist wissenschaftlich nicht anerkannt. Die Ergebnisse aus der NLS-Analyse (auch Oberon NLS Diagnostik) ergänzen die Fakten aus der Anamnese und anderen Untersuchungsverfahren. Die NLS Methode kann schulmedizinsche Diagnose und Therapie nicht ersetzen, jedoch begleitend angewendet werden.\n\nNLS Diagnose Körper\n\nNLS Diagnose Darm\n\nViel Freude und gute Erkenntnisse mit den verschiedenen Therapieverfahren…\n\nAnschrift: Naturheilpraxis Rauch Heilpraktiker Augsburg, Hochzoll Terminvereinbarung: Telefon: 0821 262 14 62\n\nE-Mail: praxis_rauch@icloud.com\n\nBioresonanztherapie NLS Diagnose EAV nach Dr. Voll Vieva Plus Diagnostik Vitalfeld- und Nährstoffanalyse Osteopathie 150 MHz nach Broers\n\n• Mittagsruhe 12:30 Uhr bis 13:00 Uhr\n\nNaturheilkunde\n\nZentrum für Naturheilkunde\n\nMein Facebook - Profil\n\nMeine Google - Bewertung\n\nDownloadbereich Naturheilpraxis\n\n• Impressum |\n\n• Datenschutzerklärung |\n\n• Kontakt |\n\n• Online-Anamnesebogen\n\n• Rechtshinweise Therapieverfahren |\n\nHinweis: Die auf dieser Website dargestellten Verfahren und Informationen dienen der allgemeinen Aufklärung und ersetzen keine ärztliche Diagnose, Beratung oder Behandlung. Es werden keine Heilversprechen abgegeben. Weitere Angaben: Heilpraktiker-Rechtshinweise und Rechtshinweise Therapieverfahren .\n\nPeter Rauch – Heilpraktiker Naturheilpraxis Rauch, Friedrich-Deffner-Straße 19a, 86163 Augsburg (Hochzoll) – erreichbar aus Friedberg und Lechhausen-Ost Telefon: 0821 2621462 · Kontakt Schwerpunkte: Bioresonanz, NLS-Diagnostik, Elektroakupunktur nach Dr. Voll, klassische Naturheilverfahren und biophysikalische Informationstherapie. Stand: August 2026\n\nHäufige Fragen zur Praxis\n\nKurze Angaben zu Ablauf, Aufnahme, Kosten und Erreichbarkeit. Keine Diagnose und keine Heilzusage.\n\nVor dem Termin können Sie den Online-Anamnesebogen ausfüllen. Das ist die Patientenaufnahme, keine Diagnose.\n\nDieser Corona-Hinweis ist ein historischer Praxistext und nicht mehr aktuell. Die Naturheilpraxis Rauch ist geöffnet. Aktuelle Fragen bitte über Kontakt oder telefonisch unter 0821 2621462 ."
+  },
+  "images": [
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/uploads/Peter-Logo-klein.svg",
+      "alt": "Rauch Heilpraktiker",
+      "width": "60",
+      "height": "60",
+      "fromCache": false,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/NLS_Diagnose_Metatron_Hospital_Vitages-7-14601014.jpeg",
+      "alt": "NLS Diagnose Metatron Hospital Vitages 7 14601014 - NLS Diagnostik",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "local": "/media/wp/cab74ced3e-NLS_Diagnose_Metatron_Hospital_Vitages-7-14601014.jpg",
+      "bytes": 424319
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Heilpraktiker_Bioresonanztherapie_Trikombin_nach_Baklayan-fab0f8d7.jpeg",
+      "alt": "Heilpraktiker Bioresonanztherapie Trikombin nach Baklayan fab0f8d7 - NLS Diagnostik",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "local": "/media/wp/04cbf36a3f-Heilpraktiker_Bioresonanztherapie_Trikombin_nach_Baklayan-fa.jpg",
+      "bytes": 414048
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Vieva_Vital_Tuning_Biofeedback_HRV-91952082.jpeg",
+      "alt": "Vieva Vital Tuning Biofeedback HRV 91952082 - NLS Diagnostik",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "local": "/media/wp/3e86525256-Vieva_Vital_Tuning_Biofeedback_HRV-91952082.jpg",
+      "bytes": 433100
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S-33551de0.jpeg",
+      "alt": "Elektroakupunktur nach Voll MBA Easy Quickcheck S 33551de0 - NLS Diagnostik",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "local": "/media/wp/12ed17b576-Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S-33551de0.jpg",
+      "bytes": 409681
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/NLS-Metatron-Diagnostik-Gehirn-457be14b.png",
+      "alt": "NLS Metatron Diagnostik Gehirn 457be14b - NLS Diagnostik",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "local": "/media/wp/75c94d20a4-NLS-Metatron-Diagnostik-Gehirn-457be14b.png",
+      "bytes": 569649
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/3D_Herz_NLS_Diagnose-2be9b5bb.png",
+      "alt": "3D Herz NLS Diagnose 2be9b5bb - NLS Diagnostik",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "local": "/media/wp/7ad0d35453-3D_Herz_NLS_Diagnose-2be9b5bb.png",
+      "bytes": 417725
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Brustkorb-24b1dfe6.jpeg",
+      "alt": "Brustkorb 24b1dfe6 - NLS Diagnostik",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "local": "/media/wp/93bf5c1c38-Brustkorb-24b1dfe6.jpg",
+      "bytes": 56976
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Darm-Hunter-bfaf8bc5.jpeg",
+      "alt": "Darm Hunter bfaf8bc5 - NLS Diagnostik",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "local": "/media/wp/5490376c14-Darm-Hunter-bfaf8bc5.jpg",
+      "bytes": 36905
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Peter-Rauch-Heilpraktiker-Augsburg-9ab7178c.png",
+      "alt": "Heilpraktiker Augsburg - Naturheilpraxis Peter Rauch",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/BNI-Unternehmen-Verband-cdced5ca.png",
+      "alt": "BNI Local Business Global network",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    }
+  ],
+  "wordCount": 819,
+  "crawledAt": "2026-08-17T22:40:10.336712+00:00"
+}

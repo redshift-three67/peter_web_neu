@@ -1,0 +1,499 @@
+{
+  "slug": "integrative-manual-therapy-imt",
+  "sourceUrl": "https://rauch-heilpraktiker.de/integrative-manual-therapy-imt/",
+  "finalUrl": "https://rauch-heilpraktiker.de/integrative-manual-therapy-imt/",
+  "httpStatus": 200,
+  "class": "B-inactive-archive",
+  "status": "draft",
+  "robots": "noindex,follow",
+  "extracted": {
+    "title": "Integrative Manual Therapy | Naturheilpraxis Rauch",
+    "h1": "Integrative Manual Therapy (I.M.T.)",
+    "description": "Integrative Manual Therapy (IMT) in der Naturheilpraxis Rauch in Augsburg – manuelles Verfahren der Erfahrungsheilkunde nach Anamnese.",
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Integrative Manual Therapy (I.M.T.)"
+      },
+      {
+        "tag": "h2",
+        "text": "Naturheilkundlich begleiten – Stark im Leben"
+      },
+      {
+        "tag": "h2",
+        "text": "Was ist Integrative Manual Therapy ( IMT )?"
+      },
+      {
+        "tag": "h3",
+        "text": "Diese Therapieform ist die integrierte Anwendung von einer Vielzahl manueller Techniken zur Behandlung von neuro-muskulo-skelettalen Dysfunktionen ( Fehlfunktion des Nerven – Muskel-Skelett-Systems )."
+      },
+      {
+        "tag": "h3",
+        "text": "Integrative Manual Therapy"
+      },
+      {
+        "tag": "h3",
+        "text": "Manuelle Therapieverfahren"
+      },
+      {
+        "tag": "h3",
+        "text": "Wodurch unterscheidet sich IMT™ ?"
+      },
+      {
+        "tag": "h3",
+        "text": "Was macht die IMT™ interessant?"
+      },
+      {
+        "tag": "h3",
+        "text": "Was lässt sich mit IMT™ behandeln?"
+      },
+      {
+        "tag": "h2",
+        "text": "Häufige Fragen zur Praxis"
+      }
+    ],
+    "parts": [
+      {
+        "tag": "li",
+        "text": "Impressum"
+      },
+      {
+        "tag": "li",
+        "text": "Rechtshinweise"
+      },
+      {
+        "tag": "li",
+        "text": "Rechtshinweise Therapieverfahren"
+      },
+      {
+        "tag": "li",
+        "text": "Downloadbereich"
+      },
+      {
+        "tag": "li",
+        "text": "Praxis offen"
+      },
+      {
+        "tag": "li",
+        "text": "Online-Anamnesebogen"
+      },
+      {
+        "tag": "li",
+        "text": "Gesundheitsrelevante Dokumentation"
+      },
+      {
+        "tag": "li",
+        "text": "Diagnostik Diagnostik – Stuhluntersuchung"
+      },
+      {
+        "tag": "li",
+        "text": "Diagnose – Urinuntersuchung"
+      },
+      {
+        "tag": "li",
+        "text": "Diagnose – Labordiagnose – Biodiagnostik"
+      },
+      {
+        "tag": "li",
+        "text": "Hinweisdiagnostik – EAV – Elektroakupunktur nach Dr. Voll"
+      },
+      {
+        "tag": "li",
+        "text": "Hinweisdiagnostik – Irisdiagnose"
+      },
+      {
+        "tag": "li",
+        "text": "Hinweisdiagnostik – Frequenztherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Biophysikalische Bioresonanz Funktionsweise Bioresonanz / Elektroakupunktur"
+      },
+      {
+        "tag": "li",
+        "text": "Akupunktur ohne Nadeln"
+      },
+      {
+        "tag": "li",
+        "text": "NLS-Diagnostik"
+      },
+      {
+        "tag": "li",
+        "text": "Vieva Pro Analyse"
+      },
+      {
+        "tag": "li",
+        "text": "Elektroakupunktur nach Voll"
+      },
+      {
+        "tag": "li",
+        "text": "150 MHz nach Broers"
+      },
+      {
+        "tag": "li",
+        "text": "Manuelle +Osteopathie Allgemein"
+      },
+      {
+        "tag": "li",
+        "text": "+Integrative Manual Therapy Die Begründer"
+      },
+      {
+        "tag": "li",
+        "text": "Denk und Behandlungsansätze"
+      },
+      {
+        "tag": "li",
+        "text": "Behandlungsmöglichkeiten"
+      },
+      {
+        "tag": "li",
+        "text": "Rehabilitation"
+      },
+      {
+        "tag": "li",
+        "text": "+Lowen Systems (Biovalent System) Arbeit mit den Händen"
+      },
+      {
+        "tag": "li",
+        "text": "Begründer Frank Lowen"
+      },
+      {
+        "tag": "li",
+        "text": "Die Hände"
+      },
+      {
+        "tag": "li",
+        "text": "Die Regulatoren"
+      },
+      {
+        "tag": "li",
+        "text": "Die Koerper Rhythmen"
+      },
+      {
+        "tag": "li",
+        "text": "Die Körpersysteme"
+      },
+      {
+        "tag": "li",
+        "text": "+Microkinesi Allgemein Microkinesi Möglichkeiten"
+      },
+      {
+        "tag": "li",
+        "text": "+Physiotherapie Allgemein Physiotherapie Tätigkeitsfelder"
+      },
+      {
+        "tag": "li",
+        "text": "+Dorntherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Schmerz Entstehung von Schmerz"
+      },
+      {
+        "tag": "li",
+        "text": "Naturheilkunde Klassische Homöopathie"
+      },
+      {
+        "tag": "li",
+        "text": "Die Komplex Homöopathie"
+      },
+      {
+        "tag": "li",
+        "text": "Die Phytotherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Allergiebehandlung mit NAET Behandlungsablauf"
+      },
+      {
+        "tag": "li",
+        "text": "Naturheilkundliche Darmsanierung"
+      },
+      {
+        "tag": "li",
+        "text": "Injektionstherapie"
+      },
+      {
+        "tag": "li",
+        "text": "Orthomolekular Kinesiologie"
+      },
+      {
+        "tag": "li",
+        "text": "Zhineng Dr Pang Ming"
+      },
+      {
+        "tag": "li",
+        "text": "Psychotherapie Hypnose"
+      },
+      {
+        "tag": "li",
+        "text": "Heilmeditation"
+      },
+      {
+        "tag": "li",
+        "text": "Kontakt"
+      },
+      {
+        "tag": "li",
+        "text": "Naturheilpraxis Rauch Integrative Manual Therapy nach Dr. Sharon Mehr Info zur Behandlung mit I.M.T."
+      },
+      {
+        "tag": "li",
+        "text": "Naturheilpraxis Rauch Selbstregulation und Selbstheilung mit IMT Mehr Info zur Selbstregulation mit I.M.T."
+      },
+      {
+        "tag": "li",
+        "text": "Naturheilpraxis Rauch IMT ist eine ganzheitliche Methode Die ganzheitlichen Methode der I.M.T."
+      },
+      {
+        "tag": "h1",
+        "text": "Integrative Manual Therapy (I.M.T.)"
+      },
+      {
+        "tag": "h2",
+        "text": "Naturheilkundlich begleiten – Stark im Leben"
+      },
+      {
+        "tag": "h2",
+        "text": "Was ist Integrative Manual Therapy ( IMT )?"
+      },
+      {
+        "tag": "h3",
+        "text": "Diese Therapieform ist die integrierte Anwendung von einer Vielzahl manueller Techniken zur Behandlung von neuro-muskulo-skelettalen Dysfunktionen ( Fehlfunktion des Nerven – Muskel-Skelett-Systems )."
+      },
+      {
+        "tag": "h3",
+        "text": "Integrative Manual Therapy"
+      },
+      {
+        "tag": "h3",
+        "text": "Manuelle Therapieverfahren"
+      },
+      {
+        "tag": "p",
+        "text": "IMT™ verbindet mehrere manuelle Techniken. Die Griffe sind in der Regel sehr zurückhaltend. Das Konzept entstand über mehr als 30 Jahre."
+      },
+      {
+        "tag": "p",
+        "text": "Beispiele: Muscle Energy Technique (Fred Mitchell D.O.), Strain and Counterstrain (Dr. Lawrence Jones D.O.), craniale Osteopathie (William Sutherland D.O.), Craniosacrale Therapie (John Upledger D.O.)."
+      },
+      {
+        "tag": "p",
+        "text": "IMT™ wird hier als differenziertes manuelles Verfahren verstanden, nicht als allgemein anerkannte schulmedizinische Behandlung."
+      },
+      {
+        "tag": "h3",
+        "text": "Wodurch unterscheidet sich IMT™ ?"
+      },
+      {
+        "tag": "p",
+        "text": "Die Integrative Manual Therapy™ (IMT™) ist eine manuelle Arbeitsweise. Osteopathische Prinzipien gehören dazu; das Konzept wird von Therapeuten weiterentwickelt. Es wird ohne Maschinen oder Ultraschall gearbeitet, mit den Händen an körpereigenen Systemen."
+      },
+      {
+        "tag": "p",
+        "text": "Beschrieben wird eine strukturelle und funktionelle Rehabilitation über mehrere Körpersysteme. Eine schmerzfreie Behandlung oder Heilung auf zellulärer Ebene wird hier nicht zugesagt."
+      },
+      {
+        "tag": "h3",
+        "text": "Was macht die IMT™ interessant?"
+      },
+      {
+        "tag": "p",
+        "text": "Die Integrative Manual Therapy ™ unterscheidet sich von den traditionellen Behandlungsverfahren insbesondere durch ihre ganzheitliche Betrachtung des Menschen. Funktionsstörungen, Schmerzen und Behinderungen resultieren immer aus zahlreichen Ursachen. Deshalb verfolgt die IMT™ einen multisystemischen Ansatz zur Befunderhebung. Die dafür entwickelten Verfahren erlauben eine äußerst effektive und systemspezifische Diagnostik. Basierend darauf ermöglicht sie dem Therapeuten eine zielgerichtete und alle Systeme umfassende Behandlung durchzuführen."
+      },
+      {
+        "tag": "li",
+        "text": "Das System der Biomechanik auf biomechanische Dysfunktionen ( z.B . Ein Gelenk besitzt eine sogenannte Biomechanik, das ist die Art wie es sich bewegt. Jede Gelenkart hat seine Eigene Biomechanik. Ist Sie gestört resultiert auf Dauer daraus Schmerz, Bewegungseinchränkung, Abnützung)"
+      },
+      {
+        "tag": "li",
+        "text": "Das System der quergestreiften Muskulatur auf erhöhten Ruhetonus und Entspannungsunfähigkeit"
+      },
+      {
+        "tag": "li",
+        "text": "Das System des Bindegewebes auf fasciale Dysfunktionen und verminderte Elastizität."
+      },
+      {
+        "tag": "li",
+        "text": "Das Craniosacrale-System (das System Kopf ? Kreuzbein) auf abnorme Spannungen in der Dura mater (Harte Hirnhaut) auf eingeschränkte Mobilität der Nervenwurzeln"
+      },
+      {
+        "tag": "li",
+        "text": "Das Craniale System auf Restriktionen der Beweglichkeit"
+      },
+      {
+        "tag": "li",
+        "text": "Das Lymphsystem auf Restriktionen und Veränderungen"
+      },
+      {
+        "tag": "li",
+        "text": "Das Pulmonale (Lunge), das Cardiale (Herz), das Leber, Milzsystem auf Veränderungen, bzw Restriktionen bzw. Funktionalität."
+      },
+      {
+        "tag": "li",
+        "text": "Das Viscerale System (Das System der Eingeweide) auf Dysfunktionen von Magen, Darm, Leber etc."
+      },
+      {
+        "tag": "h3",
+        "text": "Was lässt sich mit IMT™ behandeln?"
+      },
+      {
+        "tag": "p",
+        "text": "Anschrift: Naturheilpraxis Rauch Heilpraktiker Augsburg, Hochzoll Terminvereinbarung: Telefon: 0821 262 14 62"
+      },
+      {
+        "tag": "p",
+        "text": "E-Mail: praxis_rauch@icloud.com"
+      },
+      {
+        "tag": "p",
+        "text": "Bioresonanztherapie NLS Diagnose EAV nach Dr. Voll Vieva Plus Diagnostik Vitalfeld- und Nährstoffanalyse Osteopathie 150 MHz nach Broers"
+      },
+      {
+        "tag": "li",
+        "text": "Mittagsruhe 12:30 Uhr bis 13:00 Uhr"
+      },
+      {
+        "tag": "p",
+        "text": "Naturheilkunde"
+      },
+      {
+        "tag": "p",
+        "text": "Zentrum für Naturheilkunde"
+      },
+      {
+        "tag": "p",
+        "text": "Mein Facebook - Profil"
+      },
+      {
+        "tag": "p",
+        "text": "Meine Google - Bewertung"
+      },
+      {
+        "tag": "p",
+        "text": "Downloadbereich Naturheilpraxis"
+      },
+      {
+        "tag": "li",
+        "text": "Impressum |"
+      },
+      {
+        "tag": "li",
+        "text": "Datenschutzerklärung |"
+      },
+      {
+        "tag": "li",
+        "text": "Kontakt |"
+      },
+      {
+        "tag": "li",
+        "text": "Online-Anamnesebogen"
+      },
+      {
+        "tag": "li",
+        "text": "Rechtshinweise Therapieverfahren |"
+      },
+      {
+        "tag": "p",
+        "text": "Hinweis: Die auf dieser Website dargestellten Verfahren und Informationen dienen der allgemeinen Aufklärung und ersetzen keine ärztliche Diagnose, Beratung oder Behandlung. Es werden keine Heilversprechen abgegeben. Weitere Angaben: Heilpraktiker-Rechtshinweise und Rechtshinweise Therapieverfahren ."
+      },
+      {
+        "tag": "p",
+        "text": "Peter Rauch – Heilpraktiker Naturheilpraxis Rauch, Friedrich-Deffner-Straße 19a, 86163 Augsburg (Hochzoll) – erreichbar aus Friedberg und Lechhausen-Ost Telefon: 0821 2621462 · Kontakt Schwerpunkte: Bioresonanz, NLS-Diagnostik, Elektroakupunktur nach Dr. Voll, klassische Naturheilverfahren und biophysikalische Informationstherapie. Stand: August 2026"
+      },
+      {
+        "tag": "h2",
+        "text": "Häufige Fragen zur Praxis"
+      },
+      {
+        "tag": "p",
+        "text": "Kurze Angaben zu Ablauf, Aufnahme, Kosten und Erreichbarkeit. Keine Diagnose und keine Heilzusage."
+      },
+      {
+        "tag": "p",
+        "text": "Vor dem Termin können Sie den Online-Anamnesebogen ausfüllen. Das ist die Patientenaufnahme, keine Diagnose."
+      },
+      {
+        "tag": "p",
+        "text": "Dieser Corona-Hinweis ist ein historischer Praxistext und nicht mehr aktuell. Die Naturheilpraxis Rauch ist geöffnet. Aktuelle Fragen bitte über Kontakt oder telefonisch unter 0821 2621462 ."
+      }
+    ],
+    "bodyText": "• Impressum\n\n• Rechtshinweise\n\n• Rechtshinweise Therapieverfahren\n\n• Downloadbereich\n\n• Praxis offen\n\n• Online-Anamnesebogen\n\n• Gesundheitsrelevante Dokumentation\n\n• Diagnostik Diagnostik – Stuhluntersuchung\n\n• Diagnose – Urinuntersuchung\n\n• Diagnose – Labordiagnose – Biodiagnostik\n\n• Hinweisdiagnostik – EAV – Elektroakupunktur nach Dr. Voll\n\n• Hinweisdiagnostik – Irisdiagnose\n\n• Hinweisdiagnostik – Frequenztherapie\n\n• Biophysikalische Bioresonanz Funktionsweise Bioresonanz / Elektroakupunktur\n\n• Akupunktur ohne Nadeln\n\n• NLS-Diagnostik\n\n• Vieva Pro Analyse\n\n• Elektroakupunktur nach Voll\n\n• 150 MHz nach Broers\n\n• Manuelle +Osteopathie Allgemein\n\n• +Integrative Manual Therapy Die Begründer\n\n• Denk und Behandlungsansätze\n\n• Behandlungsmöglichkeiten\n\n• Rehabilitation\n\n• +Lowen Systems (Biovalent System) Arbeit mit den Händen\n\n• Begründer Frank Lowen\n\n• Die Hände\n\n• Die Regulatoren\n\n• Die Koerper Rhythmen\n\n• Die Körpersysteme\n\n• +Microkinesi Allgemein Microkinesi Möglichkeiten\n\n• +Physiotherapie Allgemein Physiotherapie Tätigkeitsfelder\n\n• +Dorntherapie\n\n• Schmerz Entstehung von Schmerz\n\n• Naturheilkunde Klassische Homöopathie\n\n• Die Komplex Homöopathie\n\n• Die Phytotherapie\n\n• Allergiebehandlung mit NAET Behandlungsablauf\n\n• Naturheilkundliche Darmsanierung\n\n• Injektionstherapie\n\n• Orthomolekular Kinesiologie\n\n• Zhineng Dr Pang Ming\n\n• Psychotherapie Hypnose\n\n• Heilmeditation\n\n• Kontakt\n\n• Naturheilpraxis Rauch Integrative Manual Therapy nach Dr. Sharon Mehr Info zur Behandlung mit I.M.T.\n\n• Naturheilpraxis Rauch Selbstregulation und Selbstheilung mit IMT Mehr Info zur Selbstregulation mit I.M.T.\n\n• Naturheilpraxis Rauch IMT ist eine ganzheitliche Methode Die ganzheitlichen Methode der I.M.T.\n\nIntegrative Manual Therapy (I.M.T.)\n\nNaturheilkundlich begleiten – Stark im Leben\n\nWas ist Integrative Manual Therapy ( IMT )?\n\nDiese Therapieform ist die integrierte Anwendung von einer Vielzahl manueller Techniken zur Behandlung von neuro-muskulo-skelettalen Dysfunktionen ( Fehlfunktion des Nerven – Muskel-Skelett-Systems ).\n\nIntegrative Manual Therapy\n\nManuelle Therapieverfahren\n\nIMT™ verbindet mehrere manuelle Techniken. Die Griffe sind in der Regel sehr zurückhaltend. Das Konzept entstand über mehr als 30 Jahre.\n\nBeispiele: Muscle Energy Technique (Fred Mitchell D.O.), Strain and Counterstrain (Dr. Lawrence Jones D.O.), craniale Osteopathie (William Sutherland D.O.), Craniosacrale Therapie (John Upledger D.O.).\n\nIMT™ wird hier als differenziertes manuelles Verfahren verstanden, nicht als allgemein anerkannte schulmedizinische Behandlung.\n\nWodurch unterscheidet sich IMT™ ?\n\nDie Integrative Manual Therapy™ (IMT™) ist eine manuelle Arbeitsweise. Osteopathische Prinzipien gehören dazu; das Konzept wird von Therapeuten weiterentwickelt. Es wird ohne Maschinen oder Ultraschall gearbeitet, mit den Händen an körpereigenen Systemen.\n\nBeschrieben wird eine strukturelle und funktionelle Rehabilitation über mehrere Körpersysteme. Eine schmerzfreie Behandlung oder Heilung auf zellulärer Ebene wird hier nicht zugesagt.\n\nWas macht die IMT™ interessant?\n\nDie Integrative Manual Therapy ™ unterscheidet sich von den traditionellen Behandlungsverfahren insbesondere durch ihre ganzheitliche Betrachtung des Menschen. Funktionsstörungen, Schmerzen und Behinderungen resultieren immer aus zahlreichen Ursachen. Deshalb verfolgt die IMT™ einen multisystemischen Ansatz zur Befunderhebung. Die dafür entwickelten Verfahren erlauben eine äußerst effektive und systemspezifische Diagnostik. Basierend darauf ermöglicht sie dem Therapeuten eine zielgerichtete und alle Systeme umfassende Behandlung durchzuführen.\n\n• Das System der Biomechanik auf biomechanische Dysfunktionen ( z.B . Ein Gelenk besitzt eine sogenannte Biomechanik, das ist die Art wie es sich bewegt. Jede Gelenkart hat seine Eigene Biomechanik. Ist Sie gestört resultiert auf Dauer daraus Schmerz, Bewegungseinchränkung, Abnützung)\n\n• Das System der quergestreiften Muskulatur auf erhöhten Ruhetonus und Entspannungsunfähigkeit\n\n• Das System des Bindegewebes auf fasciale Dysfunktionen und verminderte Elastizität.\n\n• Das Craniosacrale-System (das System Kopf ? Kreuzbein) auf abnorme Spannungen in der Dura mater (Harte Hirnhaut) auf eingeschränkte Mobilität der Nervenwurzeln\n\n• Das Craniale System auf Restriktionen der Beweglichkeit\n\n• Das Lymphsystem auf Restriktionen und Veränderungen\n\n• Das Pulmonale (Lunge), das Cardiale (Herz), das Leber, Milzsystem auf Veränderungen, bzw Restriktionen bzw. Funktionalität.\n\n• Das Viscerale System (Das System der Eingeweide) auf Dysfunktionen von Magen, Darm, Leber etc.\n\nWas lässt sich mit IMT™ behandeln?\n\nAnschrift: Naturheilpraxis Rauch Heilpraktiker Augsburg, Hochzoll Terminvereinbarung: Telefon: 0821 262 14 62\n\nE-Mail: praxis_rauch@icloud.com\n\nBioresonanztherapie NLS Diagnose EAV nach Dr. Voll Vieva Plus Diagnostik Vitalfeld- und Nährstoffanalyse Osteopathie 150 MHz nach Broers\n\n• Mittagsruhe 12:30 Uhr bis 13:00 Uhr\n\nNaturheilkunde\n\nZentrum für Naturheilkunde\n\nMein Facebook - Profil\n\nMeine Google - Bewertung\n\nDownloadbereich Naturheilpraxis\n\n• Impressum |\n\n• Datenschutzerklärung |\n\n• Kontakt |\n\n• Online-Anamnesebogen\n\n• Rechtshinweise Therapieverfahren |\n\nHinweis: Die auf dieser Website dargestellten Verfahren und Informationen dienen der allgemeinen Aufklärung und ersetzen keine ärztliche Diagnose, Beratung oder Behandlung. Es werden keine Heilversprechen abgegeben. Weitere Angaben: Heilpraktiker-Rechtshinweise und Rechtshinweise Therapieverfahren .\n\nPeter Rauch – Heilpraktiker Naturheilpraxis Rauch, Friedrich-Deffner-Straße 19a, 86163 Augsburg (Hochzoll) – erreichbar aus Friedberg und Lechhausen-Ost Telefon: 0821 2621462 · Kontakt Schwerpunkte: Bioresonanz, NLS-Diagnostik, Elektroakupunktur nach Dr. Voll, klassische Naturheilverfahren und biophysikalische Informationstherapie. Stand: August 2026\n\nHäufige Fragen zur Praxis\n\nKurze Angaben zu Ablauf, Aufnahme, Kosten und Erreichbarkeit. Keine Diagnose und keine Heilzusage.\n\nVor dem Termin können Sie den Online-Anamnesebogen ausfüllen. Das ist die Patientenaufnahme, keine Diagnose.\n\nDieser Corona-Hinweis ist ein historischer Praxistext und nicht mehr aktuell. Die Naturheilpraxis Rauch ist geöffnet. Aktuelle Fragen bitte über Kontakt oder telefonisch unter 0821 2621462 ."
+  },
+  "images": [
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/uploads/Peter-Logo-klein.svg",
+      "alt": "Rauch Heilpraktiker",
+      "width": "60",
+      "height": "60",
+      "fromCache": false,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Physiotherapeutische-Behandlung-Kleinkinder-Augsburg-8aa134c0.jpeg",
+      "alt": "Physiotherapeutische Behandlung Kleinkinder Augsburg 8aa134c0 - Integrative Manual Therapy IMT",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Manuelle-Schmerztherapie-Augsburg-aa5de0d2.jpeg",
+      "alt": "Manuelle Schmerztherapie Augsburg aa5de0d2 - Integrative Manual Therapy IMT",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Osteopathische-Behandlung-in-Augsburg-df130f49.jpeg",
+      "alt": "Osteopathische Behandlung in Augsburg df130f49 - Integrative Manual Therapy IMT",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Osteopathische-Behandlung-in-Augsburg-200a6220.jpeg",
+      "alt": "Osteopathische Behandlung in Augsburg 200a6220 - Integrative Manual Therapy IMT",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/uploads/Vital_und_N%C3%A4hrstoffanalyse.jpg#thumbnail=259%2C342&srcset=1",
+      "alt": "Vital und N%C3%A4hrstoffanalyse - Integrative Manual Therapy IMT",
+      "width": null,
+      "height": null,
+      "fromCache": false,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/haende_manuelle_therapie_schmerztherapie_1-1cebd135.jpeg",
+      "alt": "haende manuelle therapie schmerztherapie 1 1cebd135 - Integrative Manual Therapy IMT",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/Peter-Rauch-Heilpraktiker-Augsburg-9ab7178c.png",
+      "alt": "Heilpraktiker Augsburg - Naturheilpraxis Peter Rauch",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    },
+    {
+      "url": "https://rauch-heilpraktiker.de/wp-content/themes/yootheme/cache/BNI-Unternehmen-Verband-cdced5ca.png",
+      "alt": "BNI Local Business Global network",
+      "width": null,
+      "height": null,
+      "fromCache": true,
+      "skipped": "duplicate-url"
+    }
+  ],
+  "wordCount": 776,
+  "crawledAt": "2026-08-17T22:40:52.245372+00:00"
+}
