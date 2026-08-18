@@ -5,7 +5,7 @@ Lokales Git-Repo. Identität nur lokal: `Rauch Migration <dev@rauch-heilpraktike
 | Punkt | Tag | Commit | Wann | Inhalt |
 |---|---|---|---|---|
 | RP-01 | `rp-01-design-tokens` | `ddabd0c` | 18.08.2026 | Look-Angleichung Schritt 1: Tokens, Header, heller Footer, Karten. **Vor** Slider und App-Strukturen. |
-| RP-02 | `rp-02-slider-strukturen` | (dieser Stand) | 18.08.2026 | Hero-Slider mit Grünlayer + alten Originalen. Phone-Chip, Quote-Panel, WarningNote, Quellenhinweis, GebüH-Hinweis. |
+| RP-02 | `rp-02-slider-strukturen` | `c88df55` | 18.08.2026 | Hero-Slider mit Grünlayer + alten Originalen. Phone-Chip, Quote-Panel, WarningNote, Quellenhinweis, GebüH-Hinweis. |
 
 ## Zurücksetzen
 
