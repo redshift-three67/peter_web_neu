@@ -19,7 +19,7 @@ optional: die öffentlichen Title-Tags haben wir bereits mitgecrawlt.
 
 ## Übernommen ins neue System
 
-- E-Mail bestätigt: `info@rauch-heilpraktiker.de`
+- E-Mail bestätigt: `praxis_rauch@icloud.com` (gültig seit 18.08.2026, ersetzt `info@rauch-heilpraktiker.de`)
 - Google-Site-Verification (Search Console bleibt gültig)
 - Facebook- und Google-Places-URL in Schema `sameAs`
 - NAP bleibt: Friedrich-Deffner-Straße 19a, 86163 Augsburg, 0821 2621462

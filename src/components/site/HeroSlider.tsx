@@ -1,10 +1,6 @@
-import { ChevronLeft, ChevronRight, Phone } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Link } from "@tanstack/react-router";
-import { Button } from "@/components/ui/button";
-import { practice } from "@/content/site";
 import { homeSlides } from "@/content/slides";
-import { Container } from "@/components/site/Shared";
 
 export function HeroSlider() {
   const [index, setIndex] = useState(0);
@@ -28,91 +24,96 @@ export function HeroSlider() {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      {homeSlides.map((item, i) => (
-        <img
-          key={item.src}
-          src={item.src}
-          alt=""
-          aria-hidden={i !== index}
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
-            i === index ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      ))}
-      <div className="absolute inset-0 bg-gradient-to-r from-sage-700/92 via-sage-600/82 to-sage-500/62" />
-      <Container className="relative grid min-h-[72vh] items-end py-20 md:min-h-[80vh] md:py-28">
-        <div className="max-w-2xl text-paper">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sand-200">
-            Augsburg-Hochzoll · Friedberg · Lechhausen
-          </p>
-          <p className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-terracotta-light">
-            {slide.meta}
-          </p>
-          <h1 className="mt-3 font-display text-4xl font-semibold leading-[1.08] sm:text-5xl md:text-6xl">
-            Heilpraktiker Augsburg – Naturheilpraxis Peter Rauch
-          </h1>
-          <p className="mt-3 font-display text-xl text-paper/90 md:text-2xl">
-            {slide.title}
-          </p>
-          <p className="mt-5 max-w-xl text-lg text-paper/85">
-            {practice.tagline}. Ich begleite Menschen, die mit Schmerz,
-            Allergie oder Erschöpfung bei der Schulmedizin nicht weiterkommen
-            – ergänzend, ohne Heilversprechen, mit klaren Grenzen.
-          </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button asChild variant="clay" size="lg" className="rounded-full shadow-elevated">
-              <a href={`tel:${practice.phoneTel}`}>
-                <Phone className="size-4" /> Termin: {practice.phoneDisplay}
-              </a>
-            </Button>
-            <Button
-              asChild
-              variant="secondary"
-              size="lg"
-              className="rounded-full border-paper/30 bg-paper/15 text-paper hover:bg-paper hover:text-sage-700"
-            >
-              <Link to="/erstgespraech">Erstgespräch verstehen</Link>
-            </Button>
+      <div className="relative h-[42svh] min-h-[220px] sm:h-[46svh] md:h-[50svh] lg:h-[52svh]">
+        {homeSlides.map((item, i) => (
+          <img
+            key={`${item.src}-${item.meta}`}
+            src={item.src}
+            alt=""
+            aria-hidden={i !== index}
+            className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-700 ${
+              i === index ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
+
+        <div className="absolute inset-0 bg-gradient-to-r from-sage-800/45 via-sage-700/20 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-sage-900/35 to-transparent" />
+
+        <div className="absolute inset-x-0 top-0 z-10 px-4 pt-5 sm:px-6 md:pt-8">
+          <div className="mx-auto max-w-6xl">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-paper/85 sm:text-xs">
+              Augsburg-Hochzoll · Friedberg · Lechhausen
+            </p>
+            <h1 className="mt-1.5 max-w-xl font-display text-[1.65rem] font-semibold leading-[1.12] text-paper drop-shadow-sm sm:text-3xl md:max-w-2xl md:text-4xl lg:text-[2.6rem]">
+              Heilpraktiker Augsburg – Naturheilpraxis Peter Rauch
+            </h1>
           </div>
-          <p className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-paper/75">
-            <span>Physiotherapeut seit 2001</span>
-            <span>Heilpraktiker seit 2006</span>
-            <span>{practice.experienceYears} Jahre Praxis</span>
-          </p>
         </div>
-      </Container>
-      <div className="absolute bottom-6 right-4 z-10 flex items-center gap-2 sm:right-8">
-        <button
-          type="button"
-          className="grid size-10 place-items-center rounded-full border border-paper/30 bg-paper/15 text-paper hover:bg-paper hover:text-sage-700"
-          aria-label="Vorheriges Motiv"
-          onClick={() => setIndex((i) => (i - 1 + homeSlides.length) % homeSlides.length)}
-        >
-          <ChevronLeft className="size-5" />
-        </button>
-        <div className="flex gap-1.5" role="tablist" aria-label="Slider-Motive">
-          {homeSlides.map((item, i) => (
-            <button
-              key={item.src}
-              type="button"
-              role="tab"
-              aria-selected={i === index}
-              aria-label={`Motiv ${i + 1}: ${item.title}`}
-              className={`h-2 rounded-full transition-all ${
-                i === index ? "w-6 bg-paper" : "w-2 bg-paper/40"
-              }`}
-              onClick={() => setIndex(i)}
-            />
-          ))}
+
+        <div className="absolute bottom-3 left-3 z-20 flex items-center gap-2 sm:bottom-5 sm:left-6">
+          <button
+            type="button"
+            className="grid size-9 place-items-center rounded-full border border-paper/50 bg-paper/20 text-paper backdrop-blur-sm hover:bg-paper hover:text-sage-700 sm:size-10"
+            aria-label="Vorheriges Motiv"
+            onClick={() =>
+              setIndex((i) => (i - 1 + homeSlides.length) % homeSlides.length)
+            }
+          >
+            <ChevronLeft className="size-5" />
+          </button>
+          <div className="flex gap-1.5" role="tablist" aria-label="Slider-Motive">
+            {homeSlides.map((item, i) => (
+              <button
+                key={`${item.src}-${item.meta}`}
+                type="button"
+                role="tab"
+                aria-selected={i === index}
+                aria-label={`Motiv ${i + 1}: ${item.title}`}
+                className={`h-2 rounded-full transition-all ${
+                  i === index ? "w-6 bg-paper" : "w-2 bg-paper/45"
+                }`}
+                onClick={() => setIndex(i)}
+              />
+            ))}
+          </div>
+          <button
+            type="button"
+            className="grid size-9 place-items-center rounded-full border border-paper/50 bg-paper/20 text-paper backdrop-blur-sm hover:bg-paper hover:text-sage-700 sm:size-10"
+            aria-label="Nächstes Motiv"
+            onClick={() => setIndex((i) => (i + 1) % homeSlides.length)}
+          >
+            <ChevronRight className="size-5" />
+          </button>
         </div>
-        <button
-          type="button"
-          className="grid size-10 place-items-center rounded-full border border-paper/30 bg-paper/15 text-paper hover:bg-paper hover:text-sage-700"
-          aria-label="Nächstes Motiv"
-          onClick={() => setIndex((i) => (i + 1) % homeSlides.length)}
-        >
-          <ChevronRight className="size-5" />
-        </button>
+
+        <aside className="absolute bottom-14 right-3 z-20 w-[min(92%,20.5rem)] sm:bottom-5 sm:right-6 sm:w-[22rem] md:w-[24rem]">
+          <div className="bg-[rgb(35_70_76/0.88)] px-5 py-4 text-paper shadow-elevated sm:px-6 sm:py-5">
+            <p className="font-display text-xl font-medium text-[#e4d3a4] sm:text-2xl">
+              {slide.meta}
+            </p>
+            <p className="mt-1 border-t border-paper/25 pt-2 text-sm text-paper/95 sm:text-base">
+              {slide.title}
+            </p>
+            {slide.external ? (
+              <a
+                href={slide.href}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 inline-block bg-paper px-4 py-2 text-[11px] font-medium uppercase tracking-[0.16em] text-sage-700 hover:bg-sand-100"
+              >
+                {slide.cta}
+              </a>
+            ) : (
+              <a
+                href={slide.href}
+                className="mt-3 inline-block bg-paper px-4 py-2 text-[11px] font-medium uppercase tracking-[0.16em] text-sage-700 hover:bg-sand-100"
+              >
+                {slide.cta}
+              </a>
+            )}
+          </div>
+        </aside>
       </div>
     </section>
   );

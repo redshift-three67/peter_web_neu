@@ -11,7 +11,7 @@ export const practice = {
   country: "DE",
   phoneDisplay: "0821 2621462",
   phoneTel: "+498212621462",
-  email: "info@rauch-heilpraktiker.de",
+  email: "praxis_rauch@icloud.com",
   geo: { lat: 48.33937, lng: 10.94893 },
   hours: "Montag bis Freitag, 10:00–12:30 und 13:00–19:00 Uhr, nach Vereinbarung",
   hoursShort: "Mo–Fr 10–12:30 · 13–19 Uhr",
@@ -34,7 +34,7 @@ export const practice = {
   licensePt: "Regierungspräsidium Gießen",
   updated: "August 2026",
   experienceYears: 20,
-  emailCanonical: "info@rauch-heilpraktiker.de",
+  emailCanonical: "praxis_rauch@icloud.com",
   social: {
     facebook:
       "https://www.facebook.com/heilpraktiker.naturheilpraxis.bioresonanz.rauch/",

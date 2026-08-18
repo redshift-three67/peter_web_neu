@@ -1,5 +1,13 @@
 # Changelog — Migration
 
+## 2026-08-18 (mittag, Slider-Feinschliff)
+
+- RP-03 vor Änderung (`rp-03-pre-slider-refine`).
+- Slider-Höhe ca. −⅓, Viewport `42–52svh`.
+- Grünlayer abgeschwächt; Live-Overlay-Karten unten rechts (5 Slides, Texte vom WP-Home).
+- Bedienelement nach links.
+- Praxis-Mail überall im CMS: `praxis_rauch@icloud.com`.
+
 ## 2026-08-18 (nachmittags)
 
 - RP-01 gesetzt (`rp-01-design-tokens`).
