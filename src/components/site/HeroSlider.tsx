@@ -2,6 +2,9 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { homeSlides } from "@/content/slides";
 
+const glassCard =
+  "rounded-2xl border border-paper/40 bg-sage-50/55 shadow-card backdrop-blur-md";
+
 export function HeroSlider() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -40,19 +43,17 @@ export function HeroSlider() {
           />
         ))}
 
-        <div className="absolute inset-0 bg-gradient-to-r from-sage-800/40 via-sage-700/15 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-sage-900/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-sage-800/28 via-sage-700/10 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-sage-900/25 to-transparent" />
 
-        <div className="absolute inset-x-0 top-0 z-10 px-4 pt-4 sm:px-6 md:pt-7">
-          <div className="mx-auto max-w-6xl">
-            <div className="max-w-xl rounded-2xl bg-sage-50/92 px-4 py-3 shadow-card backdrop-blur-md sm:px-5 sm:py-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-sage">
-                Augsburg-Hochzoll · Friedberg · Lechhausen
-              </p>
-              <h1 className="mt-1 font-display text-[1.55rem] font-semibold leading-[1.15] text-sage-700 sm:text-3xl md:text-4xl">
-                Heilpraktiker Augsburg – Naturheilpraxis Peter Rauch
-              </h1>
-            </div>
+        <div className="absolute left-3 top-3 z-10 max-w-[min(20.5rem,calc(100%-1.5rem))] sm:left-5 sm:top-5 sm:max-w-[min(26rem,calc(100%-3rem))] md:left-6 md:top-6 lg:max-w-[28rem]">
+          <div className={`${glassCard} w-fit px-3.5 py-2.5 sm:px-4 sm:py-3`}>
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-sage sm:text-xs">
+              Augsburg-Hochzoll · Friedberg · Lechhausen
+            </p>
+            <h1 className="mt-1 font-display text-[1.35rem] font-semibold leading-[1.18] text-sage-700 [text-shadow:0_1px_0_rgb(255_255_255/0.55)] sm:text-[1.75rem] md:text-[2rem] lg:text-[2.15rem]">
+              Heilpraktiker Augsburg – Naturheilpraxis Peter Rauch
+            </h1>
           </div>
         </div>
 
@@ -96,12 +97,12 @@ export function HeroSlider() {
           </button>
         </div>
 
-        <aside className="absolute bottom-16 right-3 z-20 hidden w-[22rem] md:bottom-6 md:right-6 md:block lg:w-[24rem]">
+        <aside className="absolute bottom-16 right-3 z-20 hidden w-fit max-w-[min(22rem,calc(100%-4.5rem))] md:bottom-6 md:right-6 md:block">
           <OverlayCard slide={slide} ctaClass={ctaClass} />
         </aside>
       </div>
 
-      <div className="border-t border-sage-100 bg-sage-50 px-4 py-3 md:hidden">
+      <div className="px-3 py-3 md:hidden">
         <OverlayCard slide={slide} ctaClass={ctaClass} />
       </div>
     </section>
@@ -116,11 +117,13 @@ function OverlayCard({
   ctaClass: string;
 }) {
   return (
-    <div className="rounded-2xl border border-sage-200 bg-sage-50/95 p-5 shadow-card backdrop-blur-md">
-      <p className="font-display text-xl font-semibold text-sage-700 sm:text-2xl">
+    <div className={`${glassCard} w-fit max-w-full px-4 py-3 sm:px-5 sm:py-4`}>
+      <p className="font-display text-lg font-semibold leading-snug text-sage-700 [text-shadow:0_1px_0_rgb(255_255_255/0.55)] sm:text-xl md:text-[1.35rem]">
         {slide.meta}
       </p>
-      <p className="mt-2 text-base leading-relaxed text-muted">{slide.title}</p>
+      <p className="mt-1.5 text-base leading-relaxed text-sage-700/80">
+        {slide.title}
+      </p>
       <a
         href={slide.href}
         target={slide.external ? "_blank" : undefined}

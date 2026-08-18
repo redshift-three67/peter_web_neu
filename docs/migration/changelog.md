@@ -1,5 +1,11 @@
 # Changelog — Migration
 
+## 2026-08-18 (Slider-Karten Glas)
+
+- Titel- und Overlay-Karte: 55% Sage-50, Backdrop-Blur, Sage-700.
+- Breite `w-fit`, links am Slider-Rand (kein zentrierter max-w-6xl-Versatz).
+- Schriftstufen mobil 21px+ / Desktop ~34px.
+
 ## 2026-08-18 (Menü + Slider-Schrift)
 
 - Slider-H1: Sage-700 auf Sage-50-Karte (kein Weiß mehr, Kontrast AA).
