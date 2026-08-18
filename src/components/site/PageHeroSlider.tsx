@@ -8,8 +8,12 @@ export type HeroSlide = {
   meta?: string;
 };
 
-const glassCard =
+import { useMusterSkin } from "./DesignSkin";
+
+const glassLegacy =
   "rounded-2xl border border-paper/40 bg-sage-50/55 shadow-card backdrop-blur-md";
+const glassAc =
+  "rounded-2xl border border-paper/50 bg-paper/70 shadow-card backdrop-blur-md";
 
 export function PageHeroSlider({
   slides,
@@ -20,6 +24,7 @@ export function PageHeroSlider({
   heading: string;
   kicker?: string;
 }) {
+  const { ac, diagnostic } = useMusterSkin();
   const items = slides.filter((s) => s.src);
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -62,15 +67,29 @@ export function PageHeroSlider({
             }`}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-sage-800/28 via-sage-700/10 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-sage-900/25 to-transparent" />
+        <div
+          className={
+            ac && diagnostic
+              ? "absolute inset-0 bg-gradient-to-r from-[#1D2C38]/75 via-[#1D2C38]/22 to-transparent"
+              : ac
+                ? "absolute inset-0 bg-gradient-to-r from-[#16332C]/70 via-[#16332C]/18 to-transparent"
+                : "absolute inset-0 bg-gradient-to-r from-sage-800/28 via-sage-700/10 to-transparent"
+          }
+        />
+        <div
+          className={
+            ac
+              ? "absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#1D2C38]/30 to-transparent"
+              : "absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-sage-900/25 to-transparent"
+          }
+        />
 
         <div className="absolute left-3 top-3 z-10 max-w-[min(20.5rem,calc(100%-1.5rem))] sm:left-5 sm:top-5 sm:max-w-[min(26rem,calc(100%-3rem))] md:left-6 md:top-6 lg:max-w-[28rem]">
-          <div className={`${glassCard} w-fit px-3.5 py-2.5 sm:px-4 sm:py-3`}>
+          <div className={`${ac ? glassAc : glassLegacy} w-fit px-3.5 py-2.5 sm:px-4 sm:py-3`}>
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-sage sm:text-xs">
               {kicker}
             </p>
-            <h1 className="mt-1 font-display text-[1.35rem] font-semibold leading-[1.18] text-sage-700 [text-shadow:0_1px_0_rgb(255_255_255/0.55)] sm:text-[1.75rem] md:text-[2rem]">
+            <h1 className="mt-1 font-display text-[1.35rem] font-medium leading-[1.18] text-sage-700 sm:text-[1.75rem] md:text-[2rem]">
               {heading}
             </h1>
           </div>
@@ -118,24 +137,32 @@ export function PageHeroSlider({
 
         {(slide.meta || slide.title) && (
           <aside className="absolute bottom-16 right-3 z-20 hidden w-fit max-w-[min(22rem,calc(100%-4.5rem))] md:bottom-6 md:right-6 md:block">
-            <SlideCaption meta={slide.meta} title={slide.title} />
+            <SlideCaption meta={slide.meta} title={slide.title} ac={ac} />
           </aside>
         )}
       </div>
       {(slide.meta || slide.title) && (
         <div className="px-3 py-3 md:hidden">
-          <SlideCaption meta={slide.meta} title={slide.title} />
+          <SlideCaption meta={slide.meta} title={slide.title} ac={ac} />
         </div>
       )}
     </section>
   );
 }
 
-function SlideCaption({ meta, title }: { meta?: string; title?: string }) {
+function SlideCaption({
+  meta,
+  title,
+  ac,
+}: {
+  meta?: string;
+  title?: string;
+  ac: boolean;
+}) {
   return (
-    <div className={`${glassCard} w-fit max-w-full px-4 py-3 sm:px-5 sm:py-4`}>
+    <div className={`${ac ? glassAc : glassLegacy} w-fit max-w-full px-4 py-3 sm:px-5 sm:py-4`}>
       {meta ? (
-        <p className="font-display text-lg font-semibold leading-snug text-sage-700 [text-shadow:0_1px_0_rgb(255_255_255/0.55)] sm:text-xl">
+        <p className="font-display text-lg font-medium leading-snug text-sage-700 sm:text-xl">
           {meta}
         </p>
       ) : null}

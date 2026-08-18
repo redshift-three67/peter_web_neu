@@ -140,3 +140,32 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* A+C Muster: nur unter .theme-ac (Start + NLS). Fallback = Klasse weg. */
+.theme-ac {
+  --color-bg: #f7f1e8;
+  --color-paper: #f7f1e8;
+  --color-fg: #1d2c38;
+  --color-muted: #4a5863;
+  --color-line: #d9d1c4;
+  --color-sage: #3f6b52;
+  --color-sage-deep: #1d2c38;
+  --color-sage-soft: #efe8dc;
+  --color-sage-50: #efe8dc;
+  --color-sage-100: #e8e0d2;
+  --color-sage-200: #d9d1c4;
+  --color-sage-600: #274935;
+  --color-sage-700: #1d2c38;
+  --color-sand: #efe8dc;
+  --color-sand-50: #efe8dc;
+  --color-sand-100: #efe8dc;
+  --color-card: #efe8dc;
+  --color-surface: #efe8dc;
+}
+
+.theme-ac h3,
+.theme-ac h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0;
+}
