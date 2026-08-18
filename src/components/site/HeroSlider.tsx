@@ -1,6 +1,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { homeSlides } from "@/content/slides";
+import { useSwipe } from "@/lib/swipe";
 
 const glassCard =
   "rounded-2xl border border-paper/45 bg-paper/70 shadow-card backdrop-blur-md";
@@ -25,13 +26,22 @@ export function HeroSlider() {
     ? "mt-3 inline-flex min-h-11 items-center rounded-lg bg-clay px-5 text-sm font-medium text-paper hover:bg-clay-deep"
     : "mt-3 inline-flex min-h-11 items-center rounded-lg bg-field px-5 text-sm font-medium text-paper hover:bg-ink";
 
+  const goPrev = () =>
+    setIndex((i) => (i - 1 + homeSlides.length) % homeSlides.length);
+  const goNext = () => setIndex((i) => (i + 1) % homeSlides.length);
+  const swipe = useSwipe(goPrev, goNext);
+
   return (
     <section
       className="relative overflow-hidden"
       aria-roledescription="Karussell"
       aria-label="Einblick in die Praxis"
+      onPointerDown={swipe.onPointerDown}
+      onPointerUp={swipe.onPointerUp}
+      onPointerCancel={swipe.onPointerCancel}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
+      style={swipe.style}
     >
       <div className="relative h-[40svh] min-h-[240px] sm:h-[46svh] md:h-[50svh] lg:h-[52svh]">
         {homeSlides.map((item, i) => (
@@ -69,9 +79,7 @@ export function HeroSlider() {
             type="button"
             className="grid size-11 place-items-center rounded-full border border-paper/50 bg-paper/25 text-paper backdrop-blur-sm hover:bg-paper hover:text-sage-700"
             aria-label="Vorheriges Motiv"
-            onClick={() =>
-              setIndex((i) => (i - 1 + homeSlides.length) % homeSlides.length)
-            }
+            onClick={goPrev}
           >
             <ChevronLeft className="size-5" />
           </button>
@@ -98,7 +106,7 @@ export function HeroSlider() {
             type="button"
             className="grid size-11 place-items-center rounded-full border border-paper/50 bg-paper/25 text-paper backdrop-blur-sm hover:bg-paper hover:text-sage-700"
             aria-label="Nächstes Motiv"
-            onClick={() => setIndex((i) => (i + 1) % homeSlides.length)}
+            onClick={goNext}
           >
             <ChevronRight className="size-5" />
           </button>

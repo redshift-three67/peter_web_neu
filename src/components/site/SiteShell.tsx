@@ -1,17 +1,15 @@
 import type { ReactNode } from "react";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import { HeaderOura } from "./HeaderOura";
 import { PracticeJsonLd } from "./JsonLd";
 import { DesignSkinBar, useMusterSkin } from "./DesignSkin";
 
 export function SiteShell({ children }: { children: ReactNode }) {
-  const { ac, diagnostic } = useMusterSkin();
-  const skin = [ac && "theme-ac", ac && diagnostic && "theme-ac-diag"]
-    .filter(Boolean)
-    .join(" ");
+  const { oura } = useMusterSkin();
 
   return (
-    <div className={`flex min-h-dvh flex-col bg-bg text-fg ${skin}`}>
+    <div className="flex min-h-dvh flex-col bg-bg text-fg">
       <PracticeJsonLd />
       <a
         href="#content"
@@ -20,7 +18,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
         Zum Inhalt springen
       </a>
       <DesignSkinBar />
-      <Header />
+      {oura ? <HeaderOura /> : <Header />}
       <main id="content" className="flex-1">
         {children}
       </main>
