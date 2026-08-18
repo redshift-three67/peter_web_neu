@@ -63,28 +63,90 @@ export const reviews = {
 } as const;
 
 export const nav = [
-  { to: "/", label: "Start" },
-  { to: "/ueber-mich", label: "Über mich" },
-  { to: "/so-arbeite-ich", label: "So arbeite ich" },
+  { to: "/", label: "Start", text: "Praxis in Augsburg-Hochzoll" },
+  { to: "/ueber-mich", label: "Über mich", text: "Vita, Erlaubnis, Erfahrung" },
   {
     label: "Anliegen",
     children: [
-      { to: "/schmerztherapie-augsburg", label: "Schmerz" },
-      { to: "/allergie-augsburg", label: "Allergie" },
-      { to: "/erschoepfung-augsburg", label: "Erschöpfung & Psyche" },
+      {
+        to: "/schmerztherapie-augsburg",
+        label: "Schmerz",
+        text: "Rücken, Gelenke, chronische Schmerzen",
+      },
+      {
+        to: "/allergie-augsburg",
+        label: "Allergie",
+        text: "Unverträglichkeiten, Hinweisdiagnostik",
+      },
+      {
+        to: "/erschoepfung-augsburg",
+        label: "Erschöpfung & Psyche",
+        text: "Burnout, Unruhe, Schlaf",
+      },
     ],
   },
   {
     label: "Verfahren",
     children: [
-      { to: "/verfahren/manuell", label: "Manuell & Osteopathie" },
-      { to: "/verfahren/frequenz", label: "Hinweisdiagnostik & Frequenz" },
-      { to: "/verfahren/naturheilkunde", label: "Naturheilkunde & Gespräch" },
-      { to: "/hypnotherapie-augsburg", label: "Hypnotherapie" },
+      {
+        to: "/verfahren/manuell",
+        label: "Manuell & Osteopathie",
+        text: "Hände, Bewegung, Regulation",
+      },
+      {
+        to: "/verfahren/frequenz",
+        label: "Hinweisdiagnostik & Frequenz",
+        text: "Einordnung, keine Labordiagnose",
+      },
+      {
+        to: "/verfahren/naturheilkunde",
+        label: "Naturheilkunde & Gespräch",
+        text: "Pflanze, Ernährung, Zeit",
+      },
+      {
+        to: "/hypnotherapie-augsburg",
+        label: "Hypnotherapie",
+        text: "Gesprächshypnose, ergänzend",
+      },
     ],
   },
-  { to: "/erstgespraech", label: "Erstgespräch" },
-  { to: "/kontakt", label: "Kontakt" },
+  {
+    label: "Wissen",
+    children: [
+      {
+        to: "/quellenhinweis",
+        label: "Quellenhinweis & Haftung",
+        text: "Herkunft, Einordnung und Grenzen",
+      },
+      {
+        to: "/rechtshinweise",
+        label: "Rechtshinweise",
+        text: "Keine Heilversprechen, HWG",
+      },
+      {
+        to: "/erstgespraech",
+        label: "Patientenaufklärung",
+        text: "Kosten, Erstattung und GebüH",
+      },
+      {
+        to: "/so-arbeite-ich",
+        label: "Ihr Therapieweg",
+        text: "Ablauf Schritt für Schritt",
+      },
+      {
+        to: "/anamnese",
+        label: "Anamnesebogen",
+        text: "Patientenaufnahme vor dem Termin",
+      },
+      {
+        to: "/datenschutz",
+        label: "Datenschutzerklärung",
+        text: "Informationen zum Datenschutz",
+      },
+    ],
+  },
+  { to: "/erstgespraech", label: "Erstgespräch", text: "Ablauf und Kostenrahmen" },
+  { to: "/kontakt", label: "Kontakt", text: "Anruf, Nachricht, Anfahrt" },
 ] as const;
 
 export const footerNav = {

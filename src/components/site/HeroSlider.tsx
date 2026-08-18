@@ -43,14 +43,16 @@ export function HeroSlider() {
         <div className="absolute inset-0 bg-gradient-to-r from-sage-800/40 via-sage-700/15 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-sage-900/30 to-transparent" />
 
-        <div className="absolute inset-x-0 top-0 z-10 px-4 pt-5 sm:px-6 md:pt-8">
+        <div className="absolute inset-x-0 top-0 z-10 px-4 pt-4 sm:px-6 md:pt-7">
           <div className="mx-auto max-w-6xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-paper/90">
-              Augsburg-Hochzoll · Friedberg · Lechhausen
-            </p>
-            <h1 className="mt-1.5 max-w-xl font-display text-[1.7rem] font-semibold leading-[1.15] text-paper drop-shadow-sm sm:text-3xl md:max-w-2xl md:text-4xl lg:text-[2.55rem]">
-              Heilpraktiker Augsburg – Naturheilpraxis Peter Rauch
-            </h1>
+            <div className="max-w-xl rounded-2xl bg-sage-50/92 px-4 py-3 shadow-card backdrop-blur-md sm:px-5 sm:py-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-sage">
+                Augsburg-Hochzoll · Friedberg · Lechhausen
+              </p>
+              <h1 className="mt-1 font-display text-[1.55rem] font-semibold leading-[1.15] text-sage-700 sm:text-3xl md:text-4xl">
+                Heilpraktiker Augsburg – Naturheilpraxis Peter Rauch
+              </h1>
+            </div>
           </div>
         </div>
 
