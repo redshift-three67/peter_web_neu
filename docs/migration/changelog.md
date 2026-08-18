@@ -1,5 +1,10 @@
 # Changelog — Migration
 
+## 2026-08-18 (Menü + Slider-Schrift)
+
+- Slider-H1: Sage-700 auf Sage-50-Karte (kein Weiß mehr, Kontrast AA).
+- Menü im Infothek-Look: Icon-Zeilen, Kurztext, `rounded-2xl`. Neu: Wissen (nur öffentliche Seiten, kein Login/Gesperrt).
+
 ## 2026-08-18 (Slider-Karten)
 
 - Overlay-Karten: `rounded-2xl`, Sage-50, Sage-700-Titel, Sage-Button (Grün wie Quote-Kreis).

@@ -1,10 +1,39 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Leaf, Menu, Phone, X } from "lucide-react";
+import {
+  BookOpen,
+  ClipboardList,
+  FileText,
+  Heart,
+  Leaf,
+  Menu,
+  Phone,
+  Scale,
+  Shield,
+  Sparkles,
+  Stethoscope,
+  X,
+} from "lucide-react";
 import { useState } from "react";
 import { nav, practice } from "@/content/site";
 import { cn } from "@/lib/utils";
 import { useCurrentUserState } from "@/lib/auth/use-current-user";
 import { UserButton } from "@/lib/auth/gates";
+
+const itemIcons: Record<string, typeof Leaf> = {
+  Schmerz: Heart,
+  Allergie: Shield,
+  "Erschöpfung & Psyche": Sparkles,
+  "Manuell & Osteopathie": Stethoscope,
+  "Hinweisdiagnostik & Frequenz": Sparkles,
+  "Naturheilkunde & Gespräch": Leaf,
+  Hypnotherapie: BookOpen,
+  "Quellenhinweis & Haftung": Scale,
+  Rechtshinweise: FileText,
+  Patientenaufklärung: ClipboardList,
+  "Ihr Therapieweg": Stethoscope,
+  Anamnesebogen: ClipboardList,
+  Datenschutzerklärung: Shield,
+};
 
 function BrandMark({ onClick }: { onClick?: () => void }) {
   return (
@@ -22,6 +51,44 @@ function BrandMark({ onClick }: { onClick?: () => void }) {
   );
 }
 
+function MenuRow({
+  to,
+  label,
+  text,
+  active,
+  onClick,
+}: {
+  to: string;
+  label: string;
+  text?: string;
+  active?: boolean;
+  onClick?: () => void;
+}) {
+  const Icon = itemIcons[label] ?? Leaf;
+  return (
+    <Link
+      to={to}
+      onClick={onClick}
+      className={cn(
+        "flex items-start gap-3 rounded-2xl px-3 py-2.5 transition-colors hover:bg-sage-50",
+        active && "bg-sage-50",
+      )}
+    >
+      <span className="grid size-10 shrink-0 place-items-center rounded-2xl bg-sage-50 text-sage">
+        <Icon className="size-4" aria-hidden />
+      </span>
+      <span className="min-w-0">
+        <span className="block text-sm font-medium text-fg">{label}</span>
+        {text ? (
+          <span className="mt-0.5 block text-sm leading-snug text-muted">
+            {text}
+          </span>
+        ) : null}
+      </span>
+    </Link>
+  );
+}
+
 export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
@@ -33,7 +100,7 @@ export function Header() {
         <BrandMark onClick={() => setOpen(false)} />
 
         <nav
-          className="hidden items-center gap-1 lg:flex"
+          className="hidden items-center gap-0.5 xl:flex"
           aria-label="Hauptnavigation"
         >
           {nav.map((item) =>
@@ -41,24 +108,22 @@ export function Header() {
               <div key={item.label} className="group relative">
                 <button
                   type="button"
-                  className="rounded-md px-3 py-2 text-sm text-fg/80 transition-colors hover:bg-sage-100 hover:text-sage-700"
+                  className="rounded-full px-3 py-2 text-sm text-fg/80 transition-colors hover:bg-sage-100 hover:text-sage-700"
                 >
                   {item.label}
                 </button>
-                <div className="invisible absolute left-0 top-full z-50 min-w-56 translate-y-1 rounded-xl border border-line bg-paper p-2 opacity-0 shadow-elevated transition group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                <div className="invisible absolute left-0 top-full z-50 w-[22rem] translate-y-1 rounded-2xl border border-line bg-paper p-2 opacity-0 shadow-elevated transition group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                  <p className="px-3 pb-1 pt-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted">
+                    {item.label}
+                  </p>
                   {item.children.map((child) => (
-                    <Link
+                    <MenuRow
                       key={child.to}
                       to={child.to}
-                      className={cn(
-                        "block rounded-md px-3 py-2 text-sm hover:bg-sage-100",
-                        pathname === child.to
-                          ? "bg-sage-100 text-sage-700"
-                          : "text-fg",
-                      )}
-                    >
-                      {child.label}
-                    </Link>
+                      label={child.label}
+                      text={child.text}
+                      active={pathname === child.to}
+                    />
                   ))}
                 </div>
               </div>
@@ -67,7 +132,7 @@ export function Header() {
                 key={item.to}
                 to={item.to}
                 className={cn(
-                  "rounded-md px-3 py-2 text-sm transition-colors hover:bg-sage-100 hover:text-sage-700",
+                  "rounded-full px-3 py-2 text-sm transition-colors hover:bg-sage-100 hover:text-sage-700",
                   pathname === item.to
                     ? "bg-sage-100 text-sage-700"
                     : "text-fg/80",
@@ -96,7 +161,7 @@ export function Header() {
           ) : null}
           <button
             type="button"
-            className="inline-flex size-11 items-center justify-center rounded-lg border border-line bg-paper text-fg lg:hidden"
+            className="inline-flex size-11 items-center justify-center rounded-full border border-line bg-paper text-fg xl:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             onClick={() => setOpen((v) => !v)}
@@ -139,35 +204,40 @@ export function Header() {
       {open ? (
         <div
           id="mobile-nav"
-          className="border-t border-line bg-paper px-4 py-4 lg:hidden"
+          className="max-h-[80vh] overflow-y-auto border-t border-line bg-paper px-3 py-3 xl:hidden"
         >
-          <nav className="flex flex-col gap-1" aria-label="Mobilnavigation">
-            {nav.flatMap((item) =>
-              "children" in item
-                ? item.children.map((child) => (
-                    <Link
+          <nav className="flex flex-col gap-3" aria-label="Mobilnavigation">
+            {nav.map((item) =>
+              "children" in item ? (
+                <div key={item.label} className="rounded-2xl border border-line p-2">
+                  <p className="px-3 pb-1 pt-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted">
+                    {item.label}
+                  </p>
+                  {item.children.map((child) => (
+                    <MenuRow
                       key={child.to}
                       to={child.to}
-                      className="rounded-md px-3 py-3 text-base hover:bg-sage-100"
+                      label={child.label}
+                      text={child.text}
+                      active={pathname === child.to}
                       onClick={() => setOpen(false)}
-                    >
-                      {child.label}
-                    </Link>
-                  ))
-                : [
-                    <Link
-                      key={item.to}
-                      to={item.to}
-                      className="rounded-md px-3 py-3 text-base hover:bg-sage-100"
-                      onClick={() => setOpen(false)}
-                    >
-                      {item.label}
-                    </Link>,
-                  ],
+                    />
+                  ))}
+                </div>
+              ) : (
+                <MenuRow
+                  key={item.to}
+                  to={item.to}
+                  label={item.label}
+                  text={item.text}
+                  active={pathname === item.to}
+                  onClick={() => setOpen(false)}
+                />
+              ),
             )}
             <a
               href={`tel:${practice.phoneTel}`}
-              className="mt-2 inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-sage font-medium text-paper"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-sage font-medium text-paper"
             >
               <Phone className="size-4" /> {practice.phoneDisplay}
             </a>
