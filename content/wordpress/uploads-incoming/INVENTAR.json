@@ -1,0 +1,1220 @@
+{
+  "incoming_files": 661,
+  "incoming_bytes": 131674430,
+  "selected_practice_originals": 120,
+  "webp_generated": 117,
+  "thumbs_skipped": 122,
+  "theme_dummy": 422,
+  "junk": 10,
+  "umlaut_files": [
+    "Vital_und_NДhrstoffanalyse-227x300.jpg",
+    "Zhineng_Qi_Gong_Ъbung_Augsburg_2_1.jpg",
+    "Vital_und_NДhrstoffanalyse.jpg",
+    "Naet-Allergiebehandlung-Pollen-GrДser.jpg",
+    "AdobeStock_Probemonat-free-HerzvariabilitДt-Vieva.jpeg",
+    "WirbelsДule-Halswirbel-Schmerztherapie-Behandlung.jpg",
+    "Zhineng_Qi_Gong_Ъbung_Augsburg_1.jpg",
+    "Zhineng_Qi_Gong_Ъbung_Augsburg_2.jpg",
+    "Naet-Allergiebehandlung-Pollen-GrДser-1.jpg",
+    "HomФopathie_Augsburg_1.jpg",
+    "AdobeStock_Probemonat-free-HerzvariabilitДt-Vieva-1.jpeg",
+    "Klassische-HomФopathie-nach-Hahnemann-Augsburg.jpg",
+    "Zhineng_Qi_Gong_Ъbung_Augsburg_2-e1570046077729.jpg",
+    "HФrorgang-rechts.bmp",
+    "Zhineng_Qi_Gong_Ъbung_Augsburg_1_1.jpg"
+  ],
+  "errors": [],
+  "items": [
+    {
+      "source": "3D_Herz_NLS_Diagnose.png",
+      "file": "3D_Herz_NLS_Diagnose.png",
+      "bytes": 111597,
+      "umlaut_source": false,
+      "webp": "3D_Herz_NLS_Diagnose.webp",
+      "width": 700,
+      "height": 700,
+      "webp_bytes": 38062
+    },
+    {
+      "source": "3D_Herz_NLS_Diagnose-1.png",
+      "file": "3D_Herz_NLS_Diagnose-1.png",
+      "bytes": 117057,
+      "umlaut_source": false,
+      "webp": "3D_Herz_NLS_Diagnose-1.webp",
+      "width": 700,
+      "height": 700,
+      "webp_bytes": 38698
+    },
+    {
+      "source": "AdobeStock_Probemonat-free-HerzvariabilitДt-Vieva.jpeg",
+      "file": "AdobeStock_Probemonat-free-Herzvariabilitaet-Vieva.jpeg",
+      "bytes": 1734987,
+      "umlaut_source": true,
+      "webp": "AdobeStock_Probemonat-free-Herzvariabilitaet-Vieva.webp",
+      "width": 8495,
+      "height": 5663,
+      "webp_bytes": 189854
+    },
+    {
+      "source": "AdobeStock_Probemonat-free-HerzvariabilitДt-Vieva-1.jpeg",
+      "file": "AdobeStock_Probemonat-free-Herzvariabilitaet-Vieva-1.jpeg",
+      "bytes": 1734987,
+      "umlaut_source": true,
+      "webp": "AdobeStock_Probemonat-free-Herzvariabilitaet-Vieva-1.webp",
+      "width": 8495,
+      "height": 5663,
+      "webp_bytes": 189854
+    },
+    {
+      "source": "AdobeStock_Probemonat-Free-Irisdiagnostik-1.jpeg",
+      "file": "AdobeStock_Probemonat-Free-Irisdiagnostik-1.jpeg",
+      "bytes": 202616,
+      "umlaut_source": false,
+      "webp": "AdobeStock_Probemonat-Free-Irisdiagnostik-1.webp",
+      "width": 4992,
+      "height": 3328,
+      "webp_bytes": 58754
+    },
+    {
+      "source": "AdobeStock_Probemonat-Frei-Darmgesundheit.jpeg",
+      "file": "AdobeStock_Probemonat-Frei-Darmgesundheit.jpeg",
+      "bytes": 360716,
+      "umlaut_source": false,
+      "webp": "AdobeStock_Probemonat-Frei-Darmgesundheit.webp",
+      "width": 4322,
+      "height": 2882,
+      "webp_bytes": 203896
+    },
+    {
+      "source": "AdobeStock_Probemonat-frei-Ohrakupunktur-Meta.jpeg",
+      "file": "AdobeStock_Probemonat-frei-Ohrakupunktur-Meta.jpeg",
+      "bytes": 233196,
+      "umlaut_source": false,
+      "webp": "AdobeStock_Probemonat-frei-Ohrakupunktur-Meta.webp",
+      "width": 5760,
+      "height": 3840,
+      "webp_bytes": 86262
+    },
+    {
+      "source": "Akupunktur-ohne-Nadeln-mit-Heal-System-HP-Baklayan-1.jpg",
+      "file": "Akupunktur-ohne-Nadeln-mit-Heal-System-HP-Baklayan-1.jpg",
+      "bytes": 107022,
+      "umlaut_source": false,
+      "webp": "Akupunktur-ohne-Nadeln-mit-Heal-System-HP-Baklayan-1.webp",
+      "width": 1806,
+      "height": 1052,
+      "webp_bytes": 33120
+    },
+    {
+      "source": "Akupunktur-ohne-Nadeln-nach-Baklayan.jpg",
+      "file": "Akupunktur-ohne-Nadeln-nach-Baklayan.jpg",
+      "bytes": 301326,
+      "umlaut_source": false,
+      "webp": "Akupunktur-ohne-Nadeln-nach-Baklayan.webp",
+      "width": 1980,
+      "height": 967,
+      "webp_bytes": 92338
+    },
+    {
+      "source": "Baklayan-Trikombin-Bioresonanz-1.png",
+      "file": "Baklayan-Trikombin-Bioresonanz-1.png",
+      "bytes": 660537,
+      "umlaut_source": false,
+      "webp": "Baklayan-Trikombin-Bioresonanz-1.webp",
+      "width": 1200,
+      "height": 421,
+      "webp_bytes": 38374
+    },
+    {
+      "source": "Basic_kit-klein.png",
+      "file": "Basic_kit-klein.png",
+      "bytes": 251718,
+      "umlaut_source": false,
+      "webp": "Basic_kit-klein.webp",
+      "width": 1000,
+      "height": 781,
+      "webp_bytes": 46866
+    },
+    {
+      "source": "Basic_kit-klein-1.png",
+      "file": "Basic_kit-klein-1.png",
+      "bytes": 251718,
+      "umlaut_source": false,
+      "webp": "Basic_kit-klein-1.webp",
+      "width": 1000,
+      "height": 781,
+      "webp_bytes": 46866
+    },
+    {
+      "source": "BDHN-Logo.jpg",
+      "file": "BDHN-Logo.jpg",
+      "bytes": 45989,
+      "umlaut_source": false,
+      "webp": "BDHN-Logo.webp",
+      "width": 963,
+      "height": 945,
+      "webp_bytes": 43380
+    },
+    {
+      "source": "BDHN-Logo-2.jpg",
+      "file": "BDHN-Logo-2.jpg",
+      "bytes": 11796,
+      "umlaut_source": false,
+      "webp": "BDHN-Logo-2.webp",
+      "width": 250,
+      "height": 246,
+      "webp_bytes": 10620
+    },
+    {
+      "source": "BioDiagnostik_Logo_RZ_4c.jpg",
+      "file": "BioDiagnostik_Logo_RZ_4c.jpg",
+      "bytes": 14095,
+      "umlaut_source": false,
+      "webp": "BioDiagnostik_Logo_RZ_4c.webp",
+      "width": 497,
+      "height": 225,
+      "webp_bytes": 10244
+    },
+    {
+      "source": "BioDiagnostik_Logo_RZ_4c_Mail.png",
+      "file": "BioDiagnostik_Logo_RZ_4c_Mail.png",
+      "bytes": 2119,
+      "umlaut_source": false,
+      "webp": "BioDiagnostik_Logo_RZ_4c_Mail.webp",
+      "width": 200,
+      "height": 91,
+      "webp_bytes": 2536
+    },
+    {
+      "source": "Darm-Hunter.jpg",
+      "file": "Darm-Hunter.jpg",
+      "bytes": 35554,
+      "umlaut_source": false,
+      "webp": "Darm-Hunter.webp",
+      "width": 755,
+      "height": 861,
+      "webp_bytes": 46056
+    },
+    {
+      "source": "Darm-Hunter-1.jpg",
+      "file": "Darm-Hunter-1.jpg",
+      "bytes": 35963,
+      "umlaut_source": false,
+      "webp": "Darm-Hunter-1.webp",
+      "width": 755,
+      "height": 861,
+      "webp_bytes": 46734
+    },
+    {
+      "source": "Elektroakupunktur-nach-Dr-Voll.jpg",
+      "file": "Elektroakupunktur-nach-Dr-Voll.jpg",
+      "bytes": 26330,
+      "umlaut_source": false,
+      "webp": "Elektroakupunktur-nach-Dr-Voll.webp",
+      "width": 1075,
+      "height": 716,
+      "webp_bytes": 27676
+    },
+    {
+      "source": "Elektroakupunktur-nach-Dr-Voll-1.png",
+      "file": "Elektroakupunktur-nach-Dr-Voll-1.png",
+      "bytes": 566591,
+      "umlaut_source": false,
+      "webp": "Elektroakupunktur-nach-Dr-Voll-1.webp",
+      "width": 1075,
+      "height": 716,
+      "webp_bytes": 42408
+    },
+    {
+      "source": "Elektroakupunktur-nach-Dr-Voll-2.png",
+      "file": "Elektroakupunktur-nach-Dr-Voll-2.png",
+      "bytes": 557390,
+      "umlaut_source": false,
+      "webp": "Elektroakupunktur-nach-Dr-Voll-2.webp",
+      "width": 1075,
+      "height": 716,
+      "webp_bytes": 50452
+    },
+    {
+      "source": "Elektroakupunktur_nach_Voll_MBA_Easy_Qicckcheck-S.jpg",
+      "file": "Elektroakupunktur_nach_Voll_MBA_Easy_Qicckcheck-S.jpg",
+      "bytes": 927814,
+      "umlaut_source": false,
+      "webp": "Elektroakupunktur_nach_Voll_MBA_Easy_Qicckcheck-S.webp",
+      "width": 1920,
+      "height": 1277,
+      "webp_bytes": 822466
+    },
+    {
+      "source": "Elektroakupunktur_nach_Voll_MBA_Easy_Qicckcheck-S-1.jpg",
+      "file": "Elektroakupunktur_nach_Voll_MBA_Easy_Qicckcheck-S-1.jpg",
+      "bytes": 295829,
+      "umlaut_source": false,
+      "webp": "Elektroakupunktur_nach_Voll_MBA_Easy_Qicckcheck-S-1.webp",
+      "width": 1920,
+      "height": 1277,
+      "webp_bytes": 576176
+    },
+    {
+      "source": "Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S.jpg",
+      "file": "Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S.jpg",
+      "bytes": 927814,
+      "umlaut_source": false,
+      "webp": "Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S.webp",
+      "width": 1920,
+      "height": 1277,
+      "webp_bytes": 822466
+    },
+    {
+      "source": "Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S-1.jpg",
+      "file": "Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S-1.jpg",
+      "bytes": 497829,
+      "umlaut_source": false,
+      "webp": "Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S-1.webp",
+      "width": 1920,
+      "height": 1277,
+      "webp_bytes": 698892
+    },
+    {
+      "source": "Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S-1-e1569870038625.jpg",
+      "file": "Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S-1-e1569870038625.jpg",
+      "bytes": 142096,
+      "umlaut_source": false,
+      "webp": "Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S-1-e1569870038625.webp",
+      "width": 1353,
+      "height": 900,
+      "webp_bytes": 271738
+    },
+    {
+      "source": "Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S-2.jpg",
+      "file": "Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S-2.jpg",
+      "bytes": 198230,
+      "umlaut_source": false,
+      "webp": "Elektroakupunktur_nach_Voll_MBA_Easy_Quickcheck-S-2.webp",
+      "width": 1600,
+      "height": 1064,
+      "webp_bytes": 376640
+    },
+    {
+      "source": "Ganzheitliche-naturheilkundliche-Therapieverfahren.jpg",
+      "file": "Ganzheitliche-naturheilkundliche-Therapieverfahren.jpg",
+      "bytes": 75966,
+      "umlaut_source": false,
+      "webp": "Ganzheitliche-naturheilkundliche-Therapieverfahren.webp",
+      "width": 530,
+      "height": 700,
+      "webp_bytes": 70068
+    },
+    {
+      "source": "Ganzheitliche-naturheilkundliche-Therapieverfahren-1.jpg",
+      "file": "Ganzheitliche-naturheilkundliche-Therapieverfahren-1.jpg",
+      "bytes": 76994,
+      "umlaut_source": false,
+      "webp": "Ganzheitliche-naturheilkundliche-Therapieverfahren-1.webp",
+      "width": 530,
+      "height": 700,
+      "webp_bytes": 70142
+    },
+    {
+      "source": "haende_manuelle_therapie_schmerztherapie_1.jpg",
+      "file": "haende_manuelle_therapie_schmerztherapie_1.jpg",
+      "bytes": 18769,
+      "umlaut_source": false,
+      "webp": "haende_manuelle_therapie_schmerztherapie_1.webp",
+      "width": 594,
+      "height": 250,
+      "webp_bytes": 12518
+    },
+    {
+      "source": "Heilpraktiker-Naturheilpraxis-Peter-Rauch.png",
+      "file": "Heilpraktiker-Naturheilpraxis-Peter-Rauch.png",
+      "bytes": 24281,
+      "umlaut_source": false,
+      "webp": "Heilpraktiker-Naturheilpraxis-Peter-Rauch.webp",
+      "width": 340,
+      "height": 452,
+      "webp_bytes": 13016
+    },
+    {
+      "source": "Heilpraktiker_Akupunktur_ohne_Nadeln_Augsburg.jpg",
+      "file": "Heilpraktiker_Akupunktur_ohne_Nadeln_Augsburg.jpg",
+      "bytes": 211906,
+      "umlaut_source": false,
+      "webp": "Heilpraktiker_Akupunktur_ohne_Nadeln_Augsburg.webp",
+      "width": 1980,
+      "height": 1155,
+      "webp_bytes": 85658
+    },
+    {
+      "source": "Heilpraktiker_Bioresonanz_NLS-Diagnose_EAV-Voll_Augsburg.jpg",
+      "file": "Heilpraktiker_Bioresonanz_NLS-Diagnose_EAV-Voll_Augsburg.jpg",
+      "bytes": 1025905,
+      "umlaut_source": false,
+      "webp": "Heilpraktiker_Bioresonanz_NLS-Diagnose_EAV-Voll_Augsburg.webp",
+      "width": 1920,
+      "height": 1277,
+      "webp_bytes": 943672
+    },
+    {
+      "source": "Heilpraktiker_Bioresonanz_NLS-Diagnose_EAV-Voll_Augsburg_Baklayan-2.jpg",
+      "file": "Heilpraktiker_Bioresonanz_NLS-Diagnose_EAV-Voll_Augsburg_Baklayan-2.jpg",
+      "bytes": 936878,
+      "umlaut_source": false,
+      "webp": "Heilpraktiker_Bioresonanz_NLS-Diagnose_EAV-Voll_Augsburg_Baklayan-2.webp",
+      "width": 1920,
+      "height": 1277,
+      "webp_bytes": 814132
+    },
+    {
+      "source": "Heilpraktiker_Bioresonanztherapie_Trikombin_nach_Baklayan.jpg",
+      "file": "Heilpraktiker_Bioresonanztherapie_Trikombin_nach_Baklayan.jpg",
+      "bytes": 936124,
+      "umlaut_source": false,
+      "webp": "Heilpraktiker_Bioresonanztherapie_Trikombin_nach_Baklayan.webp",
+      "width": 1920,
+      "height": 1277,
+      "webp_bytes": 815676
+    },
+    {
+      "source": "Heilpraktiker_Bioresonanztherapie_Trikombin_nach_Baklayan-e1569869960230.jpg",
+      "file": "Heilpraktiker_Bioresonanztherapie_Trikombin_nach_Baklayan-e1569869960230.jpg",
+      "bytes": 414226,
+      "umlaut_source": false,
+      "webp": "Heilpraktiker_Bioresonanztherapie_Trikombin_nach_Baklayan-e1569869960230.webp",
+      "width": 1353,
+      "height": 900,
+      "webp_bytes": 378536
+    },
+    {
+      "source": "Heilpraktiker_Peter_Rauch_Augsburg_Bioresonanz_Trikombin.jpg",
+      "file": "Heilpraktiker_Peter_Rauch_Augsburg_Bioresonanz_Trikombin.jpg",
+      "bytes": 333169,
+      "umlaut_source": false,
+      "webp": "Heilpraktiker_Peter_Rauch_Augsburg_Bioresonanz_Trikombin.webp",
+      "width": 1687,
+      "height": 1126,
+      "webp_bytes": 110200
+    },
+    {
+      "source": "HomФopathie_Augsburg_1.jpg",
+      "file": "Homoeopathie_Augsburg_1.jpg",
+      "bytes": 192852,
+      "umlaut_source": true,
+      "webp": "Homoeopathie_Augsburg_1.webp",
+      "width": 1688,
+      "height": 1125,
+      "webp_bytes": 161866
+    },
+    {
+      "source": "Hypnose-Heilpraktiker-Augsburg-1.jpg",
+      "file": "Hypnose-Heilpraktiker-Augsburg-1.jpg",
+      "bytes": 165515,
+      "umlaut_source": false,
+      "webp": "Hypnose-Heilpraktiker-Augsburg-1.webp",
+      "width": 1000,
+      "height": 661,
+      "webp_bytes": 103468
+    },
+    {
+      "source": "Hypnose-Heilpraktiker-Augsburg-1-1.jpg",
+      "file": "Hypnose-Heilpraktiker-Augsburg-1-1.jpg",
+      "bytes": 65449,
+      "umlaut_source": false,
+      "webp": "Hypnose-Heilpraktiker-Augsburg-1-1.webp",
+      "width": 1000,
+      "height": 661,
+      "webp_bytes": 80856
+    },
+    {
+      "source": "Hypnose_Behandlung_Augsburg_Heilpraltiker_Rauch_1.jpg",
+      "file": "Hypnose_Behandlung_Augsburg_Heilpraltiker_Rauch_1.jpg",
+      "bytes": 276237,
+      "umlaut_source": false,
+      "webp": "Hypnose_Behandlung_Augsburg_Heilpraltiker_Rauch_1.webp",
+      "width": 1980,
+      "height": 1320,
+      "webp_bytes": 83302
+    },
+    {
+      "source": "Hypnose_Behandlung_Augsburg_Heilpraltiker_Rauch_2.jpg",
+      "file": "Hypnose_Behandlung_Augsburg_Heilpraltiker_Rauch_2.jpg",
+      "bytes": 368410,
+      "umlaut_source": false,
+      "webp": "Hypnose_Behandlung_Augsburg_Heilpraltiker_Rauch_2.webp",
+      "width": 1980,
+      "height": 1320,
+      "webp_bytes": 196188
+    },
+    {
+      "source": "Kinesiologie-Augsburg.jpg",
+      "file": "Kinesiologie-Augsburg.jpg",
+      "bytes": 49302,
+      "umlaut_source": false,
+      "webp": "Kinesiologie-Augsburg.webp",
+      "width": 1980,
+      "height": 1320,
+      "webp_bytes": 68838
+    },
+    {
+      "source": "Kinesiologie-Rauch-Heilpraktiker.jpg",
+      "file": "Kinesiologie-Rauch-Heilpraktiker.jpg",
+      "bytes": 1141575,
+      "umlaut_source": false,
+      "webp": "Kinesiologie-Rauch-Heilpraktiker.webp",
+      "width": 1688,
+      "height": 1125,
+      "webp_bytes": 366240
+    },
+    {
+      "source": "Kinesiologie-Rauch-Heilpraktiker-1.jpg",
+      "file": "Kinesiologie-Rauch-Heilpraktiker-1.jpg",
+      "bytes": 174439,
+      "umlaut_source": false,
+      "webp": "Kinesiologie-Rauch-Heilpraktiker-1.webp",
+      "width": 1006,
+      "height": 670,
+      "webp_bytes": 124056
+    },
+    {
+      "source": "Klassische-HomФopathie-nach-Hahnemann-Augsburg.jpg",
+      "file": "Klassische-Homoeopathie-nach-Hahnemann-Augsburg.jpg",
+      "bytes": 256731,
+      "umlaut_source": true,
+      "webp": "Klassische-Homoeopathie-nach-Hahnemann-Augsburg.webp",
+      "width": 1980,
+      "height": 1142,
+      "webp_bytes": 185600
+    },
+    {
+      "source": "Koerperliche_und_Emotionale_Gesundheit_Naturheilpraxis_Augsburg.jpg",
+      "file": "Koerperliche_und_Emotionale_Gesundheit_Naturheilpraxis_Augsburg.jpg",
+      "bytes": 65561,
+      "umlaut_source": false,
+      "webp": "Koerperliche_und_Emotionale_Gesundheit_Naturheilpraxis_Augsburg.webp",
+      "width": 1980,
+      "height": 1169,
+      "webp_bytes": 81264
+    },
+    {
+      "source": "Mann_Manuell_2_420.jpg",
+      "file": "Mann_Manuell_2_420.jpg",
+      "bytes": 11433,
+      "umlaut_source": false,
+      "webp": "Mann_Manuell_2_420.webp",
+      "width": 497,
+      "height": 420,
+      "webp_bytes": 7312
+    },
+    {
+      "source": "Manuelle-Schmerztherapie-Augsburg.jpg",
+      "file": "Manuelle-Schmerztherapie-Augsburg.jpg",
+      "bytes": 380749,
+      "umlaut_source": false,
+      "webp": "Manuelle-Schmerztherapie-Augsburg.webp",
+      "width": 1980,
+      "height": 1320,
+      "webp_bytes": 104656
+    },
+    {
+      "source": "Manuelle-Schmerztherapie-Physio.jpg",
+      "file": "Manuelle-Schmerztherapie-Physio.jpg",
+      "bytes": 166329,
+      "umlaut_source": false,
+      "webp": "Manuelle-Schmerztherapie-Physio.webp",
+      "width": 1980,
+      "height": 1026,
+      "webp_bytes": 31358
+    },
+    {
+      "source": "Manuelle-Schmerztherapie-Physio-1.jpg",
+      "file": "Manuelle-Schmerztherapie-Physio-1.jpg",
+      "bytes": 31026,
+      "umlaut_source": false,
+      "webp": "Manuelle-Schmerztherapie-Physio-1.webp",
+      "width": 1980,
+      "height": 1026,
+      "webp_bytes": 30590
+    },
+    {
+      "source": "Naet-Allergiebehandlung-Augsburg.jpg",
+      "file": "Naet-Allergiebehandlung-Augsburg.jpg",
+      "bytes": 508298,
+      "umlaut_source": false,
+      "webp": "Naet-Allergiebehandlung-Augsburg.webp",
+      "width": 1980,
+      "height": 939,
+      "webp_bytes": 157680
+    },
+    {
+      "source": "Naet-Allergiebehandlung-Pollen-GrДser.jpg",
+      "file": "Naet-Allergiebehandlung-Pollen-Graeser.jpg",
+      "bytes": 282715,
+      "umlaut_source": true,
+      "webp": "Naet-Allergiebehandlung-Pollen-Graeser.webp",
+      "width": 1980,
+      "height": 1325,
+      "webp_bytes": 190502
+    },
+    {
+      "source": "Naet-Allergiebehandlung-Pollen-GrДser-1.jpg",
+      "file": "Naet-Allergiebehandlung-Pollen-Graeser-1.jpg",
+      "bytes": 217750,
+      "umlaut_source": true,
+      "webp": "Naet-Allergiebehandlung-Pollen-Graeser-1.webp",
+      "width": 1980,
+      "height": 1325,
+      "webp_bytes": 197978
+    },
+    {
+      "source": "naet_logo_europe.jpg",
+      "file": "naet_logo_europe.jpg",
+      "bytes": 13761,
+      "umlaut_source": false,
+      "webp": "naet_logo_europe.webp",
+      "width": 394,
+      "height": 315,
+      "webp_bytes": 6104
+    },
+    {
+      "source": "Naturheilpraxis-Augsburg-Therapieverfahren.svg",
+      "file": "Naturheilpraxis-Augsburg-Therapieverfahren.svg",
+      "bytes": 2781,
+      "umlaut_source": false,
+      "webp": null
+    },
+    {
+      "source": "Naturheilpraxis-Rauch-Augsburg.jpg",
+      "file": "Naturheilpraxis-Rauch-Augsburg.jpg",
+      "bytes": 43302,
+      "umlaut_source": false,
+      "webp": "Naturheilpraxis-Rauch-Augsburg.webp",
+      "width": 1048,
+      "height": 733,
+      "webp_bytes": 20488
+    },
+    {
+      "source": "Naturheilpraxis_Augsburg_Zen_1.jpg",
+      "file": "Naturheilpraxis_Augsburg_Zen_1.jpg",
+      "bytes": 374665,
+      "umlaut_source": false,
+      "webp": "Naturheilpraxis_Augsburg_Zen_1.webp",
+      "width": 1690,
+      "height": 1124,
+      "webp_bytes": 198302
+    },
+    {
+      "source": "Naturheilpraxis_Heilpraktiker_Rauch_Augsburg_1.jpg",
+      "file": "Naturheilpraxis_Heilpraktiker_Rauch_Augsburg_1.jpg",
+      "bytes": 610250,
+      "umlaut_source": false,
+      "webp": "Naturheilpraxis_Heilpraktiker_Rauch_Augsburg_1.webp",
+      "width": 3960,
+      "height": 945,
+      "webp_bytes": 98328
+    },
+    {
+      "source": "Naturheilpraxis_Heilpraktiker_Rauch_Augsburg_2_2.jpg",
+      "file": "Naturheilpraxis_Heilpraktiker_Rauch_Augsburg_2_2.jpg",
+      "bytes": 347879,
+      "umlaut_source": false,
+      "webp": "Naturheilpraxis_Heilpraktiker_Rauch_Augsburg_2_2.webp",
+      "width": 1980,
+      "height": 1320,
+      "webp_bytes": 158870
+    },
+    {
+      "source": "Naturheilpraxis_Heilpraktiker_Rauch_Augsburg_2_3.jpg",
+      "file": "Naturheilpraxis_Heilpraktiker_Rauch_Augsburg_2_3.jpg",
+      "bytes": 325944,
+      "umlaut_source": false,
+      "webp": "Naturheilpraxis_Heilpraktiker_Rauch_Augsburg_2_3.webp",
+      "width": 1980,
+      "height": 1320,
+      "webp_bytes": 138980
+    },
+    {
+      "source": "Naturheilpraxis_Heilpraktiker_Sanft_Heilen_Stark_im_Leben_1.jpg",
+      "file": "Naturheilpraxis_Heilpraktiker_Sanft_Heilen_Stark_im_Leben_1.jpg",
+      "bytes": 315051,
+      "umlaut_source": false,
+      "webp": "Naturheilpraxis_Heilpraktiker_Sanft_Heilen_Stark_im_Leben_1.webp",
+      "width": 1980,
+      "height": 1320,
+      "webp_bytes": 137324
+    },
+    {
+      "source": "Naturheilpraxis_Heilpraktiker_Sanft_Heilen_Stark_im_Leben_1-e1570044586920.jpg",
+      "file": "Naturheilpraxis_Heilpraktiker_Sanft_Heilen_Stark_im_Leben_1-e1570044586920.jpg",
+      "bytes": 121520,
+      "umlaut_source": false,
+      "webp": "Naturheilpraxis_Heilpraktiker_Sanft_Heilen_Stark_im_Leben_1-e1570044586920.webp",
+      "width": 1350,
+      "height": 900,
+      "webp_bytes": 62954
+    },
+    {
+      "source": "NLS-Metatron-Diagnostik-Gehirn.png",
+      "file": "NLS-Metatron-Diagnostik-Gehirn.png",
+      "bytes": 790227,
+      "umlaut_source": false,
+      "webp": "NLS-Metatron-Diagnostik-Gehirn.webp",
+      "width": 700,
+      "height": 677,
+      "webp_bytes": 43922
+    },
+    {
+      "source": "NLS_Diagnose_Metatron_Hospital_Vitages.jpg",
+      "file": "NLS_Diagnose_Metatron_Hospital_Vitages.jpg",
+      "bytes": 984312,
+      "umlaut_source": false,
+      "webp": "NLS_Diagnose_Metatron_Hospital_Vitages.webp",
+      "width": 1920,
+      "height": 1277,
+      "webp_bytes": 875826
+    },
+    {
+      "source": "NLS_Diagnose_Metatron_Hospital_Vitages-2.jpg",
+      "file": "NLS_Diagnose_Metatron_Hospital_Vitages-2.jpg",
+      "bytes": 985787,
+      "umlaut_source": false,
+      "webp": "NLS_Diagnose_Metatron_Hospital_Vitages-2.webp",
+      "width": 1920,
+      "height": 1277,
+      "webp_bytes": 879720
+    },
+    {
+      "source": "NLS_Diagnose_Metatron_Hospital_Vitages-3.jpg",
+      "file": "NLS_Diagnose_Metatron_Hospital_Vitages-3.jpg",
+      "bytes": 1040941,
+      "umlaut_source": false,
+      "webp": "NLS_Diagnose_Metatron_Hospital_Vitages-3.webp",
+      "width": 1920,
+      "height": 1277,
+      "webp_bytes": 853016
+    },
+    {
+      "source": "NLS_Diagnose_Metatron_Hospital_Vitages-4.jpg",
+      "file": "NLS_Diagnose_Metatron_Hospital_Vitages-4.jpg",
+      "bytes": 1033670,
+      "umlaut_source": false,
+      "webp": "NLS_Diagnose_Metatron_Hospital_Vitages-4.webp",
+      "width": 1920,
+      "height": 1277,
+      "webp_bytes": 844800
+    },
+    {
+      "source": "NLS_Diagnose_Metatron_Hospital_Vitages-4-e1569870074607.jpg",
+      "file": "NLS_Diagnose_Metatron_Hospital_Vitages-4-e1569870074607.jpg",
+      "bytes": 150071,
+      "umlaut_source": false,
+      "webp": "NLS_Diagnose_Metatron_Hospital_Vitages-4-e1569870074607.webp",
+      "width": 1353,
+      "height": 900,
+      "webp_bytes": 288164
+    },
+    {
+      "source": "NLS_Diagnose_Metatron_Hospital_Vitages-5.jpg",
+      "file": "NLS_Diagnose_Metatron_Hospital_Vitages-5.jpg",
+      "bytes": 1065825,
+      "umlaut_source": false,
+      "webp": "NLS_Diagnose_Metatron_Hospital_Vitages-5.webp",
+      "width": 1920,
+      "height": 1277,
+      "webp_bytes": 825426
+    },
+    {
+      "source": "NLS_Diagnose_Metatron_Hospital_Vitages-5-1.jpg",
+      "file": "NLS_Diagnose_Metatron_Hospital_Vitages-5-1.jpg",
+      "bytes": 1065825,
+      "umlaut_source": false,
+      "webp": "NLS_Diagnose_Metatron_Hospital_Vitages-5-1.webp",
+      "width": 1920,
+      "height": 1277,
+      "webp_bytes": 825426
+    },
+    {
+      "source": "NLS_Diagnose_Metatron_Hospital_Vitages-5-2.jpg",
+      "file": "NLS_Diagnose_Metatron_Hospital_Vitages-5-2.jpg",
+      "bytes": 1065825,
+      "umlaut_source": false,
+      "webp": "NLS_Diagnose_Metatron_Hospital_Vitages-5-2.webp",
+      "width": 1920,
+      "height": 1277,
+      "webp_bytes": 825426
+    },
+    {
+      "source": "NLS_Diagnose_Metatron_Hospital_Vitages-6.jpg",
+      "file": "NLS_Diagnose_Metatron_Hospital_Vitages-6.jpg",
+      "bytes": 536436,
+      "umlaut_source": false,
+      "webp": "NLS_Diagnose_Metatron_Hospital_Vitages-6.webp",
+      "width": 1920,
+      "height": 1277,
+      "webp_bytes": 736422
+    },
+    {
+      "source": "NLS_Diagnose_Metatron_Hospital_Vitages-6-e1569877906342.jpg",
+      "file": "NLS_Diagnose_Metatron_Hospital_Vitages-6-e1569877906342.jpg",
+      "bytes": 409996,
+      "umlaut_source": false,
+      "webp": "NLS_Diagnose_Metatron_Hospital_Vitages-6-e1569877906342.webp",
+      "width": 1353,
+      "height": 900,
+      "webp_bytes": 382302
+    },
+    {
+      "source": "NLS_Diagnose_Metatron_Hospital_Vitages-6-e1569877928997.jpg",
+      "file": "NLS_Diagnose_Metatron_Hospital_Vitages-6-e1569877928997.jpg",
+      "bytes": 385300,
+      "umlaut_source": false,
+      "webp": "NLS_Diagnose_Metatron_Hospital_Vitages-6-e1569877928997.webp",
+      "width": 1353,
+      "height": 900,
+      "webp_bytes": 382302
+    },
+    {
+      "source": "NLS_Diagnose_Metatron_Hospital_Vitages-7.jpg",
+      "file": "NLS_Diagnose_Metatron_Hospital_Vitages-7.jpg",
+      "bytes": 1360876,
+      "umlaut_source": false,
+      "webp": "NLS_Diagnose_Metatron_Hospital_Vitages-7.webp",
+      "width": 1920,
+      "height": 1277,
+      "webp_bytes": 858522
+    },
+    {
+      "source": "NLS_Diagnose_Metatron_Hospital_Vitages-7-e1569878265913.jpg",
+      "file": "NLS_Diagnose_Metatron_Hospital_Vitages-7-e1569878265913.jpg",
+      "bytes": 413561,
+      "umlaut_source": false,
+      "webp": "NLS_Diagnose_Metatron_Hospital_Vitages-7-e1569878265913.webp",
+      "width": 1353,
+      "height": 900,
+      "webp_bytes": 386494
+    },
+    {
+      "source": "NLS_Diagnose_Metatron_Hospital_Vitages-8.jpg",
+      "file": "NLS_Diagnose_Metatron_Hospital_Vitages-8.jpg",
+      "bytes": 152566,
+      "umlaut_source": false,
+      "webp": "NLS_Diagnose_Metatron_Hospital_Vitages-8.webp",
+      "width": 1353,
+      "height": 900,
+      "webp_bytes": 296434
+    },
+    {
+      "source": "Orthomolekulare-Therapie-Flavonoide.jpg",
+      "file": "Orthomolekulare-Therapie-Flavonoide.jpg",
+      "bytes": 274092,
+      "umlaut_source": false,
+      "webp": "Orthomolekulare-Therapie-Flavonoide.webp",
+      "width": 1980,
+      "height": 1320,
+      "webp_bytes": 81512
+    },
+    {
+      "source": "Orthomolekulare-Therapie-Vitamin-C.jpg",
+      "file": "Orthomolekulare-Therapie-Vitamin-C.jpg",
+      "bytes": 85863,
+      "umlaut_source": false,
+      "webp": "Orthomolekulare-Therapie-Vitamin-C.webp",
+      "width": 1980,
+      "height": 1320,
+      "webp_bytes": 85864
+    },
+    {
+      "source": "Orthomolekulare-Therapie-Vitamin-C-1.jpg",
+      "file": "Orthomolekulare-Therapie-Vitamin-C-1.jpg",
+      "bytes": 82146,
+      "umlaut_source": false,
+      "webp": "Orthomolekulare-Therapie-Vitamin-C-1.webp",
+      "width": 1980,
+      "height": 1320,
+      "webp_bytes": 81908
+    },
+    {
+      "source": "Orthomolekulare-Therapie-Vitamine.jpg",
+      "file": "Orthomolekulare-Therapie-Vitamine.jpg",
+      "bytes": 363175,
+      "umlaut_source": false,
+      "webp": "Orthomolekulare-Therapie-Vitamine.webp",
+      "width": 1980,
+      "height": 1320,
+      "webp_bytes": 83492
+    },
+    {
+      "source": "Orthomolekulare-Therapie-Vitamine-1.jpg",
+      "file": "Orthomolekulare-Therapie-Vitamine-1.jpg",
+      "bytes": 58956,
+      "umlaut_source": false,
+      "webp": "Orthomolekulare-Therapie-Vitamine-1.webp",
+      "width": 1980,
+      "height": 1320,
+      "webp_bytes": 75164
+    },
+    {
+      "source": "Osteopathische-Behandlung-in-Augsburg.jpg",
+      "file": "Osteopathische-Behandlung-in-Augsburg.jpg",
+      "bytes": 301070,
+      "umlaut_source": false,
+      "webp": "Osteopathische-Behandlung-in-Augsburg.webp",
+      "width": 1980,
+      "height": 1320,
+      "webp_bytes": 65210
+    },
+    {
+      "source": "Osteopathische-Behandlung-in-Augsburg-1.jpg",
+      "file": "Osteopathische-Behandlung-in-Augsburg-1.jpg",
+      "bytes": 47402,
+      "umlaut_source": false,
+      "webp": "Osteopathische-Behandlung-in-Augsburg-1.webp",
+      "width": 1980,
+      "height": 1320,
+      "webp_bytes": 61590
+    },
+    {
+      "source": "Peter-Logo-gross.svg",
+      "file": "Peter-Logo-gross.svg",
+      "bytes": 9648,
+      "umlaut_source": false,
+      "webp": null
+    },
+    {
+      "source": "Peter-Logo-gross-1.svg",
+      "file": "Peter-Logo-gross-1.svg",
+      "bytes": 9648,
+      "umlaut_source": false,
+      "webp": null
+    },
+    {
+      "source": "Peter-Logo-klein.jpg",
+      "file": "Peter-Logo-klein.jpg",
+      "bytes": 51808,
+      "umlaut_source": false,
+      "webp": "Peter-Logo-klein.webp",
+      "width": 600,
+      "height": 580,
+      "webp_bytes": 13886
+    },
+    {
+      "source": "Peter-Logo-klein-e1575409668728.jpg",
+      "file": "Peter-Logo-klein-e1575409668728.jpg",
+      "bytes": 6747,
+      "umlaut_source": false,
+      "webp": "Peter-Logo-klein-e1575409668728.webp",
+      "width": 180,
+      "height": 174,
+      "webp_bytes": 3650
+    },
+    {
+      "source": "Peter-Rauch-Heilpraktiker-Augsburg.png",
+      "file": "Peter-Rauch-Heilpraktiker-Augsburg.png",
+      "bytes": 326218,
+      "umlaut_source": false,
+      "webp": "Peter-Rauch-Heilpraktiker-Augsburg.webp",
+      "width": 850,
+      "height": 1000,
+      "webp_bytes": 102326
+    },
+    {
+      "source": "Peter-Rauch-Heilpraktiker-Naturheilpraxis.jpg",
+      "file": "Peter-Rauch-Heilpraktiker-Naturheilpraxis.jpg",
+      "bytes": 22668,
+      "umlaut_source": false,
+      "webp": "Peter-Rauch-Heilpraktiker-Naturheilpraxis.webp",
+      "width": 525,
+      "height": 689,
+      "webp_bytes": 19362
+    },
+    {
+      "source": "Peter_Rauch_Heilpraktiker_Augsburg.jpg",
+      "file": "Peter_Rauch_Heilpraktiker_Augsburg.jpg",
+      "bytes": 34834,
+      "umlaut_source": false,
+      "webp": "Peter_Rauch_Heilpraktiker_Augsburg.webp",
+      "width": 650,
+      "height": 750,
+      "webp_bytes": 39856
+    },
+    {
+      "source": "Peter_Rauch_Heilpraktiker_Bioresonanz_Frequenztherapie.jpg",
+      "file": "Peter_Rauch_Heilpraktiker_Bioresonanz_Frequenztherapie.jpg",
+      "bytes": 33045,
+      "umlaut_source": false,
+      "webp": "Peter_Rauch_Heilpraktiker_Bioresonanz_Frequenztherapie.webp",
+      "width": 1407,
+      "height": 750,
+      "webp_bytes": 33642
+    },
+    {
+      "source": "Peter_Rauch_Heilpraktiker_Bioresonanz_Frequenztherapie-1.jpg",
+      "file": "Peter_Rauch_Heilpraktiker_Bioresonanz_Frequenztherapie-1.jpg",
+      "bytes": 127090,
+      "umlaut_source": false,
+      "webp": "Peter_Rauch_Heilpraktiker_Bioresonanz_Frequenztherapie-1.webp",
+      "width": 1407,
+      "height": 750,
+      "webp_bytes": 37720
+    },
+    {
+      "source": "Phytotherapie-Naturheilpraxis-Augsburg.jpg",
+      "file": "Phytotherapie-Naturheilpraxis-Augsburg.jpg",
+      "bytes": 197366,
+      "umlaut_source": false,
+      "webp": "Phytotherapie-Naturheilpraxis-Augsburg.webp",
+      "width": 1980,
+      "height": 900,
+      "webp_bytes": 37298
+    },
+    {
+      "source": "Phytotherapie-Naturheilpraxis-Augsburg-1.jpg",
+      "file": "Phytotherapie-Naturheilpraxis-Augsburg-1.jpg",
+      "bytes": 33120,
+      "umlaut_source": false,
+      "webp": "Phytotherapie-Naturheilpraxis-Augsburg-1.webp",
+      "width": 450,
+      "height": 299,
+      "webp_bytes": 30198
+    },
+    {
+      "source": "Phytotherapie-Naturheilpraxis-Augsburg-2.jpg",
+      "file": "Phytotherapie-Naturheilpraxis-Augsburg-2.jpg",
+      "bytes": 33120,
+      "umlaut_source": false,
+      "webp": "Phytotherapie-Naturheilpraxis-Augsburg-2.webp",
+      "width": 450,
+      "height": 299,
+      "webp_bytes": 30198
+    },
+    {
+      "source": "Rauch-Heilpraktiker-Augsburg-Naturheilpraxis-Datenschutzverordnung.jpg",
+      "file": "Rauch-Heilpraktiker-Augsburg-Naturheilpraxis-Datenschutzverordnung.jpg",
+      "bytes": 395303,
+      "umlaut_source": false,
+      "webp": "Rauch-Heilpraktiker-Augsburg-Naturheilpraxis-Datenschutzverordnung.webp",
+      "width": 1688,
+      "height": 1125,
+      "webp_bytes": 226200
+    },
+    {
+      "source": "Rauch-Peter-Logo.jpg",
+      "file": "Rauch-Peter-Logo.jpg",
+      "bytes": 43302,
+      "umlaut_source": false,
+      "webp": "Rauch-Peter-Logo.webp",
+      "width": 1048,
+      "height": 733,
+      "webp_bytes": 20488
+    },
+    {
+      "source": "Sanft_Heilen_Naturheilpraxis_Augsburg.jpg",
+      "file": "Sanft_Heilen_Naturheilpraxis_Augsburg.jpg",
+      "bytes": 319908,
+      "umlaut_source": false,
+      "webp": "Sanft_Heilen_Naturheilpraxis_Augsburg.webp",
+      "width": 1980,
+      "height": 1244,
+      "webp_bytes": 100866
+    },
+    {
+      "source": "Sanft_Heilen_Naturheilpraxis_Augsburg-1.jpg",
+      "file": "Sanft_Heilen_Naturheilpraxis_Augsburg-1.jpg",
+      "bytes": 56656,
+      "umlaut_source": false,
+      "webp": "Sanft_Heilen_Naturheilpraxis_Augsburg-1.webp",
+      "width": 1980,
+      "height": 1244,
+      "webp_bytes": 70856
+    },
+    {
+      "source": "Sanft_Heilen_Stark_im_Leben.jpg",
+      "file": "Sanft_Heilen_Stark_im_Leben.jpg",
+      "bytes": 351295,
+      "umlaut_source": false,
+      "webp": "Sanft_Heilen_Stark_im_Leben.webp",
+      "width": 1920,
+      "height": 1277,
+      "webp_bytes": 700602
+    },
+    {
+      "source": "Schmerztherapie-Augsburg-1.jpg",
+      "file": "Schmerztherapie-Augsburg-1.jpg",
+      "bytes": 21948,
+      "umlaut_source": false,
+      "webp": "Schmerztherapie-Augsburg-1.webp",
+      "width": 290,
+      "height": 441,
+      "webp_bytes": 9894
+    },
+    {
+      "source": "Trikombin_Logo_Final.png",
+      "file": "Trikombin_Logo_Final.png",
+      "bytes": 36362,
+      "umlaut_source": false,
+      "webp": "Trikombin_Logo_Final.webp",
+      "width": 2907,
+      "height": 1523,
+      "webp_bytes": 27960
+    },
+    {
+      "source": "Vieva.jpg",
+      "file": "Vieva.jpg",
+      "bytes": 36126,
+      "umlaut_source": false,
+      "webp": "Vieva.webp",
+      "width": 1000,
+      "height": 500,
+      "webp_bytes": 20406
+    },
+    {
+      "source": "vieva-vitaleval-shadow-300dpi.png",
+      "file": "vieva-vitaleval-shadow-300dpi.png",
+      "bytes": 93368,
+      "umlaut_source": false,
+      "webp": "vieva-vitaleval-shadow-300dpi.webp",
+      "width": 2674,
+      "height": 1201,
+      "webp_bytes": 36284
+    },
+    {
+      "source": "Vieva_Vital_Tuning_Biofeedback_HRV.jpg",
+      "file": "Vieva_Vital_Tuning_Biofeedback_HRV.jpg",
+      "bytes": 984735,
+      "umlaut_source": false,
+      "webp": "Vieva_Vital_Tuning_Biofeedback_HRV.webp",
+      "width": 1920,
+      "height": 1277,
+      "webp_bytes": 890558
+    },
+    {
+      "source": "Vieva_Vital_Tuning_Biofeedback_HRV-e1569870128206.jpg",
+      "file": "Vieva_Vital_Tuning_Biofeedback_HRV-e1569870128206.jpg",
+      "bytes": 433044,
+      "umlaut_source": false,
+      "webp": "Vieva_Vital_Tuning_Biofeedback_HRV-e1569870128206.webp",
+      "width": 1353,
+      "height": 900,
+      "webp_bytes": 411352
+    },
+    {
+      "source": "Vital_und_NДhrstoffanalyse.jpg",
+      "file": "Vital_und_Naehrstoffanalyse.jpg",
+      "bytes": 58334,
+      "umlaut_source": true,
+      "webp": "Vital_und_Naehrstoffanalyse.webp",
+      "width": 530,
+      "height": 700,
+      "webp_bytes": 34392
+    },
+    {
+      "source": "WirbelsДule-Halswirbel-Schmerztherapie-Behandlung.jpg",
+      "file": "Wirbelsaeule-Halswirbel-Schmerztherapie-Behandlung.jpg",
+      "bytes": 154536,
+      "umlaut_source": true,
+      "webp": "Wirbelsaeule-Halswirbel-Schmerztherapie-Behandlung.webp",
+      "width": 1980,
+      "height": 660,
+      "webp_bytes": 123294
+    },
+    {
+      "source": "Zhineng-Qi-Gong-1.jpg",
+      "file": "Zhineng-Qi-Gong-1.jpg",
+      "bytes": 44952,
+      "umlaut_source": false,
+      "webp": "Zhineng-Qi-Gong-1.webp",
+      "width": 500,
+      "height": 334,
+      "webp_bytes": 27022
+    },
+    {
+      "source": "Zhineng-Qi-Gong-Augsburg-Hochzoll-1.jpg",
+      "file": "Zhineng-Qi-Gong-Augsburg-Hochzoll-1.jpg",
+      "bytes": 30811,
+      "umlaut_source": false,
+      "webp": "Zhineng-Qi-Gong-Augsburg-Hochzoll-1.webp",
+      "width": 334,
+      "height": 500,
+      "webp_bytes": 13598
+    },
+    {
+      "source": "Zhineng-Qi-Gong-Augsburg-Hochzoll-2.jpg",
+      "file": "Zhineng-Qi-Gong-Augsburg-Hochzoll-2.jpg",
+      "bytes": 31144,
+      "umlaut_source": false,
+      "webp": "Zhineng-Qi-Gong-Augsburg-Hochzoll-2.webp",
+      "width": 500,
+      "height": 334,
+      "webp_bytes": 14718
+    },
+    {
+      "source": "Zhineng_Qi_Gong_Qi-Ball_Augsburg_1.jpg",
+      "file": "Zhineng_Qi_Gong_Qi-Ball_Augsburg_1.jpg",
+      "bytes": 309781,
+      "umlaut_source": false,
+      "webp": "Zhineng_Qi_Gong_Qi-Ball_Augsburg_1.webp",
+      "width": 1980,
+      "height": 1321,
+      "webp_bytes": 52180
+    },
+    {
+      "source": "Zhineng_Qi_Gong_Qi-Ball_Augsburg_1_1.jpg",
+      "file": "Zhineng_Qi_Gong_Qi-Ball_Augsburg_1_1.jpg",
+      "bytes": 234008,
+      "umlaut_source": false,
+      "webp": "Zhineng_Qi_Gong_Qi-Ball_Augsburg_1_1.webp",
+      "width": 1980,
+      "height": 1159,
+      "webp_bytes": 45616
+    },
+    {
+      "source": "Zhineng_Qi_Gong_Ъbung_Augsburg_1.jpg",
+      "file": "Zhineng_Qi_Gong_Uebung_Augsburg_1.jpg",
+      "bytes": 156702,
+      "umlaut_source": true,
+      "webp": "Zhineng_Qi_Gong_Uebung_Augsburg_1.webp",
+      "width": 1980,
+      "height": 1321,
+      "webp_bytes": 137894
+    },
+    {
+      "source": "Zhineng_Qi_Gong_Ъbung_Augsburg_1_1.jpg",
+      "file": "Zhineng_Qi_Gong_Uebung_Augsburg_1_1.jpg",
+      "bytes": 180664,
+      "umlaut_source": true,
+      "webp": "Zhineng_Qi_Gong_Uebung_Augsburg_1_1.webp",
+      "width": 1980,
+      "height": 1136,
+      "webp_bytes": 81898
+    },
+    {
+      "source": "Zhineng_Qi_Gong_Ъbung_Augsburg_2.jpg",
+      "file": "Zhineng_Qi_Gong_Uebung_Augsburg_2.jpg",
+      "bytes": 172003,
+      "umlaut_source": true,
+      "webp": "Zhineng_Qi_Gong_Uebung_Augsburg_2.webp",
+      "width": 1980,
+      "height": 1321,
+      "webp_bytes": 92810
+    },
+    {
+      "source": "Zhineng_Qi_Gong_Ъbung_Augsburg_2-e1570046077729.jpg",
+      "file": "Zhineng_Qi_Gong_Uebung_Augsburg_2-e1570046077729.jpg",
+      "bytes": 112467,
+      "umlaut_source": true,
+      "webp": "Zhineng_Qi_Gong_Uebung_Augsburg_2-e1570046077729.webp",
+      "width": 1349,
+      "height": 900,
+      "webp_bytes": 50716
+    },
+    {
+      "source": "Zhineng_Qi_Gong_Ъbung_Augsburg_2_1.jpg",
+      "file": "Zhineng_Qi_Gong_Uebung_Augsburg_2_1.jpg",
+      "bytes": 155651,
+      "umlaut_source": true,
+      "webp": "Zhineng_Qi_Gong_Uebung_Augsburg_2_1.webp",
+      "width": 1920,
+      "height": 1128,
+      "webp_bytes": 93314
+    }
+  ]
+}

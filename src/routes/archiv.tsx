@@ -34,12 +34,13 @@ function Archiv() {
       </p>
       <div className="mt-10 overflow-x-auto rounded-xl border border-line bg-paper">
         <table className="w-full min-w-[720px] text-left text-sm">
-          <thead className="border-b border-line bg-sand/70 text-xs uppercase tracking-[0.12em] text-muted">
+          <thead className="border-b border-line bg-sage-50 text-xs uppercase tracking-[0.12em] text-muted">
             <tr>
               <th className="px-4 py-3">Slug</th>
               <th className="px-4 py-3">Titel</th>
               <th className="px-4 py-3">Klasse</th>
               <th className="px-4 py-3">Wörter</th>
+              <th className="px-4 py-3">Bilder</th>
               <th className="px-4 py-3">Status</th>
             </tr>
           </thead>
@@ -64,6 +65,10 @@ function Archiv() {
                 <td className="px-4 py-3 text-fg">{page.h1}</td>
                 <td className="px-4 py-3 text-muted">{page.className}</td>
                 <td className="px-4 py-3 tabular-nums">{page.wordCount}</td>
+                <td className="px-4 py-3 tabular-nums">
+                  {page.images.filter((img) => img.matched).length}
+                  {page.slider?.length ? ` · ${page.slider.length} Slides` : ""}
+                </td>
                 <td className="px-4 py-3">{page.status}</td>
               </tr>
             ))}

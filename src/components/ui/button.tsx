@@ -4,24 +4,26 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors duration-150 disabled:pointer-events-none disabled:opacity-50 [&_svg]:size-4",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium transition-all duration-200 disabled:pointer-events-none disabled:opacity-50 [&_svg]:size-4",
   {
     variants: {
       variant: {
         primary:
-          "bg-sage text-paper hover:bg-sage-deep shadow-soft",
+          "bg-sage text-paper shadow-soft hover:bg-sage-600 hover:shadow-card",
         secondary:
-          "bg-sand text-sage-deep hover:bg-sand-deep border border-line",
+          "border border-line bg-sand text-sage-deep hover:bg-sand-200",
         outline:
-          "border border-line bg-paper text-fg hover:bg-sage-soft",
-        ghost: "text-sage-deep hover:bg-sage-soft",
-        clay: "bg-clay text-paper hover:bg-clay-deep",
-        link: "text-sage underline-offset-4 hover:underline px-0",
+          "border-2 border-sage bg-transparent text-sage hover:bg-sage hover:text-paper",
+        ghost: "text-sage-deep hover:bg-sage-100",
+        clay: "bg-clay text-paper shadow-soft hover:bg-terracotta-light",
+        hero: "rounded-xl bg-sage px-8 py-6 text-base text-paper shadow-elevated hover:bg-sage-600 hover:shadow-card",
+        link: "px-0 text-sage underline-offset-4 hover:underline",
       },
       size: {
-        sm: "h-9 px-3",
-        md: "h-11 px-5",
-        lg: "h-12 px-6 text-base",
+        sm: "h-9 rounded-md px-3",
+        md: "h-10 px-4",
+        lg: "h-12 rounded-lg px-8 text-base",
+        xl: "h-14 rounded-xl px-10 text-base",
         icon: "size-11",
       },
     },

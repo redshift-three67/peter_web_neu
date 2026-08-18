@@ -4,6 +4,7 @@ import {
   Outlet,
   Scripts,
 } from "@tanstack/react-router";
+import { practice } from "@/content/site";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { SiteShell } from "@/components/site/SiteShell";
@@ -23,6 +24,10 @@ export const Route = createRootRoute({
       { title: APP_NAME },
       { name: "apple-mobile-web-app-title", content: APP_NAME },
       { name: "theme-color", content: "#274932" },
+      {
+        name: "google-site-verification",
+        content: practice.googleSiteVerification,
+      },
       { name: "twitter:card", content: "summary_large_image" },
       ...(ogImage
         ? [

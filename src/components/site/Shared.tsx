@@ -33,21 +33,21 @@ export function PageHero({
   imageAlt?: string;
 }) {
   return (
-    <section className="border-b border-line bg-sand/60">
-      <Container className="grid gap-10 py-12 md:grid-cols-[1.15fr_0.85fr] md:items-end md:py-16">
+    <section className="border-b border-line bg-sand-50">
+      <Container className="grid gap-10 py-14 md:grid-cols-[1.15fr_0.85fr] md:items-end md:py-20">
         <div>
           {kicker ? (
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-sage">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">
               {kicker}
             </p>
           ) : null}
-          <h1 className="mt-3 max-w-3xl font-display text-4xl text-sage-deep sm:text-5xl">
+          <h1 className="mt-3 max-w-3xl font-display text-4xl font-semibold text-sage-700 sm:text-5xl">
             {title}
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-muted">{lead}</p>
         </div>
         {image ? (
-          <div className="overflow-hidden rounded-xl shadow-card">
+          <div className="overflow-hidden rounded-3xl shadow-elevated">
             <img
               src={image}
               alt={imageAlt ?? ""}
@@ -62,10 +62,10 @@ export function PageHero({
 
 export function CtaBand() {
   return (
-    <section className="bg-sage-deep text-paper">
-      <Container className="flex flex-col items-start justify-between gap-6 py-12 md:flex-row md:items-center">
+    <section className="bg-gradient-to-r from-sage-700 via-sage-600 to-sage-500 text-paper">
+      <Container className="flex flex-col items-start justify-between gap-6 py-14 md:flex-row md:items-center">
         <div>
-          <p className="font-display text-3xl">Erstgespräch vereinbaren</p>
+          <p className="font-display text-3xl font-semibold">Erstgespräch vereinbaren</p>
           <p className="mt-2 max-w-xl text-paper/75">
             Telefonisch oder über das Formular. Vor dem Termin können Sie den
             Anamnesebogen in Ruhe ausfüllen.
@@ -81,7 +81,7 @@ export function CtaBand() {
             asChild
             variant="secondary"
             size="lg"
-            className="border-transparent"
+            className="border-paper/30 bg-paper/15 text-paper hover:bg-paper hover:text-sage-700"
           >
             <Link to="/kontakt">
               Nachricht schreiben <ArrowRight className="size-4" />
@@ -116,7 +116,7 @@ export function ReviewStrip() {
           {reviews.quotes.map((quote) => (
             <figure
               key={quote.text}
-              className="rounded-xl border border-line bg-bg p-6 shadow-soft"
+              className="rounded-2xl border border-line bg-card p-6 shadow-card"
             >
               <blockquote className="text-[1.05rem] leading-relaxed text-fg">
                 „{quote.text}“
@@ -138,7 +138,7 @@ export function FaqList({
   items: readonly { q: string; a: string }[];
 }) {
   return (
-    <div className="divide-y divide-line rounded-xl border border-line bg-paper">
+    <div className="divide-y divide-line rounded-2xl border border-line bg-paper shadow-soft">
       {items.map((item) => (
         <details key={item.q} className="group px-5 py-4">
           <summary className="cursor-pointer list-none font-medium text-sage-deep marker:content-none [&::-webkit-details-marker]:hidden">
@@ -175,8 +175,8 @@ export function Disclaimer({ className }: { className?: string }) {
 
 export function AuthorByline() {
   return (
-    <aside className="mt-12 flex flex-col gap-3 rounded-xl border border-line bg-sand/70 p-5 sm:flex-row sm:items-center">
-      <span className="grid size-14 shrink-0 place-items-center rounded-full bg-sage-deep font-display text-lg text-paper">
+    <aside className="mt-12 flex flex-col gap-3 rounded-2xl border border-line bg-sand-100 p-5 shadow-soft sm:flex-row sm:items-center">
+      <span className="grid size-14 shrink-0 place-items-center rounded-full bg-sage font-display text-lg text-paper">
         PR
       </span>
       <div>

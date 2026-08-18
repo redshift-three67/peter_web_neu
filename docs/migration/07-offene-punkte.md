@@ -1,22 +1,24 @@
 # Offene Punkte und Lieferungen
 
-## Von Ihrer Seite, sobald verfügbar
+## Erhalten
 
-1. **Rank-Math-Export** (CSV/JSON) — Titles, Descriptions, Canonicals
-2. **Uploads-ZIP** von `wp-content/uploads/`
-3. **PDFs** aus dem Downloadbereich, die bleiben sollen
-4. **Aktivierungsreihenfolge** der Klasse-B-Seiten (oder: nach Sichtung)
-5. **E-Mail-Kanon** (`info@…` vs. iCloud)
-6. **ProvenExpert-Widget-Code** (optional)
+1. **Rank-Math-Settings** (18.08.2026) — eingespielt, Auswertung in
+   [08-rank-math.md](./08-rank-math.md).
+2. **WP-Uploads** (18.08.2026) — 660 Dateien. Inventar:
+   [09-uploads-inventar.md](./09-uploads-inventar.md).
+3. **Bild-Freigabe fürs Archiv** — alle Originale dürfen in die 64
+   Archivseiten. Live-Zuordnung: [10-bildzuordnung.md](./10-bildzuordnung.md)
+   (353/353 gemappt, 129 Slider-Slides).
 
-## Wiedervorlage bei Ihnen (nicht blockierend)
+## Noch von Ihrer Seite
 
-- Echtes Portrait und Raumfotos
+1. Optional: Rank-Math-**Seiten**-Export (Titel je URL)
+2. **PDFs** aus dem Downloadbereich, die bleiben sollen
+3. **Aktivierungsreihenfolge** der Archivseiten
+4. **ProvenExpert-Widget-Code** (optional)
+
+## Wiedervorlage bei Ihnen
+
 - Textfeinschliff in Ihrer Stimme
-- Entscheidung Cutover
-- Analyse und ggf. Umzug der Lovable-App
-
-## Nicht nötig
-
-- WordPress-Admin-Passwort
-- Änderung an der Live-WP, solange wir parallel arbeiten
+- Cutover
+- Lovable-App (weiterhin standalone)

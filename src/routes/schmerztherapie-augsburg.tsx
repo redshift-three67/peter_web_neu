@@ -7,7 +7,10 @@ import {
   PageHero,
   Prose,
 } from "@/components/site/Shared";
+import { getArchiveBySlug } from "@/content/archive";
 import { pageHead } from "@/lib/seo";
+
+const HERO = "/media/originals/Osteopathische-Behandlung-in-Augsburg.webp";
 
 export const Route = createFileRoute("/schmerztherapie-augsburg")({
   head: () =>
@@ -21,14 +24,21 @@ export const Route = createFileRoute("/schmerztherapie-augsburg")({
 });
 
 function Page() {
+  const archived = getArchiveBySlug("schmerztherapie-augsburg");
+  const extras = (archived?.images ?? [])
+    .map((img) => img.local)
+    .filter((src): src is string => Boolean(src))
+    .filter((src) => !/Peter-Rauch|logo/i.test(src))
+    .slice(0, 4);
+
   return (
     <>
       <PageHero
         kicker="Anliegen · Augsburg-Hochzoll"
         title="Schmerztherapie in Augsburg"
         lead="Wenn der Schmerz bleibt, obwohl schon viel versucht wurde. Ich arbeite manuell, regulativ und im Gespräch – ergänzend, nicht statt des Arztes."
-        image="/images/manuelle-therapie.jpg"
-        imageAlt="Manuelle Behandlung auf Leinen"
+        image={HERO}
+        imageAlt="Osteopathische Behandlung in der Naturheilpraxis Rauch, Augsburg"
       />
       <Container className="py-14">
         <Prose>
@@ -54,6 +64,18 @@ function Page() {
             .
           </p>
         </Prose>
+        {extras.length ? (
+          <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
+            {extras.map((src) => (
+              <img
+                key={src}
+                src={src.replace(/\.(jpe?g|png)$/i, ".webp")}
+                alt=""
+                className="aspect-[4/3] w-full rounded-lg object-cover"
+              />
+            ))}
+          </div>
+        ) : null}
         <AuthorByline />
         <Disclaimer className="mt-8" />
       </Container>
