@@ -1,0 +1,101 @@
+=== START test_database 2019-10-09 13:08:05 ===
+[ERROR] Konnte nicht mit der Joomla-Datenbank verbinden. Bitte überprüfen Sie die Parameter. Und seien Sie sicher das der WordPress-Server auf die Joomla-Datenbank Zugriff hat.<br />
+SQLSTATE[HY000] [1045] Access denied for user 'root'@'static.27.135.130.94.clients.your-server.de' (using password: YES)<br />
+Please read the <a href="https://www.fredericgilles.net/fg-joomla-to-wordpress/faq/" target="_blank">FAQ for the solution</a>.
+=== END test_database 2019-10-09 13:08:05 ===
+
+=== START test_database 2019-10-09 13:09:11 ===
+[ERROR] Konnte nicht mit der Joomla-Datenbank verbinden. Bitte überprüfen Sie die Parameter. Und seien Sie sicher das der WordPress-Server auf die Joomla-Datenbank Zugriff hat.<br />
+SQLSTATE[HY000] [1045] Access denied for user 'root'@'static.27.135.130.94.clients.your-server.de' (using password: YES)<br />
+Please read the <a href="https://www.fredericgilles.net/fg-joomla-to-wordpress/faq/" target="_blank">FAQ for the solution</a>.
+=== END test_database 2019-10-09 13:09:11 ===
+
+=== START test_database 2019-10-09 13:10:08 ===
+[ERROR] Konnte nicht mit der Joomla-Datenbank verbinden. Bitte überprüfen Sie die Parameter. Und seien Sie sicher das der WordPress-Server auf die Joomla-Datenbank Zugriff hat.<br />
+SQLSTATE[HY000] [1045] Access denied for user 'rauchhei_artpeter'@'static.27.135.130.94.clients.your-server.de' (using password: YES)<br />
+Please read the <a href="https://www.fredericgilles.net/fg-joomla-to-wordpress/faq/" target="_blank">FAQ for the solution</a>.
+=== END test_database 2019-10-09 13:10:08 ===
+
+=== START test_database 2019-10-09 13:11:22 ===
+Erfolgreich mit der Joomla-Datenbank verbunden.
+Folgende Joomla Daten wurden gefunden und stehen zum Import bereit.
+3 Sektionen
+5 Kategorien
+111 Artikel
+6 Web Links
+75 Benutzer
+
+[WARNING] Ihre Joomla-Datenbank enthält einige sh404sef Weiterleitungen. Sie benötigen die <a href="https://www.fredericgilles.net/fg-joomla-to-wordpress/sh404sef/" target="_blank">sh404sef Erweiterung</a> importieren.
+=== END test_database 2019-10-09 13:11:23 ===
+
+=== START save 2019-10-09 13:11:30 ===
+Einstellungen gespeichert
+=== END save 2019-10-09 13:11:30 ===
+
+=== START save 2019-10-09 13:13:43 ===
+Einstellungen gespeichert
+=== END save 2019-10-09 13:13:43 ===
+
+=== START save 2019-10-09 17:48:50 ===
+Einstellungen gespeichert
+=== END save 2019-10-09 17:48:50 ===
+
+=== START test_database 2019-10-09 18:23:46 ===
+Erfolgreich mit der Joomla-Datenbank verbunden.
+Folgende Joomla Daten wurden gefunden und stehen zum Import bereit.
+3 Sektionen
+5 Kategorien
+111 Artikel
+6 Web Links
+75 Benutzer
+
+[WARNING] Ihre Joomla-Datenbank enthält einige sh404sef Weiterleitungen. Sie benötigen die <a href="https://www.fredericgilles.net/fg-joomla-to-wordpress/sh404sef/" target="_blank">sh404sef Erweiterung</a> importieren.
+=== END test_database 2019-10-09 18:23:46 ===
+
+=== START save 2019-10-09 18:24:29 ===
+Einstellungen gespeichert
+=== END save 2019-10-09 18:24:29 ===
+
+=== START save 2019-10-09 18:27:51 ===
+Einstellungen gespeichert
+=== END save 2019-10-09 18:27:51 ===
+
+=== START save 2019-10-09 18:28:29 ===
+Einstellungen gespeichert
+=== END save 2019-10-09 18:28:29 ===
+
+=== START save 2019-10-09 18:33:39 ===
+Einstellungen gespeichert
+=== END save 2019-10-09 18:33:39 ===
+
+=== START import 2019-10-09 18:35:11 ===
+Erfolgreich mit der Joomla-Datenbank verbunden.
+Folgende Joomla Daten wurden gefunden und stehen zum Import bereit.
+3 Sektionen
+5 Kategorien
+111 Artikel
+6 Web Links
+75 Benutzer
+
+Importing categories...
+8 Kategorien importiert
+Importing posts...
+[ERROR] Can't copy http://zoo.yootheme.com/images/stories/videos/zoo_video_tour.flv to /var/www/vhosts/rauch-heilpraktiker.de/httpdocs/wp-content/uploads/videos/zoo_video_tour.flv : cURL error 6: Could not resolve host: zoo.yootheme.com; Unknown error
+[ERROR] Can't copy http://bundesrecht.juris.de/bundesrecht/heilmwerbg/gesamt.pdf to /var/www/vhosts/rauch-heilpraktiker.de/httpdocs/wp-content/uploads/http://bundesrecht.juris.de/bundesrecht/heilmwerbg/gesamt.pdf : Not a media
+111 Beiträge importiert
+70 Medien importiert
+14 Schlagworte importiert
+2 Kategorien importiert
+Importing web links...
+6 web links imported
+Importing users...
+75 Benutzer importiert
+Importing menus...
+181 Menüpunkte importiert
+Importing modules...
+0 Module importiert
+Importing redirects...
+Denken Sie daran die internen Links anzupassen.
+IMPORT COMPLETED
+=== END import 2019-10-09 18:57:26 ===
+
