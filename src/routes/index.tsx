@@ -263,14 +263,19 @@ function Home() {
               alt="Ruhiger Zugang zu einer Praxis in Augsburg-Hochzoll"
               className="mt-5 aspect-[16/10] w-full rounded-2xl object-cover"
             />
-            <div className="mt-5 flex flex-wrap gap-3">
-              <Button asChild>
-                <Link to="/anfahrt">Anfahrt & Parken</Link>
-              </Button>
-              <Button asChild variant="outline">
-                <a href={practice.mapsQuery} target="_blank" rel="noreferrer">
-                  Google Maps
-                </a>
+            <div className="mt-5 flex flex-col gap-3">
+              <div className="flex flex-wrap gap-3">
+                <Button asChild>
+                  <Link to="/anfahrt">Anfahrt & Parken</Link>
+                </Button>
+                <Button asChild variant="outline">
+                  <a href={practice.mapsQuery} target="_blank" rel="noreferrer">
+                    Google Maps
+                  </a>
+                </Button>
+              </div>
+              <Button asChild variant="clay" className="w-full sm:w-auto">
+                <Link to="/anamnese">Online-Anamnesebogen</Link>
               </Button>
             </div>
             <p className="mt-5 flex items-start gap-2 text-sm text-muted">

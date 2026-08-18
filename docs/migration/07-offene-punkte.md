@@ -2,23 +2,21 @@
 
 ## Erhalten
 
-1. **Rank-Math-Settings** (18.08.2026) — eingespielt, Auswertung in
-   [08-rank-math.md](./08-rank-math.md).
-2. **WP-Uploads** (18.08.2026) — 660 Dateien. Inventar:
-   [09-uploads-inventar.md](./09-uploads-inventar.md).
-3. **Bild-Freigabe fürs Archiv** — alle Originale dürfen in die 64
-   Archivseiten. Live-Zuordnung: [10-bildzuordnung.md](./10-bildzuordnung.md)
-   (353/353 gemappt, 129 Slider-Slides).
+1. Rank-Math-Settings — [08-rank-math.md](./08-rank-math.md)
+2. WP-Uploads — [09-uploads-inventar.md](./09-uploads-inventar.md)
+3. Bild-Freigabe Archiv — [10-bildzuordnung.md](./10-bildzuordnung.md)
+4. Design-Referenz Lovable (Look, nicht Runtime)
 
 ## Noch von Ihrer Seite
 
-1. Optional: Rank-Math-**Seiten**-Export (Titel je URL)
-2. **PDFs** aus dem Downloadbereich, die bleiben sollen
-3. **Aktivierungsreihenfolge** der Archivseiten
-4. **ProvenExpert-Widget-Code** (optional)
+1. **Aktivierungsreihenfolge** der Archivseiten (welche zuerst öffentlich)
+2. Optional: Rank-Math-**Seiten**-Export (Title/Description je URL)
+3. **PDFs**, die im Downloadbereich bleiben sollen
+4. ProvenExpert-Widget (optional)
+5. Freigabe der **HWG-Texte** Seite für Seite (Wortlaut ist noch WP-Original)
 
-## Wiedervorlage bei Ihnen
+## Wiedervorlage / später
 
-- Textfeinschliff in Ihrer Stimme
-- Cutover
-- Lovable-App (weiterhin standalone)
+- Lovable-App (Workflow, Login, Infothek) — weiter standalone
+- Cutover (DNS, 301, Search Console)
+- Payload-CMS / Multi-Mandant
