@@ -1,5 +1,10 @@
 # Changelog — Migration
 
+## 2026-08-18 (Hub-UX)
+
+- 18 Inhalts-Hubs nutzen Start-Module: IconCards, Warnhinweise, Themenkarten, FAQ, CTA.
+- Footer-Chrome und Generic-FAQ aus WP entfernt. Texte bleiben.
+
 ## 2026-08-18 (Hubs Welle 3)
 
 - 18 Hubs vollständig auf alten URLs.

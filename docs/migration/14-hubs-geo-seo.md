@@ -29,6 +29,9 @@ Downloadbereich vorbereitet – PDF-Binaries lagen nicht im Crawl, werden 1:1 na
 
 Die 18 Hubs sind damit auf den WordPress-Pfaden angelegt.
 
+Danach: Hub-UX-Konsolidierung (`rp-12-hub-ux`) – gleiche Module wie die Startseite
+(Karten, Warnhinweis, Themenraster, FAQ), ohne den archivierten Wortlaut zu ersetzen.
+
 ### Welle 2 (umgesetzt, `rp-10-hubs-wave2`)
 
 `/psychotherapie-augsburg`, `/nls-diagnostik`, `/osteopathie-techniken` als HubFromArchive.
