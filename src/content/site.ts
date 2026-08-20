@@ -98,7 +98,7 @@ export const nav = [
       { to: "/bioresonanz-therapie", label: "Bioresonanz Augsburg", text: "Hinweisgebend, kein Laborersatz" },
       { to: "/biophysikalische-informationstherapie-bit", label: "Informationstherapie", text: "BIT in der Praxis" },
       { to: "/hypnotherapie-augsburg", label: "Hypnotherapie Augsburg", text: "Gesprächshypnose" },
-      { to: "/psychotherapie-augsburg", label: "Psychotherapie Augsburg", text: "Burnout, Belastung, ergänzend" },
+      { to: "/psychotherapie-augsburg", label: "Erschöpfung & Burnout", text: "Gespräch und Begleitung, ergänzend" },
     ],
   },
   { to: "/kontakt", label: "Kontakt", text: "Hochzoll, Telefon, Nachricht" },
@@ -115,7 +115,7 @@ export const footerNav = {
   anliegen: [
     { to: "/schmerztherapie-augsburg", label: "Schmerztherapie Augsburg" },
     { to: "/naet-methode-allergie-behandlung", label: "Allergie / NAET" },
-    { to: "/psychotherapie-augsburg", label: "Psychotherapie Augsburg" },
+    { to: "/psychotherapie-augsburg", label: "Erschöpfung & Burnout" },
     { to: "/hypnotherapie-augsburg", label: "Hypnotherapie Augsburg" },
     { to: "/bioresonanz-therapie", label: "Bioresonanz Augsburg" },
   ],

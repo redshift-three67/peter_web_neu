@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { HubFromArchive } from "@/components/site/HubFromArchive";
+import { AnliegenHub } from "@/components/site/AnliegenHub";
+import { anliegen } from "@/content/anliegen";
 import { hubMeta } from "@/content/hubs";
 import { pageHead } from "@/lib/seo";
 
@@ -12,12 +13,5 @@ export const Route = createFileRoute("/naet-methode-allergie-behandlung")({
 });
 
 function Page() {
-  return (
-    <HubFromArchive
-      slug="naet-methode-allergie-behandlung"
-      heading="NAET – Allergiebehandlung in Augsburg"
-      kicker={meta.kicker}
-      lead="NAET als ergänzender naturheilkundlicher Ansatz bei Unverträglichkeiten in Augsburg-Hochzoll. Keine Allergiediagnose, kein Heilversprechen."
-    />
-  );
+  return <AnliegenHub anliegen={anliegen[path]} />;
 }

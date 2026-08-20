@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { HubFromArchive } from "@/components/site/HubFromArchive";
+import { AnliegenHub } from "@/components/site/AnliegenHub";
+import { anliegen } from "@/content/anliegen";
 import { hubMeta } from "@/content/hubs";
 import { pageHead } from "@/lib/seo";
 
@@ -12,12 +13,5 @@ export const Route = createFileRoute("/psychotherapie-augsburg")({
 });
 
 function Page() {
-  return (
-    <HubFromArchive
-      slug="psychotherapie-augsburg"
-      heading="Psychotherapie in Augsburg"
-      kicker={meta.kicker}
-      lead="Gespräch und naturheilkundliche Begleitung bei Erschöpfung und Belastung – in Augsburg-Hochzoll. Das ersetzt keine ärztliche oder approbierte Psychotherapie und gibt kein Heilversprechen."
-    />
-  );
+  return <AnliegenHub anliegen={anliegen[path]} />;
 }

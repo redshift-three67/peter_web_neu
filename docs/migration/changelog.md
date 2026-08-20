@@ -1,5 +1,20 @@
 # Changelog — Migration
 
+## 2026-08-20 (Breitenberger-Anliegen-Hubs)
+
+- Umsetzung der fachlichen Vorgabe `docs/design-a-plus-c/07-breitenberger-inhaltsmaschine.md` für die drei Anliegen-Hubs (`/schmerztherapie-augsburg`, `/psychotherapie-augsburg`, `/naet-methode-allergie-behandlung`) auf Branch `breitenberger-hubs` (Basis `main` = `1d535b3`).
+- Neu: `src/content/anliegen.ts` (Inhaltsmaschine je Anliegen) + `src/components/site/AnliegenHub.tsx`.
+- Akzeptanz je Seite erfüllt: Title = Anliegen + Augsburg; Above-the-fold wer/für wen/wo/was-nicht (4 Kacheln); zitierfähige Kurzdefinition (GEO); Symptom-Karten ohne Claims; Einordnung mit Red Flags; Archiv-Tiefe als Hintergrund; Verfahrens-Spokes (Geräte-URLs stützen Anliegen); Bietet/Bietet-nicht-Listen; 3 Schritte + Clay-CTA; hub-spezifische FAQ (3–5); NAP + Byline + Quellen/Redaktion; Disclaimer.
+- Schema erweitert: `FAQPage` + `BreadcrumbList` jetzt auf allen drei Hubs.
+- Title-Formel umgestellt (Leistung/Anliegen + Ort, nicht Gerät + Ort):
+  - `/schmerztherapie-augsburg` → „Heilpraktiker für Schmerz in Augsburg | Peter Rauch“
+  - `/psychotherapie-augsburg` → „Erschöpfung & Burnout – Heilpraktiker Augsburg | Peter Rauch“ (Anliegen statt geschützter Berufsbezeichnung „Psychotherapie“; URL unverändert, Weiterleitung/Redirects unberührt)
+  - `/naet-methode-allergie-behandlung` → „Allergie & Unverträglichkeit – Heilpraktiker Augsburg | Peter Rauch“
+- Nav-/Footer-Label „Psychotherapie Augsburg“ → „Erschöpfung & Burnout“; Slider-CTA angepasst; Header-Icon-Map mitgezogen.
+- HWG-strenger: NAET ausdrücklich als nicht schulmedizinisch anerkannt eingeordnet; Notfallwege (112/116 117/Telefonseelsorge) zitierfähig benannt.
+- Verifikation: `npm run typecheck`, `npm run lint` (0 Fehler), `npm run build` grün; Dev-Render aller drei Hubs geprüft (Titel, Sektionen, FAQ-Schema, keine Console-Errors). Screenshots: `screenshots/anliegen-*.png`.
+- Nicht berührt: URLs/Rankings, Live-WordPress, Lovable-App, Design/Tokens (Rollback-Stand bleibt).
+
 ## 2026-08-18 (Abend / Rollback)
 
 - Auftraggeber: zurück auf `rp-20-pre-palette` (`8af29ad`).

@@ -32,7 +32,7 @@ export const homeSlides = [
     alt: "Ruhe und Gespräch in der Naturheilpraxis",
     meta: "Naturheilpraxis Rauch",
     title: "Selbstbewusstsein und emotionale Freiheit",
-    cta: "Info zur Psychotherapie",
+    cta: "Info: Erschöpfung & Burnout",
     href: "/psychotherapie-augsburg",
     external: false,
   },

@@ -31,9 +31,9 @@ export const hubMeta: Record<
   { title: string; description: string; kicker: string }
 > = {
   "/schmerztherapie-augsburg": {
-    title: "Schmerztherapie Augsburg – Heilpraktiker Peter Rauch",
+    title: "Heilpraktiker für Schmerz in Augsburg | Peter Rauch",
     description:
-      "Schmerztherapie in Augsburg-Hochzoll: manuell, naturheilkundlich und im Gespräch. Peter Rauch, Heilpraktiker und Physiotherapeut. Ergänzend zur Ärztin, ohne Heilversprechen.",
+      "Ergänzende Schmerztherapie in Augsburg-Hochzoll: manuelle Verfahren, Naturheilkunde und Gespräch bei chronischen Schmerzen. Peter Rauch, Heilpraktiker und Physiotherapeut. Ohne Heilversprechen.",
     kicker: "Heilpraktiker Augsburg-Hochzoll",
   },
   "/hypnotherapie-augsburg": {
@@ -61,9 +61,9 @@ export const hubMeta: Record<
     kicker: "Heilpraktiker Augsburg-Hochzoll",
   },
   "/psychotherapie-augsburg": {
-    title: "Psychotherapie Augsburg – Burnout | Heilpraktiker Rauch",
+    title: "Erschöpfung & Burnout – Heilpraktiker Augsburg | Peter Rauch",
     description:
-      "Heilpraktiker-Gespräch und Burnout-Begleitung in Augsburg-Hochzoll. Ergänzend zur ärztlichen und psychotherapeutischen Versorgung, ohne Heilversprechen.",
+      "Ergänzende Gesprächs- und naturheilkundliche Begleitung bei Erschöpfung, Burnout und Belastung in Augsburg-Hochzoll. Keine approbierte Psychotherapie, kein Heilversprechen. Termin: 0821 2621462.",
     kicker: "Heilpraktiker Augsburg-Hochzoll",
   },
   "/nls-diagnostik": {
@@ -115,9 +115,9 @@ export const hubMeta: Record<
     kicker: "Naturheilkunde · Augsburg-Hochzoll",
   },
   "/naet-methode-allergie-behandlung": {
-    title: "NAET Allergiebehandlung Augsburg – Heilpraktiker Rauch",
+    title: "Allergie & Unverträglichkeit – Heilpraktiker Augsburg | Peter Rauch",
     description:
-      "NAET als ergänzender Ansatz bei Unverträglichkeiten in Augsburg-Hochzoll. Keine Allergiediagnose, kein Heilversprechen.",
+      "Ergänzende naturheilkundliche Begleitung bei Allergien und Unverträglichkeiten in Augsburg-Hochzoll, u. a. mit NAET. Keine Allergiediagnose, kein Heilversprechen. Termin: 0821 2621462.",
     kicker: "Naturheilkunde · Augsburg-Hochzoll",
   },
   "/diagnostik-informationstherapie": {

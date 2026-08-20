@@ -34,7 +34,7 @@ const itemIcons: Record<string, typeof Leaf> = {
   "Bioresonanz Augsburg": Sparkles,
   Informationstherapie: Sparkles,
   "Hypnotherapie Augsburg": BookOpen,
-  "Psychotherapie Augsburg": Heart,
+  "Erschöpfung & Burnout": Heart,
   "Quellenhinweis & Haftung": Scale,
   Rechtshinweise: FileText,
   Patientenaufklärung: ClipboardList,
