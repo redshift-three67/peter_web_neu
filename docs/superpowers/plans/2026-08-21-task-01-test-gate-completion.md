@@ -48,4 +48,4 @@
 - [x] **Step 1:** Tests, leeren Testordner, Typecheck, Lint, Prettier, JSON-/Markdown-Deckung und Diff prüfen.
 - [x] **Step 2:** Implementierungscommit mit exakt dokumentiertem Umfang erstellen.
 - [x] **Step 3:** Übergabeordner mit Commit, Prüfwerten, Restwarnungen und nächstem Prüfauftrag erstellen und committen.
-- [ ] **Step 4:** Feature-Branch per Fast-forward integrieren, ohne Force pushen und lokalen/echten Remote-SHA vergleichen.
+- [x] **Step 4:** Feature-Branch per Fast-forward integrieren, ohne Force pushen und lokalen/echten Remote-SHA vergleichen.
