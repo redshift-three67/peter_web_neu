@@ -1,5 +1,11 @@
 # Changelog — Migration
 
+## 2026-08-21 (Design-Teilfreigaben umgesetzt)
+
+- Auftraggeber-Freigabe nach Sichtung `?look=neu`: **Farb-Tokens ✅**, **Petrol sparsam wie NLS ✅**; **Struktur der Original-Frontseite maßgeblich** (nicht HomeAc): `look=neu` rendert jetzt `HomeLegacy` mit neuen Tokens.
+- **Slider wie auf der alten Seite, an gleichen Stellen:** `HeroSlider`/`PageHeroSlider` einheitlicher Modern-Look (field-Gradient, Paper-Glas, Clay-CTA, `modern = ac || neu`); Anliegen-Hubs nutzen jetzt `PageHeroSlider` mit echten Archiv-Slides (NAET: 3 Motive mit Punktnavigation; Schmerz: Osteopathie-Bild; Psyche: Archivmotiv — je wie im WP-Original).
+- Verifikation: SSR-Checks (Slider-Punkte, Bildquellen), Typecheck grün.
+
 ## 2026-08-21 (Relaunch-Masterplan + Design-Prototyp `look=neu`)
 
 - Tiefenrecherche (Agentenläufe): Wettbewerbsumfeld Augsburg + Google-Kriterien 2026 (E-E-A-T/GEO/Local/Technik) → `docs/relaunch-2026/01-*.md`, `02-*.md`.

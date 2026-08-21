@@ -2,6 +2,17 @@
 
 **Umsetzung der verbindlichen Festlegung** `docs/design-a-plus-c/00-FESTLEGUNG.md` **als lauffähiger Skin** (`?look=neu`, Branch `relaunch-konzept`). Position: ruhig, hochwertig, ehrlich — die unbesetzte Design-Position im Augsburger Umfeld (Wettbewerber: entweder Katalog-WordPress oder Marketing-Wärme).
 
+## 0. Teil-Freigaben des Auftraggebers (21.08.2026, nach Sichtung `?look=neu`)
+
+| Entscheidung | Festlegung |
+|---|---|
+| **Farb-Tokens** | ✅ freigegeben (paper/ink/field/sage/clay/signal wie implementiert) |
+| **Startseiten-Struktur** | **Original-Struktur maßgeblich** (`HomeLegacy`): Slider, Sektionen, intelligenter Einsatz von Texten/Bildern/Symbolen — `look=neu` zeigt diese Struktur mit neuen Tokens (nicht mehr `HomeAc`) |
+| **Slider** | **Wie auf der alten Seite, an gleichen Stellen**: Startseite 5-Motive-Slider; Anliegen-Hubs nutzen jetzt den Archiv-Slider (NAET: 3 echte Motive; Schmerz/Psyche: statisches Titelbild wie im WP-Original) |
+| **Petrol-Akzent** | ✅ in dieser Form freigegeben: sparsam, nur als Akzent — NLS-Diagnostik ist die Referenz; keine petrolfarbenen Vollflächen |
+
+Folgeregel: Slider-Optik im Modern-Look (field-Gradient `#16332C`, Paper-Glas, Clay-CTA) einheitlich in `HeroSlider` + `PageHeroSlider` über `modern = ac || neu`.
+
 ## 1. Design-Token (implementiert in `src/styles.css` unter `.theme-neu`)
 
 | Token | Wert | Rolle |

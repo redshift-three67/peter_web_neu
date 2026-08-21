@@ -60,11 +60,13 @@ const concerns = [
 ];
 
 function Home() {
-  const { ac, neu } = useMusterSkin();
+  // look=neu: Struktur der Original-Startseite (Slider, Sektionen, Icons),
+  // Optik über theme-neu-Tokens. HomeAc bleibt als Muster A+C abrufbar.
+  const { ac } = useMusterSkin();
   return (
     <>
       <FaqJsonLd items={practiceFaqs} />
-      {ac || neu ? <HomeAc /> : <HomeLegacy />}
+      {ac ? <HomeAc /> : <HomeLegacy />}
     </>
   );
 }

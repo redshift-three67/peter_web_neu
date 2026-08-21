@@ -24,7 +24,8 @@ export function PageHeroSlider({
   heading: string;
   kicker?: string;
 }) {
-  const { ac, diagnostic } = useMusterSkin();
+  const { ac, neu, diagnostic } = useMusterSkin();
+  const modern = ac || neu;
   const items = slides.filter((s) => s.src);
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -69,23 +70,23 @@ export function PageHeroSlider({
         ))}
         <div
           className={
-            ac && diagnostic
+            modern && diagnostic
               ? "absolute inset-0 bg-gradient-to-r from-[#1D2C38]/75 via-[#1D2C38]/22 to-transparent"
-              : ac
+              : modern
                 ? "absolute inset-0 bg-gradient-to-r from-[#16332C]/70 via-[#16332C]/18 to-transparent"
                 : "absolute inset-0 bg-gradient-to-r from-sage-800/28 via-sage-700/10 to-transparent"
           }
         />
         <div
           className={
-            ac
+            modern
               ? "absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#1D2C38]/30 to-transparent"
               : "absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-sage-900/25 to-transparent"
           }
         />
 
         <div className="absolute left-3 top-3 z-10 max-w-[min(20.5rem,calc(100%-1.5rem))] sm:left-5 sm:top-5 sm:max-w-[min(26rem,calc(100%-3rem))] md:left-6 md:top-6 lg:max-w-[28rem]">
-          <div className={`${ac ? glassAc : glassLegacy} w-fit px-3.5 py-2.5 sm:px-4 sm:py-3`}>
+          <div className={`${modern ? glassAc : glassLegacy} w-fit px-3.5 py-2.5 sm:px-4 sm:py-3`}>
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-sage sm:text-xs">
               {kicker}
             </p>

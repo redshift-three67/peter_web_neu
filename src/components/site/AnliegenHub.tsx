@@ -12,7 +12,7 @@ import {
   X,
 } from "lucide-react";
 import { getArchiveBySlug } from "@/content/archive";
-import { blocksFromParts, editorialParts } from "@/lib/hub-blocks";
+import { blocksFromParts, classifyImage, editorialParts } from "@/lib/hub-blocks";
 import { practice } from "@/content/site";
 import type { Anliegen } from "@/content/anliegen";
 import { Button } from "@/components/ui/button";
@@ -22,12 +22,44 @@ import {
   CtaBand,
   Disclaimer,
   FaqList,
-  PageHero,
   Prose,
   ReviewStrip,
 } from "@/components/site/Shared";
 import { PhoneChip } from "@/components/site/Design";
 import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/site/JsonLd";
+import { PageHeroSlider, type HeroSlide } from "@/components/site/PageHeroSlider";
+
+/** .jpg/.png-Archivpfade auf vorhandene .webp umbiegen (wie HubFromArchive). */
+function mediaSrc(local: string) {
+  return /\.(jpe?g|png)$/i.test(local) ? local.replace(/\.(jpe?g|png)$/i, ".webp") : local;
+}
+
+/** Hero-Slider wie auf der alten WordPress-Seite: echte Slider-Motive des
+ *  Archivs, sonst erstes brauchbares Seitenbild, sonst Themenbild. */
+function heroSlidesFor(anliegen: Anliegen): HeroSlide[] {
+  const page = getArchiveBySlug(anliegen.slug.replace(/^\//, ""));
+  const slides = (page?.slider ?? [])
+    .filter((s) => s.src)
+    .map((s) => ({
+      src: mediaSrc(s.src),
+      alt: s.alt || s.title,
+      title: s.title,
+      meta: s.meta,
+    }));
+  if (slides.length > 0) return slides;
+  const pic = (page?.images ?? []).find(
+    (img) =>
+      img.local &&
+      classifyImage(img.local, img.alt) !== "skip" &&
+      !/Peter-Rauch-Heilpraktiker/i.test(img.local),
+  );
+  if (pic?.local) {
+    return [
+      { src: mediaSrc(pic.local), alt: pic.alt || anliegen.imageAlt, title: anliegen.h1, meta: undefined },
+    ];
+  }
+  return [{ src: anliegen.image, alt: anliegen.imageAlt, title: anliegen.h1, meta: undefined }];
+}
 
 /**
  * Anliegen-Hub nach Breitenberger-Logik:
@@ -50,12 +82,10 @@ export function AnliegenHub({ anliegen }: { anliegen: Anliegen }) {
           { name: anliegen.navLabel, href: anliegen.slug },
         ]}
       />
-      <PageHero
+      <PageHeroSlider
+        slides={heroSlidesFor(anliegen)}
+        heading={anliegen.h1}
         kicker="Heilpraktiker Augsburg-Hochzoll"
-        title={anliegen.h1}
-        lead={anliegen.kurz}
-        image={anliegen.image}
-        imageAlt={anliegen.imageAlt}
       />
       <PhoneChip className="border-b border-line bg-bg" />
 

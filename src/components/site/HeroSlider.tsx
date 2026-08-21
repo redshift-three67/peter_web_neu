@@ -9,11 +9,12 @@ const glassAc =
   "rounded-2xl border border-paper/50 bg-paper/70 shadow-card backdrop-blur-md";
 
 export function HeroSlider() {
-  const { ac } = useMusterSkin();
+  const { ac, neu } = useMusterSkin();
+  const modern = ac || neu;
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const slide = homeSlides[index];
-  const glass = ac ? glassAc : glassLegacy;
+  const glass = modern ? glassAc : glassLegacy;
 
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -24,7 +25,7 @@ export function HeroSlider() {
     return () => window.clearInterval(id);
   }, [paused]);
 
-  const ctaClass = ac
+  const ctaClass = modern
     ? "mt-3 inline-flex min-h-11 items-center rounded-lg bg-clay px-5 text-sm font-medium text-paper hover:bg-clay-deep"
     : "mt-3 inline-flex min-h-11 items-center rounded-full bg-sage px-5 text-sm font-medium text-paper hover:bg-sage-600";
 
@@ -55,14 +56,14 @@ export function HeroSlider() {
 
         <div
           className={
-            ac
+            modern
               ? "absolute inset-0 bg-gradient-to-r from-[#16332C]/70 via-[#16332C]/18 to-transparent"
               : "absolute inset-0 bg-gradient-to-r from-sage-800/28 via-sage-700/10 to-transparent"
           }
         />
         <div
           className={
-            ac
+            modern
               ? "absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#16332C]/35 to-transparent"
               : "absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-sage-900/25 to-transparent"
           }
@@ -74,7 +75,7 @@ export function HeroSlider() {
               Augsburg-Hochzoll · Friedberg · Lechhausen
             </p>
             <h1 className="mt-1 font-display text-[1.35rem] font-medium leading-[1.18] text-sage-700 sm:text-[1.75rem] md:text-[2rem] lg:text-[2.15rem]">
-              {ac ? (
+              {modern ? (
                 <>
                   Heilpraktiker Augsburg – Naturheilpraxis{" "}
                   <em className="font-medium italic">Peter Rauch</em>
