@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "RAUCH-TASK-01-VERIFIKATIONSSTATUS-2026-08-21",
+  "task": "Task 1: Test-Gate reparieren",
+  "status": "implementiert_verifiziert_implementation_sync_bestaetigt",
+  "canonical_repository": "C:\\Users\\Hubert111\\Documents\\rauch_18_08_26_19_42\\repo-main",
+  "canonical_branch": "relaunch-konzept",
+  "commits": {
+    "developer_base": "04e6b9dc64be437787c02f1dc6d3de3a533b9240",
+    "design": "366073e6f0bd2feb7d63674a9687d19b65144c0d",
+    "implementation": "7ea8a50149d5a54a45014a92f1ec265182ad5efe",
+    "handoff": null
+  },
+  "implementation_sync": {
+    "verified_after_fetch": true,
+    "local_sha": "7ea8a50149d5a54a45014a92f1ec265182ad5efe",
+    "origin_sha": "7ea8a50149d5a54a45014a92f1ec265182ad5efe",
+    "equal": true
+  },
+  "verification": {
+    "targeted_runner_tests": {
+      "exit_code": 0,
+      "tests": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    "npm_test": {
+      "exit_code": 0,
+      "tests": 44,
+      "passed": 44,
+      "failed": 0
+    },
+    "empty_test_directory": {
+      "observed_runner_exit_code": 1,
+      "expected_nonzero": true,
+      "passed": true
+    },
+    "typecheck": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "lint": {
+      "exit_code": 0,
+      "errors": 0,
+      "warnings": 3,
+      "passed": true
+    },
+    "prettier": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "status_matrix_coverage": {
+      "json_items": 29,
+      "markdown_unique_ids": 29,
+      "missing": [],
+      "extra": [],
+      "passed": true
+    },
+    "git_diff_check": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "secret_pattern_scan": {
+      "matches": 0,
+      "passed": true
+    }
+  },
+  "chrome_live_view": {
+    "url": "http://127.0.0.1:8080/",
+    "ready_state": "complete",
+    "title": "Heilpraktiker Augsburg – Naturheilpraxis Peter Rauch",
+    "h1_count": 1,
+    "main_count": 1,
+    "canonical": "https://rauch-heilpraktiker.de/",
+    "console_warnings": 0,
+    "console_errors": 0,
+    "passed": true
+  },
+  "known_non_blocking_warnings": [
+    "scripts/wp-public-crawl.mjs: ungenutzter readFile-Import",
+    "src/components/site/DesignSkin.tsx: Fast-Refresh-Grenze",
+    "src/lib/auth/use-current-user.ts: ungenutzte ESLint-Deaktivierung"
+  ],
+  "next_defined_step": "Task 2: GSC- und 64-URL-Matrix",
+  "external_review_required_before_next_task": true
+}
