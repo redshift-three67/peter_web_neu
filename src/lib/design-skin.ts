@@ -33,6 +33,15 @@ export function persistLook(look: DesignLook) {
   window.localStorage.setItem(KEY, look);
 }
 
+/** URL-Parameter > gespeicherte Auswahl > Default „neu" (Relaunch-Design).
+ *  Auftraggeber 21.08.: Umsetzungen sollen ohne Parameter sichtbar sein;
+ *  `?look=alt` bleibt als expliziter Fallback erhalten. */
 export function resolveLook(search: string): DesignLook {
-  return lookFromSearch(search) ?? "alt";
+  const fromUrl = lookFromSearch(search);
+  if (fromUrl) return fromUrl;
+  if (typeof window !== "undefined") {
+    const stored = window.localStorage.getItem(KEY);
+    if (stored === "alt" || stored === "ac" || stored === "neu") return stored;
+  }
+  return "neu";
 }
