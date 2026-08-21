@@ -14,8 +14,8 @@ export const Route = createFileRoute("/nls-diagnostik")({
 });
 
 function Page() {
-  const { ac } = useMusterSkin();
-  if (ac) {
+  const { ac, neu } = useMusterSkin();
+  if (ac || neu) {
     return (
       <NlsNeko
         heading="NLS-Diagnostik in Augsburg"

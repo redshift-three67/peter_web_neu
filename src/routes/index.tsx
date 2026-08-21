@@ -60,11 +60,11 @@ const concerns = [
 ];
 
 function Home() {
-  const { ac } = useMusterSkin();
+  const { ac, neu } = useMusterSkin();
   return (
     <>
       <FaqJsonLd items={practiceFaqs} />
-      {ac ? <HomeAc /> : <HomeLegacy />}
+      {ac || neu ? <HomeAc /> : <HomeLegacy />}
     </>
   );
 }

@@ -35,6 +35,13 @@
   font-display: swap;
   src: url("/fonts/source-sans-600.woff2") format("woff2");
 }
+@font-face {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/playfair-italic-500.woff2") format("woff2");
+}
 
 @theme {
   /* Lovable tokens, hex-genau aus hsl(145/40/18 …) */
@@ -67,6 +74,8 @@
   --color-paper: #fffdf9;
   --color-card: #f5f3ef;
   --color-danger: #d32f2f;
+  --color-field: #16332c;
+  --color-signal: #8a4b32;
 
   --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
   --font-sans: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
@@ -185,4 +194,90 @@
     opacity: 1;
     transform: none;
   }
+}
+
+/* ------------------------------------------------------------------ */
+/* Relaunch-Design 2026 (look=neu). Umsetzung der verbindlichen        */
+/* Festlegung docs/design-a-plus-c/00-FESTLEGUNG.md: Oura-Creme als    */
+/* Grund, Ink für Text, Field nur als dunkles Hero-Feld, Sage als      */
+/* dünner Akzent, Clay für den einen CTA, Signal für HWG-Hinweise.     */
+/* Default bleibt look=alt — dieser Skin wird nur per Klasse aktiv.    */
+/* ------------------------------------------------------------------ */
+.theme-neu {
+  --color-bg: #f7f1e8;
+  --color-paper: #f7f1e8;
+  --color-fg: #1d2c38;
+  --color-muted: #4a5863;
+  --color-line: #d9d1c4;
+  --color-sage: #3f6b52;
+  --color-sage-deep: #274935;
+  --color-sage-soft: #efe8dc;
+  --color-sage-50: #efe8dc;
+  --color-sage-100: #e8e0d2;
+  --color-sage-200: #d9d1c4;
+  --color-sage-600: #274935;
+  --color-sage-700: #1d2c38;
+  --color-sand: #efe8dc;
+  --color-sand-50: #f2ecdf;
+  --color-sand-100: #efe8dc;
+  --color-card: #f3ede1;
+  --color-surface: #efe8dc;
+  --color-danger: #8a4b32;
+
+  --radius-3xl: 1rem;
+
+  /* Festlegung: Fließtext 18px, lh 1.65 */
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+/* Typo-Disziplin: Playfair nur H1/Kapitel-H2, Karten sans */
+.theme-neu h3,
+.theme-neu h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+/* Ein Wort Betonung im H1 (Playfair italic 500) */
+.theme-neu .neu-em {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Sticky Mobile-CTA: Platz am Seitenende schaffen */
+.theme-neu main {
+  padding-bottom: 4.75rem;
+}
+@media (min-width: 768px) {
+  .theme-neu main {
+    padding-bottom: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .theme-neu .neu-rise {
+    animation: neu-rise 0.7s ease both;
+  }
+}
+
+@keyframes neu-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Diagnose-Seiten (C): dieselben Familien, kühler gemischt —
+   Neko-Petrol als Akzent, sage fast weg, Hero darf ink. */
+.theme-neu-diag {
+  --color-sage: #3a5258;
+  --color-sage-deep: #1d2c38;
+  --color-sage-600: #1d2c38;
+  --color-sage-700: #1d2c38;
 }

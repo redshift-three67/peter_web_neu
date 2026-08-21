@@ -1,5 +1,13 @@
 # Changelog — Migration
 
+## 2026-08-21 (Relaunch-Masterplan + Design-Prototyp `look=neu`)
+
+- Tiefenrecherche (Agentenläufe): Wettbewerbsumfeld Augsburg + Google-Kriterien 2026 (E-E-A-T/GEO/Local/Technik) → `docs/relaunch-2026/01-*.md`, `02-*.md`.
+- **Masterplan** `docs/relaunch-2026/00-MASTERPLAN.md`: Phasen 0–5 (Absicherung → nahtlose Übernahme → Anliegen-Hubs → Design → SEO/GEO → Cutover), Akzeptanz „nahtlos", Governance (Bilder nur in Absprache, Geräte nie; Design-Default nur nach Freigabe).
+- **Design-Prototyp** Branch `relaunch-konzept` (basiert auf `breitenberger-hubs`): Skin `.theme-neu` / `.theme-neu-diag` nach Festlegung A+C (`00-FESTLEGUNG.md`): Oura-Creme/Ink/Field/Sage-Akzent/Clay-CTA/Signal-HWG; Body 18px lh 1.65; Playfair nur H1/Kapitel (H3/H4 Sans erzwungen); `playfair-italic-500.woff2` (OFL) lokal nachgezogen; Sticky Mobile-CTA (Anrufen/Termin, 44px, safe-area); Design-Leiste mit drei Looks (Default weiterhin `alt`).
+- Vorschau-Flächen `?look=neu`: Start, NLS (Diag), Schmerz-, Erschöpfungs-, Allergie-Hub. Verifikation: Computed-Styles (Farben/Fonts/18px/44px) + Screenshots `screenshots/neu-*.png`.
+- Kernerkenntnisse Recherche: „NAET Augsburg" = null lokale Konkurrenz; Burnout-SERP ohne Naturheilpraktiker-Angebot; kein Augsburger Wettbewerber mit echtem Schema.org-Stack; llms.txt unnötig; AggregateRating self-serving-Regel beachten.
+
 ## 2026-08-20 (Breitenberger-Anliegen-Hubs)
 
 - Umsetzung der fachlichen Vorgabe `docs/design-a-plus-c/07-breitenberger-inhaltsmaschine.md` für die drei Anliegen-Hubs (`/schmerztherapie-augsburg`, `/psychotherapie-augsburg`, `/naet-methode-allergie-behandlung`) auf Branch `breitenberger-hubs` (Basis `main` = `1d535b3`).
