@@ -281,16 +281,16 @@ Der Plattform-Arbeitsbaum basiert bei dieser Tiefenprüfung auf `2d233564ca98ed4
 
 **Files:** Modify `package.json`; verify `scripts/*.test.mjs`.
 
-- [ ] `npm test` ausführen; erwartet derzeit Exit 0 mit `tests 0` und gilt als fehlgeschlagen.
-- [ ] `node --test scripts/*.test.mjs` ausführen; Baseline: 41/41 grün.
-- [ ] Script exakt ändern:
+- [x] `npm test` ausführen; erwartet derzeit Exit 0 mit `tests 0` und gilt als fehlgeschlagen.
+- [x] `node --test scripts/*.test.mjs` ausführen; Baseline: 41/41 grün.
+- [x] Script exakt ändern:
 
 ```json
 "test": "node --test scripts/*.test.mjs"
 ```
 
-- [ ] `npm test` erneut ausführen; erwartet mindestens 41 Tests, 0 Fehler.
-- [ ] Commit: `git commit -m "test: execute repository test suite on all platforms"`.
+- [x] `npm test` erneut ausführen; erwartet mindestens 41 Tests, 0 Fehler.
+- [x] Commit: `git commit -m "fix: make test gate execute all node tests"`.
 
 ### Task 2: GSC- und 64-URL-Matrix
 

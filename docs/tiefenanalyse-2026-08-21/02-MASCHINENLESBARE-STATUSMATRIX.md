@@ -24,7 +24,7 @@ Zulässige Statuswerte sind:
 | -------- | -------------------------- | ------------------------------------------------ | ----------------------------- | ------------------ |
 | STAT-001 | Git und Synchronisation    | Kanonischer Quellstand der Prüfung               | bestätigt                     | Info               |
 | STAT-002 | Dokumentation              | Kanonische Übergabequellen                       | bestätigt                     | Info               |
-| STAT-003 | Qualitätssicherung         | npm-Testskript                                   | nicht bestätigt               | P0                 |
+| STAT-003 | Qualitätssicherung         | npm-Testskript                                   | bestätigt                     | P0                 |
 | STAT-004 | Qualitätssicherung         | Direkte Node-Testsuite                           | bestätigt                     | Info               |
 | STAT-005 | Qualitätssicherung         | Typecheck und Lint                               | bestätigt mit Einschränkungen | P2                 |
 | STAT-006 | Deployment                 | Node-Containervertrag                            | nicht bestätigt               | P0                 |
