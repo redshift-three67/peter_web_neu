@@ -1,5 +1,12 @@
 # Changelog — Migration
 
+## 2026-08-21 (Abend: Tiefenanalyse Parität + Sichtbarkeits-Fixes)
+
+- Auftraggeber-Meldung "Umsetzungen nicht sichtbar / kein Petrol" → Tiefenanalyse docs/relaunch-2026/05-tiefenanalyse-paritaet.md mit neuem Prüfwerkzeug scripts/parity-audit.mjs (Live-Snapshot vs. SSR-Render, elementgenau; Entities/Chrome/Join-Scheinlücken bereinigt).
+- Ursachen: Default-Look-Falle (bereits rp-29 behoben — Default jetzt "neu", localStorage wird gelesen), Browser-Cache nach Server-Restart, Petrol gemäß Freigabe nur auf Diagnose-Seiten (NLS --color-sage:#3a5258 messbar aktiv).
+- Echte Fehler behoben: Anliegen-Hubs rendern moreTitles jetzt als Link-Chips (Card-Nebentitel fehlten); Verfahrens-Verzeichnis 6→17 Kacheln (topicHref um 13 Einträge erweitert); FAQ-H2 auf Live-Wortlaut "Häufige Fragen zur Praxis".
+- Echte Restlücken dokumentiert (Welle 2): NLS-Archivtiefe (NlsNeko), Kontakt-Live-Texte, Header-Mega-Menü-Linkprofil, 4 fehlende Hub-Slider im Katalog (Nachcrawl). Rechtsseiten bewusst kondensiert.
+
 ## 2026-08-21 (Welle 1: Inhalts-Parität Start + Hubs)
 
 - Wiederherstellungspunkte: `rp-27-pre-inhaltsabgleich` (vor) / `rp-28-welle1-paritaet` (nach, `062fc48`).

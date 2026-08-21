@@ -384,7 +384,7 @@ export function AnliegenHub({ anliegen }: { anliegen: Anliegen }) {
               Häufige Fragen
             </p>
             <h2 className="mt-2 font-display text-3xl font-semibold text-sage-700">
-              Klarheit vor dem ersten Anruf
+              Häufige Fragen zur Praxis
             </h2>
             <div className="mt-6">
               <FaqList items={anliegen.faqs} />
@@ -463,6 +463,34 @@ function DepthBlock({ block }: { block: DepthBlockType }) {
               <li key={item}>{item}</li>
             ))}
           </ul>
+        ) : null}
+        {block.moreTitles.length ? (
+          <div className="mt-4 grid gap-2 sm:grid-cols-2">
+            {block.moreTitles.map((name) => {
+              const href = guessHref(name);
+              const label = (
+                <span className="inline-flex items-center gap-1 text-sm font-medium text-sage">
+                  {name} <ArrowRight className="size-3.5" />
+                </span>
+              );
+              return href ? (
+                <Link
+                  key={name}
+                  to={href}
+                  className="rounded-xl border border-line bg-paper px-3 py-2 transition hover:-translate-y-0.5 hover:shadow-soft"
+                >
+                  {label}
+                </Link>
+              ) : (
+                <span
+                  key={name}
+                  className="rounded-xl border border-line bg-paper px-3 py-2 text-sm text-muted"
+                >
+                  {name}
+                </span>
+              );
+            })}
+          </div>
         ) : null}
       </div>
     );

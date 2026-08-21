@@ -289,7 +289,7 @@ export function HubFromArchive({
               Häufige Fragen
             </p>
             <h2 className="mt-2 font-display text-3xl font-semibold text-sage-700">
-              Klarheit vor dem ersten Anruf
+              Häufige Fragen zur Praxis
             </h2>
             <div className="mt-6">
               <FaqList items={practiceFaqs} />

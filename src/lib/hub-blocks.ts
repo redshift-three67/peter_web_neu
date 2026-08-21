@@ -235,6 +235,21 @@ export const topicHref: Record<string, string> = {
   "Elektroakupunktur nach Dr. Voll": "/elektroakupunktur-nach-dr-voll-3",
   "Vieva Pro": "/vieva-pro-herzratenvariabilitaet",
   "Hinweisdiagnostik im Überblick": "/diagnostik-informationstherapie",
+  "Elektroakupunktur nach Doktor Voll": "/hinweisdiagnostik-eav-elektroakupunktur-nach-dr-voll",
+  "Bioresonanztherapie nach Baklayan": "/bioresonanz-und-elektroakupunktur",
+  "Frequenz-Akupunkt": "/akupunktur-ohne-nadeln",
+  "HEAL-Therapie": "/akupunktur-ohne-nadeln",
+  "Vitalfeldtherapie": "/vieva-pro-herzratenvariabilitaet",
+  "150 MHz": "/150-mhz-befeldung-nach-broers-3",
+  "Klassische | Komplexe": "/klassische-homoeopathie",
+  "Komplexe Homöopathie": "/die-komplex-homoeopathie",
+  "Schmerztherapie": "/schmerztherapie-augsburg",
+  "Allergie Behandlung": "/naet-methode-allergie-behandlung",
+  "Vitamin- und Nährstoffberatung": "/vital-und-naehrstoffanalyse",
+  "Kinesiologie": "/kinesiologie",
+  "Orthomolekulare": "/orthomolekulare-therapie",
+  "Osteopathie Techniken": "/osteopathie-techniken",
+  "Manuelle Therapieverfahren": "/manuelle-therapieverfahren-uebersicht",
 };
 
 export function guessTopicHref(name: string) {
