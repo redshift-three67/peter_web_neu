@@ -60,14 +60,14 @@
       "bereich": "Qualitätssicherung",
       "gegenstand": "npm-Testskript",
       "soll_zustand": "npm test führt die vorhandene Testsuite plattformübergreifend aus und scheitert bei null gefundenen Tests",
-      "ist_zustand": "npm test führt 41 Tests über node --test scripts/*.test.mjs plattformübergreifend aus; 41 bestanden, 0 Fehler",
+      "ist_zustand": "npm test ermittelt scripts/**/*.test.mjs rekursiv über scripts/run-tests.mjs, bricht bei null Testdateien mit Exitcode 1 ab und führte 44 Tests aus; 44 bestanden, 0 Fehler",
       "status": "bestätigt",
       "verifikationsgrad": "verifiziert",
-      "nachweis": "package.json:16; frischer Lauf npm test: tests 41, pass 41, fail 0, Exit 0",
+      "nachweis": "package.json:16; scripts/run-tests.mjs; scripts/run-tests.test.mjs; frischer Lauf npm test: tests 44, pass 44, fail 0, Exit 0; Nulltreffer-Regressionstest: Exit 1",
       "prioritaet": "P0",
       "abhaengigkeiten": [],
-      "naechster_schritt": "Keine Aktion erforderlich; Gate ist aktiv",
-      "abnahmekriterium": "npm test führt mindestens 41 Tests aus und meldet null Fehler",
+      "naechster_schritt": "Runner und Nulltreffer-Regressionstest als verpflichtendes Standardgate bewahren",
+      "abnahmekriterium": "npm test führt mindestens 44 Tests aus und meldet null Fehler; ein leerer Testbestand liefert Exitcode ungleich null",
       "verantwortungsrolle": "Developer"
     },
     {
@@ -81,7 +81,7 @@
       "nachweis": "Frischer Baseline-Lauf im isolierten Worktree am 2026-08-21",
       "prioritaet": "Info",
       "abhaengigkeiten": [],
-      "naechster_schritt": "Tests über das korrigierte npm-Testskript zum Standardgate machen",
+      "naechster_schritt": "Direkten Baseline-Lauf als historische Vergleichsevidenz bewahren; Standardgate ist npm test",
       "abnahmekriterium": "Der direkte Lauf führt 41 Tests aus und meldet 41 bestanden sowie 0 fehlgeschlagen",
       "verantwortungsrolle": "Developer"
     },
@@ -380,10 +380,9 @@
       "ist_zustand": "Die Codebasis ist eine fortgeschrittene Relaunch-Grundlage, aber mehrere P0- und P1-Gates sind offen; WordPress bleibt Produktions- und Rollbackquelle",
       "status": "nicht bestätigt",
       "verifikationsgrad": "verifiziert",
-      "nachweis": "STAT-003, STAT-006, STAT-007, STAT-010 bis STAT-012, STAT-014, STAT-016 bis STAT-023 und STAT-025 bis STAT-029",
+      "nachweis": "STAT-006, STAT-007, STAT-010 bis STAT-012, STAT-014, STAT-016 bis STAT-023 und STAT-025 bis STAT-029; STAT-003 ist geschlossen",
       "prioritaet": "P0",
       "abhaengigkeiten": [
-        "STAT-003",
         "STAT-006",
         "STAT-007",
         "STAT-010",
@@ -403,7 +402,7 @@
         "STAT-028",
         "STAT-029"
       ],
-      "naechster_schritt": "Masterplan Tasks 1 bis 12 in Abhängigkeitsreihenfolge umsetzen und jedes Gate evidenzbasiert schließen",
+      "naechster_schritt": "Masterplan Tasks 2 bis 12 in Abhängigkeitsreihenfolge umsetzen und jedes Gate evidenzbasiert schließen",
       "abnahmekriterium": "Definition of Done des Masterplans vollständig erfüllt; Cutover ausdrücklich freigegeben",
       "verantwortungsrolle": "Product Owner / Technical Lead / SEO / DevOps / Reviewers"
     },

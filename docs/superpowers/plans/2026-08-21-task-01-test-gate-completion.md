@@ -18,11 +18,11 @@
 - Create: `scripts/run-tests.mjs`
 - Modify: `package.json:16`
 
-- [ ] **Step 1:** Regressionstests für rekursive Ermittlung, Nulltreffer-Exitcode 1 und Child-Exitcode-Weitergabe schreiben.
-- [ ] **Step 2:** `node --test scripts/run-tests.test.mjs` ausführen und den erwarteten Importfehler für das noch fehlende Modul bestätigen.
-- [ ] **Step 3:** Minimalen Runner mit `discoverTestFiles()` und `runTestSuite()` implementieren.
-- [ ] **Step 4:** `package.json` auf `node scripts/run-tests.mjs` umstellen.
-- [ ] **Step 5:** Regressionstest und vollständiges `npm test` grün ausführen.
+- [x] **Step 1:** Regressionstests für rekursive Ermittlung, Nulltreffer-Exitcode 1 und Child-Exitcode-Weitergabe schreiben.
+- [x] **Step 2:** `node --test scripts/run-tests.test.mjs` ausführen und den erwarteten Importfehler für das noch fehlende Modul bestätigen.
+- [x] **Step 3:** Minimalen Runner mit `discoverTestFiles()` und `runTestSuite()` implementieren.
+- [x] **Step 4:** `package.json` auf `node scripts/run-tests.mjs` umstellen.
+- [x] **Step 5:** Regressionstest und vollständiges `npm test` grün ausführen.
 
 ### Task 2: Kanonische Statusdokumente konsolidieren
 
@@ -33,9 +33,9 @@
 - Modify: `docs/tiefenanalyse-2026-08-21/02-MASCHINENLESBARE-STATUSMATRIX.json`
 - Modify: `docs/tiefenanalyse-2026-08-21/02-MASCHINENLESBARE-STATUSMATRIX.md`
 
-- [ ] **Step 1:** Historische Null-Test-Baseline von der aktuellen Statusfortschreibung unterscheiden.
-- [ ] **Step 2:** `STAT-003` erst nach grünem Nulltreffer-Test bestätigen, `STAT-004` fortschreiben und `STAT-003` aus offenen `STAT-024`-Abhängigkeiten entfernen.
-- [ ] **Step 3:** Masterplan Task 1, Risikoübersicht, Vollbericht und nächste Maßnahme widerspruchsfrei aktualisieren.
+- [x] **Step 1:** Historische Null-Test-Baseline von der aktuellen Statusfortschreibung unterscheiden.
+- [x] **Step 2:** `STAT-003` erst nach grünem Nulltreffer-Test bestätigen, `STAT-004` fortschreiben und `STAT-003` aus offenen `STAT-024`-Abhängigkeiten entfernen.
+- [x] **Step 3:** Masterplan Task 1, Risikoübersicht, Vollbericht und nächste Maßnahme widerspruchsfrei aktualisieren.
 
 ### Task 3: Verifizieren, übergeben und synchronisieren
 
@@ -45,7 +45,7 @@
 - Create: `docs/developer-handoffs/2026-08-21-task-01-test-gate/02-LLM-PRUEFAUFTRAG.md`
 - Create: `docs/developer-handoffs/2026-08-21-task-01-test-gate/03-VERIFIKATIONSSTATUS.json`
 
-- [ ] **Step 1:** Tests, leeren Testordner, Typecheck, Lint, Prettier, JSON-/Markdown-Deckung und Diff prüfen.
+- [x] **Step 1:** Tests, leeren Testordner, Typecheck, Lint, Prettier, JSON-/Markdown-Deckung und Diff prüfen.
 - [ ] **Step 2:** Implementierungscommit mit exakt dokumentiertem Umfang erstellen.
 - [ ] **Step 3:** Übergabeordner mit Commit, Prüfwerten, Restwarnungen und nächstem Prüfauftrag erstellen und committen.
 - [ ] **Step 4:** Feature-Branch per Fast-forward integrieren, ohne Force pushen und lokalen/echten Remote-SHA vergleichen.

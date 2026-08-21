@@ -60,6 +60,7 @@ Die neue Rauch-Website ist eine fortgeschrittene, lauffähige Relaunch-Codebasis
 
 - Der geprüfte lokale Branch und `origin/relaunch-konzept` waren zu Prüfungsbeginn auf demselben Commit `c6aa58e`; der Arbeitsbaum war sauber.
 - Die direkte Testsuite umfasst 41 Tests; alle 41 bestanden frisch im isolierten Windows-Worktree.
+- Task 1 ist fortgeschrieben: `npm test` verwendet einen deterministischen rekursiven Runner, führte 44 Tests aus und scheitert bei einem leeren Testbestand mit Exitcode 1.
 - TypeScript-Typecheck meldete Exitcode 0.
 - ESLint meldete Exitcode 0, 0 Fehler und 3 bekannte Warnungen.
 - Der öffentliche WordPress-Crawl enthält 64 Seiten, 80 Medienreferenzen und 0 Crawlfehler.
@@ -70,14 +71,13 @@ Die neue Rauch-Website ist eine fortgeschrittene, lauffähige Relaunch-Codebasis
 
 ### 2.3 Kritische offene Gates
 
-1. `npm test` führt unter Windows aufgrund des einfach gequoteten Glob-Musters null Tests aus und liefert trotzdem Exitcode 0.
-2. Eine fachlich und GSC-gestützt freigegebene 64-URL-Migrationsmatrix fehlt.
-3. GSC-Baseline-Exporte liegen nicht im Workspace.
-4. Der Node-/Containervertrag für den bevorzugten `managed-container`-Betrieb fehlt.
-5. `MedicalBusiness`-JSON-LD enthält ein selbstbezogenes Rating, eine relative Bild-URL und unvollständige Öffnungsintervalle.
-6. Der Online-Anamnesebogen schreibt Gesundheitsdaten als Klartext-JSON in die allgemeine Datenbank.
-7. Ein vollständiges WXR-/WordPress-/Plesk-Abschalt- und Restorepaket fehlt.
-8. Vollständige fachlich-rechtliche Inhalts-, Accessibility-, Performance- und Cutover-Abnahmen fehlen.
+1. Eine fachlich und GSC-gestützt freigegebene 64-URL-Migrationsmatrix fehlt.
+2. GSC-Baseline-Exporte liegen nicht im Workspace.
+3. Der Node-/Containervertrag für den bevorzugten `managed-container`-Betrieb fehlt.
+4. `MedicalBusiness`-JSON-LD enthält ein selbstbezogenes Rating, eine relative Bild-URL und unvollständige Öffnungsintervalle.
+5. Der Online-Anamnesebogen schreibt Gesundheitsdaten als Klartext-JSON in die allgemeine Datenbank.
+6. Ein vollständiges WXR-/WordPress-/Plesk-Abschalt- und Restorepaket fehlt.
+7. Vollständige fachlich-rechtliche Inhalts-, Accessibility-, Performance- und Cutover-Abnahmen fehlen.
 
 ### 2.4 Verbindliche Statusantworten
 
@@ -191,8 +191,9 @@ Der Masterplan deckt Architektur, P0/P1-Risiken, Zielverträge, zwölf Umsetzung
 | 64 Live-Sitemap-URLs               | Direktabruf der XML-Sitemap   | bestätigt                                |
 | 19 neue Sitemap-URLs               | lokales XML-Parsing           | bestätigt                                |
 | 18 Hubpfade in drei Wellen         | `src/content/hubs.ts`         | bestätigt                                |
-| `npm test` = 0 Tests               | frischer Lauf                 | bestätigt                                |
-| direkter Node-Test = 41/41         | frischer Lauf                 | bestätigt                                |
+| `npm test` = 0 Tests (Baseline)    | Ausgangsprüfung               | historisch bestätigt                     |
+| direkter Node-Test = 41/41         | Ausgangsprüfung               | historisch bestätigt                     |
+| `npm test` = 44/44 plus Null-Gate  | Task-1-Fortschreibung         | bestätigt                                |
 | Nitro-Preset Vercel                | `vite.config.ts:148-150`      | bestätigt                                |
 | Rating und relative Bild-URL       | `JsonLd.tsx:11,42-47`         | bestätigt                                |
 | Gesundheits-JSON in allgemeiner DB | `actions.ts:33-72`, Migration | bestätigt                                |
@@ -527,14 +528,18 @@ Der Quellcommit besitzt weder `Dockerfile` noch `/healthz` noch passende Build-/
 | Befehl                           | Exit |             Ausgeführt | Bestanden | Fehler | Bewertung                                          |
 | -------------------------------- | ---: | ---------------------: | --------: | -----: | -------------------------------------------------- |
 | `npm ci`                         |    0 | 418 Pakete installiert |         — |      — | reproduzierbar; Recharts-Deprecationwarnung        |
-| `npm test`                       |    0 |                      0 |         0 |      0 | fachlich fehlgeschlagen, weil keine Tests liefen   |
+| `npm test` (Ausgangsprüfung)     |    0 |                      0 |         0 |      0 | historischer Defekt: keine Tests liefen            |
 | `node --test scripts/*.test.mjs` |    0 |                     41 |        41 |      0 | bestanden                                          |
+| `npm test` (Task 1)              |    0 |                     44 |        44 |      0 | bestanden; rekursive Testermittlung                |
+| Nulltreffer-Regressionstest      |    1 |                      0 |         0 |      0 | bestanden; leere Testsuite wird abgewiesen         |
 | `npm run typecheck`              |    0 |                      — |         — |      0 | bestanden                                          |
 | `npm run lint`                   |    0 |                      — |         — |      0 | bestanden mit 3 Warnungen                          |
 | `npm run build`                  |    0 |                      — |         — |      0 | Vercel-Build bestanden; DB-Migration übersprungen  |
 | `npm run preview` + HTTP-Abruf   |    — |                      1 |         0 |      1 | HTTP 500; erwartetes `dist/server/server.js` fehlt |
 
 Der Preview-Befund wurde nach dem frischen Build reproduziert: Vite meldete `ERR_MODULE_NOT_FOUND` für `dist/server/server.js`. Damit ist nicht der Vercel-Build selbst fehlgeschlagen, sondern der lokale Build-/Startvertrag inkonsistent.
+
+Task 1 schließt das frühere npm-Nichtnull-Gate: `scripts/run-tests.mjs` ermittelt `scripts/**/*.test.mjs` rekursiv und deterministisch, propagiert den Node-Test-Exitcode und liefert bei null gefundenen Testdateien Exitcode 1. Die Baseline-Zeilen bleiben ausschließlich als historische Evidenz erhalten.
 
 ### 20.2 Bestehende Lintwarnungen
 
@@ -544,7 +549,6 @@ Der Preview-Befund wurde nach dem frischen Build reproduziert: Vite meldete `ERR
 
 ### 20.3 Fehlende Releasegates
 
-- npm-Nichtnull-Testgate;
 - SEO-/Schema-Vertragstests;
 - Redirect-/Canonical-E2E;
 - Gesundheitsdaten-Boundary-Test;
@@ -609,7 +613,7 @@ Zugangsdaten dürfen niemals im Chat oder Repository übermittelt werden.
 
 | ID   | Bereich       | Risiko                                        | Prio               | Abnahme                                     |
 | ---- | ------------- | --------------------------------------------- | ------------------ | ------------------------------------------- |
-| R-01 | QA            | `npm test` kann mit null Tests grün wirken    | P0                 | mindestens 41 Tests über Standardscript     |
+| R-01 | QA            | `npm test` kann mit null Tests grün wirken    | geschlossen        | 44/44 über Standardscript; Nulltreffer = 1  |
 | R-02 | SEO           | 64 Alt-URLs ohne freigegebene Matrix          | P0                 | 64 eindeutige Entscheidungen, keine Ketten  |
 | R-03 | GSC           | Ranking-/Indexdaten fehlen                    | P0                 | datierte private Baseline                   |
 | R-04 | Schema        | Rating, relative Bild-URL, Öffnungszeiten     | P0                 | getestetes freigegebenes JSON-LD            |
@@ -634,7 +638,7 @@ Die detaillierten maschinenlesbaren Datensätze stehen in `02-MASCHINENLESBARE-S
 
 Der verbindliche Ausführungsplan ist `docs/relaunch-2026/00-MASTERPLAN.md`. Seine zwölf Tasks bleiben in folgender Abhängigkeitslogik maßgeblich:
 
-1. Test-Gate reparieren.
+1. Test-Gate reparieren (geschlossen).
 2. GSC- und 64-URL-Matrix erzeugen.
 3. WordPress-/Plesk-Abschaltarchiv erfassen.
 4. NAP und strukturierte Daten korrigieren.
@@ -649,7 +653,7 @@ Der verbindliche Ausführungsplan ist `docs/relaunch-2026/00-MASTERPLAN.md`. Sei
 
 Sofort parallelisierbar nach separaten Branches beziehungsweise klaren Dateigrenzen:
 
-- Task 1, Task 4 und Task 7;
+- Task 4 und Task 7;
 - Beschaffung externer Daten für Task 2 und 3;
 - Vorbereitung des Node-Vertrags Task 8;
 - redaktionelle Reviewmatrix aus Task 6.
@@ -720,13 +724,14 @@ Vor einer produktiven Freigabe müssen mindestens erfüllt sein:
 | Headless-Stufe 2 fertig       | nicht bestätigt               | ContentProvider/Payload-Migration offen                       |
 | Go-live bereit                | nicht bestätigt               | mehrere P0-/P1-Gates offen                                    |
 
-**Nächste Maßnahme mit hohem Nutzen und geringem Risiko:** zuerst das `npm test`-Gate reparieren und parallel die externen GSC-/WordPress-/Plesk-Evidenzpakete beschaffen. Danach JSON-LD und Gesundheitsdatengrenze korrigieren, bevor Deployment und URL-Umschaltung weitergeführt werden.
+**Nächste Maßnahme mit hohem Nutzen und geringem Risiko:** Task 2 mit der GSC- und 64-URL-Matrix beginnen und parallel die externen GSC-/WordPress-/Plesk-Evidenzpakete beschaffen. Danach JSON-LD und Gesundheitsdatengrenze korrigieren, bevor Deployment und URL-Umschaltung weitergeführt werden.
 
 ## 28. Quellen- und Nachweisverzeichnis
 
 ### 28.1 Repository
 
 - Quellcommit `c6aa58ef980bdd4d84be3fcc9b237e1296693722`;
+- Task-1-Fortschreibung: `package.json`, `scripts/run-tests.mjs`, `scripts/run-tests.test.mjs`;
 - Plattform-Basiscommit `2d233564ca98ed48a0a118a3165c242150448436` plus als nicht reproduzierbar gekennzeichneter lokaler Arbeitsstand;
 - ursprünglicher externer Entwickler-/LLM-Bericht, SHA-256 `643408D043281C52E9C48B7C7390E54239B26346B95AB52561C8855D4E53F80E`;
 - ursprüngliche externe Markdown-Matrix, SHA-256 `A95D3F9043061ED582C2B95B59812ADD2CC275B81A23B97F44049A1B2A63691B`;

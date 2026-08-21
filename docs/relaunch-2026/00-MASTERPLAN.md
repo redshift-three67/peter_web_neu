@@ -130,8 +130,8 @@ missing_image_alt_attributes: 0
 | `npm ci`                         | 418 Pakete installiert                             | reproduzierbar                                     |
 | `npm run typecheck`              | Exit 0                                             | grün                                               |
 | `npm run lint`                   | Exit 0, 3 Warnungen                                | keine Fehler; Warnungen offen                      |
-| `npm test`                       | Exit 0, 0 Tests                                    | Script falsch gequotet; P0                         |
-| `node --test scripts/*.test.mjs` | 41/41 bestanden                                    | Tests existieren                                   |
+| `npm test`                       | Exit 0, 44/44 Tests                                | rekursiver Runner und Nulltreffer-Gate bestätigt   |
+| `node --test scripts/*.test.mjs` | 41/41 bestanden (historische Ausgangsprüfung)      | Tests existierten bereits                          |
 | `npm run build:dev`              | erfolgreich                                        | Vercel-Build möglich                               |
 | `npm run build`                  | Exit 0; Migration ohne `DATABASE_URL` übersprungen | Vercel-Build bestätigt; kein Node-Containervertrag |
 | `npm run preview`                | HTTP 500                                           | falscher Build-/Startvertrag; P0                   |
@@ -185,7 +185,7 @@ Von Plesk/nginx werden vor Cutover benötigt: Hosting/Document Root, Host-/HTTPS
 | P0   | relative Schema-Bild-URL                         | absolute kanonische URL                              |
 | P0   | Mittagspause fehlt im Schema                     | zwei Öffnungsintervalle                              |
 | P0   | Vercel-Preset/defekter Previewpfad               | Node-Build, Start und `/healthz`                     |
-| P0   | `npm test` führt 0 statt 41 Tests aus            | Script korrigieren; Nichtnull-Gate                   |
+| Info | Test-Gate (historischer P0-Befund)               | geschlossen: 44/44 plus Nulltreffer-Exitcode 1       |
 | P0   | Anamnese speichert Gesundheits-JSON allgemein    | deaktivieren oder separater Dienst                   |
 | P0   | medizinisch-werbliche Altsätze                   | seitenweise HWG-/Fachprüfung                         |
 | P1   | FAQPage-Markup ohne Google-Mehrwert              | FAQ sichtbar lassen, Markup nicht strategisch führen |
@@ -279,18 +279,20 @@ Der Plattform-Arbeitsbaum basiert bei dieser Tiefenprüfung auf `2d233564ca98ed4
 
 ### Task 1: Test-Gate reparieren
 
-**Files:** Modify `package.json`; verify `scripts/*.test.mjs`.
+**Files:** Modify `package.json`; create `scripts/run-tests.mjs`, `scripts/run-tests.test.mjs`; verify `scripts/**/*.test.mjs`.
 
 - [x] `npm test` ausführen; erwartet derzeit Exit 0 mit `tests 0` und gilt als fehlgeschlagen.
 - [x] `node --test scripts/*.test.mjs` ausführen; Baseline: 41/41 grün.
-- [x] Script exakt ändern:
+- [x] Script auf den deterministischen Runner ändern:
 
 ```json
-"test": "node --test scripts/*.test.mjs"
+"test": "node scripts/run-tests.mjs"
 ```
 
-- [x] `npm test` erneut ausführen; erwartet mindestens 41 Tests, 0 Fehler.
-- [x] Commit: `git commit -m "fix: make test gate execute all node tests"`.
+- [x] Runner-Test rot ausführen; fehlendes Modul als erwartete Ursache bestätigen.
+- [x] Rekursive Ermittlung, Nulltreffer-Exitcode 1 und Child-Exitcode-Weitergabe implementieren und testen.
+- [x] `npm test` erneut ausführen; 44 Tests, 44 bestanden, 0 Fehler.
+- [x] Commitfolge: `fix: make test gate execute all node tests` und korrigierender Abschluss `fix: enforce nonzero test gate`.
 
 ### Task 2: GSC- und 64-URL-Matrix
 
