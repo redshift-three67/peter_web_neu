@@ -129,22 +129,32 @@ export const footerNav = {
   ],
 } as const;
 
+/** Live-Parität: die 6 „Häufige Fragen zur Praxis" der WordPress-Seite
+ *  (wortnah) + die HWG-relevante Heilversprechen-Frage des Neubaus. */
 export const practiceFaqs = [
   {
     q: "Ersetzt die Naturheilpraxis einen Arztbesuch?",
-    a: "Nein. Ich arbeite ergänzend. Die dargestellten Verfahren ersetzen keine ärztliche Diagnose, Beratung oder Behandlung. Bei Notfällen wählen Sie 112, außerhalb der Sprechzeit den kassenärztlichen Bereitschaftsdienst 116 117.",
+    a: "Nein. Die Naturheilpraxis Rauch arbeitet ergänzend. Die dargestellten Verfahren ersetzen keine ärztliche Diagnose, Beratung oder Behandlung. Bei Notfällen wählen Sie 112, außerhalb der Sprechzeit den kassenärztlichen Bereitschaftsdienst 116 117.",
   },
   {
     q: "Wie vereinbare ich einen Termin?",
-    a: "Telefonisch unter 0821 2621462 oder über das Kontaktformular. Vor dem Erstgespräch können Sie den Online-Anamnesebogen ausfüllen. Sprechzeiten: montags bis freitags 10–12:30 und 13–19 Uhr, nach Vereinbarung.",
+    a: "Telefonisch unter 0821 2621462 oder über das Kontaktformular. Unter „Jetzt Termin buchen“ ist die Online-Terminabfrage verlinkt. Sprechzeiten: montags bis freitags 10–12:30 und 13–19 Uhr, nach Vereinbarung.",
   },
   {
-    q: "Was kostet die Behandlung?",
-    a: "Die Behandlung ist eine Privatleistung. Das Erstgespräch dauert in der Regel 60–90 Minuten. Einen konkreten Rahmen nenne ich im Gespräch – abhängig von Aufwand und Verfahren. Ob Krankenkasse, Beihilfe oder Zusatzversicherung erstattet, hängt von Ihrem Vertrag ab.",
+    q: "Wozu dient der Online-Anamnesebogen?",
+    a: "Zur Patientenaufnahme vor dem Termin bei Heilpraktiker Peter Rauch. Der Bogen stellt keine Diagnose und gibt kein Behandlungsergebnis. Erklärung und Zugang finden Sie unter Online-Anamnesebogen.",
+  },
+  {
+    q: "Was tun im Notfall?",
+    a: "Diese Website ist kein Notfallweg. Bei lebensbedrohlichen Beschwerden wählen Sie 112. Bei dringenden medizinischen Fragen außerhalb der Sprechzeit den kassenärztlichen Bereitschaftsdienst 116 117 oder eine Arztpraxis.",
+  },
+  {
+    q: "Wie sind die Kosten?",
+    a: "Die Behandlung ist eine Privatleistung. Das Erstgespräch dauert in der Regel 60–90 Minuten. Ob Ihre Krankenkasse, Beihilfe oder Zusatzversicherung etwas erstattet, hängt von Ihrem Vertrag ab. Konkrete Beträge nenne ich im Gespräch.",
   },
   {
     q: "Wo liegt die Praxis?",
-    a: "In Augsburg-Hochzoll, Friedrich-Deffner-Straße 19a. Von Friedberg und Lechhausen-Ost ist sie in wenigen Minuten erreichbar. Parken ist in der Straße möglich; die S-Bahn-Haltestelle Hochzoll liegt in der Nähe.",
+    a: "In Augsburg-Hochzoll, Friedrich-Deffner-Straße 19a, 86163 Augsburg. Von Friedberg und Lechhausen-Ost ist die Praxis gut erreichbar. Parken ist in der Straße möglich; die S-Bahn-Haltestelle Hochzoll liegt in der Nähe.",
   },
   {
     q: "Geben Sie Heilversprechen?",

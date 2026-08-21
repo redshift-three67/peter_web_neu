@@ -38,6 +38,7 @@ import {
   WarningNote,
 } from "@/components/site/Design";
 import { PageHeroSlider } from "@/components/site/PageHeroSlider";
+import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/site/JsonLd";
 
 const ICONS = [Leaf, Heart, Stethoscope, Sparkles, Shield, BookOpen];
 
@@ -87,7 +88,7 @@ export function HubFromArchive({
   const photos = pics.filter((p) => p.kind === "photo");
 
   const slides = (page?.slider ?? [])
-    .filter((s) => s.src && classifyImage(s.src, s.alt) === "device")
+    .filter((s) => s.src)
     .map((s) => ({
       src: mediaSrc(s.src, s.src),
       alt: s.alt || s.title,
@@ -129,10 +130,34 @@ export function HubFromArchive({
   const firstH2 = rest.find((b) => b.type === "h2");
   const body = rest.filter((b) => b.type !== "h2" || b !== firstH2);
   const usedScan = body.some((b) => b.type === "scans");
-  const gallery = [...scans, ...photos, ...atmosphere].slice(0, 6);
+  // Bildstruktur-Vorgabe 21.08.: Archivbilder als thematische Karten im
+  // Fliesstext (etwa alle 3 Bloecke eines) statt loser Galerie am Ende.
+  // Scans bleiben im thematischen Scans-Block ("kein Befund"), falls vorhanden.
+  const flowPics: Pic[] = usedScan
+    ? [...photos, ...atmosphere, ...devices]
+    : [...photos, ...atmosphere, ...devices, ...scans];
+  const flow: (
+    | { kind: "block"; block: HubBlock; index: number }
+    | { kind: "fig"; pic: Pic }
+  )[] = [];
+  let picIdx = 0;
+  body.forEach((block, i) => {
+    flow.push({ kind: "block", block, index: i });
+    if (picIdx < flowPics.length && (i + 1) % 3 === 0 && block.type !== "h2") {
+      flow.push({ kind: "fig", pic: flowPics[picIdx++] });
+    }
+  });
+  while (picIdx < flowPics.length) flow.push({ kind: "fig", pic: flowPics[picIdx++] });
 
   return (
     <>
+      <FaqJsonLd items={practiceFaqs} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Start", href: "/" },
+          { name: heading, href: page?.route ? "/" + page.route.replace(/^\/+/, "") : "/" },
+        ]}
+      />
       <PageHeroSlider slides={hero} heading={heading} kicker={kicker} />
       <PhoneChip className="border-b border-line bg-bg" />
 
@@ -214,59 +239,48 @@ export function HubFromArchive({
         </section>
       ) : null}
 
-      {body.length ? (
+      {flow.length ? (
         <section>
           <Container className="grid gap-6 py-14 md:grid-cols-2">
-            {body.map((block, i) => (
-              <div
-                key={i}
-                className={
-                  block.type === "scans" || block.type === "related" || block.type === "h2"
-                    ? "md:col-span-2"
-                    : ""
-                }
-              >
-                <BlockView block={block} index={i} scans={scans} />
-              </div>
-            ))}
-          </Container>
-        </section>
-      ) : null}
-
-      {!usedScan && gallery.length > 0 ? (
-        <section className="border-t border-line bg-sand-50">
-          <Container className="py-14 md:py-16">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-sage">
-              Bilder zu dieser Seite
-            </p>
-            <h2 className="mt-2 max-w-2xl font-display text-3xl font-semibold text-sage-700">
-              Zum Betrachten – nicht als Befund.
-            </h2>
-            <div className="mt-10 grid gap-5 md:grid-cols-3">
-              {gallery.map((pic) => (
+            {flow.map((item, i) =>
+              item.kind === "fig" ? (
                 <figure
-                  key={pic.src}
-                  className="overflow-hidden rounded-2xl border border-line bg-paper shadow-card"
+                  key={"fig-" + item.pic.src + "-" + i}
+                  className="self-start overflow-hidden rounded-2xl border border-line bg-paper shadow-card"
                 >
                   <img
-                    src={pic.src}
-                    alt={pic.alt}
+                    src={item.pic.src}
+                    alt={item.pic.alt}
                     width={900}
                     height={540}
                     loading="lazy"
                     className="aspect-[5/3] w-full object-cover"
                   />
-                  <figcaption className="p-5">
-                    <p className="font-display text-xl text-sage-deep">{pic.caption}</p>
+                  <figcaption className="p-5 font-display text-xl text-sage-deep">
+                    {item.pic.caption}
                   </figcaption>
                 </figure>
-              ))}
-            </div>
+              ) : (
+                <div
+                  key={"b-" + i}
+                  className={
+                    item.block.type === "scans" ||
+                    item.block.type === "related" ||
+                    item.block.type === "topics" ||
+                    item.block.type === "h2"
+                      ? "md:col-span-2"
+                      : ""
+                  }
+                >
+                  <BlockView block={item.block} index={item.index} scans={scans} />
+                </div>
+              ),
+            )}
           </Container>
         </section>
       ) : null}
 
-      <ReviewStrip />
+      <ReviewStrip />  <ReviewStrip />
 
       <section>
         <Container className="grid gap-10 py-16 md:grid-cols-[1.1fr_0.9fr] md:items-start">
@@ -425,6 +439,34 @@ function BlockView({
               <li key={item}>{item}</li>
             ))}
           </ul>
+        ) : null}
+        {block.moreTitles.length ? (
+          <div className="mt-4 grid gap-2 sm:grid-cols-2">
+            {block.moreTitles.map((name) => {
+              const href = guessHref(name);
+              const label = (
+                <span className="inline-flex items-center gap-1 text-sm font-medium text-sage">
+                  {name} <ArrowRight className="size-3.5" />
+                </span>
+              );
+              return href ? (
+                <Link
+                  key={name}
+                  to={href}
+                  className="rounded-xl border border-line bg-paper px-3 py-2 transition hover:-translate-y-0.5 hover:shadow-soft"
+                >
+                  {label}
+                </Link>
+              ) : (
+                <span
+                  key={name}
+                  className="rounded-xl border border-line bg-paper px-3 py-2 text-sm text-muted"
+                >
+                  {name}
+                </span>
+              );
+            })}
+          </div>
         ) : null}
       </IconCard>
     );

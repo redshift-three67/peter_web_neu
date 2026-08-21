@@ -23,6 +23,8 @@ import { FeatureRow, PhoneChip, QuotePanel } from "@/components/site/Design";
 import { HeroSlider } from "@/components/site/HeroSlider";
 import { FaqJsonLd } from "@/components/site/JsonLd";
 import { HomeAc } from "@/components/site/HomeAc";
+import { getArchiveBySlug } from "@/content/archive";
+import { guessTopicHref } from "@/lib/hub-blocks";
 import { useMusterSkin } from "@/components/site/DesignSkin";
 import { practice, practiceFaqs } from "@/content/site";
 import { pageHead } from "@/lib/seo";
@@ -58,6 +60,27 @@ const concerns = [
     image: "/images/ruhe.jpg",
   },
 ];
+
+/** Verfahrens-Verzeichnis der Live-Startseite: H3-Kacheln + Kurztext
+ *  aus dem Archiv (slug "home"), verlinkt auf die Verfahrensseiten. */
+function verfahrensVerzeichnis() {
+  const page = getArchiveBySlug("home");
+  if (!page) return [] as { title: string; text?: string; href: string }[];
+  const skip = /Naturheilpraxis mit Herz|Therapieverfahren von|Weitere mögliche|^Heilpraktiker Augsburg$/i;
+  const out: { title: string; text?: string; href: string }[] = [];
+  for (const part of page.parts) {
+    if (part.tag !== "h3" || part.text.length > 90 || skip.test(part.text)) continue;
+    const href = guessTopicHref(part.text);
+    if (!href) continue;
+    const entry = { title: part.text.replace(/\s+$/, ""), text: undefined as string | undefined, href };
+    const next = page.parts[page.parts.indexOf(part) + 1];
+    if (next && next.tag === "p" && next.text.length > 30 && next.text.length < 260) {
+      entry.text = next.text;
+    }
+    out.push(entry);
+  }
+  return out;
+}
 
 function Home() {
   // look=neu: Struktur der Original-Startseite (Slider, Sektionen, Icons),
@@ -208,6 +231,8 @@ function HomeLegacy() {
         </Container>
       </section>
 
+      <VerfahrenSection />
+
       <section className="bg-sage-50">
         <Container className="grid gap-8 py-16 md:grid-cols-3">
           {[
@@ -271,6 +296,9 @@ function HomeLegacy() {
               Gut erreichbar aus {practice.reach.join(", ")}. Einzugsgebiet
               außerdem {practice.catchment.join(", ")}.
             </p>
+            <p className="mt-3 text-sm font-medium text-sage-deep">
+              Sprechzeiten: {practice.hours}
+            </p>
             <img
               src="/images/anfahrt.jpg"
               alt="Ruhiger Zugang zu einer Praxis in Augsburg-Hochzoll"
@@ -302,8 +330,49 @@ function HomeLegacy() {
       <Container className="pb-6">
         <AuthorByline />
         <Disclaimer className="mt-8" />
+        <p className="mt-8 max-w-2xl font-display text-xl italic text-sage-deep">
+          Ich freue mich auf Ihren Besuch in der Friedrich-Deffner-Straße –
+          ruhig, persönlich und mit Zeit für Ihr Anliegen.
+        </p>
       </Container>
       <CtaBand />
     </>
+  );
+}
+
+/** Verfahrens-Kacheln wie auf der Live-Startseite (interes Linknetz). */
+function VerfahrenSection() {
+  const items = verfahrensVerzeichnis();
+  if (items.length === 0) return null;
+  return (
+    <section className="border-t border-line bg-paper">
+      <Container className="py-16">
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">
+          Verfahrensverzeichnis
+        </p>
+        <h2 className="mt-2 max-w-2xl font-display text-3xl font-semibold text-sage-700 sm:text-4xl">
+          Therapieverfahren der Naturheilpraxis in Augsburg
+        </h2>
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {items.map((item) => (
+            <Link
+              key={item.href + item.title}
+              to={item.href}
+              className="group rounded-2xl border border-line bg-card p-5 shadow-soft transition hover:-translate-y-1 hover:shadow-card"
+            >
+              <h3 className="font-display text-xl font-semibold text-sage-700">
+                {item.title}
+              </h3>
+              {item.text ? (
+                <p className="mt-2 text-[0.95rem] leading-relaxed text-muted">{item.text}</p>
+              ) : null}
+              <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-sage">
+                Weiterlesen <ArrowRight className="size-4 transition group-hover:translate-x-1" />
+              </span>
+            </Link>
+          ))}
+        </div>
+      </Container>
+    </section>
   );
 }

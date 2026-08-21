@@ -12,7 +12,13 @@ import {
   X,
 } from "lucide-react";
 import { getArchiveBySlug } from "@/content/archive";
-import { blocksFromParts, classifyImage, editorialParts } from "@/lib/hub-blocks";
+import {
+  blocksFromParts,
+  captionFromPath,
+  classifyImage,
+  editorialParts,
+  topicHref,
+} from "@/lib/hub-blocks";
 import { practice } from "@/content/site";
 import type { Anliegen } from "@/content/anliegen";
 import { Button } from "@/components/ui/button";
@@ -34,6 +40,32 @@ function mediaSrc(local: string) {
   return /\.(jpe?g|png)$/i.test(local) ? local.replace(/\.(jpe?g|png)$/i, ".webp") : local;
 }
 
+type Pic = { src: string; alt: string; caption: string };
+type DepthBlockType = Exclude<ReturnType<typeof blocksFromParts>[number], { type: "scans" }>;
+type FlowItem =
+  | { kind: "block"; block: DepthBlockType }
+  | { kind: "fig"; pic: Pic };
+
+/** Archivbilder der Seite (ohne Logos), für Hero und Textfluss. */
+function archivePics(slug: string, fallbackAlt: string): Pic[] {
+  const page = getArchiveBySlug(slug);
+  return (page?.images ?? [])
+    .filter(
+      (img) =>
+        img.local &&
+        classifyImage(img.local, img.alt) !== "skip" &&
+        !/Peter-Rauch-Heilpraktiker/i.test(img.local),
+    )
+    .map((img) => {
+      const src = mediaSrc(img.local as string);
+      return {
+        src,
+        alt: img.alt || fallbackAlt,
+        caption: captionFromPath(src, img.alt),
+      };
+    });
+}
+
 /** Hero-Slider wie auf der alten WordPress-Seite: echte Slider-Motive des
  *  Archivs, sonst erstes brauchbares Seitenbild, sonst Themenbild. */
 function heroSlidesFor(anliegen: Anliegen): HeroSlide[] {
@@ -47,31 +79,47 @@ function heroSlidesFor(anliegen: Anliegen): HeroSlide[] {
       meta: s.meta,
     }));
   if (slides.length > 0) return slides;
-  const pic = (page?.images ?? []).find(
-    (img) =>
-      img.local &&
-      classifyImage(img.local, img.alt) !== "skip" &&
-      !/Peter-Rauch-Heilpraktiker/i.test(img.local),
-  );
-  if (pic?.local) {
-    return [
-      { src: mediaSrc(pic.local), alt: pic.alt || anliegen.imageAlt, title: anliegen.h1, meta: undefined },
-    ];
+  const pics = archivePics(anliegen.slug.replace(/^\//, ""), anliegen.imageAlt);
+  if (pics.length > 0) {
+    return [{ src: pics[0].src, alt: pics[0].alt, title: anliegen.h1, meta: undefined }];
   }
   return [{ src: anliegen.image, alt: anliegen.imageAlt, title: anliegen.h1, meta: undefined }];
+}
+
+function guessHref(name: string) {
+  const direct = topicHref[name];
+  if (direct) return direct;
+  return Object.entries(topicHref).find(([key]) =>
+    name.toLowerCase().includes(key.toLowerCase()),
+  )?.[1];
 }
 
 /**
  * Anliegen-Hub nach Breitenberger-Logik:
  * Symptome, Einordnung, was die Praxis tut und nicht tut,
  * nächster Schritt, NAP, FAQ, Quellen. Optik im bestehenden Design-System.
+ * Archiv-Tiefe: der wesentliche Live-Text der alten Seite wird vollständig
+ * eingebunden (Cards, Listen, Themen) — mit Archivbildern als thematischen
+ * Bild-Karten im Textfluss (Bildstruktur-Vorgabe 21.08.2026).
  */
 export function AnliegenHub({ anliegen }: { anliegen: Anliegen }) {
-  const page = getArchiveBySlug(anliegen.slug);
+  const slug = anliegen.slug.replace(/^\//, "");
+  const page = getArchiveBySlug(slug);
   const blocks = page ? blocksFromParts(editorialParts(page), anliegen.h1) : [];
-  const depth = blocks.filter(
-    (b) => b.type === "h2" || b.type === "p" || b.type === "quote",
-  );
+  const depth = blocks.filter((b) => b.type !== "warning" && b.type !== "scans");
+  const pics = archivePics(slug, anliegen.imageAlt);
+
+  // Archivbilder als thematische Karten in den Fließtext streuen
+  // (etwa alle 3 Blöcke eines, wie auf der alten Seite im Text verteilt).
+  const flow: FlowItem[] = [];
+  let nextPic = 0;
+  depth.forEach((block, i) => {
+    flow.push({ kind: "block", block });
+    if (nextPic < pics.length && (i + 1) % 3 === 0 && block.type !== "h2") {
+      flow.push({ kind: "fig", pic: pics[nextPic++] });
+    }
+  });
+  while (nextPic < pics.length) flow.push({ kind: "fig", pic: pics[nextPic++] });
 
   return (
     <>
@@ -166,9 +214,9 @@ export function AnliegenHub({ anliegen }: { anliegen: Anliegen }) {
         </Container>
       </section>
 
-      {depth.length > 3 ? (
+      {depth.length > 0 ? (
         <section className="border-b border-line bg-bg">
-          <Container className="max-w-3xl py-14">
+          <Container className="max-w-5xl py-14">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sage">
               Ausführlich
             </p>
@@ -176,33 +224,28 @@ export function AnliegenHub({ anliegen }: { anliegen: Anliegen }) {
               Hintergrund aus der Praxis
             </h2>
             <div className="mt-6 space-y-5">
-              {depth.map((block, i) => {
-                if (block.type === "h2") {
-                  return (
-                    <h3
-                      key={i}
-                      className="pt-4 font-display text-2xl font-semibold text-sage-700"
-                    >
-                      {block.text}
-                    </h3>
-                  );
-                }
-                if (block.type === "quote") {
-                  return (
-                    <blockquote
-                      key={i}
-                      className="rounded-2xl border border-line bg-paper p-5 font-display text-lg text-sage-deep shadow-soft"
-                    >
-                      {block.text}
-                    </blockquote>
-                  );
-                }
-                return (
-                  <p key={i} className="text-[1.05rem] leading-relaxed text-fg/90">
-                    {block.text}
-                  </p>
-                );
-              })}
+              {flow.map((item, i) =>
+                item.kind === "fig" ? (
+                  <figure
+                    key={`fig-${item.pic.src}-${i}`}
+                    className="overflow-hidden rounded-2xl border border-line bg-paper shadow-card"
+                  >
+                    <img
+                      src={item.pic.src}
+                      alt={item.pic.alt}
+                      width={900}
+                      height={540}
+                      loading="lazy"
+                      className="aspect-[5/3] w-full object-cover"
+                    />
+                    <figcaption className="p-5">
+                      <p className="font-display text-xl text-sage-deep">{item.pic.caption}</p>
+                    </figcaption>
+                  </figure>
+                ) : (
+                  <DepthBlock key={`b-${i}`} block={item.block} />
+                ),
+              )}
             </div>
           </Container>
         </section>
@@ -380,4 +423,91 @@ export function AnliegenHub({ anliegen }: { anliegen: Anliegen }) {
       <CtaBand />
     </>
   );
+}
+
+/** Vollständige Archiv-Tiefe: jede Blockart der alten Seite rendern. */
+function DepthBlock({ block }: { block: DepthBlockType }) {
+  if (block.type === "h2") {
+    return (
+      <h3 className="pt-4 font-display text-2xl font-semibold text-sage-700">
+        {block.text}
+      </h3>
+    );
+  }
+  if (block.type === "quote") {
+    return (
+      <blockquote className="rounded-2xl border border-line bg-paper p-5 font-display text-lg text-sage-deep shadow-soft">
+        {block.text}
+      </blockquote>
+    );
+  }
+  if (block.type === "card") {
+    return (
+      <div className="rounded-2xl border border-line bg-paper p-6 shadow-soft">
+        <p className="font-display text-xl font-semibold text-sage-700">
+          {block.title}
+        </p>
+        {block.subtitle ? (
+          <p className="mt-1 text-sm font-medium text-sage">{block.subtitle}</p>
+        ) : null}
+        <div className="mt-3 space-y-3">
+          {block.paragraphs.map((p) => (
+            <p key={p.slice(0, 48)} className="leading-relaxed text-muted">
+              {p}
+            </p>
+          ))}
+        </div>
+        {block.items.length ? (
+          <ul className="mt-3 list-disc space-y-1 pl-5 text-muted">
+            {block.items.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
+    );
+  }
+  if (block.type === "topics" || block.type === "related") {
+    const items = block.type === "topics" ? block.items : block.items;
+    return (
+      <div className="grid gap-4 sm:grid-cols-2">
+        {items.map((name) => {
+          const href = guessHref(name);
+          const inner = (
+            <>
+              <p className="font-display text-lg font-semibold text-sage-700">{name}</p>
+              {href ? (
+                <span className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-sage">
+                  Weiterlesen <ArrowRight className="size-4" />
+                </span>
+              ) : null}
+            </>
+          );
+          return href ? (
+            <Link
+              key={name}
+              to={href}
+              className="rounded-2xl border border-line bg-paper p-5 shadow-soft transition hover:-translate-y-1 hover:shadow-card"
+            >
+              {inner}
+            </Link>
+          ) : (
+            <div key={name} className="rounded-2xl border border-line bg-paper p-5 shadow-soft">
+              {inner}
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
+  if (block.type === "list") {
+    return (
+      <ul className="list-disc space-y-1 pl-5 text-muted">
+        {block.items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    );
+  }
+  return <p className="text-[1.05rem] leading-relaxed text-fg/90">{block.text}</p>;
 }

@@ -9,6 +9,8 @@ export type HubBlock =
       subtitle?: string;
       paragraphs: string[];
       items: string[];
+      /** H3-Titel ab dem dritten — Live-Parität: fallen sonst weg. */
+      moreTitles: string[];
     }
   | { type: "topics"; items: string[] }
   | { type: "warning"; text: string }
@@ -68,7 +70,6 @@ export function editorialParts(page: ArchivePage): ArchivePart[] {
     if (skipText(text)) continue;
     if (part.tag === "h1") continue;
     if (part.tag === "h2" && /Häufige Fragen/.test(text)) break;
-    if (part.tag === "h2" && /^mit der /i.test(text)) continue;
     if (part.tag === "li" && text.length < 90 && /Diagnostik|Hinweisdiagnostik|Download|Impressum|Kontakt \|/.test(text)) {
       continue;
     }
@@ -147,6 +148,7 @@ export function blocksFromParts(parts: ArchivePart[], heading = ""): HubBlock[] 
         subtitle: titles[1],
         paragraphs,
         items,
+        moreTitles: titles.slice(2),
       });
       continue;
     }
@@ -234,6 +236,14 @@ export const topicHref: Record<string, string> = {
   "Vieva Pro": "/vieva-pro-herzratenvariabilitaet",
   "Hinweisdiagnostik im Überblick": "/diagnostik-informationstherapie",
 };
+
+export function guessTopicHref(name: string) {
+  const direct = topicHref[name];
+  if (direct) return direct;
+  return Object.entries(topicHref).find(([key]) =>
+    name.toLowerCase().includes(key.toLowerCase()),
+  )?.[1];
+}
 
 export function classifyImage(src: string, alt = "") {
   const hay = `${src} ${alt}`;
