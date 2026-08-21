@@ -56,7 +56,7 @@ Eine lokal führende, E-E-A-T-feste Praxis-Website: ruhiges, hochwertiges Design
 - [x] Skin `theme-neu` nach Festlegung: paper `#F7F1E8`, ink `#1D2C38`, field `#16332C` (dunkles Hero-Feld), sage `#3F6B52` nur Akzent, clay `#C07859` ein CTA, signal `#8A4B32` für HWG-/Grenzen-Hinweise; Diagnose-Variante `theme-neu-diag` (Neko-Petrol-Akzent `#3A5258`, sage fast weg).
 - [x] Typografie: Playfair 500/600 nur H1/Kapitel-H2; Source Sans 3 für Fließtext/Karten; **Body 18px / lh 1,65**; Playfair-Italic 500 lokal gehostet nachgezogen.
 - [x] Sticky Mobile-CTA (Anrufen + Termin anfragen, 44px-Touch-Ziele, safe-area).
-- [x] Vorschau-Schalter (Design-Leiste): Relaunch-Design 2026 · Muster A+C · Bisheriges Design — Default bleibt der Bestandslook.
+- [x] Vorschau-Schalter (Design-Leiste): Relaunch-Design 2026 · Muster A+C · Bisheriges Design — **Default ist seit 21.08. (Abend, `rp-29`) das Relaunch-Design** (`?look=alt` bleibt Fallback).
 - [ ] **Nach Freigabe:** Übertragung auf alle Seiten (Tokens sind seitenweit per Klasse aktivierbar), Startseiten-Feinschliff (ein Playfair-Italic-Wort im H1, Trust-Leiste unter Hero: Erlaubnis seit 2006 · PT seit 2001 · Bewertungen · BDHN), Geräteslider entschlacken.
 - [ ] **Bilder — Regeln (Absprache-Pflicht):** Geräte (Trikombin, NLS-Scans, Slider-Geräte) bleiben **unverändert**; `ruhe.jpg` ersetzen (Kopfhörer-Stock); `hero-praxis.jpg` nicht als Identität; Unsplash-Freilizenzen für Raum/Wald/Gespräch sind vorbereitet (`public/images/free/`). Jede Ersetzung vorher mit Auftraggeber abstimmen und ALT-Texte führen („kein Hochzoll-Behauptung" außer `anfahrt.jpg`).
 
@@ -81,6 +81,21 @@ Priorisiert nach 02-Kriterien:
 
 ---
 
+## 2a. Wellen-Roadmap (konsolidiert, Stand 21.08. Abend)
+
+Die Umsetzung erfolgt in Wellen; jede Welle wird über `rp-*`-Tags abgesichert und im Changelog dokumentiert.
+
+| Welle | Inhalt | Status |
+|---|---|---|
+| **Welle 1** | Inhalts-Parität Startseite + 17 Hubs: FAQ-Live-Wortlaut + FAQPage/Breadcrumb-Schema auf allen Seiten, Anliegen-Tiefe vollständig, Slider-Motive wie live, Archivbilder als thematische Karten im Fließtext (Bildstruktur_2), Verfahrens-Verzeichnis (17 Kacheln), Sprechzeiten, Schlussformel | ✅ erledigt (`rp-28`, Fixes `rp-30`) |
+| **Welle 2** | **P0:** NLS-Archivtiefe in `NlsNeko` nachrüsten; Kontakt-Seite um Live-Texte ergänzen · **P1:** Header-/Mega-Menü mit echten Unterseiten-URLs (Linkprofil-Parität) · **P2:** 4 fehlende Hub-Slider nachcrawlen; H1-Wortlaute je Hub angleichen | ⬜ offen (Detail: `05-tiefenanalyse-paritaet.md` §4) |
+| **Welle 3** | Kind-/Archivseiten sukzessive: stützende Ratgeber-Spokes je Anliegen (beginnend NAET-Whitespace, dann Burnout — s. `01-wettbewerbsanalyse`), tiefe Archiv-URLs bewusst noindex, außer sie stützen einen Hub | ⬜ offen |
+| **danach** | Phase 4 (SEO/GEO: GBP, Review-Routine, NAP, KI-Monitoring) und Phase 5 (Cutover: 301-Map, GSC, Nachsorge) gemäß §2 unten | ⬜ offen |
+
+**Prüfinstrument:** `node scripts/parity-audit.mjs` — vor jedem Wellen-Abschluss und vor Cutover ausführen; Ziel: keine echten p/h-Lücken außer den dokumentierten Ausnahmen.
+
+---
+
 ## 3. Akzeptanz „nahtlos" (Kriterium a)
 
 Der Cutover gilt als nahtlos, wenn:
@@ -96,7 +111,7 @@ Der Cutover gilt als nahtlos, wenn:
 | Thema | Regel |
 |---|---|
 | Branches | `main` = freigegebener Stand; Feature-Branches (`breitenberger-hubs`, `relaunch-konzept`) + `rp-*`-Tags für Wiederherstellungspunkte |
-| Design-Freigabe | Default-Look wechselt nur nach ausdrücklicher Freigabe (Leiste zeigt alle drei Varianten zur Auswahl) |
+| Design-Freigabe | Default ist seit 21.08. (Abend) das Relaunch-Design (`rp-29`); `?look=alt` als Fallback erhalten; Leiste zeigt alle drei Varianten |
 | Bilder | Ersetzungen nur in Absprache; **Geräte nie**; ALT-Texte vorher festlegen |
 | WP-live | Keine strukturellen Eingriffe ohne Rückfrage (Plesk, Domain, Plugins) |
 | Recht | HWG-Textprüfung vor jedem Livegang; „Psychotherapie"-Bezeichnung bleibt außen vor; Disclaimer/Byline auf jeder Money-Page |
