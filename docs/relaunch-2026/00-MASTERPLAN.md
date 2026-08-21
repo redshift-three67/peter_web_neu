@@ -13,7 +13,7 @@
 ```yaml
 document:
   id: rauch-pilot-headless-implementation-plan
-  version: 2.0.0
+  version: 2.1.0
   status: approved_architecture_execution_plan
   updated_at: 2026-08-21
   audience: [product_owner, developer, devops, seo, editor, reviewer, llm_agent]
@@ -29,15 +29,33 @@ document:
 source_repository: https://github.com/redshift-three67/peter_web_neu.git
 canonical_branch: relaunch-konzept
 audited_head_before_plan_sync: 2287908a032d97c72b3a7fc5e59b0d9cb052cb98
+audited_product_head_before_deep_analysis_integration: c6aa58ef980bdd4d84be3fcc9b237e1296693722
+deep_analysis_source_head: c6aa58ef980bdd4d84be3fcc9b237e1296693722
+deep_analysis_integration_path: docs/tiefenanalyse-2026-08-21/
+platform_repository_path: C:\Projekte\Headless_Platform_CMS
+platform_base_head_at_deep_analysis: 2d233564ca98ed48a0a118a3165c242150448436
+platform_worktree_state_at_deep_analysis: dirty_unversioned_contract_work
 audited_tag: rp-31-uebergabe-abend
 remote_main_at_audit: 1d535b38d5146675288c483f835bfa8ea29a9995
-commits_ahead_of_remote_main: 10
+commits_ahead_of_remote_main_at_deep_analysis: 11
 remote_read_access_verified: true
 audit_vercel_artifacts_cleaned: true
 source_tree_clean_after_cleanup: true
 ```
 
 `relaunch-konzept` ist die maßgebliche neue Website. `main` bleibt bis zu einer gesondert freigegebenen Integration unverändert. Experimentelle lokale Branches sind keine Produktionsquelle.
+
+#### Dokumentenhierarchie und Übergabevertrag
+
+| Rang | Dokument                                                              | Verbindliche Rolle                                                                            |
+| ---: | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+|    1 | `docs/relaunch-2026/00-MASTERPLAN.md`                                 | handlungsleitende Quelle für Architektur, Reihenfolge, Zielverträge und Definition of Done    |
+|    2 | `docs/tiefenanalyse-2026-08-21/01-VOLLBERICHT-TIEFENANALYSE.md`       | beweisgestützte Verifikationsakte des Quellcommits `c6aa58e`, Prüfgrenzen und Reifegrad       |
+|    3 | `docs/tiefenanalyse-2026-08-21/02-MASCHINENLESBARE-STATUSMATRIX.json` | kanonische maschinenlesbare Statusquelle für Entwicklerwerkzeuge und LLMs                     |
+|    4 | `docs/tiefenanalyse-2026-08-21/02-MASCHINENLESBARE-STATUSMATRIX.md`   | menschenlesbare Erklärung und vollständige Statusübersicht                                    |
+|    5 | ältere Übergabe-, Design- und Migrationsakten                         | historische Evidenz, soweit die vier vorgenannten Quellen sie nicht ersetzen oder präzisieren |
+
+Der Tiefenbericht prüft einen festen Quellcommit. Sein enthaltender Integrationscommit verändert ausschließlich die Dokumentationsbasis und darf nicht rückwirkend als neu geprüfter Produktcode ausgegeben werden. Bei Statusänderungen sind Masterplan, Bericht und Statusmatrix konsistent fortzuschreiben; reine Umsetzungshistorie gehört zusätzlich in Commit und Changelog.
 
 | System             | Verifizierter Stand                                                 | Rolle                                         |
 | ------------------ | ------------------------------------------------------------------- | --------------------------------------------- |
@@ -107,16 +125,17 @@ horizontal_overflow: 0
 missing_image_alt_attributes: 0
 ```
 
-| Check                            | Frisches Ergebnis                        | Einordnung                       |
-| -------------------------------- | ---------------------------------------- | -------------------------------- |
-| `npm ci`                         | 418 Pakete installiert                   | reproduzierbar                   |
-| `npm run typecheck`              | Exit 0                                   | grün                             |
-| `npm run lint`                   | Exit 0, 3 Warnungen                      | keine Fehler; Warnungen offen    |
-| `npm test`                       | Exit 0, 0 Tests                          | Script falsch gequotet; P0       |
-| `node --test scripts/*.test.mjs` | 41/41 bestanden                          | Tests existieren                 |
-| `npm run build:dev`              | erfolgreich                              | Vercel-Build möglich             |
-| `npm run preview`                | HTTP 500                                 | falscher Build-/Startvertrag; P0 |
-| Hauptchunk                       | 1.016,88 kB minifiziert / 200,65 kB gzip | Code-Splitting P1                |
+| Check                            | Frisches Ergebnis                                  | Einordnung                                         |
+| -------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
+| `npm ci`                         | 418 Pakete installiert                             | reproduzierbar                                     |
+| `npm run typecheck`              | Exit 0                                             | grün                                               |
+| `npm run lint`                   | Exit 0, 3 Warnungen                                | keine Fehler; Warnungen offen                      |
+| `npm test`                       | Exit 0, 0 Tests                                    | Script falsch gequotet; P0                         |
+| `node --test scripts/*.test.mjs` | 41/41 bestanden                                    | Tests existieren                                   |
+| `npm run build:dev`              | erfolgreich                                        | Vercel-Build möglich                               |
+| `npm run build`                  | Exit 0; Migration ohne `DATABASE_URL` übersprungen | Vercel-Build bestätigt; kein Node-Containervertrag |
+| `npm run preview`                | HTTP 500                                           | falscher Build-/Startvertrag; P0                   |
+| Hauptchunk                       | 1.016,88 kB minifiziert / 200,65 kB gzip           | Code-Splitting P1                                  |
 
 Lint-Warnungen: `scripts/wp-public-crawl.mjs` (ungenutzter Import), `src/components/site/DesignSkin.tsx` (Fast-Refresh-Grenze), `src/lib/auth/use-current-user.ts` (ungenutzte ESLint-Deaktivierung).
 
@@ -161,7 +180,7 @@ Von Plesk/nginx werden vor Cutover benötigt: Hosting/Document Root, Host-/HTTPS
 | Prio | Befund                                           | Verbindliche Reaktion                                |
 | ---- | ------------------------------------------------ | ---------------------------------------------------- |
 | P0   | 64 alte gegen 19 neue Sitemap-URLs               | GSC-gestützte 64-Zeilen-Matrix                       |
-| P0   | Slashvarianten liefern 200, Canonical ohne Slash | direkte 301/308-Normalisierung                       |
+| P0   | Slashvarianten liefern 200, Canonical ohne Slash | direkte 301-Normalisierung                           |
 | P0   | selbstbezogenes `aggregateRating`                | aus `MedicalBusiness` entfernen                      |
 | P0   | relative Schema-Bild-URL                         | absolute kanonische URL                              |
 | P0   | Mittagspause fehlt im Schema                     | zwei Öffnungsintervalle                              |
@@ -249,10 +268,12 @@ Payload verwaltet später `sites`, `pages`, `seoEntries`, `authors`, `contentRev
 
 ### Headless-Plattform
 
-- `src/collections/Sites.ts`, `src/utilities/siteRuntimeManifest.ts`: vorhandener External-App-Vertrag.
+- `src/collections/Sites.ts`, `src/utilities/siteRuntimeManifest.ts`: im lokalen, noch unversionierten Plattform-Arbeitsbaum vorhandener External-App-Vertrag.
 - `src/endpoints/seed/rauch-site.ts` + `seed/index.ts`: idempotente Registrierung.
 - `tests/int/rauch-runtime-manifest.int.spec.ts`: Manifestvertrag.
 - `docker-compose.yml` und generierte Caddy-Konfiguration: separater `rauch-site`-Service.
+
+Der Plattform-Arbeitsbaum basiert bei dieser Tiefenprüfung auf `2d233564ca98ed48a0a118a3165c242150448436` (`main`/`origin/main`), enthält jedoch 50 veränderte und 22 unversionierte Statuspositionen. `Sites.ts`, Runtime-Manifest-Route und `siteRuntimeManifest.ts` sind darin noch unversioniert. Diese Dateien belegen die lokale Vertragsrichtung, aber noch keinen reproduzierbaren Plattform-Quellstand. Vor Task 10 sind die Plattformänderungen separat zu prüfen, zu testen und zu versionieren.
 
 ## 6. Ausführungsplan
 
