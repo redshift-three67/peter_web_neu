@@ -1,5 +1,10 @@
 # Übergabe 21. August 2026 — Stand nach Welle 1 + Tiefenanalyse (Abend)
 
+> **Historischer Zwischenstand:** Für alle Arbeiten ab dem GitHub-Sync ist
+> `docs/relaunch-2026/00-MASTERPLAN.md` in Version 2.0.0 die einzige kanonische
+> Ausführungs- und Statusquelle. Insbesondere sind die frühere Aussage „GitHub
+> nicht erforderlich“ und der damalige ungepushte Branchstatus überholt.
+
 **Für:** Entwickler, die das Projekt ab hier übernehmen
 **Repo:** `redshift-three67/peter_web_neu` (lokal: `repo-main/`, Worktree des Embedded-Repos — **noch nicht gepusht**, GitHub laut Auftraggeber nicht erforderlich)
 **Live:** WordPress auf rauch-heilpraktiker.de unverändert · **Nicht anfassen ohne Rückfrage:** Live-Domain, Plesk, WordPress, Lovable-App, Hub-URLs/Rankings · Bilder nur in Absprache, **Geräte nie**
