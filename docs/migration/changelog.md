@@ -1,5 +1,14 @@
 # Changelog — Migration
 
+## 2026-08-21 (Welle 1: Inhalts-Parität Start + Hubs)
+
+- Wiederherstellungspunkte: `rp-27-pre-inhaltsabgleich` (vor) / `rp-28-welle1-paritaet` (nach, `062fc48`).
+- Tiefenabgleich Live vs. Neubau (Agent): Bericht `docs/relaunch-2026/04-paritaetsabgleich-welle1.md` + Live-Snapshot `content/wordpress/live-snapshot-2026-08-21/` (18 Seiten) eingecheckt.
+- P0 umgesetzt: FAQ-Parität (6 Live-Fragen wortnah + Heilversprechen), FAQPage/Breadcrumb-Schema auf allen Seitentypen; AnliegenHub-Tiefe rendert jetzt vollständige Archiv-Blöcke (vorher 88–99 % Textverlust der drei Money-Pages).
+- P1 umgesetzt: Startseiten-Verfahrens-Verzeichnis aus dem Archiv (H3-Kacheln + Kurztexte + interne Links), Sprechzeiten in der Praxis-Karte, Schlussformel; Card-Titel-Kollaps behoben (13 Diagnostik-Unterlinks zurück); Skip-Regel „mit der …“ entfernt.
+- P2 umgesetzt: Slider zeigen wieder alle Live-Motive (Device-Filter entfällt; klassische-homoeopathie 1→4, diagnostik 1→4, NLS 4); Archivbilder als thematische Karten im Fließtext (Bildstruktur_2-Vorgabe) statt End-Galerie; Anliegen-Hubs zeigen jetzt auch Archivbilder.
+- Bekannt/minor: NLS-Seite (NlsNeko) hat eigene Struktur — „mit der NLS-Diagnostik“-H2 dort nicht im Spiel; 4 Hub-Slider fehlen im Katalog (GAP-A, Nachcrawl P3); Datenschutz/Impressum bewusst kondensiert.
+
 ## 2026-08-21 (Design-Teilfreigaben umgesetzt)
 
 - Auftraggeber-Freigabe nach Sichtung `?look=neu`: **Farb-Tokens ✅**, **Petrol sparsam wie NLS ✅**; **Struktur der Original-Frontseite maßgeblich** (nicht HomeAc): `look=neu` rendert jetzt `HomeLegacy` mit neuen Tokens.
