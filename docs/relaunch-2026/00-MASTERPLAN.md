@@ -298,7 +298,7 @@ Der Plattform-Arbeitsbaum basiert bei dieser Tiefenprüfung auf `2d233564ca98ed4
 
 **Files:** Modify `.gitignore`; create `scripts/build-url-matrix.mjs`, `scripts/build-url-matrix.test.mjs`, `docs/migration/url-migration-matrix.csv`.
 
-- [ ] Private Pfade ignorieren:
+- [x] Private Pfade ignorieren:
 
 ```gitignore
 data/private/gsc/
@@ -306,7 +306,7 @@ data/private/plesk/
 data/private/wordpress-backup/
 ```
 
-- [ ] Test zuerst schreiben: exakt 64 eindeutige Alt-URLs, erlaubte Entscheidungen, Redirectzielpflicht, keine Ketten, keine Massenweiterleitung `/`.
+- [x] Test zuerst schreiben: exakt 64 eindeutige Alt-URLs, erlaubte Entscheidungen, Redirectzielpflicht, keine Ketten, keine Massenweiterleitung `/`.
 
 ```js
 test("one valid decision exists per live URL", () => {
@@ -317,10 +317,11 @@ test("one valid decision exists per live URL", () => {
 });
 ```
 
-- [ ] Test rot ausführen; Generator implementieren: Manifest + optionale GSC-Seitenexporte, fehlende Werte als `unknown`, niemals als `0`.
-- [ ] Jede Zeile fachlich entscheiden und bei Deindexierung `approved_by` verlangen.
-- [ ] `npm test && node scripts/parity-audit.mjs` ausführen.
-- [ ] Commit: `feat: add evidence-based URL migration matrix`.
+- [x] Test rot ausführen; Generator implementieren: Manifest + optionale GSC-Seitenexporte, fehlende Werte als `unknown`, niemals als `0`.
+- [x] Strukturelle Baseline erzeugen: 64 eindeutige Zeilen, davon 5 `keep_200_index` und 59 nicht deploybare `temporary_noindex_review`; keine unbelegten 301-/410-Entscheidungen. Jede 410-Entscheidung verlangt eine namentliche Freigabe in `approved_by`.
+- [ ] **Gate B:** Privaten GSC-Export einlesen, alle 59 Prüfzeilen fachlich bewerten und produktverantwortlich freigeben. Bis dahin darf die Matrix nicht von Redirect-, Sitemap- oder Deindexierungslogik konsumiert werden.
+- [x] `npm test` ausführen; 68 Tests, 68 bestanden, 0 Fehler. Der Paritätsaudit wird im finalen Qualitätsgate gegen den lokalen Server ausgeführt.
+- [x] Implementierungs-Commits: `0492ca2`, `822f7b8`, `780f12d`, `904c9fa`.
 
 ### Task 3: Abschaltarchiv WordPress/Plesk
 

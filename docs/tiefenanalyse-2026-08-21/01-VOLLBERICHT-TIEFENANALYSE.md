@@ -71,7 +71,7 @@ Die neue Rauch-Website ist eine fortgeschrittene, lauffähige Relaunch-Codebasis
 
 ### 2.3 Kritische offene Gates
 
-1. Eine fachlich und GSC-gestützt freigegebene 64-URL-Migrationsmatrix fehlt.
+1. Die strukturelle 64-URL-Migrationsmatrix ist deterministisch erzeugt und technisch abgesichert; die GSC-gestützte fachliche Freigabe der 59 Prüfzeilen fehlt noch.
 2. GSC-Baseline-Exporte liegen nicht im Workspace.
 3. Der Node-/Containervertrag für den bevorzugten `managed-container`-Betrieb fehlt.
 4. Der Codevertrag für `MedicalBusiness`-JSON-LD ist korrigiert, mit 4/4 Vertragstests und dem externen Entwicklerreview `RAUCH-TASK-04-REVIEW` belegt; Schema-Validator- und autoritative NAP-Freigaben stehen noch aus.
@@ -196,6 +196,7 @@ Der Masterplan deckt Architektur, P0/P1-Risiken, Zielverträge, zwölf Umsetzung
 | direkter Node-Test = 41/41         | Ausgangsprüfung               | historisch bestätigt                     |
 | `npm test` = 48/48 plus Null-Gate  | Task-4-Fortschreibung         | bestätigt                                |
 | `npm test` = 55/55 plus Null-Gate  | Task-7-Fortschreibung         | bestätigt                                |
+| `npm test` = 68/68 plus Null-Gate  | Task-2-Strukturfortschreibung | bestätigt                                |
 | Nitro-Preset Vercel                | `vite.config.ts:148-150`      | bestätigt                                |
 | Rating und relative Bild-URL       | historischer Ausgangsbefund; `practice-json-ld.ts` und SEO-Vertragstest | code-seitig geschlossen, externe Freigabe offen |
 | Gesundheits-JSON in allgemeiner DB | historischer Ausgangsbefund; Boundary-Test und aktuelle Produktionsquellen | geschlossen; kein lokaler Anamnese-Schreib- oder Lesepfad |
@@ -403,7 +404,7 @@ Ohne GSC-Export sind nicht belastbar bekannt:
 
 ### 14.3 Konsequenz
 
-Keine Alt-URL darf nur aufgrund der neuen Sitemap gelöscht oder pauschal weitergeleitet werden. Die 64-URL-Matrix muss GSC-, Backlink-, Inhaltsrisiko- und Businessdaten verbinden.
+Keine Alt-URL darf nur aufgrund der neuen Sitemap gelöscht oder pauschal weitergeleitet werden. Die strukturelle 64-URL-Matrix liegt vor: 5 URLs bleiben auf 200/indexierbar, 59 URLs verbleiben als nicht deploybare Prüfentscheidungen. GSC-, Backlink-, Inhaltsrisiko- und Businessdaten müssen diese 59 Entscheidungen noch evidenzbasiert vervollständigen; fehlende Werte sind `unknown` und nicht `0`.
 
 ## 15. E-E-A-T- und Gesundheitsinhaltsprüfung
 
@@ -556,7 +557,7 @@ Task 1 schließt das frühere npm-Nichtnull-Gate: `scripts/run-tests.mjs` ermitt
 - mobile Kernrouten-E2E;
 - Accessibility- und Performancegate.
 
-Der SEO-/Schema-Codevertrag ist seit Task 4 automatisiert (4/4 Zieltests); der aktuelle Gesamtstand umfasst 55/55 Tests. Der externe Entwicklerreview ist freigegeben. Schema-Validator- und autoritative NAP-Freigaben bleiben getrennte offene Abnahmen. Das historische `.vercel/output` wurde aus der Versionskontrolle entfernt und wird ignoriert; Releases müssen aus dem geprüften Quellstand neu gebaut werden, bis Task 8 den Deploymentvertrag verbindlich regelt.
+Der SEO-/Schema-Codevertrag ist seit Task 4 automatisiert (4/4 Zieltests); der aktuelle Gesamtstand umfasst 68/68 Tests, darunter 13/13 Task-2-Vertragstests. Der externe Entwicklerreview für Task 4 ist freigegeben. Schema-Validator- und autoritative NAP-Freigaben bleiben getrennte offene Abnahmen. Das historische `.vercel/output` wurde aus der Versionskontrolle entfernt und wird ignoriert; Releases müssen aus dem geprüften Quellstand neu gebaut werden, bis Task 8 den Deploymentvertrag verbindlich regelt.
 
 ## 21. Widersprüche und veraltete Informationen
 
@@ -615,8 +616,8 @@ Zugangsdaten dürfen niemals im Chat oder Repository übermittelt werden.
 
 | ID   | Bereich       | Risiko                                        | Prio               | Abnahme                                     |
 | ---- | ------------- | --------------------------------------------- | ------------------ | ------------------------------------------- |
-| R-01 | QA            | `npm test` kann mit null Tests grün wirken    | geschlossen        | aktuell 55/55 über Standardscript; Nulltreffer = 1 |
-| R-02 | SEO           | 64 Alt-URLs ohne freigegebene Matrix          | P0                 | 64 eindeutige Entscheidungen, keine Ketten  |
+| R-01 | QA            | `npm test` kann mit null Tests grün wirken    | geschlossen        | aktuell 68/68 über Standardscript; Nulltreffer = 1 |
+| R-02 | SEO           | 59 Alt-URLs ohne GSC-/Product-Owner-Freigabe  | P0                 | strukturelle Matrix steht; Gate B verlangt evidenzbasierte Freigabe ohne Ketten |
 | R-03 | GSC           | Ranking-/Indexdaten fehlen                    | P0                 | datierte private Baseline                   |
 | R-04 | Schema        | Rating, relative Bild-URL, Öffnungszeiten     | P0 Validator/NAP   | Codevertrag 4/4 und Entwicklerreview freigegeben; Validator/NAP offen |
 | R-05 | Datenschutz   | Gesundheits-JSON in allgemeiner DB            | geschlossen        | lokale Funktion und getracktes Alt-Prebuild entfernt; 7/7 Boundary-Tests |
@@ -641,7 +642,7 @@ Die detaillierten maschinenlesbaren Datensätze stehen in `02-MASCHINENLESBARE-S
 Der verbindliche Ausführungsplan ist `docs/relaunch-2026/00-MASTERPLAN.md`. Seine zwölf Tasks bleiben in folgender Abhängigkeitslogik maßgeblich:
 
 1. Test-Gate reparieren (geschlossen).
-2. GSC- und 64-URL-Matrix erzeugen.
+2. GSC- und 64-URL-Matrix: strukturelle Baseline erzeugt; GSC-/Product-Owner-Gate für 59 Prüfzeilen offen.
 3. WordPress-/Plesk-Abschaltarchiv erfassen.
 4. NAP und strukturierte Daten korrigieren (Codevertrag umgesetzt; externe Validator-/NAP-Freigabe offen).
 5. Canonicals und Redirects implementieren.
@@ -721,12 +722,12 @@ Vor einer produktiven Freigabe müssen mindestens erfüllt sein:
 | Entwickler kann beginnen      | bestätigt                     | lokale P0-Tasks sind ausführbar                               |
 | LLM kann ohne Chat übernehmen | bestätigt                     | Dokumentenhierarchie und strukturierte Statusmatrix vorhanden |
 | WordPress-Daten vollständig   | nicht bestätigt               | Crawl umfangreich; WXR/Admin-/Restorepaket fehlt              |
-| SEO-Migration freigegeben     | nicht bestätigt               | GSC und 64-URL-Matrix fehlen                                  |
+| SEO-Migration freigegeben     | nicht bestätigt               | Strukturmatrix vorhanden; GSC und fachliche Freigabe für 59 Prüfzeilen fehlen |
 | Headless-Stufe 1 fertig       | nicht bestätigt               | Container-/Health-/Plattformvertrag offen                     |
 | Headless-Stufe 2 fertig       | nicht bestätigt               | ContentProvider/Payload-Migration offen                       |
 | Go-live bereit                | nicht bestätigt               | mehrere P0-/P1-Gates offen                                    |
 
-**Nächste Maßnahme mit hohem Nutzen und geringem Risiko:** Task 2 mit der GSC- und 64-URL-Matrix beginnen und parallel die externen GSC-/WordPress-/Plesk-Evidenzpakete beschaffen. Danach JSON-LD und Gesundheitsdatengrenze korrigieren, bevor Deployment und URL-Umschaltung weitergeführt werden.
+**Nächste Maßnahme mit hohem Nutzen und geringem Risiko:** Die Task-2-Strukturmatrix unabhängig prüfen lassen und anschließend den privaten GSC-Seitenexport sowie die fachliche Product-Owner-Freigabe für die 59 Prüfzeilen beschaffen. Task 5 darf die Matrix erst nach diesem Gate konsumieren. JSON-LD und die Gesundheitsdatengrenze sind code-seitig bereits geschlossen und extern freigegeben; WordPress-/Plesk-Evidenzpakete bleiben parallel offen.
 
 ## 28. Quellen- und Nachweisverzeichnis
 
