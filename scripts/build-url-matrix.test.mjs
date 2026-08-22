@@ -123,6 +123,17 @@ test("CLI generates one conservative decision per manifest URL", async () => {
   }
 });
 
+test("committed matrix is byte-identical to the deterministic generator", async () => {
+  const expected = generatorModule.serializeCsv(
+    generatorModule.buildBaselineRows(manifest),
+  );
+  const committed = await readFile(
+    path.join(root, "docs/migration/url-migration-matrix.csv"),
+    "utf8",
+  );
+  assert.equal(committed, expected);
+});
+
 test("optional GSC CSV preserves real zero and missing evidence", () => {
   assert.equal(typeof generatorModule.parseGscPagesCsv, "function");
   const csv = [
@@ -195,6 +206,32 @@ test("merge decisions require a target path", () => {
   assert.throws(() => generatorModule.validateMatrix(rows, manifest), /target_path/);
 });
 
+test("merge decisions require Product Owner approval and GSC evidence", () => {
+  const targetPath = baselineRows[2].old_path;
+  const unapproved = matrixWith(1, {
+    decision: "merge_301",
+    target_path: targetPath,
+    target_http_status: "301",
+    evidence_status: "manifest_plus_gsc",
+  });
+  assert.throws(
+    () => generatorModule.validateMatrix(unapproved, manifest),
+    /approved_by/,
+  );
+
+  const withoutGsc = matrixWith(1, {
+    decision: "merge_301",
+    target_path: targetPath,
+    target_http_status: "301",
+    approval_status: "approved",
+    approved_by: "Product Owner",
+  });
+  assert.throws(
+    () => generatorModule.validateMatrix(withoutGsc, manifest),
+    /GSC evidence/,
+  );
+});
+
 test("self redirects are rejected", () => {
   const rows = matrixWith(1, {
     decision: "merge_301",
@@ -213,12 +250,23 @@ test("mass redirects to the root path are rejected", () => {
   assert.throws(() => generatorModule.validateMatrix(rows, manifest), /root/);
 });
 
-test("remove decisions require a real approval identity", () => {
+test("remove decisions require a real approval identity and GSC evidence", () => {
   const rows = matrixWith(1, {
     decision: "remove_410",
     target_http_status: "410",
   });
   assert.throws(() => generatorModule.validateMatrix(rows, manifest), /approved_by/);
+
+  const withoutGsc = matrixWith(1, {
+    decision: "remove_410",
+    target_http_status: "410",
+    approval_status: "approved",
+    approved_by: "Product Owner",
+  });
+  assert.throws(
+    () => generatorModule.validateMatrix(withoutGsc, manifest),
+    /GSC evidence/,
+  );
 });
 
 test("pending noindex reviews remain non-deployable", () => {
@@ -230,6 +278,39 @@ test("pending noindex reviews remain non-deployable", () => {
   assert.throws(() => generatorModule.validateMatrix(rows, manifest), /pending review/);
 });
 
+test("pending noindex reviews cannot publish canonical or sitemap fields", () => {
+  for (const overrides of [
+    { new_canonical: "https://rauch-heilpraktiker.de/falsch" },
+    { in_new_sitemap: "true" },
+  ]) {
+    const rows = matrixWith(1, overrides);
+    assert.throws(
+      () => generatorModule.validateMatrix(rows, manifest),
+      /pending review/,
+    );
+  }
+});
+
+test("each manifest URL remains bound to its normalized path", () => {
+  const rows = structuredClone(baselineRows);
+  [rows[1].old_path, rows[2].old_path] = [rows[2].old_path, rows[1].old_path];
+  assert.throws(
+    () => generatorModule.validateMatrix(rows, manifest),
+    /URL and path binding/,
+  );
+});
+
+test("evidence status is restricted to the documented values", () => {
+  const rows = matrixWith(1, {
+    evidence_status: "unverified",
+    gsc_clicks: 0,
+  });
+  assert.throws(
+    () => generatorModule.validateMatrix(rows, manifest),
+    /evidence_status/,
+  );
+});
+
 test("redirect chains are rejected", () => {
   const rows = structuredClone(baselineRows);
   rows[1] = {
@@ -237,12 +318,18 @@ test("redirect chains are rejected", () => {
     decision: "merge_301",
     target_path: rows[2].old_path,
     target_http_status: "301",
+    approval_status: "approved",
+    approved_by: "Product Owner",
+    evidence_status: "manifest_plus_gsc",
   };
   rows[2] = {
     ...rows[2],
     decision: "merge_301",
     target_path: rows[3].old_path,
     target_http_status: "301",
+    approval_status: "approved",
+    approved_by: "Product Owner",
+    evidence_status: "manifest_plus_gsc",
   };
   assert.throws(() => generatorModule.validateMatrix(rows, manifest), /chain or cycle/);
 });
@@ -254,12 +341,18 @@ test("redirect cycles are rejected", () => {
     decision: "merge_301",
     target_path: rows[2].old_path,
     target_http_status: "301",
+    approval_status: "approved",
+    approved_by: "Product Owner",
+    evidence_status: "manifest_plus_gsc",
   };
   rows[2] = {
     ...rows[2],
     decision: "merge_301",
     target_path: rows[1].old_path,
     target_http_status: "301",
+    approval_status: "approved",
+    approved_by: "Product Owner",
+    evidence_status: "manifest_plus_gsc",
   };
   assert.throws(() => generatorModule.validateMatrix(rows, manifest), /chain or cycle/);
 });

@@ -214,6 +214,9 @@ export function validateMatrix(rows, manifest) {
   const expectedPaths = new Set(
     manifest.pages.map((page) => normalizePath(page.sourceUrl)),
   );
+  const expectedPathByUrl = new Map(
+    manifest.pages.map((page) => [page.sourceUrl, normalizePath(page.sourceUrl)]),
+  );
   const urls = new Set(rows.map((row) => row.old_url));
   const paths = new Set(rows.map((row) => row.old_path));
 
@@ -232,9 +235,16 @@ export function validateMatrix(rows, manifest) {
     "remove_410",
     "temporary_noindex_review",
   ]);
+  const allowedEvidenceStatuses = new Set(["manifest_only", "manifest_plus_gsc"]);
   for (const row of rows) {
+    if (expectedPathByUrl.get(row.old_url) !== row.old_path) {
+      throw new Error(`invalid URL and path binding: ${row.old_url} -> ${row.old_path}`);
+    }
     if (!allowed.has(row.decision)) {
       throw new Error(`invalid decision: ${row.decision}`);
+    }
+    if (!allowedEvidenceStatuses.has(row.evidence_status)) {
+      throw new Error(`invalid evidence_status: ${row.evidence_status}`);
     }
 
     if (row.evidence_status === "manifest_only") {
@@ -267,6 +277,12 @@ export function validateMatrix(rows, manifest) {
       if (row.target_http_status !== "301") {
         throw new Error(`merge_301 requires target_http_status 301: ${row.old_path}`);
       }
+      if (row.approval_status !== "approved" || !row.approved_by.trim()) {
+        throw new Error(`merge_301 requires approved_by: ${row.old_path}`);
+      }
+      if (row.evidence_status !== "manifest_plus_gsc") {
+        throw new Error(`merge_301 requires GSC evidence: ${row.old_path}`);
+      }
     }
 
     if (row.decision === "remove_410") {
@@ -275,13 +291,18 @@ export function validateMatrix(rows, manifest) {
         || !row.approved_by.trim()) {
         throw new Error(`remove_410 requires approved_by: ${row.old_path}`);
       }
+      if (row.evidence_status !== "manifest_plus_gsc") {
+        throw new Error(`remove_410 requires GSC evidence: ${row.old_path}`);
+      }
     }
 
     if (row.decision === "temporary_noindex_review") {
       if (row.approval_status !== "pending"
         || row.approved_by !== ""
         || row.target_path !== ""
-        || row.target_http_status !== "pending") {
+        || row.target_http_status !== "pending"
+        || row.new_canonical !== "unknown"
+        || row.in_new_sitemap !== "pending") {
         throw new Error(`pending review must remain non-deployable: ${row.old_path}`);
       }
     }
