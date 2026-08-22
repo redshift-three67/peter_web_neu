@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "RAUCH-TASK-04-VERIFIKATIONSSTATUS-2026-08-22",
+  "task": "Task 4: NAP und strukturierte Daten",
+  "status": "implementiert_verifiziert_uebergabe_sync_bestaetigt_externe_freigabe_ausstehend",
+  "canonical_repository": "C:\\Users\\Hubert111\\Documents\\rauch_18_08_26_19_42\\repo-main",
+  "canonical_branch": "relaunch-konzept",
+  "commits": {
+    "base": "a5ec8fe454416322720777f8f83d8ec8a135e22c",
+    "design": "841ecf96362d2eb47328ce585d6f97749fb79857",
+    "plan": "96a9b0dd139513d365e6d78b3a2e6bdb4a4747ef",
+    "implementation": "d3fedcba401cb722c442a792b294d544d2920a70",
+    "review_hardening": "2ad965f65a94622b4070063ba9787bd594bff08d",
+    "handoff": "79d271218b72c1b0739c14752a05bcf6fb4d0fb3"
+  },
+  "handoff_sync": {
+    "verified_after_fetch": true,
+    "local_sha": "79d271218b72c1b0739c14752a05bcf6fb4d0fb3",
+    "origin_sha": "79d271218b72c1b0739c14752a05bcf6fb4d0fb3",
+    "equal": true,
+    "canonical_worktree_clean": true
+  },
+  "verification": {
+    "tdd_red": {
+      "exit_code": 1,
+      "tests": 4,
+      "passed": 1,
+      "failed": 3,
+      "expected_failures": [
+        "missing src/lib/practice-json-ld.ts",
+        "five production FaqJsonLd source findings"
+      ]
+    },
+    "seo_contract": {
+      "exit_code": 0,
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "uses_real_practice_export": true
+    },
+    "npm_test": {
+      "exit_code": 0,
+      "tests": 48,
+      "passed": 48,
+      "failed": 0
+    },
+    "typecheck": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "lint": {
+      "exit_code": 0,
+      "errors": 0,
+      "warnings": 3,
+      "passed": true
+    },
+    "production_build": {
+      "exit_code": 0,
+      "passed": true,
+      "database_migration": "DATABASE_URL nicht gesetzt; erwartungsgemäß übersprungen"
+    },
+    "status_matrix_json": {
+      "parsed": true,
+      "passed": true
+    },
+    "git_diff_check": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "internal_code_review": {
+      "verdict": "APPROVE",
+      "confidence": "HIGH",
+      "remaining_p0_p1_p2_findings": 0,
+      "source_build_integration_safe": true
+    }
+  },
+  "chrome_live_view": {
+    "url": "http://localhost:8080/",
+    "title": "Heilpraktiker Augsburg – Naturheilpraxis Peter Rauch",
+    "medical_business_count": 1,
+    "person_count": 1,
+    "absolute_image": "https://rauch-heilpraktiker.de/images/hero-praxis.jpg",
+    "aggregate_rating_present": false,
+    "opening_intervals": [
+      { "opens": "10:00", "closes": "12:30" },
+      { "opens": "13:00", "closes": "19:00" }
+    ],
+    "faq_page_count": 0,
+    "visible_faq_heading_present": true,
+    "console_warnings": 0,
+    "console_errors": 0,
+    "passed": true
+  },
+  "status_matrix": {
+    "STAT-017": "bestätigt mit Einschränkungen",
+    "STAT-026": "bestätigt mit Einschränkungen",
+    "STAT-027": "derzeit nicht prüfbar"
+  },
+  "release_restriction": {
+    "tracked_vercel_output": "historische, nicht freigegebene Momentaufnahme",
+    "vercel_deploy_prebuilt_allowed": false,
+    "required_release_method": "aus dem geprüften Quellstand neu bauen",
+    "final_deployment_contract_owner": "Task 8 / STAT-006"
+  },
+  "production_systems_changed": false,
+  "known_non_blocking_warnings": [
+    "scripts/wp-public-crawl.mjs: ungenutzter readFile-Import",
+    "src/components/site/DesignSkin.tsx: Fast-Refresh-Grenze",
+    "src/lib/auth/use-current-user.ts: ungenutzte ESLint-Deaktivierung"
+  ],
+  "external_review_required_before_next_task": true,
+  "recommended_next_decision": "Nach externer Freigabe Priorität zwischen Task 7 / STAT-018 und Task 2 / STAT-011 bestätigen"
+}
