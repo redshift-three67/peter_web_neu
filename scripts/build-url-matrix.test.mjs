@@ -123,18 +123,20 @@ test("CLI generates one conservative decision per manifest URL", async () => {
   }
 });
 
-test("committed matrix is byte-identical to the deterministic generator", async () => {
+test("committed matrix Git blob is byte-identical to the deterministic generator", () => {
   const expected = generatorModule.serializeCsv(
     generatorModule.buildBaselineRows(manifest),
   );
-  const committed = await readFile(
-    path.join(root, "docs/migration/url-migration-matrix.csv"),
-    "utf8",
-  );
-  assert.equal(committed, expected);
+  const committed = spawnSync("git", [
+    "show",
+    "HEAD:docs/migration/url-migration-matrix.csv",
+  ], { cwd: root, encoding: "utf8" });
+
+  assert.equal(committed.status, 0, committed.stderr);
+  assert.equal(committed.stdout, expected);
 });
 
-test("committed matrix keeps LF bytes in Windows checkouts", () => {
+test("committed matrix declares LF policy for future checkouts", () => {
   const check = spawnSync("git", [
     "check-attr",
     "eol",
