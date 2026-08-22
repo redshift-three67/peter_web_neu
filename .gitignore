@@ -4,6 +4,7 @@ node_modules/
 .env
 .env.*
 .vercel/output/
+.worktrees/
 data/private/gsc/
 data/private/plesk/
 data/private/wordpress-backup/
