@@ -86,7 +86,7 @@ Die produktive WordPress-Website, Plesk und DNS wurden nicht verändert.
 ## Verbindliche Einschränkungen und Restpunkte
 
 1. Die im Repository vorhandene `.vercel/output`-Momentaufnahme ist historisch und ausdrücklich kein freigegebenes Prebuilt-Releaseartefakt. `vercel deploy --prebuilt` darf damit nicht verwendet werden. Bis Task 8 den Deploymentvertrag schließt, muss jedes Release aus dem geprüften Quellstand neu gebaut werden.
-2. Externer Entwickler-/LLM-Review und Schema.org-Validatorprüfung stehen aus.
+2. Der externe Entwickler-/LLM-Review wurde am 2026-08-22 mit `freigegeben` und ohne Findings abgeschlossen; die separate Schema.org-Validatorprüfung steht weiterhin aus.
 3. Die autoritative Bestätigung von E-Mail, NAP, Öffnungszeiten und externen Profilen bleibt unter `STAT-027` offen.
 4. Die drei bekannten Lintwarnungen liegen außerhalb von Task 4:
    - `scripts/wp-public-crawl.mjs`: ungenutzter `readFile`-Import;

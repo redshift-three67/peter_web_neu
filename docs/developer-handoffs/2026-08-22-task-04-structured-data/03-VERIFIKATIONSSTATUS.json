@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "document_id": "RAUCH-TASK-04-VERIFIKATIONSSTATUS-2026-08-22",
   "task": "Task 4: NAP und strukturierte Daten",
-  "status": "implementiert_verifiziert_uebergabe_sync_bestaetigt_externe_freigabe_ausstehend",
+  "status": "implementiert_verifiziert_uebergabe_sync_bestaetigt_extern_freigegeben",
   "canonical_repository": "C:\\Users\\Hubert111\\Documents\\rauch_18_08_26_19_42\\repo-main",
   "canonical_branch": "relaunch-konzept",
   "commits": {
@@ -103,11 +103,20 @@
     "final_deployment_contract_owner": "Task 8 / STAT-006"
   },
   "production_systems_changed": false,
+  "external_review": {
+    "review_id": "RAUCH-TASK-04-REVIEW",
+    "reviewed_commit": "2ad965f65a94622b4070063ba9787bd594bff08d",
+    "verdict": "freigegeben",
+    "findings": 0,
+    "all_declared_checks_confirmed": true,
+    "received_on": "2026-08-22",
+    "artifact": "docs/developer-handoffs/2026-08-22-task-04-structured-data/04-EXTERNES-REVIEW.json"
+  },
   "known_non_blocking_warnings": [
     "scripts/wp-public-crawl.mjs: ungenutzter readFile-Import",
     "src/components/site/DesignSkin.tsx: Fast-Refresh-Grenze",
     "src/lib/auth/use-current-user.ts: ungenutzte ESLint-Deaktivierung"
   ],
-  "external_review_required_before_next_task": true,
-  "recommended_next_decision": "Nach externer Freigabe Priorität zwischen Task 7 / STAT-018 und Task 2 / STAT-011 bestätigen"
+  "external_review_required_before_next_task": false,
+  "recommended_next_decision": "Task 7 / STAT-018 zuerst schließen; anschließend Task 2 / STAT-011 umsetzen"
 }
