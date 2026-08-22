@@ -1,5 +1,25 @@
 # Offene Punkte und Lieferungen
 
+## Task 3: Abschaltarchiv – verifizierter Zwischenstand vom 22.08.2026
+
+| Paket | Received | Verified | Datum | Prüfer | Nachweis und Grenze |
+|---|---:|---:|---|---|---|
+| Vollständiger WordPress-WXR-Export | ja | ja | 22.08.2026 | Codex | XML wohlgeformt; 796 Objekte, darunter 91 Seiten, 544 Anhänge und 153 Menüeinträge; SHA-256 `8AB2ABFB482EFD31621EE9FD47ED1A925107DC339C9BAB93C7EE085BD8DBF755` |
+| Bestehender UpdraftPlus-Satz vom 14.08.2026 | ja | ja, Dateiintegrität | 22.08.2026 | Codex | Datenbank, Plugins, Themes, MU-Plugins, sonstige Dateien und fünf Upload-Archive vollständig lokal; alle ZIP-/GZIP-Datenströme lesbar; Einzelhashes im privaten Inventar |
+| WordPress-Admininventar | ja | ja | 22.08.2026 | Codex | 50 Plugins (34 aktiv, 16 inaktiv), 1 MU-Plugin, 3 Drop-ins, 4 Themes, 17 HFCM-Snippets (12 aktiv), Lesen-/Permalinkwerte, drei Administratorrollen ohne Personenangaben und flache Seitenhierarchie erfasst |
+| Rank-Math-Globalexport | ja | ja | 22.08.2026 | Codex | Vorhandener Export erneut gehasht; SHA-256 `DE3A7E86DF1ED7AE93ACBB32EB0839DAC1AE7888E80838B121EDBD502F68CCEC`; kein erneuter Export erforderlich |
+| Plesk-/nginx-/DNS-/TLS-Paket | nein | nein | 22.08.2026 | Codex | Interne Konfiguration weiterhin nicht zugänglich; gültige Plesk-Login-URL oder bereinigter Betreiberexport erforderlich |
+| Isolierter Restore | nein | nein | 22.08.2026 | – | Keine Wiederherstellung gegen Produktion ausführen; Test erst in einer isolierten Umgebung |
+
+Die Roharchive und das bereinigte Vollinventar liegen ausschließlich unter
+`data/private/wordpress-backup/2026-08-22/`. Dieser Pfad ist durch `.gitignore`
+gesperrt. Keine Rohdatei, Datenbank, Benutzerangabe oder Serverkonfiguration
+wird in Git übernommen.
+
+Die erfolgreiche Datei- und Archivprüfung ist noch **keine Restore-Freigabe**.
+`STAT-014` bleibt bis zum isoliert protokollierten Restore nur teilweise
+bestätigt. `STAT-023` bleibt bis zum Plesk-/nginx-Paket derzeit nicht prüfbar.
+
 ## Erhalten
 
 1. Rank-Math-Settings — [08-rank-math.md](./08-rank-math.md)
@@ -14,6 +34,8 @@
 3. **PDFs** aus dem Downloadbereich – Binaries fehlten im Crawl, Seite `/downloadbereich-naturheilpraxis-rauch` ist vorbereitet.
 4. ProvenExpert-Widget (optional)
 5. Freigabe der **HWG-Texte** Seite für Seite (Wortlaut ist noch WP-Original)
+6. Gültiger **Plesk-Zugang** beziehungsweise bereinigter Export der Host-, nginx-, DNS-, TLS-, Cache-, Backup- und Restorekonfiguration
+7. Freigabe einer **isolierten Restore-Umgebung**; niemals gegen die laufende Produktionswebsite testen
 
 ## Wiedervorlage / später
 

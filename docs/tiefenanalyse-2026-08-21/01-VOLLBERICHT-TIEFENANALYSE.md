@@ -73,10 +73,10 @@ Die neue Rauch-Website ist eine fortgeschrittene, lauffähige Relaunch-Codebasis
 ### 2.3 Kritische offene Gates
 
 1. Die strukturelle 64-URL-Migrationsmatrix ist deterministisch erzeugt und technisch abgesichert; die GSC-gestützte fachliche Freigabe der 59 Prüfzeilen fehlt noch.
-2. GSC-Baseline-Exporte liegen nicht im Workspace.
+2. Ein vorläufiger GSC-Performanceexport liegt privat vor, enthält trotz Dreimonatsfilter aber nur einen Datentag; eine belastbare Baseline und die weiteren GSC-Bereiche fehlen.
 3. Der Node-/Containervertrag für den bevorzugten `managed-container`-Betrieb fehlt.
 4. Der Codevertrag für `MedicalBusiness`-JSON-LD ist korrigiert, mit 4/4 Vertragstests und dem externen Entwicklerreview `RAUCH-TASK-04-REVIEW` belegt; Schema-Validator- und autoritative NAP-Freigaben stehen noch aus.
-5. Ein vollständiges WXR-/WordPress-/Plesk-Abschalt- und Restorepaket fehlt.
+5. WXR und ein vollständiger bestehender WordPress-Updraft-Satz sind lokal integritätsgeprüft; Plesk-/nginx-Paket und isolierter Restore fehlen.
 6. Vollständige fachlich-rechtliche Inhalts-, Accessibility-, Performance- und Cutover-Abnahmen fehlen.
 
 Das frühere P0-Gate zur lokalen Online-Anamnese ist am 2026-08-22 geschlossen worden: Der lokale Wizard, der Submit-/Tabellenpfad und die Anamnese-Inbox sind entfernt. Die Website zeigt eine Informationsroute und verlinkt ausschließlich die eigenständige externe App. Deren interne Datenschutz- und Speicherprozesse waren nicht Gegenstand dieser Repository-Prüfung.
@@ -149,16 +149,16 @@ Live-Werte sind zeitpunktbezogen und vor Cutover erneut zu prüfen.
 
 | Quelle                                             | Status                      | Auswirkung                                                                                           |
 | -------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
-| GSC-Performance- und Indexierungsexporte           | nicht vorhanden             | kein belegtes Ranking-, Klick-, Impressionen-, CTR- oder CWV-Baselineurteil                          |
+| GSC-Performance- und Indexierungsexporte           | vorläufig und unvollständig | ein Performanceexport mit nur einem Datentag liegt privat vor; keine belastbare Baseline und keine vollständigen Indexierungs-/CWV-Nachweise |
 | Plesk/nginx-vHost-Konfiguration                    | nicht vorhanden             | Redirectreihenfolge, Cache, TLS, Proxy, WAF und Restore intern nicht vollständig prüfbar             |
-| WXR/XML-Export                                     | nicht vorhanden             | öffentlicher Inhalt ist erfasst, administrativer WordPress-Vollbestand nicht abschließend archiviert |
-| WordPress-Datenbank-/Plugin-/Theme-/Snippet-Archiv | nicht vorhanden             | nicht öffentliche Metadaten und Wiederherstellbarkeit nicht vollständig belegt                       |
+| WXR/XML-Export                                     | vorhanden und verifiziert   | 796 Objekte; XML-Wohlgeformtheit und SHA-256 bestätigt                                                |
+| WordPress-Datenbank-/Plugin-/Theme-/Snippet-Archiv | vorhanden, Restore offen    | bestehender vollständiger Updraft-Satz und aktuelles Admininventar lokal verifiziert; isolierter Restore noch nicht protokolliert |
 | Medienrechtsnachweise                              | nicht vollständig vorhanden | produktive Verwendung einzelner Bilder nicht abschließend freigabefähig                              |
 | fachmedizinische und rechtliche Einzelabnahme      | nicht vorhanden             | keine vollständige E-E-A-T-/HWG-/Inhaltsfreigabe                                                     |
 | produktionsnaher Node-Container                    | nicht implementiert         | kein abschließender E2E-, Performance- oder Cutovernachweis                                          |
 | versionierter Plattform-Integrationsstand          | nicht vorhanden             | External-App-Vertrag lokal sichtbar, aber noch keinem reproduzierbaren Plattform-Commit zugeordnet   |
 
-Die Meldung, dass die Search-Console-Property neu verbunden wurde, ist als Auftraggeberangabe dokumentiert, aber ohne Export nicht technisch verifizierbar.
+Die neu verbundene Search-Console-Property ist durch einen vorläufigen Export technisch belegt. Wegen nur eines enthaltenen Datentags darf dieser Export nicht als belastbare Baseline oder als Nullnachweis für fehlende URLs verwendet werden.
 
 ## 6. Git- und Synchronisationsstatus
 
@@ -202,7 +202,7 @@ Der Masterplan deckt Architektur, P0/P1-Risiken, Zielverträge, zwölf Umsetzung
 | Rating und relative Bild-URL       | historischer Ausgangsbefund; `practice-json-ld.ts` und SEO-Vertragstest | code-seitig geschlossen, externe Freigabe offen |
 | Gesundheits-JSON in allgemeiner DB | historischer Ausgangsbefund; Boundary-Test und aktuelle Produktionsquellen | geschlossen; kein lokaler Anamnese-Schreib- oder Lesepfad |
 | Relaunch-Default                   | `design-skin.ts:27,39-46`     | bestätigt mit localStorage-Einschränkung |
-| WXR und GSC-Baseline fehlen        | Dateiinventar                 | bestätigt                                |
+| WXR und GSC-Baseline fehlen        | privates Evidenzinventar      | WXR geschlossen; GSC-Baseline weiterhin unvollständig |
 
 ### 7.3 Präzisierungen
 
@@ -210,7 +210,7 @@ Der Masterplan deckt Architektur, P0/P1-Risiken, Zielverträge, zwölf Umsetzung
 - Die Catch-all-Route kann Archivseiten rendern, setzt aber `noindex,follow`; eine gerenderte Seite ist daher nicht automatisch ein freigegebenes Indexziel.
 - Der Build- und Hauptchunkbefund ist ein technischer Hinweis; reale CWV benötigen Release- und Felddaten.
 - Historische Browserläufe sind nützlich, ersetzen aber kein versioniertes Releasegate.
-- Der öffentliche Crawl ist kein Ersatz für WXR, Datenbank, Plugin-/Themeinventar und Restoreprüfung.
+- Der öffentliche Crawl wird inzwischen durch WXR, Datenbank-/Dateiarchive und Admininventar ergänzt; die isolierte Restoreprüfung bleibt unverzichtbar.
 
 ## 8. Technische Architektur
 
@@ -341,18 +341,23 @@ Das Entfernen des selbstbezogenen `aggregateRating` ist ein internes SEO-, Daten
 - Rank-Math-Exportbereiche `general`, `modules`, `redirections`, `role-manager`, `sitemap`, `titles`;
 - Bildmapping und Uploadinventar.
 
-### 12.2 Nicht vollständig vorhanden
+### 12.2 Administrativer Archivstand
 
-- WXR/XML;
-- vollständige WordPress-Datenbank;
-- Plugin-, Theme-, MU-Plugin- und Snippetinventar;
-- administrative Seitenhierarchie-/Permalinknachweise;
-- alle nicht öffentlichen URL-spezifischen Rank-Math-Felder;
-- getesteter Restore.
+Vorhanden und am 22.08.2026 lokal verifiziert:
+
+- vollständiger WXR/XML-Export;
+- bestehender Updraft-Satz vom 14.08.2026 mit Datenbank, Plugins, Themes, MU-Plugins, sonstigen Dateien und fünf Upload-Archiven;
+- aktuelles Plugin-, Theme-, MU-Plugin-, Drop-in- und Snippetinventar;
+- Lesen-/Permalinkwerte, anonymisierte Benutzerrollenzählung und Seitenhierarchie.
+
+Weiterhin offen:
+
+- alle nicht öffentlichen URL-spezifischen Rank-Math-Felder, soweit sie einen zusätzlichen Migrationsnutzen besitzen;
+- isoliert getesteter und protokollierter Restore.
 
 ### 12.3 Einordnung
 
-Die vorhandenen Daten reichen für die Fortsetzung der Entwicklung und eine belastbare öffentliche Inhaltsinventur. Für die Abschaltung von WordPress und die vollständige Archiv-/Restorefähigkeit reichen sie nicht.
+Die vorhandenen Daten reichen für die Fortsetzung der Entwicklung und für eine integritätsgeprüfte WordPress-Archivbasis. Die Abschaltung bleibt bis zum isolierten Restore und zum Plesk-/nginx-/Rollbackpaket gesperrt.
 
 ## 13. Medieninventar
 
@@ -509,7 +514,7 @@ Dies ist eine technische Risikobewertung. Rechtsgrundlage, Auftragsverarbeitung,
 
 ### 19.1 Alte Produktion
 
-Öffentlich verifiziert wurden nginx, PHP 8.2.33 und PleskLin. Nicht öffentlich prüfbar sind vHost-Regeln, Cache, TLS-Konfiguration, DNS/TTL, WAF/CDN, Backups, Cronjobs und Restore.
+Öffentlich verifiziert wurden nginx, PHP 8.2.33 und PleskLin. Der bestehende WordPress-Updraft-Satz ist privat integritätsgeprüft. Nicht prüfbar bleiben Plesk-vHost-Regeln, Cache, TLS-Konfiguration, DNS/TTL, WAF/CDN, Plesk-Backups, Cronjobs und der isolierte Restore.
 
 ### 19.2 Neue Zielumgebung
 
@@ -592,11 +597,16 @@ Der Paritätsaudit wurde im Task-2-Abschluss gegen den lokalen Entwicklungsserve
 
 ### 22.2 Zwingend vor WordPress-Abschaltung
 
+Erhalten und integritätsgeprüft:
+
 - WXR/XML;
 - Datenbank- und `wp-content`-Backup;
-- Plugin-, Theme-, MU-Plugin- und Snippetinventar;
-- Permalink-, Lesen-, Benutzerrollen- und Seitenhierarchienachweis;
-- getesteter Restore.
+- Plugin-, Theme-, MU-Plugin-, Drop-in- und Snippetinventar;
+- Permalink-, Lesen-, Benutzerrollen- und Seitenhierarchienachweis.
+
+Noch zwingend ausstehend:
+
+- isoliert getesteter und protokollierter Restore.
 
 ### 22.3 Zwingend vor Cutover
 
@@ -627,7 +637,7 @@ Zugangsdaten dürfen niemals im Chat oder Repository übermittelt werden.
 | R-04 | Schema        | Rating, relative Bild-URL, Öffnungszeiten     | P0 Validator/NAP   | Codevertrag 4/4 und Entwicklerreview freigegeben; Validator/NAP offen |
 | R-05 | Datenschutz   | Gesundheits-JSON in allgemeiner DB            | geschlossen        | lokale Funktion und getracktes Alt-Prebuild entfernt; 7/7 Boundary-Tests |
 | R-06 | Deployment    | kein Node-/Containervertrag                   | P0                 | produktionsnaher Container und `/healthz`   |
-| R-07 | WordPress     | kein vollständiges Abschaltarchiv             | P0 vor Abschaltung | isoliert getesteter Restore                 |
+| R-07 | WordPress     | Archivdateien verifiziert, Restore ungetestet | P0 vor Abschaltung | isoliert getesteter Restore                 |
 | R-08 | Infrastruktur | interne Cutoverdaten fehlen                   | P0 vor Cutover     | freigegebenes Infrastruktur-/Rollbackpaket  |
 | R-09 | Inhalt        | fachlich-rechtliche Welle 2/Governance offen  | P0 vor Go-live     | 19-Seiten-Reviewmatrix                      |
 | R-10 | Accessibility | kein vollständiges Releasegate                | P1                 | automatisierte und manuelle Abnahme         |
@@ -648,7 +658,7 @@ Der verbindliche Ausführungsplan ist `docs/relaunch-2026/00-MASTERPLAN.md`. Sei
 
 1. Test-Gate reparieren (geschlossen).
 2. GSC- und 64-URL-Matrix: strukturelle Baseline erzeugt; GSC-/Product-Owner-Gate für 59 Prüfzeilen offen.
-3. WordPress-/Plesk-Abschaltarchiv erfassen.
+3. WordPress-Archiv ist dateiseitig erfasst; Plesk-Paket und isolierten Restore ergänzen.
 4. NAP und strukturierte Daten korrigieren (Codevertrag umgesetzt; externe Validator-/NAP-Freigabe offen).
 5. Canonicals und Redirects implementieren.
 6. Welle 2, E-E-A-T und HWG-Review abschließen.
@@ -726,13 +736,13 @@ Vor einer produktiven Freigabe müssen mindestens erfüllt sein:
 | Masterplan übergabefähig      | bestätigt mit Einschränkungen | mit diesem Bericht und Matrix eindeutig präzisiert            |
 | Entwickler kann beginnen      | bestätigt                     | lokale P0-Tasks sind ausführbar                               |
 | LLM kann ohne Chat übernehmen | bestätigt                     | Dokumentenhierarchie und strukturierte Statusmatrix vorhanden |
-| WordPress-Daten vollständig   | nicht bestätigt               | Crawl umfangreich; WXR/Admin-/Restorepaket fehlt              |
+| WordPress-Daten vollständig   | teilweise bestätigt           | WXR, vollständiger bestehender Updraft-Satz und Admininventar verifiziert; isolierter Restore und Plesk-Paket offen |
 | SEO-Migration freigegeben     | nicht bestätigt               | Strukturmatrix vorhanden; GSC und fachliche Freigabe für 59 Prüfzeilen fehlen |
 | Headless-Stufe 1 fertig       | nicht bestätigt               | Container-/Health-/Plattformvertrag offen                     |
 | Headless-Stufe 2 fertig       | nicht bestätigt               | ContentProvider/Payload-Migration offen                       |
 | Go-live bereit                | nicht bestätigt               | mehrere P0-/P1-Gates offen                                    |
 
-**Nächste Maßnahme mit hohem Nutzen und geringem Risiko:** Die Task-2-Strukturmatrix unabhängig prüfen lassen und anschließend den privaten GSC-Seitenexport sowie die fachliche Product-Owner-Freigabe für die 59 Prüfzeilen beschaffen. Task 5 darf die Matrix erst nach diesem Gate konsumieren. JSON-LD und die Gesundheitsdatengrenze sind code-seitig bereits geschlossen und extern freigegeben; WordPress-/Plesk-Evidenzpakete bleiben parallel offen.
+**Nächste Maßnahme mit hohem Nutzen und geringem Risiko:** Für Task 2 nach ausreichender Datenreife einen vollständigen GSC-Export beschaffen und die 59 Prüfzeilen fachlich freigeben; Task 5 darf die Matrix vorher nicht konsumieren. Parallel ist Task 3 durch ein gültiges Plesk-/nginx-Paket und einen isolierten Restore zu schließen. JSON-LD und die Gesundheitsdatengrenze sind code-seitig bereits geschlossen und extern freigegeben.
 
 ## 28. Quellen- und Nachweisverzeichnis
 

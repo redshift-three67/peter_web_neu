@@ -165,13 +165,13 @@ Historische Detailakten bleiben verbindliche Ergänzungen, soweit dieser Masterp
 | Uploadinventar   | `content/wordpress/uploads-incoming-inventory.json` | 661 Dateien                                         |
 | Bildmapping      | `content/wordpress/image-map.json`                  | Quell-/Zielzuordnung                                |
 
-Der Rank-Math-Redirect-Array ist leer. URL-Level-Fokuskeywords und interne Einzelfelder fehlen; öffentlich wirksame Titles, Descriptions, Robots und Canonicals wurden gecrawlt. WXR/XML fehlt, ist für die aktuelle Analyse nicht blockierend, muss aber vor WordPress-Abschaltung als Archiv erzeugt werden.
+Der Rank-Math-Redirect-Array ist leer. URL-Level-Fokuskeywords und interne Einzelfelder fehlen; öffentlich wirksame Titles, Descriptions, Robots und Canonicals wurden gecrawlt. WXR/XML und ein vollständiger bestehender Updraft-Satz wurden am 22.08.2026 privat gesichert und integritätsgeprüft; der isolierte Restore bleibt vor WordPress-Abschaltung verpflichtend.
 
 `bilder.zip` enthält 666 Einträge, davon 657 Bilder. 607 Rasterdateien sind byteidentisch im Repo, alle 50 SVGs nach Textnormalisierung identisch; neue Bilder: 0. Sechs MP3 fehlen, werden aber nicht automatisch importiert. Log, Fortschritts-JSON und leere PHP-Debugdatei bleiben ausgeschlossen. Bildrechte müssen separat belegt werden.
 
 ### 2.4 Search Console und Plesk
 
-Die Search-Console-Property wurde am 21.08.2026 neu verbunden. `gsc_property_connected=true`, `gsc_baseline_received=false`. Benötigt werden maximal verfügbare Exporte für Queries, Pages, Devices, Countries, Search Appearance sowie Indexierung, Sitemaps, CWV, Links, manuelle Maßnahmen und Sicherheit. Fehlende Werte werden niemals geschätzt.
+Die Search-Console-Property wurde am 21.08.2026 neu verbunden. `gsc_property_connected=true`, `gsc_preliminary_export_received=true`, `gsc_baseline_received=false`. Der vorläufige Export vom 22.08.2026 enthält trotz Dreimonatsfilter nur den 20.08.2026 und ist kein Nullnachweis für fehlende URLs. Benötigt werden nach ausreichender Datenreife erneut Queries, Pages, Devices, Countries und Search Appearance sowie Indexierung, Sitemaps, CWV, Links, manuelle Maßnahmen und Sicherheit. Fehlende Werte werden niemals geschätzt.
 
 Von Plesk/nginx werden vor Cutover benötigt: Hosting/Document Root, Host-/HTTPS-Regeln, zusätzliche Direktiven und Redirects, DNS/TTLs, TLS-Metadaten ohne Schlüssel, PHP/Proxy/Cache, anonymisierte 404-/Bot-/Error-Auswertung, Backup-/Restoreweg, Cronjobs und WAF/CDN-Schicht.
 
@@ -320,6 +320,7 @@ test("one valid decision exists per live URL", () => {
 - [x] Test rot ausführen; Generator implementieren: Manifest + optionale GSC-Seitenexporte, fehlende Werte als `unknown`, niemals als `0`.
 - [x] Strukturelle Baseline erzeugen: 64 eindeutige Zeilen, davon 5 `keep_200_index` und 59 nicht deploybare `temporary_noindex_review`; keine unbelegten 301-/410-Entscheidungen. Jede 410-Entscheidung verlangt eine namentliche Freigabe in `approved_by`.
 - [ ] **Gate B:** Privaten GSC-Export einlesen, alle 59 Prüfzeilen fachlich bewerten und produktverantwortlich freigeben. Bis dahin darf die Matrix nicht von Redirect-, Sitemap- oder Deindexierungslogik konsumiert werden.
+- [x] Vorläufigen GSC-Performanceexport vom 22.08.2026 privat gesichert und analysiert: Filter `Letzte 3 Monate`, tatsächlich nur ein Datentag (20.08.2026), 17 Seitenzeilen und 16/64 Manifesttreffer. Diese Evidenz schließt Gate B nicht; fehlende URLs bleiben `unknown`.
 - [x] `npm test` ausführen; 74 Tests, 74 bestanden, 0 Fehler, darunter 19/19 Task-2-Vertragstests. `node scripts/parity-audit.mjs` wurde gegen den lokalen Server ausgeführt (18 Seiten, Exitcode 0); der Bericht weist weiterhin 49–95 % fehlende Inhaltsmerkmale aus. Diese offenen Paritätsbefunde gehören zu Task 6 und sind keine positive Inhaltsfreigabe.
 - [x] Implementierungs-Commits: `0492ca2`, `822f7b8`, `780f12d`, `904c9fa`, `f4393af`, `9a86e39`, `f34c7fd`.
 - [x] Gate A extern ohne Findings freigegeben: `RAUCH-TASK-02-GATE-A-REVIEW`; Nachweis `docs/developer-handoffs/2026-08-22-task-02-url-matrix/04-EXTERNES-REVIEW.json`.
@@ -328,12 +329,12 @@ test("one valid decision exists per live URL", () => {
 
 **Files:** Update `docs/migration/07-offene-punkte.md`; Rohdaten nur unter `data/private/`.
 
-- [ ] WXR unter `Werkzeuge -> Daten exportieren -> Alle Inhalte` erzeugen.
-- [ ] Plugins/Themes/MU-Plugins/Snippets, Lesen-/Permalinkscreens, Seitenhierarchie dokumentieren.
-- [ ] Rank-Math global nicht erneut verlangen, sofern vorhandener Exporthash bestätigt ist.
+- [x] WXR unter `Werkzeuge -> Daten exportieren -> Alle Inhalte` erzeugen; XML-Wohlgeformtheit, 796 Objekte und SHA-256 `8AB2ABFB482EFD31621EE9FD47ED1A925107DC339C9BAB93C7EE085BD8DBF755` am 22.08.2026 verifiziert.
+- [x] Plugins/Themes/MU-Plugins/Snippets, Lesen-/Permalinkwerte und Seitenhierarchie read-only dokumentieren; bereinigtes Vollinventar ausschließlich privat abgelegt.
+- [x] Rank-Math global nicht erneut verlangen; vorhandener Export mit SHA-256 `DE3A7E86DF1ED7AE93ACBB32EB0839DAC1AE7888E80838B121EDBD502F68CCEC` bestätigt.
 - [ ] Plesk/nginx-Paket aus §2.4 erfassen; Secrets, Schlüssel und personenbezogene Logs ausschließen.
-- [ ] Dokument je Paket mit `received`, `verified`, Datum und Prüfer aktualisieren.
-- [ ] Nur bereinigte Dokumentation committen: `docs: record verified migration evidence`.
+- [x] Dokument je Paket mit `received`, `verified`, Datum und Prüfer aktualisieren; Plesk und isolierter Restore ausdrücklich offen gelassen.
+- [x] Nur bereinigte Dokumentation committen: `docs: record verified migration evidence`; private Roharchive bleiben vollständig ignoriert.
 
 ### Task 4: NAP und strukturierte Daten
 

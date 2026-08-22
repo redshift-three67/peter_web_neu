@@ -33,9 +33,9 @@ Zulässige Statuswerte sind:
 | STAT-009 | SEO und Migration          | Live-Seiten-Sitemap der alten Website            | bestätigt                     | Info               |
 | STAT-010 | SEO und Migration          | Neue statische Sitemap                           | teilweise bestätigt           | P0                 |
 | STAT-011 | SEO und Migration          | 64-URL-Migrationsmatrix                          | bestätigt mit Einschränkungen | P0                 |
-| STAT-012 | Google Search Console      | GSC-Baseline                                     | derzeit nicht prüfbar         | P0                 |
+| STAT-012 | Google Search Console      | GSC-Baseline                                     | teilweise bestätigt           | P0                 |
 | STAT-013 | WordPress                  | Öffentlicher Inhalts-Snapshot                    | bestätigt mit Einschränkungen | P1                 |
-| STAT-014 | WordPress                  | WXR- und Abschaltarchiv                          | nicht bestätigt               | P0 vor Abschaltung |
+| STAT-014 | WordPress                  | WXR- und Abschaltarchiv                          | teilweise bestätigt           | P0 vor Abschaltung |
 | STAT-015 | Rank Math                  | SEO-Plugin-Daten                                 | bestätigt mit Einschränkungen | P1                 |
 | STAT-016 | Medien                     | Repository-Medieninventar                        | bestätigt mit Einschränkungen | P1                 |
 | STAT-017 | SEO und Schema.org         | MedicalBusiness JSON-LD                          | bestätigt mit Einschränkungen | P0                 |
