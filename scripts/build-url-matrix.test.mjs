@@ -134,6 +134,18 @@ test("committed matrix is byte-identical to the deterministic generator", async 
   assert.equal(committed, expected);
 });
 
+test("committed matrix keeps LF bytes in Windows checkouts", () => {
+  const check = spawnSync("git", [
+    "check-attr",
+    "eol",
+    "--",
+    "docs/migration/url-migration-matrix.csv",
+  ], { cwd: root, encoding: "utf8" });
+
+  assert.equal(check.status, 0, check.stderr);
+  assert.match(check.stdout, /eol: lf\s*$/);
+});
+
 test("optional GSC CSV preserves real zero and missing evidence", () => {
   assert.equal(typeof generatorModule.parseGscPagesCsv, "function");
   const csv = [
