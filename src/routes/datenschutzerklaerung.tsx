@@ -19,7 +19,7 @@ function Page() {
       <PageHero
         kicker={meta.kicker}
         title="Datenschutzerklärung"
-        lead="Gesundheitsdaten sind besonders schützenswert. Diese Erklärung gilt für Website, Kontaktformular und Anamnesebogen der Naturheilpraxis Rauch in Augsburg-Hochzoll."
+        lead="Diese Erklärung gilt für die Relaunch-Website und ihr Kontaktformular. Der Online-Anamnesebogen gehört zu einer eigenständigen externen App."
       />
       <PhoneChip />
       <Container className="py-12 md:py-16">
@@ -36,11 +36,12 @@ function Page() {
           </p>
           <h2>Formulare</h2>
           <p>
-            Kontakt- und Anamnesedaten werden ausschließlich zur
-            Terminvorbereitung und Praxisorganisation verarbeitet (Art. 6
-            Abs. 1 lit. a und lit. b DSGVO, Art. 9 Abs. 2 lit. a und h DSGVO).
-            Anamnesedaten sind Gesundheitsdaten. Die Übermittlung erfolgt über
-            diese Domain, nicht über fremde Prototyp-Hosts.
+            Das Kontaktformular dieser Website dient ausschließlich allgemeinen
+            organisatorischen Anfragen. Bitte übermitteln Sie dort keine
+            Gesundheitsdaten. Der Online-Anamnesebogen wird in einer
+            eigenständigen externen App angeboten. Beim Öffnen verlassen Sie
+            diese Website; für die Datenverarbeitung in der App gelten die dort
+            bereitgestellten Datenschutzhinweise.
           </p>
           <h2>Cookies und Einwilligung</h2>
           <p>

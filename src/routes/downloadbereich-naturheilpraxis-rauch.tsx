@@ -28,10 +28,10 @@ function Page() {
       <Container className="max-w-3xl pb-16">
         <IconCard icon={FileText} title="Formulare">
           <p>
-            Der aktuelle Aufnahmebogen liegt digital auf dieser Website. Die
-            bisherigen PDF-Dateien aus WordPress waren im öffentlichen Crawl
-            nicht enthalten – sie werden 1:1 nachgereicht, ohne Inhalt zu
-            kürzen.
+            Der Anamnesebogen und weitere Unterlagen werden über die
+            eigenständige Patienten-App der Naturheilpraxis bereitgestellt. Auf
+            dieser Website werden keine Gesundheitsdaten erfasst oder
+            gespeichert.
           </p>
           <div className="mt-4">
             <Button asChild variant="clay">

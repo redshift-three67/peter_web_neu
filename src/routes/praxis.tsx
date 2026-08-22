@@ -26,7 +26,7 @@ function Praxis() {
     if (!user) return;
     listInbox()
       .then(setData)
-      .catch(() => setData({ contacts: [], forms: [] }));
+      .catch(() => setData({ contacts: [] }));
   }, [user]);
 
   if (isPending) {
@@ -45,7 +45,7 @@ function Praxis() {
         Posteingang
       </h1>
       <p className="mt-2 text-muted">Angemeldet als {user.displayName}</p>
-      <div className="mt-10 grid gap-8 lg:grid-cols-2">
+      <div className="mt-10">
         <section>
           <h2 className="font-display text-2xl text-sage-deep">Nachrichten</h2>
           <ul className="mt-4 space-y-3">
@@ -62,24 +62,6 @@ function Praxis() {
                     {row.email} · {row.phone}
                   </p>
                   <p className="mt-2">{row.message}</p>
-                </li>
-              ))
-            )}
-          </ul>
-        </section>
-        <section>
-          <h2 className="font-display text-2xl text-sage-deep">Anamnesen</h2>
-          <ul className="mt-4 space-y-3">
-            {(data?.forms ?? []).length === 0 ? (
-              <li className="text-sm text-muted">Noch keine Bögen.</li>
-            ) : (
-              data?.forms.map((row) => (
-                <li
-                  key={row.id}
-                  className="rounded-lg border border-line bg-paper p-4 text-sm"
-                >
-                  <p className="font-medium">{row.status}</p>
-                  <p className="text-muted">{String(row.created_at)}</p>
                 </li>
               ))
             )}

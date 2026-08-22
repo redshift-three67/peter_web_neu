@@ -32,43 +32,6 @@ export const submitContact = createServerFn({ method: "POST" })
     return { ok: true as const, id };
   });
 
-const anamneseSchema = z.object({
-  firstName: z.string().trim().min(2).max(80),
-  lastName: z.string().trim().min(2).max(80),
-  birthDate: z.string().trim().min(6).max(20),
-  street: z.string().trim().min(3).max(120),
-  zip: z.string().trim().min(4).max(10),
-  city: z.string().trim().min(2).max(80),
-  email: z.string().trim().email(),
-  phone: z.string().trim().min(6).max(40),
-  concern: z.string().trim().min(8).max(2000),
-  duration: z.string().trim().max(200).optional(),
-  physician: z.string().trim().max(400).optional(),
-  diagnoses: z.string().trim().max(800).optional(),
-  medication: z.string().trim().max(800).optional(),
-  allergies: z.string().trim().max(400).optional(),
-  sleep: z.string().trim().max(200).optional(),
-  notes: z.string().trim().max(2000).optional(),
-  printedName: z.string().trim().min(3).max(120),
-  accurate: z.literal(true),
-  privacy: z.literal(true),
-});
-
-export type AnamneseInput = z.infer<typeof anamneseSchema>;
-
-export const submitAnamnese = createServerFn({ method: "POST" })
-  .validator((input: unknown) => anamneseSchema.parse(input))
-  .handler(async ({ data }) => {
-    const sql = await getSql();
-    const id = crypto.randomUUID();
-    const payload = JSON.stringify(data);
-    await sql`
-      insert into anamnesis_submissions (id, payload, status)
-      values (${id}, ${payload}, ${"received"})
-    `;
-    return { ok: true as const, id };
-  });
-
 export const listInbox = createServerFn({ method: "GET" })
   .middleware([authMiddleware])
   .handler(async () => {
@@ -87,15 +50,5 @@ export const listInbox = createServerFn({ method: "GET" })
       order by created_at desc
       limit 50
     `;
-    const forms = await sql<{
-      id: string;
-      created_at: string;
-      status: string;
-    }>`
-      select id, created_at, status
-      from anamnesis_submissions
-      order by created_at desc
-      limit 50
-    `;
-    return { contacts, forms };
+    return { contacts };
   });

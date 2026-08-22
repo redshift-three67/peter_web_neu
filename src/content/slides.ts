@@ -1,3 +1,5 @@
+import { externalLinks } from "@/content/external-links";
+
 /** Live-Slider der WordPress-Startseite, Overlay-Texte 1:1 vom 18.08.2026. */
 export const homeSlides = [
   {
@@ -15,7 +17,7 @@ export const homeSlides = [
     meta: "Online-Anamnesebogen",
     title: "Patientenaufnahme vor dem Termin",
     cta: "Online-Anamnesebogen",
-    href: "https://naturheilpraxis-rauch.lovable.app/",
+    href: externalLinks.anamneseApp,
     external: true,
   },
   {
