@@ -549,12 +549,13 @@ Task 1 schließt das frühere npm-Nichtnull-Gate: `scripts/run-tests.mjs` ermitt
 
 ### 20.3 Fehlende Releasegates
 
-- SEO-/Schema-Vertragstests;
 - Redirect-/Canonical-E2E;
 - Gesundheitsdaten-Boundary-Test;
 - Node-Container- und Healthchecktest;
 - mobile Kernrouten-E2E;
 - Accessibility- und Performancegate.
+
+Der SEO-/Schema-Codevertrag ist seit Task 4 automatisiert (4/4 Zieltests; 48/48 Gesamttests). Externe Schema-Validator-, Entwickler- und autoritative NAP-Freigaben bleiben getrennte offene Abnahmen. Die eingecheckte historische `.vercel/output`-Momentaufnahme ist kein freigegebenes Prebuilt-Releaseartefakt; Releases müssen aus dem geprüften Quellstand neu gebaut werden, bis Task 8 den Deploymentvertrag verbindlich regelt.
 
 ## 21. Widersprüche und veraltete Informationen
 

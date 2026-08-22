@@ -6,6 +6,7 @@ import ts from "typescript";
 
 const ROOT = resolve(import.meta.dirname, "..");
 const BUILDER_PATH = join(ROOT, "src", "lib", "practice-json-ld.ts");
+const SITE_CONTENT_PATH = join(ROOT, "src", "content", "site.ts");
 const HERO_PATH = join(ROOT, "public", "images", "hero-praxis.jpg");
 const EXPECTED_IMAGE =
   "https://rauch-heilpraktiker.de/images/hero-praxis.jpg";
@@ -17,48 +18,25 @@ const EXPECTED_DAYS = [
   "Friday",
 ];
 
-const practiceFixture = {
-  name: "Naturheilpraxis Rauch",
-  person: "Peter Rauch",
-  role: "Heilpraktiker und Physiotherapeut",
-  street: "Friedrich-Deffner-Straße 19a",
-  zip: "86163",
-  city: "Augsburg",
-  district: "Hochzoll",
-  phoneTel: "+498212621462",
-  email: "praxis_rauch@icloud.com",
-  geo: { lat: 48.33937, lng: 10.94893 },
-  reach: ["Augsburg-Hochzoll", "Friedberg", "Lechhausen-Ost"],
-  association: "Bund Deutscher Heilpraktiker und Naturheilkundiger e.V.",
-  social: {
-    facebook:
-      "https://www.facebook.com/heilpraktiker.naturheilpraxis.bioresonanz.rauch/",
-    googlePlaces: "https://g.page/RauchHeilpraktikerAugsburg",
-  },
-  schemaImage: EXPECTED_IMAGE,
-  openingDays: EXPECTED_DAYS,
-  openingIntervals: [
-    { opens: "10:00", closes: "12:30" },
-    { opens: "13:00", closes: "19:00" },
-  ],
-};
-
-async function loadBuilder() {
-  const source = readFileSync(BUILDER_PATH, "utf8");
+async function loadTypeScriptModule(filePath) {
+  const source = readFileSync(filePath, "utf8");
   const { outputText } = ts.transpileModule(source, {
     compilerOptions: {
       module: ts.ModuleKind.ESNext,
       target: ts.ScriptTarget.ES2022,
     },
-    fileName: basename(BUILDER_PATH),
+    fileName: basename(filePath),
   });
   const dataUrl = `data:text/javascript;base64,${Buffer.from(outputText).toString("base64")}`;
   return import(dataUrl);
 }
 
 async function buildFixtureGraph() {
-  const { buildPracticeJsonLd } = await loadBuilder();
-  return buildPracticeJsonLd(practiceFixture);
+  const [{ buildPracticeJsonLd }, { practice }] = await Promise.all([
+    loadTypeScriptModule(BUILDER_PATH),
+    loadTypeScriptModule(SITE_CONTENT_PATH),
+  ]);
+  return buildPracticeJsonLd(practice);
 }
 
 function filesBelow(directory) {
@@ -111,13 +89,22 @@ test("the absolute structured-data image has a matching public asset", () => {
   assert.equal(existsSync(HERO_PATH), true, relative(ROOT, HERO_PATH));
 });
 
-test("production source does not define or use FaqJsonLd", () => {
+test("production source emits no FAQPage markup and retains visible FAQ lists", () => {
   const sourceFiles = filesBelow(join(ROOT, "src")).filter((file) =>
     [".ts", ".tsx"].includes(extname(file)),
   );
   const offenders = sourceFiles
-    .filter((file) => readFileSync(file, "utf8").includes("FaqJsonLd"))
+    .filter((file) => /FaqJsonLd|["']FAQPage["']/.test(readFileSync(file, "utf8")))
     .map((file) => relative(ROOT, file));
+  const visibleFaqCallers = [
+    "src/routes/index.tsx",
+    "src/components/site/NlsNeko.tsx",
+    "src/components/site/AnliegenHub.tsx",
+    "src/components/site/HubFromArchive.tsx",
+  ];
 
   assert.deepEqual(offenders, []);
+  for (const caller of visibleFaqCallers) {
+    assert.match(readFileSync(join(ROOT, caller), "utf8"), /<FaqList\b/);
+  }
 });
