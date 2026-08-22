@@ -91,6 +91,8 @@ Update `src/routes/praxis.tsx` so the authenticated inbox displays contact messa
 
 Update `src/routes/downloadbereich-naturheilpraxis-rauch.tsx` so it no longer claims that the intake form is hosted on the website. Its call to action may lead to the retained internal information page; the external boundary is then explicit before the user leaves the domain.
 
+Update `src/routes/datenschutzerklaerung.tsx` so the active privacy copy no longer claims that anamnesis data is transmitted through the relaunch domain. It must distinguish the website contact form from the independently operated external application and direct visitors to the privacy information provided by that application for its processing.
+
 ### Existing database migration
 
 `migrations/0002_practice.sql` remains unchanged. It is historical and may already have been applied. Task 7 does not drop `anamnesis_submissions`, delete rows, or rewrite migration history. After the code removal, the website has no production read or write path to that table.

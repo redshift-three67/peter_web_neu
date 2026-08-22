@@ -186,7 +186,7 @@ Von Plesk/nginx werden vor Cutover benötigt: Hosting/Document Root, Host-/HTTPS
 | P0   | Mittagspause fehlt im Schema                     | zwei Öffnungsintervalle                              |
 | P0   | Vercel-Preset/defekter Previewpfad               | Node-Build, Start und `/healthz`                     |
 | Info | Test-Gate (historischer P0-Befund)               | geschlossen: 44/44 plus Nulltreffer-Exitcode 1       |
-| P0   | Anamnese speichert Gesundheits-JSON allgemein    | deaktivieren oder separater Dienst                   |
+| Info | Anamnese-Gesundheitsdatenpfad (historischer P0)  | geschlossen: lokale Funktion entfernt, externe App   |
 | P0   | medizinisch-werbliche Altsätze                   | seitenweise HWG-/Fachprüfung                         |
 | P1   | FAQPage-Markup ohne Google-Mehrwert              | FAQ sichtbar lassen, Markup nicht strategisch führen |
 | P1   | fehlende Autor-/Review-/Quellenfelder            | Governance-Schema                                    |
@@ -264,7 +264,7 @@ Payload verwaltet später `sites`, `pages`, `seoEntries`, `authors`, `contentRev
 - `src/content/site.ts`, `src/components/site/JsonLd.tsx`, `src/lib/seo.ts`, `src/content/hubs.ts`: SEO-/Stammdatenvertrag.
 - `server/middleware/redirects.ts`: serverseitige Normalisierung.
 - `src/routes/healthz.ts`, `vite.config.ts`, `Dockerfile`, `package.json`: Node-Containervertrag.
-- `src/lib/actions.ts`, `AnamneseWizard.tsx`: Gesundheitsdatengrenze.
+- `scripts/health-data-boundary.test.mjs`, `src/content/external-links.ts`, `src/routes/online-anamnesebogen.tsx`: externe Gesundheitsdatengrenze ohne lokale Anamnese-Funktionalität.
 
 ### Headless-Plattform
 
@@ -353,7 +353,7 @@ openingHoursSpecification: [
 - [ ] Product Owner bestätigt E-Mail, Öffnungszeiten und Bewertungszahlen; sonst bleibt Gate geschlossen.
 - [x] `npm test && npm run typecheck && npm run lint`; Commit `fix: align practice structured data with search policies`.
 
-Code- und Teststand am 2026-08-22: 48/48 Tests, Typecheck Exit 0, Lint Exit 0 mit drei bekannten Warnungen. `STAT-017` und `STAT-026` bleiben bis zum externen Entwickler-/Validatorreview bewusst `bestätigt mit Einschränkungen`; die autoritative NAP-/Profilfreigabe wird separat unter `STAT-027` geführt.
+Code- und Teststand am 2026-08-22 nach Task 7: 53/53 Tests, Typecheck Exit 0, Lint Exit 0 mit drei bekannten Warnungen und Build Exit 0. Der externe Entwicklerreview `RAUCH-TASK-04-REVIEW` ist ohne Findings freigegeben. `STAT-017` und `STAT-026` bleiben wegen ausstehender Schema-Validator-, NAP- beziehungsweise fachlich-redaktioneller Freigaben bewusst `bestätigt mit Einschränkungen`; die autoritative NAP-/Profilfreigabe wird separat unter `STAT-027` geführt.
 
 ### Task 5: Canonicals und Redirects
 
@@ -388,23 +388,18 @@ test("slash variant redirects directly", async ({ request }) => {
 - [ ] Paritätsaudit, Typecheck, Lint und mobile Sichtprüfung; jede Abweichung begründen.
 - [ ] Commit `feat: complete reviewed content migration wave two`.
 
-### Task 7: Gesundheitsdaten-Submit begrenzen
+### Task 7: Externe Online-Anamnese-Grenze
 
-**Files:** Modify `src/lib/actions.ts`, `AnamneseWizard.tsx`, `online-anamnesebogen.tsx`; review `migrations/0002_practice.sql`; create Boundary-Test.
+**Files:** Create `scripts/health-data-boundary.test.mjs`, `src/content/external-links.ts`; delete `src/components/site/AnamneseWizard.tsx`; modify `src/lib/actions.ts`, `src/routes/online-anamnesebogen.tsx`, `src/routes/praxis.tsx` und aktive Grenztexte; verify unchanged `migrations/0002_practice.sql`.
 
-- [ ] Test schreiben: ohne freigegebenen separaten Dienst keine Speicherung in `anamnesis_submissions`.
-- [ ] Rot bestätigen, weil aktuell Gesundheits-JSON allgemein gespeichert wird.
-- [ ] Produktiven Submit standardmäßig deaktivieren:
+- [x] Roten Boundary-Test gegen Wizard, Submit, Tabellenzugriff, lokalen Inbox-Pfad und unzutreffende aktive Grenztexte ausführen.
+- [x] Lokalen Wizard, Submit-Endpunkt und Anamnese-Inbox vollständig entfernen.
+- [x] Interne Informationsseite mit prominentem, sicherem externem Link zur eigenständigen Lovable-App ausgeben.
+- [x] `/anamnese` als Kompatibilitätsweiterleitung erhalten.
+- [x] Historische Migration und bestehende Daten unverändert lassen.
+- [x] 5/5 Boundary-Tests, 53/53 Gesamttests, Typecheck, Lint, Build und Chrome-Liveprüfung ausführen.
 
-```ts
-if (process.env.HEALTH_FORM_SUBMISSION_ENABLED !== "true") {
-  throw new Error("health_form_submission_not_enabled");
-}
-```
-
-- [ ] Flag erst nach vollständigem §4-Gate setzen. Bestehende Tabelle/Daten nicht ungeprüft löschen.
-- [ ] UI zeigt bei geschlossenem Gate sicheren Alternativweg; keine Gesundheitsdaten in Local Storage, Analytics oder Logs.
-- [ ] Tests/Typecheck/Lint; Commit `fix: enforce health data storage boundary`.
+Die externe Lovable-App ist ein getrenntes System. Datenschutz, Authentisierung, Speicherung, Einwilligung, Aufbewahrung und Löschung innerhalb dieser App wurden in Task 7 nicht geprüft und dürfen aus dem bestätigten Website-Gate nicht abgeleitet werden.
 
 ### Task 8: Node-/Containervertrag
 

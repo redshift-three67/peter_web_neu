@@ -31,7 +31,7 @@ Legende: H2/H3/P = Anzahl; W = sichtbare Textwörter (inkl. Überschriften). „
 | **naturheilkunde** | 2/3 | 1 | 14 → 4 Cards + 1 Topics(4) | 18 (420) | 451 | 6 / 5, kein FAQ-JSON-LD | 3 live / 8 Katalog → Galerie 6; Slider 4 → Hero 1 | ⚠️ H3-Kapitel werden zu Chips (Heading-Struktur weg) |
 | **nls-diagnostik** | 2/3 | **0** (H2 „mit der NLS-Diagnostik" wird gedroppt) | 6 → 2 Cards | 17 (316) | 307 | 6 / 5, kein FAQ-JSON-LD | 4 Scan-Bilder ✓ (Scans-Block); Slider 4/4 ✓ | ⚠️ H2-Verlust durch Filter |
 | **osteopathie-techniken** | 2/3 | 1 | 6 → 1 Card | 12 (544) | 619 | 6 / 5, kein FAQ-JSON-LD | 3 live / 6 Katalog → Galerie 5; Slider 3 → Hero 1 | ⚠️ Slider auf 1 Motiv reduziert |
-| **online-anamnesebogen** | 0/1 | 0 | –/– | 7 (80) | 97 + eigener AnamneseWizard | 6 / 5, kein FAQ-JSON-LD | Slider 4/4 ✓ | ✅ paritätisch (funktional besser als Live-iFrame) |
+| **online-anamnesebogen** | 0/1 | 0 | –/– | 7 (80) | Informationsroute ohne lokale Formfunktion; sicherer externer Link zur eigenständigen App | 6 / 5, kein FAQ-JSON-LD | Slider 4/4 ✓ | ✅ Produktgrenze korrigiert; lokale Wizard-Annahme war historisch falsch |
 | **impressum** | 2/3 | eigene Route | –/– | 12 (450) | ~200 kondensiert aus `practice` | 6 / – | 3 live → eigene Route ohne Galerie | ⚠️ bewusst kondensiert, Pflichtangaben vollständig |
 | **datenschutzerklaerung** | 2/3 | eigene Route | –/– | 7 (1490) | ~250 stark gekürzt | 6 / – | 3 live → ohne | ⚠️ starke Kürzung (ca. −83 %) |
 | **rechtshinweise-therapieverfahren** | 2/3 | eigene Route | –/– | 12 (427) | ~300 kuratiert (IconCards) | 6 / – | 3 live → ohne | ⚠️ kuratiert, Live-Verfahrensliste gekürzt |

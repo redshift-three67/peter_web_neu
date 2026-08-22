@@ -39,7 +39,7 @@ Zulässige Statuswerte sind:
 | STAT-015 | Rank Math                  | SEO-Plugin-Daten                                 | bestätigt mit Einschränkungen | P1                 |
 | STAT-016 | Medien                     | Repository-Medieninventar                        | bestätigt mit Einschränkungen | P1                 |
 | STAT-017 | SEO und Schema.org         | MedicalBusiness JSON-LD                          | bestätigt mit Einschränkungen | P0                 |
-| STAT-018 | Datenschutz und Sicherheit | Online-Anamnese                                  | nicht bestätigt               | P0                 |
+| STAT-018 | Datenschutz und Sicherheit | Online-Anamnese                                  | bestätigt                     | P0                 |
 | STAT-019 | Accessibility              | Barrierefreiheitsnachweis der neuen Website      | teilweise bestätigt           | P1                 |
 | STAT-020 | Performance                | Release-Performance der neuen Website            | teilweise bestätigt           | P1                 |
 | STAT-021 | Design und Mobile UX       | Relaunch-Design als Standard                     | bestätigt mit Einschränkungen | Info               |

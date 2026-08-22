@@ -74,10 +74,11 @@ Die neue Rauch-Website ist eine fortgeschrittene, lauffähige Relaunch-Codebasis
 1. Eine fachlich und GSC-gestützt freigegebene 64-URL-Migrationsmatrix fehlt.
 2. GSC-Baseline-Exporte liegen nicht im Workspace.
 3. Der Node-/Containervertrag für den bevorzugten `managed-container`-Betrieb fehlt.
-4. Der Codevertrag für `MedicalBusiness`-JSON-LD ist korrigiert und mit 4/4 Vertragstests belegt; externe Schema-Validator-, Entwickler- und autoritative NAP-Freigaben stehen noch aus.
-5. Der Online-Anamnesebogen schreibt Gesundheitsdaten als Klartext-JSON in die allgemeine Datenbank.
-6. Ein vollständiges WXR-/WordPress-/Plesk-Abschalt- und Restorepaket fehlt.
-7. Vollständige fachlich-rechtliche Inhalts-, Accessibility-, Performance- und Cutover-Abnahmen fehlen.
+4. Der Codevertrag für `MedicalBusiness`-JSON-LD ist korrigiert, mit 4/4 Vertragstests und dem externen Entwicklerreview `RAUCH-TASK-04-REVIEW` belegt; Schema-Validator- und autoritative NAP-Freigaben stehen noch aus.
+5. Ein vollständiges WXR-/WordPress-/Plesk-Abschalt- und Restorepaket fehlt.
+6. Vollständige fachlich-rechtliche Inhalts-, Accessibility-, Performance- und Cutover-Abnahmen fehlen.
+
+Das frühere P0-Gate zur lokalen Online-Anamnese ist am 2026-08-22 geschlossen worden: Der lokale Wizard, der Submit-/Tabellenpfad und die Anamnese-Inbox sind entfernt. Die Website zeigt eine Informationsroute und verlinkt ausschließlich die eigenständige externe App. Deren interne Datenschutz- und Speicherprozesse waren nicht Gegenstand dieser Repository-Prüfung.
 
 ### 2.4 Verbindliche Statusantworten
 
@@ -194,9 +195,10 @@ Der Masterplan deckt Architektur, P0/P1-Risiken, Zielverträge, zwölf Umsetzung
 | `npm test` = 0 Tests (Baseline)    | Ausgangsprüfung               | historisch bestätigt                     |
 | direkter Node-Test = 41/41         | Ausgangsprüfung               | historisch bestätigt                     |
 | `npm test` = 48/48 plus Null-Gate  | Task-4-Fortschreibung         | bestätigt                                |
+| `npm test` = 53/53 plus Null-Gate  | Task-7-Fortschreibung         | bestätigt                                |
 | Nitro-Preset Vercel                | `vite.config.ts:148-150`      | bestätigt                                |
 | Rating und relative Bild-URL       | historischer Ausgangsbefund; `practice-json-ld.ts` und SEO-Vertragstest | code-seitig geschlossen, externe Freigabe offen |
-| Gesundheits-JSON in allgemeiner DB | `actions.ts:33-72`, Migration | bestätigt                                |
+| Gesundheits-JSON in allgemeiner DB | historischer Ausgangsbefund; Boundary-Test und aktuelle Produktionsquellen | geschlossen; kein lokaler Anamnese-Schreib- oder Lesepfad |
 | Relaunch-Default                   | `design-skin.ts:27,39-46`     | bestätigt mit localStorage-Einschränkung |
 | WXR und GSC-Baseline fehlen        | Dateiinventar                 | bestätigt                                |
 
@@ -301,7 +303,7 @@ Die Plattform kann perspektivisch mehrere Websites verwalten; die Rauch-App selb
 - neun Redirectrouten mit TanStack `redirect`;
 - dynamisches noindex-Archiv für weitere bekannte Slugs;
 - Kontaktformular;
-- mehrstufiger Online-Anamnesebogen;
+- Informationsroute zum Online-Anamnesebogen mit sicherem Link zur eigenständigen externen App, ohne lokale Formfunktion;
 - Login- und Auth-API;
 - strukturierte Daten für Praxis, FAQ und Breadcrumbs;
 - Design-Skin-Auswahl mit Relaunch-Default;
@@ -550,12 +552,11 @@ Task 1 schließt das frühere npm-Nichtnull-Gate: `scripts/run-tests.mjs` ermitt
 ### 20.3 Fehlende Releasegates
 
 - Redirect-/Canonical-E2E;
-- Gesundheitsdaten-Boundary-Test;
 - Node-Container- und Healthchecktest;
 - mobile Kernrouten-E2E;
 - Accessibility- und Performancegate.
 
-Der SEO-/Schema-Codevertrag ist seit Task 4 automatisiert (4/4 Zieltests; 48/48 Gesamttests). Externe Schema-Validator-, Entwickler- und autoritative NAP-Freigaben bleiben getrennte offene Abnahmen. Die eingecheckte historische `.vercel/output`-Momentaufnahme ist kein freigegebenes Prebuilt-Releaseartefakt; Releases müssen aus dem geprüften Quellstand neu gebaut werden, bis Task 8 den Deploymentvertrag verbindlich regelt.
+Der SEO-/Schema-Codevertrag ist seit Task 4 automatisiert (4/4 Zieltests); der aktuelle Gesamtstand umfasst 53/53 Tests. Der externe Entwicklerreview ist freigegeben. Schema-Validator- und autoritative NAP-Freigaben bleiben getrennte offene Abnahmen. Die eingecheckte historische `.vercel/output`-Momentaufnahme ist kein freigegebenes Prebuilt-Releaseartefakt; Releases müssen aus dem geprüften Quellstand neu gebaut werden, bis Task 8 den Deploymentvertrag verbindlich regelt.
 
 ## 21. Widersprüche und veraltete Informationen
 
@@ -614,11 +615,11 @@ Zugangsdaten dürfen niemals im Chat oder Repository übermittelt werden.
 
 | ID   | Bereich       | Risiko                                        | Prio               | Abnahme                                     |
 | ---- | ------------- | --------------------------------------------- | ------------------ | ------------------------------------------- |
-| R-01 | QA            | `npm test` kann mit null Tests grün wirken    | geschlossen        | 44/44 über Standardscript; Nulltreffer = 1  |
+| R-01 | QA            | `npm test` kann mit null Tests grün wirken    | geschlossen        | aktuell 53/53 über Standardscript; Nulltreffer = 1 |
 | R-02 | SEO           | 64 Alt-URLs ohne freigegebene Matrix          | P0                 | 64 eindeutige Entscheidungen, keine Ketten  |
 | R-03 | GSC           | Ranking-/Indexdaten fehlen                    | P0                 | datierte private Baseline                   |
-| R-04 | Schema        | Rating, relative Bild-URL, Öffnungszeiten     | P0 externe Freigabe | Codevertrag 4/4; Validator-/Reviewfreigabe  |
-| R-05 | Datenschutz   | Gesundheits-JSON in allgemeiner DB            | P0                 | standardmäßig kein Schreibpfad              |
+| R-04 | Schema        | Rating, relative Bild-URL, Öffnungszeiten     | P0 Validator/NAP   | Codevertrag 4/4 und Entwicklerreview freigegeben; Validator/NAP offen |
+| R-05 | Datenschutz   | Gesundheits-JSON in allgemeiner DB            | geschlossen        | lokale Anamnese-Funktion entfernt; 5/5 Boundary-Tests |
 | R-06 | Deployment    | kein Node-/Containervertrag                   | P0                 | produktionsnaher Container und `/healthz`   |
 | R-07 | WordPress     | kein vollständiges Abschaltarchiv             | P0 vor Abschaltung | isoliert getesteter Restore                 |
 | R-08 | Infrastruktur | interne Cutoverdaten fehlen                   | P0 vor Cutover     | freigegebenes Infrastruktur-/Rollbackpaket  |

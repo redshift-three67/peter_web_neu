@@ -73,6 +73,7 @@ Expected: nonzero exit. The failure output must identify the existing wizard, `s
 - Modify: `src/content/slides.ts`
 - Modify: `src/routes/online-anamnesebogen.tsx`
 - Modify: `src/routes/downloadbereich-naturheilpraxis-rauch.tsx`
+- Modify: `src/routes/datenschutzerklaerung.tsx`
 - Test: `scripts/health-data-boundary.test.mjs`
 
 - [ ] **Step 1: Add the canonical external link**
@@ -154,6 +155,10 @@ Replace the claim that the intake form is hosted on the website with:
 ```
 
 Keep its existing internal `<Link to="/online-anamnesebogen">` so visitors see the boundary explanation before leaving the domain.
+
+- [ ] **Step 5: Correct the active privacy statement**
+
+Remove the incorrect claim that anamnesis data is transmitted through the relaunch domain. State that the contact form is for general organizational requests without health data and that the independently operated external app provides its own privacy information.
 
 ### Task 3: Remove every local health-data code path
 
