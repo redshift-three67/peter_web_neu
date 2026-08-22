@@ -16,9 +16,9 @@ Ausgangscommit:
 
 `35ad22503d6f4c67ced12df343bff7cbaa8ea346`
 
-Zu prüfender Task-2-Quellcommit:
+Zu prüfender Task-2-Implementierungscommit:
 
-`36d2b58819aed08e1defd7a4ed2109229928922f`
+`9a86e39d436a2d279fc96516d52ca6c9eaac372c`
 
 ## Commitfolge
 
@@ -32,6 +32,7 @@ Zu prüfender Task-2-Quellcommit:
 - `4664b0feaf0abcc3e784f67f2fa00da798f78088` – Verifikation und Paritätsbefund dokumentiert;
 - `f4393afa885bea31fe67bd5ee38f8859ea45f222` – interne Review-Härtung;
 - `36d2b58819aed08e1defd7a4ed2109229928922f` – Prüfprovenienz und Testzahlen konsolidiert.
+- `9a86e39d436a2d279fc96516d52ca6c9eaac372c` – plattformübergreifenden LF-Bytevertrag für die CSV erzwungen.
 
 ## Umgesetzter Umfang
 
@@ -56,12 +57,13 @@ Zu prüfender Task-2-Quellcommit:
    - 301 und 410 verlangen GSC-Evidenz, `approval_status=approved` und eine reale Freigabeperson;
    - Pending-Zeilen dürfen weder Zielpfad/HTTP-Status noch Canonical/Sitemap-Felder deploybar setzen;
    - die versionierte CSV muss byte-identisch zum Generatorergebnis sein.
+   - `.gitattributes` erzwingt für die Matrix `eol=lf`, damit der Bytevertrag auch bei `core.autocrlf=true` gilt.
 5. Statuskonsistenz
    - `STAT-011` steht auf `bestätigt mit Einschränkungen`;
    - `STAT-012` bleibt `derzeit nicht prüfbar`;
    - Masterplan, Vollbericht sowie JSON- und Markdown-Statusmatrix unterscheiden Gate A und Gate B ausdrücklich.
 
-## Frische Verifikation auf `36d2b58819aed08e1defd7a4ed2109229928922f`
+## Frische Verifikation auf `9a86e39d436a2d279fc96516d52ca6c9eaac372c`
 
 | Prüfung | Ergebnis |
 | --- | --- |
@@ -70,8 +72,9 @@ Zu prüfender Task-2-Quellcommit:
 | TDD RED – GSC-Import | 2/5; drei erwartete fehlende Parser-/CLI-Verträge |
 | TDD RED – Sicherheitsinvarianten | 5/13; acht erwartete Sicherheitsverletzungen noch akzeptiert |
 | TDD RED – Review-Härtung | 14/18, später 17/18; reproduzierbare Bypässe abgewiesen nach Implementierung |
-| Task-2-Vertragstest | 18/18 bestanden, Exit 0 |
-| `npm test` | 73/73 bestanden, 0 Fehler, Exit 0 |
+| TDD RED – Windows-Bytevertrag | 18/19; fehlendes `eol=lf` reproduzierte die CRLF-Abweichung im kanonischen Checkout |
+| Task-2-Vertragstest | 19/19 bestanden, Exit 0 |
+| `npm test` | 74/74 bestanden, 0 Fehler, Exit 0 |
 | `npm run typecheck` | Exit 0 |
 | `npm run lint` | Exit 0, 0 Fehler, 3 bekannte nicht blockierende Warnungen |
 | Generator | 64 Zeilen; 5 Keep; 59 Review; 0 Redirects; 0 Löschungen |

@@ -4,7 +4,7 @@
 **Dokument-ID:** `TIEFENANALYSE-RAUCH-RELAUNCH-2026-08-21`<br>
 **Prüfdatum:** 2026-08-21, Zeitzone Europe/Berlin<br>
 **Geprüfter Rauch-Quellcommit:** `c6aa58ef980bdd4d84be3fcc9b237e1296693722`<br>
-**Statusfortschreibung:** 2026-08-22; Task-2-Implementierung geprüft bis `f4393af` (die ursprüngliche Prüfprovenienz bleibt unverändert)<br>
+**Statusfortschreibung:** 2026-08-22; Task-2-Implementierung geprüft bis `9a86e39` (die ursprüngliche Prüfprovenienz bleibt unverändert)<br>
 **Kanonischer Branch:** `relaunch-konzept`<br>
 **Repository:** `https://github.com/redshift-three67/peter_web_neu.git`<br>
 **Geprüfter Plattform-Basiscommit:** `2d233564ca98ed48a0a118a3165c242150448436`, ergänzt um einen nicht versionierten lokalen Arbeitsstand<br>
@@ -197,7 +197,7 @@ Der Masterplan deckt Architektur, P0/P1-Risiken, Zielverträge, zwölf Umsetzung
 | direkter Node-Test = 41/41         | Ausgangsprüfung               | historisch bestätigt                     |
 | `npm test` = 48/48 plus Null-Gate  | Task-4-Fortschreibung         | bestätigt                                |
 | `npm test` = 55/55 plus Null-Gate  | Task-7-Fortschreibung         | bestätigt                                |
-| `npm test` = 73/73 plus Null-Gate  | Task-2-Strukturfortschreibung | bestätigt                                |
+| `npm test` = 74/74 plus Null-Gate  | Task-2-Strukturfortschreibung | bestätigt                                |
 | Nitro-Preset Vercel                | `vite.config.ts:148-150`      | bestätigt                                |
 | Rating und relative Bild-URL       | historischer Ausgangsbefund; `practice-json-ld.ts` und SEO-Vertragstest | code-seitig geschlossen, externe Freigabe offen |
 | Gesundheits-JSON in allgemeiner DB | historischer Ausgangsbefund; Boundary-Test und aktuelle Produktionsquellen | geschlossen; kein lokaler Anamnese-Schreib- oder Lesepfad |
@@ -558,7 +558,7 @@ Task 1 schließt das frühere npm-Nichtnull-Gate: `scripts/run-tests.mjs` ermitt
 - mobile Kernrouten-E2E;
 - Accessibility- und Performancegate.
 
-Der SEO-/Schema-Codevertrag ist seit Task 4 automatisiert (4/4 Zieltests); der aktuelle Gesamtstand umfasst 73/73 Tests, darunter 18/18 Task-2-Vertragstests. Der externe Entwicklerreview für Task 4 ist freigegeben. Schema-Validator- und autoritative NAP-Freigaben bleiben getrennte offene Abnahmen. Das historische `.vercel/output` wurde aus der Versionskontrolle entfernt und wird ignoriert; Releases müssen aus dem geprüften Quellstand neu gebaut werden, bis Task 8 den Deploymentvertrag verbindlich regelt.
+Der SEO-/Schema-Codevertrag ist seit Task 4 automatisiert (4/4 Zieltests); der aktuelle Gesamtstand umfasst 74/74 Tests, darunter 19/19 Task-2-Vertragstests. Der externe Entwicklerreview für Task 4 ist freigegeben. Schema-Validator- und autoritative NAP-Freigaben bleiben getrennte offene Abnahmen. Das historische `.vercel/output` wurde aus der Versionskontrolle entfernt und wird ignoriert; Releases müssen aus dem geprüften Quellstand neu gebaut werden, bis Task 8 den Deploymentvertrag verbindlich regelt.
 
 Der Paritätsaudit wurde im Task-2-Abschluss gegen den lokalen Entwicklungsserver vollständig ausgeführt (18 Seiten, Exitcode 0). Seine inhaltlichen Befunde sind ausdrücklich kein positives Paritätsgate: Je Seite fehlen weiterhin 49–95 % der geprüften Merkmale. Die Behebung und fachliche Abnahme bleiben Task 6 zugeordnet.
 
@@ -619,7 +619,7 @@ Zugangsdaten dürfen niemals im Chat oder Repository übermittelt werden.
 
 | ID   | Bereich       | Risiko                                        | Prio               | Abnahme                                     |
 | ---- | ------------- | --------------------------------------------- | ------------------ | ------------------------------------------- |
-| R-01 | QA            | `npm test` kann mit null Tests grün wirken    | geschlossen        | aktuell 73/73 über Standardscript; Nulltreffer = 1 |
+| R-01 | QA            | `npm test` kann mit null Tests grün wirken    | geschlossen        | aktuell 74/74 über Standardscript; Nulltreffer = 1 |
 | R-02 | SEO           | 59 Alt-URLs ohne GSC-/Product-Owner-Freigabe  | P0                 | strukturelle Matrix steht; Gate B verlangt evidenzbasierte Freigabe ohne Ketten |
 | R-03 | GSC           | Ranking-/Indexdaten fehlen                    | P0                 | datierte private Baseline                   |
 | R-04 | Schema        | Rating, relative Bild-URL, Öffnungszeiten     | P0 Validator/NAP   | Codevertrag 4/4 und Entwicklerreview freigegeben; Validator/NAP offen |
