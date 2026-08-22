@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "document_id": "RAUCH-TASK-02-GATE-A-VERIFIKATIONSSTATUS-2026-08-22",
   "task": "Task 2: GSC- und 64-URL-Matrix (Gate A)",
-  "status": "gate_a_implementiert_verifiziert_sync_bestaetigt_externes_review_ausstehend",
+  "status": "gate_a_implementiert_verifiziert_sync_bestaetigt_extern_freigegeben",
   "canonical_repository": "C:\\Users\\Hubert111\\Documents\\rauch_18_08_26_19_42\\repo-main",
   "canonical_branch": "relaunch-konzept",
   "commits": {
@@ -109,6 +109,15 @@
     "redirects_or_removals_authorized": false,
     "task_5_consumption_authorized": false
   },
+  "external_review": {
+    "review_id": "RAUCH-TASK-02-GATE-A-REVIEW",
+    "reviewed_commit": "f34c7fd5cee648ebdd65109fd324fe859fe14369",
+    "verdict": "freigegeben",
+    "findings": 0,
+    "all_declared_checks_confirmed": true,
+    "received_on": "2026-08-22",
+    "artifact": "docs/developer-handoffs/2026-08-22-task-02-url-matrix/04-EXTERNES-REVIEW.json"
+  },
   "production_systems_changed": false,
   "wordpress_changed": false,
   "plesk_changed": false,
@@ -119,6 +128,6 @@
     "src/components/site/DesignSkin.tsx: Fast-Refresh-Grenze",
     "src/lib/auth/use-current-user.ts: ungenutzte ESLint-Deaktivierung"
   ],
-  "external_developer_review_required_before_next_masterplan_step": true,
+  "external_developer_review_required_before_next_masterplan_step": false,
   "recommended_next_decision_after_external_approval": "Task 2 Gate B: privaten GSC-Seitenexport bereitstellen und 59 Prüfzeilen fachlich freigeben"
 }

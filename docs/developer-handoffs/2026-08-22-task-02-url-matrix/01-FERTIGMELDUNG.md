@@ -2,7 +2,7 @@
 
 ## Exakter Wortlaut für den Entwickler
 
-Task 2 „GSC- und 64-URL-Matrix / STAT-011“ ist im technisch ausführbaren Umfang testgetrieben implementiert und intern ohne verbleibende Findings freigegeben. Gate A ist erfüllt: Eine deterministische Strukturmatrix enthält exakt 64 Alt-URLs, alle Sicherheitsinvarianten sind automatisiert, und keine unbelegte URL-Änderung ist deploybar. Gate B bleibt ausdrücklich offen, weil weder ein privater GSC-Seitenexport noch die fachliche Product-Owner-Freigabe der 59 Prüfzeilen vorliegt.
+Task 2 „GSC- und 64-URL-Matrix / STAT-011“ ist im technisch ausführbaren Umfang testgetrieben implementiert sowie intern und extern ohne verbleibende Findings freigegeben. Der externe Review `RAUCH-TASK-02-GATE-A-REVIEW` bestätigt Gate A vollständig. Eine deterministische Strukturmatrix enthält exakt 64 Alt-URLs, alle Sicherheitsinvarianten sind automatisiert, und keine unbelegte URL-Änderung ist deploybar. Gate B bleibt ausdrücklich offen, weil weder ein privater GSC-Seitenexport noch die fachliche Product-Owner-Freigabe der 59 Prüfzeilen vorliegt.
 
 Die aktuelle Matrix ist **keine Freigabe für Redirects, Deindexierung, Canonicals oder Sitemap-Umschaltung**. Sie enthält 5 konservative `keep_200_index`-Zeilen und 59 gesperrte `temporary_noindex_review`-Zeilen sowie 0 Redirects und 0 Löschungen. Task 5 darf diese Matrix erst nach abgeschlossenem Gate B konsumieren.
 
@@ -85,6 +85,7 @@ Zu prüfender Task-2-Implementierungscommit:
 | Paritätsaudit gegen lokalen Server | 18 Seiten geprüft, Exit 0; weiterhin 49–95 % fehlende Merkmale, deshalb **keine** positive Inhaltsfreigabe; Task 6 |
 | `git diff --check` | Exit 0 |
 | interner Erst- und Follow-up-Review | abschließend APPROVE, hohe Sicherheit, keine verbleibenden Findings |
+| externer Entwickler-/LLM-Review | `RAUCH-TASK-02-GATE-A-REVIEW`, freigegeben, keine Findings; Nachweis `04-EXTERNES-REVIEW.json` |
 
 ## Live- und Produktionsgrenze
 
@@ -92,7 +93,7 @@ Task 2 verändert keine sichtbare Website-Funktion. Deshalb ist ein eigener Chro
 
 ## Verbindliche Restpunkte
 
-1. Der externe Entwickler-/LLM-Review dieses Übergabeordners ist vor der weiteren Masterplan-Umsetzung erforderlich.
+1. Der externe Entwickler-/LLM-Review ist ohne Findings abgeschlossen; Nachweis: `04-EXTERNES-REVIEW.json`.
 2. Gate B bleibt geschlossen, bis ein datierter privater GSC-Seitenexport vorliegt und alle 59 Prüfzeilen fachlich bewertet und durch reale Verantwortliche freigegeben sind.
 3. Aus `temporary_noindex_review` darf weder technisch noch redaktionell eine Deindexierungsentscheidung abgeleitet werden.
 4. Redirect-Zielerreichbarkeit sowie vollständige Canonical-/Sitemap-Konsistenz werden erst in Task 5 geprüft und umgesetzt.

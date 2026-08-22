@@ -322,6 +322,7 @@ test("one valid decision exists per live URL", () => {
 - [ ] **Gate B:** Privaten GSC-Export einlesen, alle 59 Prüfzeilen fachlich bewerten und produktverantwortlich freigeben. Bis dahin darf die Matrix nicht von Redirect-, Sitemap- oder Deindexierungslogik konsumiert werden.
 - [x] `npm test` ausführen; 74 Tests, 74 bestanden, 0 Fehler, darunter 19/19 Task-2-Vertragstests. `node scripts/parity-audit.mjs` wurde gegen den lokalen Server ausgeführt (18 Seiten, Exitcode 0); der Bericht weist weiterhin 49–95 % fehlende Inhaltsmerkmale aus. Diese offenen Paritätsbefunde gehören zu Task 6 und sind keine positive Inhaltsfreigabe.
 - [x] Implementierungs-Commits: `0492ca2`, `822f7b8`, `780f12d`, `904c9fa`, `f4393af`, `9a86e39`, `f34c7fd`.
+- [x] Gate A extern ohne Findings freigegeben: `RAUCH-TASK-02-GATE-A-REVIEW`; Nachweis `docs/developer-handoffs/2026-08-22-task-02-url-matrix/04-EXTERNES-REVIEW.json`.
 
 ### Task 3: Abschaltarchiv WordPress/Plesk
 

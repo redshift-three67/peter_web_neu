@@ -560,6 +560,8 @@ Task 1 schließt das frühere npm-Nichtnull-Gate: `scripts/run-tests.mjs` ermitt
 
 Der SEO-/Schema-Codevertrag ist seit Task 4 automatisiert (4/4 Zieltests); der aktuelle Gesamtstand umfasst 74/74 Tests, darunter 19/19 Task-2-Vertragstests. Der externe Entwicklerreview für Task 4 ist freigegeben. Schema-Validator- und autoritative NAP-Freigaben bleiben getrennte offene Abnahmen. Das historische `.vercel/output` wurde aus der Versionskontrolle entfernt und wird ignoriert; Releases müssen aus dem geprüften Quellstand neu gebaut werden, bis Task 8 den Deploymentvertrag verbindlich regelt.
 
+Gate A der 64-URL-Matrix ist durch den externen Review `RAUCH-TASK-02-GATE-A-REVIEW` ohne Findings freigegeben. Diese Freigabe umfasst ausschließlich Generator, Strukturmatrix und Sicherheitsverträge. Gate B bleibt mangels privater GSC-Baseline und Product-Owner-Freigaben für 59 Prüfzeilen geschlossen; Task 5 darf die Matrix weiterhin nicht konsumieren.
+
 Der Paritätsaudit wurde im Task-2-Abschluss gegen den lokalen Entwicklungsserver vollständig ausgeführt (18 Seiten, Exitcode 0). Seine inhaltlichen Befunde sind ausdrücklich kein positives Paritätsgate: Je Seite fehlen weiterhin 49–95 % der geprüften Merkmale. Die Behebung und fachliche Abnahme bleiben Task 6 zugeordnet.
 
 ## 21. Widersprüche und veraltete Informationen
