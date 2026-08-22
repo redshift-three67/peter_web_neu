@@ -1,13 +1,16 @@
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
 import { existsSync } from "node:fs";
-import { mkdtemp, readFile, rm } from "node:fs/promises";
+import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import test from "node:test";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const generatorModule = await import(pathToFileURL(
+  path.join(root, "scripts/build-url-matrix.mjs"),
+).href);
 
 function parseTestCsv(text) {
   const records = [];
@@ -104,6 +107,69 @@ test("CLI generates one conservative decision per manifest URL", async () => {
       assert.equal(row.approval_status, "pending");
       assert.equal(row.approved_by, "");
     }
+  } finally {
+    await rm(temp, { recursive: true, force: true });
+  }
+});
+
+test("optional GSC CSV preserves real zero and missing evidence", () => {
+  assert.equal(typeof generatorModule.parseGscPagesCsv, "function");
+  const csv = [
+    "Seite,Klicks,Impressionen,Position",
+    '"https://rauch-heilpraktiker.de/",0,12,"4,5"',
+    '"https://rauch-heilpraktiker.de/kontakt/?utm_source=test",,,',
+  ].join("\n");
+
+  const parsed = generatorModule.parseGscPagesCsv(csv);
+  assert.deepEqual(parsed.get("/"), { clicks: 0, impressions: 12, position: 4.5 });
+  assert.deepEqual(parsed.get("/kontakt"), {
+    clicks: "unknown",
+    impressions: "unknown",
+    position: "unknown",
+  });
+});
+
+test("GSC CSV rejects missing required page and metric headers", () => {
+  assert.equal(typeof generatorModule.parseGscPagesCsv, "function");
+  assert.throws(
+    () => generatorModule.parseGscPagesCsv(
+      "URL,Visits\nhttps://rauch-heilpraktiker.de/,1",
+    ),
+    /required GSC columns/i,
+  );
+});
+
+test("CLI merges only matching in-scope GSC page evidence", async () => {
+  const temp = await mkdtemp(path.join(tmpdir(), "rauch-url-matrix-gsc-"));
+  const input = path.join(temp, "gsc-pages.csv");
+  const output = path.join(temp, "matrix.csv");
+
+  try {
+    await writeFile(input, [
+      "Page,Clicks,Impressions,Average position",
+      "https://rauch-heilpraktiker.de/,0,12,4.5",
+      "https://example.com/fremd/,99,999,1",
+    ].join("\n"), "utf8");
+
+    const run = spawnSync(process.execPath, [
+      path.join(root, "scripts/build-url-matrix.mjs"),
+      "--gsc-pages",
+      input,
+      "--output",
+      output,
+    ], { cwd: root, encoding: "utf8" });
+
+    assert.equal(run.status, 0, run.stderr);
+    const parsed = parseTestCsv(await readFile(output, "utf8"));
+    const home = parsed.find((row) => row.old_path === "/");
+    assert.equal(home.gsc_clicks, "0");
+    assert.equal(home.gsc_impressions, "12");
+    assert.equal(home.gsc_position, "4.5");
+    assert.equal(home.evidence_status, "manifest_plus_gsc");
+    assert.equal(
+      parsed.filter((row) => row.evidence_status === "manifest_plus_gsc").length,
+      1,
+    );
   } finally {
     await rm(temp, { recursive: true, force: true });
   }

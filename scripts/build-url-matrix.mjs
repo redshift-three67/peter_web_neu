@@ -42,6 +42,116 @@ export function normalizePath(value) {
   return pathname === "/" ? "/" : pathname.replace(/\/$/, "");
 }
 
+export function parseCsv(text) {
+  const records = [];
+  let record = [];
+  let cell = "";
+  let quoted = false;
+
+  for (let index = 0; index < text.length; index += 1) {
+    const char = text[index];
+    if (quoted) {
+      if (char === '"' && text[index + 1] === '"') {
+        cell += '"';
+        index += 1;
+      } else if (char === '"') {
+        quoted = false;
+      } else {
+        cell += char;
+      }
+    } else if (char === '"') {
+      quoted = true;
+    } else if (char === ",") {
+      record.push(cell);
+      cell = "";
+    } else if (char === "\n") {
+      record.push(cell);
+      records.push(record);
+      record = [];
+      cell = "";
+    } else if (char !== "\r") {
+      cell += char;
+    }
+  }
+
+  if (quoted) throw new Error("unterminated CSV quote");
+  if (cell !== "" || record.length > 0) {
+    record.push(cell);
+    records.push(record);
+  }
+
+  return records.filter((values) => values.some((value) => value !== ""));
+}
+
+const GSC_HEADER_ALIASES = {
+  page: ["page", "top_pages", "seite", "haufigste_seiten"],
+  clicks: ["clicks", "klicks"],
+  impressions: ["impressions", "impressionen"],
+  position: ["position", "average_position", "durchschnittliche_position"],
+};
+
+function normalizeHeader(value) {
+  return value
+    .replace(/^\uFEFF/, "")
+    .normalize("NFKD")
+    .replace(/\p{M}/gu, "")
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
+}
+
+function parseMetric(value, label, integer = false) {
+  const trimmed = value.trim();
+  if (trimmed === "") return "unknown";
+  if (!/^\d+(?:[.,]\d+)?$/.test(trimmed)) {
+    throw new Error(`invalid ${label}: ${value}`);
+  }
+
+  const parsed = Number(trimmed.replace(",", "."));
+  if (!Number.isFinite(parsed) || parsed < 0 || (integer && !Number.isInteger(parsed))) {
+    throw new Error(`invalid ${label}: ${value}`);
+  }
+
+  return parsed;
+}
+
+export function parseGscPagesCsv(text) {
+  const [headers, ...records] = parseCsv(text);
+  if (!headers) throw new Error("required GSC columns are missing");
+
+  const normalizedHeaders = headers.map(normalizeHeader);
+  const indexes = Object.fromEntries(
+    Object.entries(GSC_HEADER_ALIASES).map(([key, names]) => [
+      key,
+      normalizedHeaders.findIndex((header) => names.includes(header)),
+    ]),
+  );
+  if (Object.values(indexes).some((index) => index < 0)) {
+    throw new Error("required GSC columns are missing");
+  }
+
+  const result = new Map();
+  for (const record of records) {
+    const page = record[indexes.page]?.trim();
+    if (!page) continue;
+
+    const url = new URL(page);
+    if (url.hostname.toLowerCase() !== "rauch-heilpraktiker.de") continue;
+
+    const pathname = normalizePath(url.href);
+    if (result.has(pathname)) throw new Error(`duplicate GSC page: ${pathname}`);
+
+    result.set(pathname, {
+      clicks: parseMetric(record[indexes.clicks] ?? "", "clicks", true),
+      impressions: parseMetric(record[indexes.impressions] ?? "", "impressions", true),
+      position: parseMetric(record[indexes.position] ?? "", "position"),
+    });
+  }
+
+  return result;
+}
+
 export function buildBaselineRows(manifest, gscByPath = new Map()) {
   return manifest.pages.map((page) => {
     const oldPath = normalizePath(page.sourceUrl);
@@ -154,12 +264,11 @@ function parseArgs(argv) {
 
 export async function main(argv = process.argv.slice(2)) {
   const options = parseArgs(argv);
-  if (options.gscPages) {
-    throw new Error("--gsc-pages is not available until the GSC parser contract is green");
-  }
-
   const manifest = JSON.parse(await readFile(options.manifest, "utf8"));
-  const rows = buildBaselineRows(manifest);
+  const gscByPath = options.gscPages
+    ? parseGscPagesCsv(await readFile(options.gscPages, "utf8"))
+    : new Map();
+  const rows = buildBaselineRows(manifest, gscByPath);
   const summary = validateMatrix(rows, manifest);
 
   await mkdir(path.dirname(options.output), { recursive: true });
