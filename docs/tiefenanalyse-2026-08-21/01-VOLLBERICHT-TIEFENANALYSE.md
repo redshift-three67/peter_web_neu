@@ -150,7 +150,7 @@ Live-Werte sind zeitpunktbezogen und vor Cutover erneut zu prüfen.
 | Quelle                                             | Status                      | Auswirkung                                                                                           |
 | -------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
 | GSC-Performance- und Indexierungsexporte           | vorläufig und unvollständig | ein Performanceexport mit nur einem Datentag liegt privat vor; keine belastbare Baseline und keine vollständigen Indexierungs-/CWV-Nachweise |
-| Plesk/nginx-vHost-Konfiguration                    | nicht vorhanden             | Redirectreihenfolge, Cache, TLS, Proxy, WAF und Restore intern nicht vollständig prüfbar             |
+| Plesk/nginx-vHost-Konfiguration                    | read-only erfasst, Restgates offen | Hosting, Redirect, DNS/TTL, TLS, PHP, Proxy, Cache, WAF, Cron und vorhandene Backups intern dokumentiert; Plesk-Satz nur vom 03.–09.06.2026 und Abo-Zeitplan deaktiviert; zeitlich abgegrenzte Logbaseline und isolierter Restore fehlen |
 | WXR/XML-Export                                     | vorhanden und verifiziert   | 796 Objekte; XML-Wohlgeformtheit und SHA-256 bestätigt                                                |
 | WordPress-Datenbank-/Plugin-/Theme-/Snippet-Archiv | vorhanden, Restore offen    | bestehender vollständiger Updraft-Satz und aktuelles Admininventar lokal verifiziert; isolierter Restore noch nicht protokolliert |
 | Medienrechtsnachweise                              | nicht vollständig vorhanden | produktive Verwendung einzelner Bilder nicht abschließend freigabefähig                              |
@@ -610,11 +610,9 @@ Noch zwingend ausstehend:
 
 ### 22.3 Zwingend vor Cutover
 
-- Plesk/nginx-Host- und Redirectregeln;
-- DNS/TTL und TLS-Metadaten ohne private Schlüssel;
-- Cache/Proxy/WAF/CDN;
-- anonymisierte 404-/Bot-/Errorauswertung;
-- Backup-/Rollbackweg;
+- Plesk/nginx-Host-, Redirect-, DNS/TTL-, TLS-, PHP-, Cache/Proxy-, WAF-, Cron- und Backupkonfiguration ist read-only erfasst; unmittelbar vor Cutover erneut auf Aktualität prüfen;
+- zeitlich abgegrenzte anonymisierte 404-/Bot-/Errorbaseline ohne IPs, Referrer oder Logrohdaten;
+- isoliert getesteter und protokollierter Backup-/Rollbackweg;
 - fachlich-rechtliche Inhaltsfreigaben;
 - Medienrechte;
 - Datenschutzfreigabe des Formularwegs.

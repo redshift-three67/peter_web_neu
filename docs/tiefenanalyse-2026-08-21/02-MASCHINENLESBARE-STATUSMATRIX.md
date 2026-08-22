@@ -44,7 +44,7 @@ Zulässige Statuswerte sind:
 | STAT-020 | Performance                | Release-Performance der neuen Website            | teilweise bestätigt           | P1                 |
 | STAT-021 | Design und Mobile UX       | Relaunch-Design als Standard                     | bestätigt mit Einschränkungen | Info               |
 | STAT-022 | Inhalt und E-E-A-T         | Gesundheitsinhalte und Freigabegovernance        | teilweise bestätigt           | P0 vor Go-live     |
-| STAT-023 | Infrastruktur              | Plesk- und nginx-Cutoverdaten                    | derzeit nicht prüfbar         | P0 vor Cutover     |
+| STAT-023 | Infrastruktur              | Plesk- und nginx-Cutoverdaten                    | teilweise bestätigt           | P0 vor Cutover     |
 | STAT-024 | Release                    | Produktiver Domainwechsel                        | nicht bestätigt               | P0                 |
 | STAT-025 | SEO und Migration          | Slash-, Canonical- und Redirectvertrag           | nicht bestätigt               | P0                 |
 | STAT-026 | Strukturierte Daten        | FAQPage-Strategie                                | bestätigt mit Einschränkungen | P1                 |
