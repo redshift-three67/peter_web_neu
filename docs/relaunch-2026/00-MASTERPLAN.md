@@ -320,7 +320,7 @@ test("one valid decision exists per live URL", () => {
 - [x] Test rot ausführen; Generator implementieren: Manifest + optionale GSC-Seitenexporte, fehlende Werte als `unknown`, niemals als `0`.
 - [x] Strukturelle Baseline erzeugen: 64 eindeutige Zeilen, davon 5 `keep_200_index` und 59 nicht deploybare `temporary_noindex_review`; keine unbelegten 301-/410-Entscheidungen. Jede 410-Entscheidung verlangt eine namentliche Freigabe in `approved_by`.
 - [ ] **Gate B:** Privaten GSC-Export einlesen, alle 59 Prüfzeilen fachlich bewerten und produktverantwortlich freigeben. Bis dahin darf die Matrix nicht von Redirect-, Sitemap- oder Deindexierungslogik konsumiert werden.
-- [x] `npm test` ausführen; 68 Tests, 68 bestanden, 0 Fehler. Der Paritätsaudit wird im finalen Qualitätsgate gegen den lokalen Server ausgeführt.
+- [x] `npm test` ausführen; 68 Tests, 68 bestanden, 0 Fehler. `node scripts/parity-audit.mjs` wurde gegen den lokalen Server ausgeführt (18 Seiten, Exitcode 0); der Bericht weist weiterhin 49–95 % fehlende Inhaltsmerkmale aus. Diese offenen Paritätsbefunde gehören zu Task 6 und sind keine positive Inhaltsfreigabe.
 - [x] Implementierungs-Commits: `0492ca2`, `822f7b8`, `780f12d`, `904c9fa`.
 
 ### Task 3: Abschaltarchiv WordPress/Plesk
