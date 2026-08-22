@@ -11,6 +11,17 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const generatorModule = await import(pathToFileURL(
   path.join(root, "scripts/build-url-matrix.mjs"),
 ).href);
+const manifest = JSON.parse(await readFile(
+  path.join(root, "content/wordpress/manifest.json"),
+  "utf8",
+));
+const baselineRows = generatorModule.buildBaselineRows(manifest);
+
+function matrixWith(index, overrides) {
+  const rows = structuredClone(baselineRows);
+  rows[index] = { ...rows[index], ...overrides };
+  return rows;
+}
 
 function parseTestCsv(text) {
   const records = [];
@@ -173,4 +184,90 @@ test("CLI merges only matching in-scope GSC page evidence", async () => {
   } finally {
     await rm(temp, { recursive: true, force: true });
   }
+});
+
+test("merge decisions require a target path", () => {
+  const rows = matrixWith(1, {
+    decision: "merge_301",
+    target_path: "",
+    target_http_status: "301",
+  });
+  assert.throws(() => generatorModule.validateMatrix(rows, manifest), /target_path/);
+});
+
+test("self redirects are rejected", () => {
+  const rows = matrixWith(1, {
+    decision: "merge_301",
+    target_path: baselineRows[1].old_path,
+    target_http_status: "301",
+  });
+  assert.throws(() => generatorModule.validateMatrix(rows, manifest), /self redirect/);
+});
+
+test("mass redirects to the root path are rejected", () => {
+  const rows = matrixWith(1, {
+    decision: "merge_301",
+    target_path: "/",
+    target_http_status: "301",
+  });
+  assert.throws(() => generatorModule.validateMatrix(rows, manifest), /root/);
+});
+
+test("remove decisions require a real approval identity", () => {
+  const rows = matrixWith(1, {
+    decision: "remove_410",
+    target_http_status: "410",
+  });
+  assert.throws(() => generatorModule.validateMatrix(rows, manifest), /approved_by/);
+});
+
+test("pending noindex reviews remain non-deployable", () => {
+  const rows = matrixWith(1, {
+    decision: "temporary_noindex_review",
+    approval_status: "approved",
+    target_http_status: "200",
+  });
+  assert.throws(() => generatorModule.validateMatrix(rows, manifest), /pending review/);
+});
+
+test("redirect chains are rejected", () => {
+  const rows = structuredClone(baselineRows);
+  rows[1] = {
+    ...rows[1],
+    decision: "merge_301",
+    target_path: rows[2].old_path,
+    target_http_status: "301",
+  };
+  rows[2] = {
+    ...rows[2],
+    decision: "merge_301",
+    target_path: rows[3].old_path,
+    target_http_status: "301",
+  };
+  assert.throws(() => generatorModule.validateMatrix(rows, manifest), /chain or cycle/);
+});
+
+test("redirect cycles are rejected", () => {
+  const rows = structuredClone(baselineRows);
+  rows[1] = {
+    ...rows[1],
+    decision: "merge_301",
+    target_path: rows[2].old_path,
+    target_http_status: "301",
+  };
+  rows[2] = {
+    ...rows[2],
+    decision: "merge_301",
+    target_path: rows[1].old_path,
+    target_http_status: "301",
+  };
+  assert.throws(() => generatorModule.validateMatrix(rows, manifest), /chain or cycle/);
+});
+
+test("missing manifest-only evidence cannot be encoded as numeric zero", () => {
+  const rows = matrixWith(1, { gsc_clicks: 0 });
+  assert.throws(
+    () => generatorModule.validateMatrix(rows, manifest),
+    /missing evidence must remain unknown/,
+  );
 });

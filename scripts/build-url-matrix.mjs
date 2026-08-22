@@ -211,6 +211,9 @@ export function validateMatrix(rows, manifest) {
   }
 
   const expectedUrls = new Set(manifest.pages.map((page) => page.sourceUrl));
+  const expectedPaths = new Set(
+    manifest.pages.map((page) => normalizePath(page.sourceUrl)),
+  );
   const urls = new Set(rows.map((row) => row.old_url));
   const paths = new Set(rows.map((row) => row.old_path));
 
@@ -218,6 +221,9 @@ export function validateMatrix(rows, manifest) {
   if (paths.size !== 64) throw new Error("old_path values must be unique");
   if ([...expectedUrls].some((url) => !urls.has(url))) {
     throw new Error("matrix URL set differs from manifest");
+  }
+  if ([...expectedPaths].some((pathname) => !paths.has(pathname))) {
+    throw new Error("matrix path set differs from manifest");
   }
 
   const allowed = new Set([
@@ -229,6 +235,63 @@ export function validateMatrix(rows, manifest) {
   for (const row of rows) {
     if (!allowed.has(row.decision)) {
       throw new Error(`invalid decision: ${row.decision}`);
+    }
+
+    if (row.evidence_status === "manifest_only") {
+      for (const field of ["gsc_clicks", "gsc_impressions", "gsc_position"]) {
+        if (row[field] !== "unknown") {
+          throw new Error(`missing evidence must remain unknown: ${row.old_path} ${field}`);
+        }
+      }
+    }
+
+    if (row.decision === "keep_200_index") {
+      if (row.target_path !== row.old_path || row.target_http_status !== "200") {
+        throw new Error(`keep decision must retain its path with 200: ${row.old_path}`);
+      }
+    }
+
+    if (row.decision === "merge_301") {
+      if (!row.target_path?.startsWith("/")) {
+        throw new Error(`merge_301 requires target_path: ${row.old_path}`);
+      }
+      if (normalizePath(row.target_path) !== row.target_path || /[?#]/.test(row.target_path)) {
+        throw new Error(`invalid target_path: ${row.target_path}`);
+      }
+      if (row.target_path === row.old_path) {
+        throw new Error(`self redirect: ${row.old_path}`);
+      }
+      if (row.target_path === "/" && row.old_path !== "/") {
+        throw new Error(`mass redirect to root is forbidden: ${row.old_path}`);
+      }
+      if (row.target_http_status !== "301") {
+        throw new Error(`merge_301 requires target_http_status 301: ${row.old_path}`);
+      }
+    }
+
+    if (row.decision === "remove_410") {
+      if (row.target_http_status !== "410"
+        || row.approval_status !== "approved"
+        || !row.approved_by.trim()) {
+        throw new Error(`remove_410 requires approved_by: ${row.old_path}`);
+      }
+    }
+
+    if (row.decision === "temporary_noindex_review") {
+      if (row.approval_status !== "pending"
+        || row.approved_by !== ""
+        || row.target_path !== ""
+        || row.target_http_status !== "pending") {
+        throw new Error(`pending review must remain non-deployable: ${row.old_path}`);
+      }
+    }
+  }
+
+  const byPath = new Map(rows.map((row) => [row.old_path, row]));
+  for (const row of rows.filter((candidate) => candidate.decision === "merge_301")) {
+    const target = byPath.get(row.target_path);
+    if (target?.decision === "merge_301") {
+      throw new Error(`redirect chain or cycle: ${row.old_path} -> ${row.target_path}`);
     }
   }
 
