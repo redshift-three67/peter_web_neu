@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "RAUCH-TASK-03-GATE-A-VERIFIKATIONSSTATUS-2026-08-22",
+  "task": "Task 3: WordPress-Abschaltarchiv (Gate A)",
+  "status": "wordpress_archive_implemented_verified_external_review_pending",
+  "canonical_repository": "C:\\Users\\Hubert111\\Documents\\rauch_18_08_26_19_42\\repo-main",
+  "canonical_branch": "relaunch-konzept",
+  "commits": {
+    "base": "444d7dac67577e53e4785d2e6625789468448cf4",
+    "reviewed_evidence": "a4a2bba49e4defbd174206d74c48b14c43f03bf7"
+  },
+  "private_evidence": {
+    "wordpress_root": "data/private/wordpress-backup/2026-08-22/",
+    "gsc_root": "data/private/gsc/2026-08-22-preliminary/",
+    "git_ignored": true,
+    "tracked_private_files": 0
+  },
+  "wxr": {
+    "bytes": 5240009,
+    "sha256": "8AB2ABFB482EFD31621EE9FD47ED1A925107DC339C9BAB93C7EE085BD8DBF755",
+    "xml_well_formed": true,
+    "items": 796,
+    "pages": 91,
+    "attachments": 544,
+    "menu_items": 153
+  },
+  "updraft": {
+    "backup_timestamp": "2026-08-14T10:25:00+02:00",
+    "received_on": "2026-08-22",
+    "archive_files": 10,
+    "components_complete": true,
+    "all_streams_readable": true,
+    "new_live_backup_started": false,
+    "restore_tested": false
+  },
+  "wordpress_inventory": {
+    "plugins": 50,
+    "active_plugins": 34,
+    "inactive_plugins": 16,
+    "must_use_plugins": 1,
+    "dropins": 3,
+    "themes": 4,
+    "hfcm_snippets": 17,
+    "enabled_hfcm_snippets": 12,
+    "users_counted_anonymously": 3,
+    "user_role": "Administrator",
+    "permalink_structure": "/%postname%/",
+    "front_page": "Home"
+  },
+  "gsc_preliminary": {
+    "sha256": "FB2DA52E51FB3CD749504A02394DF010DA63FB66F9CE55458B22F2EAF949399F",
+    "filter": "Letzte 3 Monate",
+    "actual_date_rows": 1,
+    "actual_date": "2026-08-20",
+    "page_rows": 17,
+    "manifest_matches": 16,
+    "baseline_complete": false,
+    "gate_b_closed": true
+  },
+  "verification": {
+    "npm_test": {
+      "exit_code": 0,
+      "tests": 74,
+      "passed": 74,
+      "failed": 0
+    },
+    "typecheck": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "lint": {
+      "exit_code": 0,
+      "errors": 0,
+      "warnings": 3,
+      "passed": true
+    },
+    "status_matrix_json_valid": true,
+    "git_diff_check_passed": true
+  },
+  "status_matrix": {
+    "STAT-012": "teilweise bestätigt",
+    "STAT-014": "teilweise bestätigt",
+    "STAT-023": "derzeit nicht prüfbar"
+  },
+  "open_gates": {
+    "plesk_evidence_complete": false,
+    "isolated_restore_tested": false,
+    "wordpress_shutdown_authorized": false,
+    "task_3_fully_complete": false
+  },
+  "production_systems_changed": false,
+  "external_review": {
+    "required": true,
+    "review_id": "RAUCH-TASK-03-GATE-A-REVIEW",
+    "status": "pending"
+  },
+  "recommended_next_step": "Gültigen Plesk-Zugang oder bereinigten Betreiberexport bereitstellen; danach Plesk/nginx-Paket erfassen und Restore isoliert testen"
+}
