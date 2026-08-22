@@ -1,0 +1,41 @@
+{
+  "review_id": "RAUCH-TASK-07-REVIEW",
+  "reviewed_commit": "d36cb51928d06c185aee32422f18dd4f8173138e",
+  "verdict": "freigegeben",
+  "summary": "Task 7 ist vollständig, testgetrieben und regelkonform umgesetzt. Sämtliche lokalen Anamnese-Formulare, Server-Submit-Endpunkte, Datenbankzugriffe und Inbox-Listenpfade für Gesundheitsdaten wurden aus den Produktionsquellen entfernt. Die Informationsroute /online-anamnesebogen verlinkt die eigenständige Lovable-App sicher (target=_blank, rel=noopener noreferrer, kein iframe). Das historische .vercel/output-Verzeichnis wurde aus Git entfernt und ignoriert. Alle 55 Tests, Typecheck, Lint, Build und Git-Synchronisation wurden erfolgreich und ohne Fehler validiert.",
+  "checks": {
+    "local_anamnesis_ui_absent": "bestätigt",
+    "local_submit_and_storage_absent": "bestätigt",
+    "practice_inbox_contacts_only": "bestätigt",
+    "external_link_contract_secure": "bestätigt",
+    "legacy_redirect_preserved": "bestätigt",
+    "active_copy_boundary_accurate": "bestätigt",
+    "historical_migrations_unchanged": "bestätigt",
+    "tracked_prebuild_absent": "bestätigt",
+    "boundary_test": "bestätigt",
+    "npm_test": "bestätigt",
+    "typecheck": "bestätigt",
+    "lint": "bestätigt",
+    "production_build": "bestätigt",
+    "documentation_consistency": "bestätigt",
+    "git_sync": "bestätigt"
+  },
+  "findings": [],
+  "known_non_blocking_warnings": [
+    "scripts/wp-public-crawl.mjs:6:28 - warning: 'readFile' is defined but never used (@typescript-eslint/no-unused-vars)",
+    "src/components/site/DesignSkin.tsx:4:17 - warning: Fast refresh only works when a file only exports components (react-refresh/only-export-components)",
+    "src/lib/auth/use-current-user.ts:59:3 - warning: Unused eslint-disable directive"
+  ],
+  "external_app_scope": {
+    "reviewed_as_part_of_website_repository": false,
+    "separate_review_required": true,
+    "note": "Die externe Anwendung https://naturheilpraxis-rauch.lovable.app/ ist ein separates System. Datenschutz, Einwilligung, Backend-Speicherung und Löschung dieser App sind nicht Gegenstand dieser Repository-Abnahme und müssen gesondert geprüft werden."
+  },
+  "recommended_next_step": {
+    "task": "Task 2: GSC- und 64-URL-Matrix",
+    "decision": "starten",
+    "reason": "Die P0-Gates für strukturierte Daten (Task 4) und Gesundheitsdatengrenze (Task 7) sind erfolgreich implementiert, unabhängig geprüft und freigegeben. Gemäß Masterplan-Reihenfolge ist als nächstes Task 2 (GSC- und 64-URL-Matrix / STAT-011) umzusetzen."
+  },
+  "received_on": "2026-08-22",
+  "source": "Vom Benutzer übermittelte Entwickler-/LLM-Antwort"
+}

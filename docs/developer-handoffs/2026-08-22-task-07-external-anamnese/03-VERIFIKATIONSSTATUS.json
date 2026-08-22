@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "document_id": "RAUCH-TASK-07-VERIFIKATIONSSTATUS-2026-08-22",
   "task": "Task 7: Externe Online-Anamnese-Grenze",
-  "status": "implementiert_verifiziert_uebergabe_sync_bestaetigt_externes_review_ausstehend",
+  "status": "implementiert_verifiziert_uebergabe_sync_bestaetigt_extern_freigegeben",
   "canonical_repository": "C:\\Users\\Hubert111\\Documents\\rauch_18_08_26_19_42\\repo-main",
   "canonical_branch": "relaunch-konzept",
   "commits": {
@@ -122,11 +122,20 @@
   "production_systems_changed": false,
   "external_app_changed": false,
   "external_app_separate_review_required": true,
+  "external_review": {
+    "review_id": "RAUCH-TASK-07-REVIEW",
+    "reviewed_commit": "d36cb51928d06c185aee32422f18dd4f8173138e",
+    "verdict": "freigegeben",
+    "findings": 0,
+    "all_declared_checks_confirmed": true,
+    "received_on": "2026-08-22",
+    "artifact": "docs/developer-handoffs/2026-08-22-task-07-external-anamnese/04-EXTERNES-REVIEW.json"
+  },
   "known_non_blocking_warnings": [
     "scripts/wp-public-crawl.mjs: ungenutzter readFile-Import",
     "src/components/site/DesignSkin.tsx: Fast-Refresh-Grenze",
     "src/lib/auth/use-current-user.ts: ungenutzte ESLint-Deaktivierung"
   ],
-  "external_developer_review_required_before_next_task": true,
+  "external_developer_review_required_before_next_task": false,
   "recommended_next_decision_after_external_approval": "Task 2 / STAT-011: GSC- und 64-URL-Matrix"
 }

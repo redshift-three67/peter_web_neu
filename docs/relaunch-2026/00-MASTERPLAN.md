@@ -399,8 +399,9 @@ test("slash variant redirects directly", async ({ request }) => {
 - [x] Historische Migration und bestehende Daten unverändert lassen.
 - [x] Getracktes historisches `.vercel/output` entfernen und generierte Prebuilds ignorieren, damit kein alter Gesundheitsdatenpfad per `--prebuilt` deploybar bleibt.
 - [x] 7/7 Boundary-Tests, 55/55 Gesamttests, Typecheck, Lint, Build und Chrome-Liveprüfung ausführen.
+- [x] Externen Entwickler-/LLM-Review `RAUCH-TASK-07-REVIEW` ohne Findings abschließen; Task 2 ist als nächster Schritt freigegeben.
 
-Die externe Lovable-App ist ein getrenntes System. Datenschutz, Authentisierung, Speicherung, Einwilligung, Aufbewahrung und Löschung innerhalb dieser App wurden in Task 7 nicht geprüft und dürfen aus dem bestätigten Website-Gate nicht abgeleitet werden.
+Die externe Lovable-App ist ein getrenntes System. Datenschutz, Authentisierung, Speicherung, Einwilligung, Aufbewahrung und Löschung innerhalb dieser App wurden in Task 7 nicht geprüft und dürfen aus dem bestätigten Website-Gate nicht abgeleitet werden. Der externe Repository-Review ist unter `docs/developer-handoffs/2026-08-22-task-07-external-anamnese/04-EXTERNES-REVIEW.json` dokumentiert.
 
 ### Task 8: Node-/Containervertrag
 

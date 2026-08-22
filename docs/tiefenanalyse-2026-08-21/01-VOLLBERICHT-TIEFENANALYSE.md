@@ -489,7 +489,7 @@ Im geprüften Ausgangsstand verarbeitete `submitAnamnese` unter anderem Geburtsd
 3. schreibt sie in `anamnesis_submissions.payload` als `text`;
 4. besitzt im geprüften Code kein Auth-, Verschlüsselungs-, Retention- oder separates Freigabegate.
 
-Dieser historische Stand verletzte den Gesundheitsdaten-Grenzvertrag. Seit Task 7 enthält die Relaunch-Website keinen lokalen Anamnese-Wizard, Submit-, Tabellen- oder Inbox-Pfad mehr. `/online-anamnesebogen` informiert über die Grenze und verlinkt ausschließlich die eigenständige externe App; eine spätere lokale Reaktivierung ist nicht vorgesehen. Die externe App und ihre Datenschutz-, Authentisierungs-, Speicher-, Aufbewahrungs- und Löschprozesse wurden in diesem Repository-Task nicht abgenommen.
+Dieser historische Stand verletzte den Gesundheitsdaten-Grenzvertrag. Seit Task 7 enthält die Relaunch-Website keinen lokalen Anamnese-Wizard, Submit-, Tabellen- oder Inbox-Pfad mehr. `/online-anamnesebogen` informiert über die Grenze und verlinkt ausschließlich die eigenständige externe App; eine spätere lokale Reaktivierung ist nicht vorgesehen. Der externe Repository-Review `RAUCH-TASK-07-REVIEW` bestätigte den Website-Grenzvertrag ohne Findings. Die externe App und ihre Datenschutz-, Authentisierungs-, Speicher-, Aufbewahrungs- und Löschprozesse wurden in diesem Repository-Task nicht abgenommen.
 
 ### 18.2 Weitere technische Prüfpunkte
 
@@ -646,7 +646,7 @@ Der verbindliche Ausführungsplan ist `docs/relaunch-2026/00-MASTERPLAN.md`. Sei
 4. NAP und strukturierte Daten korrigieren (Codevertrag umgesetzt; externe Validator-/NAP-Freigabe offen).
 5. Canonicals und Redirects implementieren.
 6. Welle 2, E-E-A-T und HWG-Review abschließen.
-7. Externe Online-Anamnese-Grenze herstellen (geschlossen; lokale Funktion entfernt).
+7. Externe Online-Anamnese-Grenze herstellen (geschlossen und extern ohne Findings freigegeben; lokale Funktion entfernt).
 8. Node-/Containervertrag implementieren.
 9. Release-, Mobile-, Accessibility- und Performancegates etablieren.
 10. Rauch als external-app in der Plattform registrieren.

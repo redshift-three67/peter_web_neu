@@ -2,7 +2,7 @@
 
 ## Exakter Wortlaut für den Entwickler
 
-Task 7 „Externe Online-Anamnese-Grenze / STAT-018“ ist entsprechend der verbindlichen Produktentscheidung implementiert, testgetrieben verifiziert und intern ohne verbleibende Critical-, Important- oder Minor-Findings freigegeben.
+Task 7 „Externe Online-Anamnese-Grenze / STAT-018“ ist entsprechend der verbindlichen Produktentscheidung implementiert, testgetrieben verifiziert sowie intern und extern ohne verbleibende Findings freigegeben. Der externe Review `RAUCH-TASK-07-REVIEW` bestätigte am 2026-08-22 alle deklarierten Checks und empfiehlt als nächsten Schritt Task 2 „GSC- und 64-URL-Matrix / STAT-011“.
 
 Die Relaunch-Website enthält **keinen eigenen Online-Anamnesebogen**. Sie erfasst, übermittelt, speichert und listet keine Online-Anamnesedaten. Die interne Route `/online-anamnesebogen` ist ausschließlich eine Informationsseite und öffnet per sicherem externem Link die eigenständige App unter `https://naturheilpraxis-rauch.lovable.app/`. Die externe App ist ein separates System und nicht Bestandteil dieser Repository-Abnahme.
 
@@ -92,10 +92,9 @@ Die produktive WordPress-Website, Plesk, DNS und die externe Lovable-App wurden 
 
 ## Verbindliche Restpunkte
 
-1. Prüfen Sie den dokumentierten Task-7-Umfang read-only auf Akkuranz, Regressionen und Vollständigkeit.
-2. Prüfen Sie die externe Lovable-App als separates System gesondert auf Datenschutz, Authentisierung, Speicherung, Einwilligung, Aufbewahrung und Löschung. Daraus darf keine lokale Website-Integration abgeleitet werden.
-3. Melden Sie ausdrücklich `freigegeben`, `freigegeben_mit_auflagen` oder `nicht_freigegeben`.
-4. Bis zu Ihrer Rückmeldung wird kein weiterer Masterplan-Task begonnen. Bei Freigabe ist nach dem priorisierten Plan Task 2 „GSC- und 64-URL-Matrix / STAT-011“ der nächste Umsetzungsschritt.
+1. Der dokumentierte Task-7-Umfang wurde extern read-only geprüft und ohne Findings freigegeben; Nachweis: `04-EXTERNES-REVIEW.json`.
+2. Die externe Lovable-App ist als separates System weiterhin gesondert auf Datenschutz, Authentisierung, Speicherung, Einwilligung, Aufbewahrung und Löschung zu prüfen. Daraus darf keine lokale Website-Integration abgeleitet werden.
+3. Task 2 „GSC- und 64-URL-Matrix / STAT-011“ ist als nächster Masterplan-Schritt freigegeben.
 
 Bekannte, nicht blockierende Lintwarnungen außerhalb von Task 7:
 
