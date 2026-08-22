@@ -23,6 +23,7 @@ import { Route as DiagnostikInformationstherapieRouteImport } from './routes/dia
 import { Route as DownloadbereichNaturheilpraxisRauchRouteImport } from './routes/downloadbereich-naturheilpraxis-rauch'
 import { Route as ErschoepfungAugsburgRouteImport } from './routes/erschoepfung-augsburg'
 import { Route as ErstgespraechRouteImport } from './routes/erstgespraech'
+import { Route as HealthzRouteImport } from './routes/healthz'
 import { Route as HypnotherapieAugsburgRouteImport } from './routes/hypnotherapie-augsburg'
 import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as KlassischeHomoeopathieRouteImport } from './routes/klassische-homoeopathie'
@@ -117,6 +118,11 @@ const ErschoepfungAugsburgRoute = ErschoepfungAugsburgRouteImport.update({
 const ErstgespraechRoute = ErstgespraechRouteImport.update({
   id: '/erstgespraech',
   path: '/erstgespraech',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HealthzRoute = HealthzRouteImport.update({
+  id: '/healthz',
+  path: '/healthz',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HypnotherapieAugsburgRoute = HypnotherapieAugsburgRouteImport.update({
@@ -253,6 +259,7 @@ export interface FileRoutesByFullPath {
   '/downloadbereich-naturheilpraxis-rauch': typeof DownloadbereichNaturheilpraxisRauchRoute
   '/erschoepfung-augsburg': typeof ErschoepfungAugsburgRoute
   '/erstgespraech': typeof ErstgespraechRoute
+  '/healthz': typeof HealthzRoute
   '/hypnotherapie-augsburg': typeof HypnotherapieAugsburgRoute
   '/impressum': typeof ImpressumRoute
   '/klassische-homoeopathie': typeof KlassischeHomoeopathieRoute
@@ -292,6 +299,7 @@ export interface FileRoutesByTo {
   '/downloadbereich-naturheilpraxis-rauch': typeof DownloadbereichNaturheilpraxisRauchRoute
   '/erschoepfung-augsburg': typeof ErschoepfungAugsburgRoute
   '/erstgespraech': typeof ErstgespraechRoute
+  '/healthz': typeof HealthzRoute
   '/hypnotherapie-augsburg': typeof HypnotherapieAugsburgRoute
   '/impressum': typeof ImpressumRoute
   '/klassische-homoeopathie': typeof KlassischeHomoeopathieRoute
@@ -332,6 +340,7 @@ export interface FileRoutesById {
   '/downloadbereich-naturheilpraxis-rauch': typeof DownloadbereichNaturheilpraxisRauchRoute
   '/erschoepfung-augsburg': typeof ErschoepfungAugsburgRoute
   '/erstgespraech': typeof ErstgespraechRoute
+  '/healthz': typeof HealthzRoute
   '/hypnotherapie-augsburg': typeof HypnotherapieAugsburgRoute
   '/impressum': typeof ImpressumRoute
   '/klassische-homoeopathie': typeof KlassischeHomoeopathieRoute
@@ -373,6 +382,7 @@ export interface FileRouteTypes {
     | '/downloadbereich-naturheilpraxis-rauch'
     | '/erschoepfung-augsburg'
     | '/erstgespraech'
+    | '/healthz'
     | '/hypnotherapie-augsburg'
     | '/impressum'
     | '/klassische-homoeopathie'
@@ -412,6 +422,7 @@ export interface FileRouteTypes {
     | '/downloadbereich-naturheilpraxis-rauch'
     | '/erschoepfung-augsburg'
     | '/erstgespraech'
+    | '/healthz'
     | '/hypnotherapie-augsburg'
     | '/impressum'
     | '/klassische-homoeopathie'
@@ -451,6 +462,7 @@ export interface FileRouteTypes {
     | '/downloadbereich-naturheilpraxis-rauch'
     | '/erschoepfung-augsburg'
     | '/erstgespraech'
+    | '/healthz'
     | '/hypnotherapie-augsburg'
     | '/impressum'
     | '/klassische-homoeopathie'
@@ -491,6 +503,7 @@ export interface RootRouteChildren {
   DownloadbereichNaturheilpraxisRauchRoute: typeof DownloadbereichNaturheilpraxisRauchRoute
   ErschoepfungAugsburgRoute: typeof ErschoepfungAugsburgRoute
   ErstgespraechRoute: typeof ErstgespraechRoute
+  HealthzRoute: typeof HealthzRoute
   HypnotherapieAugsburgRoute: typeof HypnotherapieAugsburgRoute
   ImpressumRoute: typeof ImpressumRoute
   KlassischeHomoeopathieRoute: typeof KlassischeHomoeopathieRoute
@@ -614,6 +627,13 @@ declare module '@tanstack/react-router' {
       path: '/erstgespraech'
       fullPath: '/erstgespraech'
       preLoaderRoute: typeof ErstgespraechRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/healthz': {
+      id: '/healthz'
+      path: '/healthz'
+      fullPath: '/healthz'
+      preLoaderRoute: typeof HealthzRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/hypnotherapie-augsburg': {
@@ -796,6 +816,7 @@ const rootRouteChildren: RootRouteChildren = {
     DownloadbereichNaturheilpraxisRauchRoute,
   ErschoepfungAugsburgRoute: ErschoepfungAugsburgRoute,
   ErstgespraechRoute: ErstgespraechRoute,
+  HealthzRoute: HealthzRoute,
   HypnotherapieAugsburgRoute: HypnotherapieAugsburgRoute,
   ImpressumRoute: ImpressumRoute,
   KlassischeHomoeopathieRoute: KlassischeHomoeopathieRoute,

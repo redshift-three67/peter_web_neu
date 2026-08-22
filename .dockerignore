@@ -1,0 +1,9 @@
+.git
+.worktrees
+node_modules
+.vercel
+.output
+.env
+.env.*
+data/private
+npm-debug.log*
