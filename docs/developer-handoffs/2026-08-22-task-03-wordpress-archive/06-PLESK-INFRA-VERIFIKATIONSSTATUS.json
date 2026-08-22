@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "RAUCH-TASK-03-GATE-B-INFRA-VERIFIKATIONSSTATUS-2026-08-22",
+  "task": "Task 3: Plesk-/nginx-Inventarisierung (Gate B)",
+  "status": "plesk_inventory_implemented_verified_external_review_pending",
+  "canonical_repository": "C:\\Users\\Hubert111\\Documents\\rauch_18_08_26_19_42\\repo-main",
+  "canonical_branch": "relaunch-konzept",
+  "commits": {
+    "base": "53a62d368182f97c89f706c53cc763f3fe5a2c9a",
+    "evidence": "e22b715cd90739c6eb9406b231a4edb659a97055",
+    "handoff": null
+  },
+  "private_evidence": {
+    "path": "data/private/plesk/2026-08-22/plesk-inventory.json",
+    "ignored_by_git": true,
+    "json_valid": true,
+    "contains_secrets": false,
+    "contains_personal_log_data": false
+  },
+  "verified_scope": {
+    "plesk_version": "18.0.79",
+    "hosting_document_root": "httpdocs",
+    "http_to_https_301": true,
+    "additional_apache_directives_empty": true,
+    "nginx_proxy_and_cache_inventory": true,
+    "php_version_and_handler_inventory": true,
+    "dns_record_count": 18,
+    "dns_ttl_soa_inventory": true,
+    "tls_hsts_inventory_without_keys": true,
+    "waf_inventory": true,
+    "scheduled_task_count": 0,
+    "plesk_valid_backup_count": 7,
+    "plesk_backup_range": "2026-06-03/2026-06-09",
+    "subscription_backup_schedule_enabled": false,
+    "restore_links_present": true,
+    "anonymized_log_presence_sample": true
+  },
+  "verification": {
+    "npm_test": {
+      "passed": true,
+      "tests": 74,
+      "failed": 0
+    },
+    "typecheck": {
+      "passed": true
+    },
+    "lint": {
+      "passed": true,
+      "errors": 0,
+      "warnings": 3
+    },
+    "production_build": {
+      "passed": true,
+      "known_warning": "main client chunk exceeds 500 kB after minification"
+    },
+    "status_matrix_json_valid": true,
+    "private_inventory_json_valid": true,
+    "git_diff_check_passed": true,
+    "evidence_commit_pushed": true
+  },
+  "status_matrix": {
+    "STAT-014": "teilweise bestätigt",
+    "STAT-023": "teilweise bestätigt"
+  },
+  "open_gates": {
+    "time_bounded_log_baseline_complete": false,
+    "isolated_restore_tested": false,
+    "current_cutover_rollback_basis_confirmed": false,
+    "wordpress_shutdown_authorized": false,
+    "cutover_authorized": false,
+    "task_3_fully_complete": false
+  },
+  "production_actions": {
+    "configuration_changed": false,
+    "backup_created": false,
+    "backup_downloaded": false,
+    "restore_executed": false,
+    "secret_accessed": false,
+    "raw_logs_persisted": false
+  },
+  "external_review": {
+    "required": true,
+    "review_id": "RAUCH-TASK-03-GATE-B-INFRA-REVIEW",
+    "status": "pending"
+  },
+  "recommended_next_step": "Externen Gate-B-Infrastrukturreview durchführen; danach isolierte Restore-Umgebung festlegen und aktuellen WordPress-Archivsatz ohne Produktionszugriff wiederherstellen"
+}
