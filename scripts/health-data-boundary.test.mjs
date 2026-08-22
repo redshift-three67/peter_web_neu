@@ -1,9 +1,12 @@
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync, readdirSync } from "node:fs";
-import { extname, join, resolve } from "node:path";
+import { extname, join, relative, resolve } from "node:path";
 import test from "node:test";
 
-const ROOT = resolve(import.meta.dirname, "..");
+const ROOT = process.env.HEALTH_BOUNDARY_ROOT
+  ? resolve(process.env.HEALTH_BOUNDARY_ROOT)
+  : resolve(import.meta.dirname, "..");
 const SRC = join(ROOT, "src");
 const WIZARD_PATH = join(SRC, "components", "site", "AnamneseWizard.tsx");
 const ACTIONS_PATH = join(SRC, "lib", "actions.ts");
@@ -26,73 +29,114 @@ function filesBelow(directory) {
   });
 }
 
-test("relaunch source contains no local anamnesis submit or database path", () => {
+test("local anamnesis wizard is absent", () => {
   assert.equal(
     existsSync(WIZARD_PATH),
     false,
     "the local anamnesis wizard must be removed",
   );
+});
 
+test("relaunch source contains no local anamnesis submit or database path", () => {
   const productionSources = filesBelow(SRC).filter((filePath) =>
     [".ts", ".tsx"].includes(extname(filePath)),
   );
+  const offenders = [];
 
   for (const filePath of productionSources) {
     const source = readFileSync(filePath, "utf8");
-    assert.doesNotMatch(source, /\bsubmitAnamnese\b/);
-    assert.doesNotMatch(source, /\banamnesis_submissions\b/);
+    if (/\bsubmitAnamnese\b/.test(source)) {
+      offenders.push(`${relative(ROOT, filePath)}:submitAnamnese`);
+    }
+    if (/\banamnesis_submissions\b/.test(source)) {
+      offenders.push(`${relative(ROOT, filePath)}:anamnesis_submissions`);
+    }
   }
+
+  assert.deepEqual(offenders, []);
 });
 
 test("information route opens the independent app securely without embedding it", () => {
-  assert.equal(
-    existsSync(EXTERNAL_LINKS_PATH),
-    true,
-    "the external app URL must have one canonical source",
-  );
-
-  const links = readFileSync(EXTERNAL_LINKS_PATH, "utf8");
   const route = readFileSync(INFO_ROUTE_PATH, "utf8");
+  const violations = [];
 
-  assert.match(
-    links,
-    /anamneseApp:\s*["']https:\/\/naturheilpraxis-rauch\.lovable\.app\/["']/,
-  );
-  assert.match(route, /externalLinks\.anamneseApp/);
-  assert.match(
-    route,
-    /introAction=\{/,
-    "the external boundary action must be part of the prominent hub intro",
-  );
-  assert.match(route, /target=["']_blank["']/);
-  assert.match(route, /rel=["']noopener noreferrer["']/);
-  assert.doesNotMatch(route, /AnamneseWizard/);
-  assert.doesNotMatch(route, /<(?:form|input|textarea|select|iframe)\b/i);
+  if (!existsSync(EXTERNAL_LINKS_PATH)) {
+    violations.push("missing canonical external-links source");
+  } else if (
+    !/anamneseApp:\s*["']https:\/\/naturheilpraxis-rauch\.lovable\.app\/["']/.test(
+      readFileSync(EXTERNAL_LINKS_PATH, "utf8"),
+    )
+  ) {
+    violations.push("incorrect canonical external app URL");
+  }
+  if (!/externalLinks\.anamneseApp/.test(route)) {
+    violations.push("route does not use canonical external app URL");
+  }
+  if (!/introAction=\{/.test(route)) {
+    violations.push("external action is not in the prominent hub intro");
+  }
+  if (!/target=["']_blank["']/.test(route)) {
+    violations.push("external action lacks target=_blank");
+  }
+  if (!/rel=["']noopener noreferrer["']/.test(route)) {
+    violations.push("external action lacks noopener noreferrer");
+  }
+  if (/AnamneseWizard/.test(route)) {
+    violations.push("route still renders AnamneseWizard");
+  }
+  if (/<(?:form|input|textarea|select|iframe)\b/i.test(route)) {
+    violations.push("route contains local form or embedded-app markup");
+  }
+
+  assert.deepEqual(violations, []);
 });
 
 test("authenticated practice inbox contains contact messages only", () => {
   const actions = readFileSync(ACTIONS_PATH, "utf8");
   const practiceRoute = readFileSync(PRACTICE_ROUTE_PATH, "utf8");
+  const violations = [];
 
-  assert.doesNotMatch(actions, /\banamneseSchema\b/);
-  assert.doesNotMatch(actions, /\bforms\b/);
-  assert.doesNotMatch(practiceRoute, /\bAnamnesen\b/);
-  assert.doesNotMatch(practiceRoute, /\.forms\b/);
+  if (/\banamneseSchema\b/.test(actions)) {
+    violations.push("actions retains anamneseSchema");
+  }
+  if (/\bforms\b/.test(actions)) {
+    violations.push("actions retains forms inbox data");
+  }
+  if (/\bAnamnesen\b/.test(practiceRoute)) {
+    violations.push("practice inbox retains Anamnesen section");
+  }
+  if (/\.forms\b/.test(practiceRoute)) {
+    violations.push("practice inbox retains forms access");
+  }
+
+  assert.deepEqual(violations, []);
 });
 
 test("active website copy states the external health-data boundary accurately", () => {
   const privacyRoute = readFileSync(PRIVACY_ROUTE_PATH, "utf8");
   const downloadRoute = readFileSync(DOWNLOAD_ROUTE_PATH, "utf8");
+  const violations = [];
 
-  assert.doesNotMatch(privacyRoute, /Kontakt- und Anamnesedaten/);
-  assert.doesNotMatch(privacyRoute, /Übermittlung erfolgt über diese Domain/);
-  assert.match(privacyRoute, /eigenständigen externen App/);
-  assert.match(privacyRoute, /keine\s+Gesundheitsdaten/);
-  assert.match(downloadRoute, /eigenständige Patienten-App/);
-  assert.match(
-    downloadRoute,
-    /keine\s+Gesundheitsdaten erfasst oder\s+gespeichert/,
-  );
+  if (/Kontakt- und Anamnesedaten/.test(privacyRoute)) {
+    violations.push("privacy copy conflates contact and anamnesis data");
+  }
+  if (/Übermittlung erfolgt über diese Domain/.test(privacyRoute)) {
+    violations.push("privacy copy claims local anamnesis transmission");
+  }
+  if (!/eigenständigen externen App/.test(privacyRoute)) {
+    violations.push("privacy copy omits independent external app boundary");
+  }
+  if (!/keine\s+Gesundheitsdaten/.test(privacyRoute)) {
+    violations.push("privacy copy omits contact-form health-data warning");
+  }
+  if (!/eigenständige Patienten-App/.test(downloadRoute)) {
+    violations.push("download copy omits independent patient app");
+  }
+  if (!/keine\s+Gesundheitsdaten erfasst oder\s+gespeichert/.test(downloadRoute)) {
+    violations.push("download copy claims or permits local health-data handling");
+  }
+
+  assert.deepEqual(violations, []);
 });
 
 test("legacy route stays compatible while the historical migration stays untouched", () => {
@@ -103,4 +147,21 @@ test("legacy route stays compatible while the historical migration stays untouch
     /redirect\(\{\s*href:\s*["']\/online-anamnesebogen["']\s*\}\)/,
   );
   assert.equal(existsSync(MIGRATION_PATH), true);
+});
+
+test("deployable prebuilt output is not tracked", () => {
+  const trackedOutput = execFileSync(
+    "git",
+    ["ls-files", "--", ".vercel/output"],
+    { cwd: ROOT, encoding: "utf8" },
+  )
+    .trim()
+    .split(/\r?\n/)
+    .filter(Boolean);
+
+  assert.equal(
+    trackedOutput.length,
+    0,
+    "generated .vercel/output must not be deployable from repository history",
+  );
 });
