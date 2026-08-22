@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "RAUCH-TASK-07-VERIFIKATIONSSTATUS-2026-08-22",
+  "task": "Task 7: Externe Online-Anamnese-Grenze",
+  "status": "implementiert_verifiziert_uebergabe_sync_bestaetigt_externes_review_ausstehend",
+  "canonical_repository": "C:\\Users\\Hubert111\\Documents\\rauch_18_08_26_19_42\\repo-main",
+  "canonical_branch": "relaunch-konzept",
+  "commits": {
+    "base": "46e67a96fb0c46bb9d9d3349e73eecbe84ca61ba",
+    "design": "7eb532daae224aa4d098f317643154153f261631",
+    "plan": "ea907fd13a0ca0b6e23bb94e873bfd3e9245e5b2",
+    "remove_local_health_data": "2b64fbd5d3f46536a8c8092c2f1e943bf806bab9",
+    "external_boundary_ui": "65c30415f9f98953db73977e3f80822f6711872e",
+    "status_documentation": "0aa0b919262185f225658596b6516550f9a6a5e8",
+    "review_security_hardening": "4af24268d5e4e7a435fba7738bc2502e9033dbf8",
+    "review_documentation_hardening": "d36cb51928d06c185aee32422f18dd4f8173138e",
+    "handoff": "71c9f984bb23543ca8db6c35fd602b6f741b5ef8"
+  },
+  "handoff_sync_checkpoint": {
+    "verified_after_fetch": true,
+    "local_sha": "71c9f984bb23543ca8db6c35fd602b6f741b5ef8",
+    "origin_sha": "71c9f984bb23543ca8db6c35fd602b6f741b5ef8",
+    "equal": true,
+    "canonical_worktree_clean": true,
+    "note": "Dieser Block protokolliert den verifizierten ersten Sync vor dem separaten Commit dieses Statusdokuments."
+  },
+  "product_boundary": {
+    "website_contains_local_anamnesis_form": false,
+    "website_processes_health_form_data": false,
+    "information_route": "/online-anamnesebogen",
+    "legacy_redirect": "/anamnese",
+    "external_app_url": "https://naturheilpraxis-rauch.lovable.app/",
+    "external_app_is_separate_system": true,
+    "iframe_or_proxy_integration": false,
+    "shared_auth_or_database": false
+  },
+  "verification": {
+    "tdd_red_against_base": {
+      "exit_code": 1,
+      "tests": 7,
+      "passed": 1,
+      "failed": 6,
+      "violations_reported": [
+        "local AnamneseWizard present",
+        "submitAnamnese and anamnesis_submissions present",
+        "external route contract incomplete",
+        "local anamnesis inbox present",
+        "active boundary copy inaccurate",
+        "119 tracked deployable prebuild files"
+      ]
+    },
+    "health_data_boundary": {
+      "exit_code": 0,
+      "tests": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    "npm_test": {
+      "exit_code": 0,
+      "tests": 55,
+      "passed": 55,
+      "failed": 0
+    },
+    "typecheck": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "lint": {
+      "exit_code": 0,
+      "errors": 0,
+      "warnings": 3,
+      "passed": true
+    },
+    "production_build": {
+      "exit_code": 0,
+      "passed": true,
+      "database_migration": "DATABASE_URL nicht gesetzt; erwartungsgemäß übersprungen"
+    },
+    "status_matrix_json": {
+      "parsed": true,
+      "passed": true
+    },
+    "git_diff_check": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "tracked_vercel_output": {
+      "file_count": 0,
+      "ignored": true,
+      "passed": true
+    },
+    "historical_migrations": {
+      "changed_against_base": false,
+      "passed": true
+    },
+    "internal_follow_up_review": {
+      "verdict": "APPROVE",
+      "confidence": "HIGH",
+      "remaining_critical_findings": 0,
+      "remaining_important_findings": 0,
+      "remaining_minor_findings": 0,
+      "ready_to_merge": true
+    }
+  },
+  "chrome_live_view": {
+    "url": "http://localhost:8080/online-anamnesebogen",
+    "external_href": "https://naturheilpraxis-rauch.lovable.app/",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "form_count": 0,
+    "input_count": 0,
+    "textarea_count": 0,
+    "select_count": 0,
+    "iframe_count": 0,
+    "console_warnings": 0,
+    "console_errors": 0,
+    "passed": true
+  },
+  "status_matrix": {
+    "STAT-018": "bestätigt"
+  },
+  "production_systems_changed": false,
+  "external_app_changed": false,
+  "external_app_separate_review_required": true,
+  "known_non_blocking_warnings": [
+    "scripts/wp-public-crawl.mjs: ungenutzter readFile-Import",
+    "src/components/site/DesignSkin.tsx: Fast-Refresh-Grenze",
+    "src/lib/auth/use-current-user.ts: ungenutzte ESLint-Deaktivierung"
+  ],
+  "external_developer_review_required_before_next_task": true,
+  "recommended_next_decision_after_external_approval": "Task 2 / STAT-011: GSC- und 64-URL-Matrix"
+}
