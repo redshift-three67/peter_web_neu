@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "RAUCH-TASK-02-GATE-A-VERIFIKATIONSSTATUS-2026-08-22",
+  "task": "Task 2: GSC- und 64-URL-Matrix (Gate A)",
+  "status": "gate_a_implementiert_verifiziert_sync_bestaetigt_externes_review_ausstehend",
+  "canonical_repository": "C:\\Users\\Hubert111\\Documents\\rauch_18_08_26_19_42\\repo-main",
+  "canonical_branch": "relaunch-konzept",
+  "commits": {
+    "base": "35ad22503d6f4c67ced12df343bff7cbaa8ea346",
+    "design": "22311db079eb4d11d08c0bed2b42919b580504ea",
+    "plan": "aafa75ea86a86a7cf824bdf01fe1c80c27c7a394",
+    "private_boundaries": "0492ca26182a478b3dca6decb5b4038d4a62103b",
+    "baseline_generator": "822f7b87b66476bf3a2d4c2dc44982fb9b71d11b",
+    "gsc_import": "780f12d1ad00c994c386d90ecdb7ef3abbf85e52",
+    "safety_invariants": "904c9fa0e049063d4c874db1daa93dcae76a23d7",
+    "review_hardening": "f4393afa885bea31fe67bd5ee38f8859ea45f222",
+    "eol_policy": "9a86e39d436a2d279fc96516d52ca6c9eaac372c",
+    "portable_blob_contract": "f34c7fd5cee648ebdd65109fd324fe859fe14369",
+    "verified_documentation": "78120fbc48321d1dd53128becfc3f4045a575d0e"
+  },
+  "handoff_sync_checkpoint": {
+    "verified_after_fetch": true,
+    "local_sha": "78120fbc48321d1dd53128becfc3f4045a575d0e",
+    "origin_sha": "78120fbc48321d1dd53128becfc3f4045a575d0e",
+    "equal": true,
+    "canonical_worktree_clean": true,
+    "note": "Dieser Block protokolliert den verifizierten Sync vor dem separaten Commit dieses Statusdokuments."
+  },
+  "matrix": {
+    "rows": 64,
+    "keep_200_index": 5,
+    "temporary_noindex_review": 59,
+    "merge_301": 0,
+    "remove_410": 0,
+    "unsafe_pending_rows": 0,
+    "git_blob_sha256": "6B8B0A1E136ECCF6CA055817CDC5A426C4D2C5BB253555053A9E5D79C30A2A00",
+    "git_blob_byte_identical_to_generator": true,
+    "checkout_policy": "text eol=lf",
+    "working_tree_line_endings_are_contractual": false
+  },
+  "verification": {
+    "tdd_red": {
+      "private_boundaries": "0/1",
+      "baseline_generator": "1/2",
+      "gsc_import": "2/5",
+      "safety_invariants": "5/13",
+      "review_hardening": "14/18; anschließend 17/18",
+      "windows_checkout_byte_contract": "18/19"
+    },
+    "focused_tests": {
+      "exit_code": 0,
+      "tests": 19,
+      "passed": 19,
+      "failed": 0
+    },
+    "npm_test": {
+      "exit_code": 0,
+      "tests": 74,
+      "passed": 74,
+      "failed": 0
+    },
+    "typecheck": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "lint": {
+      "exit_code": 0,
+      "errors": 0,
+      "warnings": 3,
+      "passed": true
+    },
+    "status_matrix_json": {
+      "parsed": true,
+      "passed": true
+    },
+    "git_diff_check": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "canonical_windows_fast_forward": {
+      "core_autocrlf": true,
+      "working_tree_csv": "CRLF",
+      "git_blob_csv": "LF",
+      "focused_tests_passed": true,
+      "npm_test_passed": true
+    },
+    "internal_follow_up_review": {
+      "verdict": "APPROVE",
+      "confidence": "HIGH",
+      "remaining_findings": 0,
+      "ready_to_push": true
+    },
+    "parity_audit": {
+      "exit_code": 0,
+      "pages_checked": 18,
+      "missing_feature_range_percent": "49-95",
+      "content_parity_approved": false,
+      "assigned_task": "Task 6"
+    }
+  },
+  "status_matrix": {
+    "STAT-011": "bestätigt mit Einschränkungen",
+    "STAT-012": "derzeit nicht prüfbar"
+  },
+  "gate_b": {
+    "gsc_baseline_available": false,
+    "pending_rows": 59,
+    "product_owner_approvals_complete": false,
+    "redirects_or_removals_authorized": false,
+    "task_5_consumption_authorized": false
+  },
+  "production_systems_changed": false,
+  "wordpress_changed": false,
+  "plesk_changed": false,
+  "dns_changed": false,
+  "search_console_changed": false,
+  "known_non_blocking_warnings": [
+    "scripts/wp-public-crawl.mjs: ungenutzter readFile-Import",
+    "src/components/site/DesignSkin.tsx: Fast-Refresh-Grenze",
+    "src/lib/auth/use-current-user.ts: ungenutzte ESLint-Deaktivierung"
+  ],
+  "external_developer_review_required_before_next_masterplan_step": true,
+  "recommended_next_decision_after_external_approval": "Task 2 Gate B: privaten GSC-Seitenexport bereitstellen und 59 Prüfzeilen fachlich freigeben"
+}
