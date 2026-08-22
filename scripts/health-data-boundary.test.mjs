@@ -59,6 +59,11 @@ test("information route opens the independent app securely without embedding it"
     /anamneseApp:\s*["']https:\/\/naturheilpraxis-rauch\.lovable\.app\/["']/,
   );
   assert.match(route, /externalLinks\.anamneseApp/);
+  assert.match(
+    route,
+    /introAction=\{/,
+    "the external boundary action must be part of the prominent hub intro",
+  );
   assert.match(route, /target=["']_blank["']/);
   assert.match(route, /rel=["']noopener noreferrer["']/);
   assert.doesNotMatch(route, /AnamneseWizard/);

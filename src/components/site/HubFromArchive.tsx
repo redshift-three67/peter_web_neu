@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import type { ReactNode } from "react";
 import {
   ArrowRight,
   BookOpen,
@@ -57,12 +58,14 @@ export function HubFromArchive({
   heading,
   kicker,
   lead,
+  introAction,
   showCta = true,
 }: {
   slug: string;
   heading: string;
   kicker: string;
   lead?: string;
+  introAction?: ReactNode;
   showCta?: boolean;
 }) {
   const page = getArchiveBySlug(slug);
@@ -172,6 +175,7 @@ export function HubFromArchive({
             {lead ? (
               <p className="mt-5 text-[1.05rem] leading-relaxed text-muted">{lead}</p>
             ) : null}
+            {introAction ? <div className="mt-6">{introAction}</div> : null}
             <div className="mt-5 space-y-4 text-[1.05rem] leading-relaxed text-fg/90">
               {intro.slice(0, 3).map((b, i) =>
                 b.type === "p" ? <p key={i}>{b.text}</p> : null,
