@@ -38,7 +38,7 @@ Zulässige Statuswerte sind:
 | STAT-014 | WordPress                  | WXR- und Abschaltarchiv                          | nicht bestätigt               | P0 vor Abschaltung |
 | STAT-015 | Rank Math                  | SEO-Plugin-Daten                                 | bestätigt mit Einschränkungen | P1                 |
 | STAT-016 | Medien                     | Repository-Medieninventar                        | bestätigt mit Einschränkungen | P1                 |
-| STAT-017 | SEO und Schema.org         | MedicalBusiness JSON-LD                          | nicht bestätigt               | P0                 |
+| STAT-017 | SEO und Schema.org         | MedicalBusiness JSON-LD                          | bestätigt mit Einschränkungen | P0                 |
 | STAT-018 | Datenschutz und Sicherheit | Online-Anamnese                                  | nicht bestätigt               | P0                 |
 | STAT-019 | Accessibility              | Barrierefreiheitsnachweis der neuen Website      | teilweise bestätigt           | P1                 |
 | STAT-020 | Performance                | Release-Performance der neuen Website            | teilweise bestätigt           | P1                 |
@@ -47,7 +47,7 @@ Zulässige Statuswerte sind:
 | STAT-023 | Infrastruktur              | Plesk- und nginx-Cutoverdaten                    | derzeit nicht prüfbar         | P0 vor Cutover     |
 | STAT-024 | Release                    | Produktiver Domainwechsel                        | nicht bestätigt               | P0                 |
 | STAT-025 | SEO und Migration          | Slash-, Canonical- und Redirectvertrag           | nicht bestätigt               | P0                 |
-| STAT-026 | Strukturierte Daten        | FAQPage-Strategie                                | nicht bestätigt               | P1                 |
+| STAT-026 | Strukturierte Daten        | FAQPage-Strategie                                | bestätigt mit Einschränkungen | P1                 |
 | STAT-027 | Lokale Auffindbarkeit      | NAP- und Öffnungszeiten-Konsistenz               | derzeit nicht prüfbar         | P1                 |
 | STAT-028 | SEO und Migration          | NLS-Diagnostik-, Kontakt- und Linkprofil-Welle 2 | nicht bestätigt               | P1                 |
 | STAT-029 | Headless-CMS-Integration   | Reproduzierbarer Plattform-Quellstand            | nicht bestätigt               | P0 vor Integration |

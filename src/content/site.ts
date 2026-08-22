@@ -13,6 +13,12 @@ export const practice = {
   phoneTel: "+498212621462",
   email: "praxis_rauch@icloud.com",
   geo: { lat: 48.33937, lng: 10.94893 },
+  schemaImage: "https://rauch-heilpraktiker.de/images/hero-praxis.jpg",
+  openingDays: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+  openingIntervals: [
+    { opens: "10:00", closes: "12:30" },
+    { opens: "13:00", closes: "19:00" },
+  ],
   hours: "Montag bis Freitag, 10:00–12:30 und 13:00–19:00 Uhr, nach Vereinbarung",
   hoursShort: "Mo–Fr 10–12:30 · 13–19 Uhr",
   mapsQuery:

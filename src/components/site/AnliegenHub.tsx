@@ -32,7 +32,7 @@ import {
   ReviewStrip,
 } from "@/components/site/Shared";
 import { PhoneChip } from "@/components/site/Design";
-import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/site/JsonLd";
+import { BreadcrumbJsonLd } from "@/components/site/JsonLd";
 import { PageHeroSlider, type HeroSlide } from "@/components/site/PageHeroSlider";
 
 /** .jpg/.png-Archivpfade auf vorhandene .webp umbiegen (wie HubFromArchive). */
@@ -123,7 +123,6 @@ export function AnliegenHub({ anliegen }: { anliegen: Anliegen }) {
 
   return (
     <>
-      <FaqJsonLd items={anliegen.faqs} />
       <BreadcrumbJsonLd
         items={[
           { name: "Start", href: "/" },

@@ -38,7 +38,7 @@ import {
   WarningNote,
 } from "@/components/site/Design";
 import { PageHeroSlider } from "@/components/site/PageHeroSlider";
-import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/site/JsonLd";
+import { BreadcrumbJsonLd } from "@/components/site/JsonLd";
 
 const ICONS = [Leaf, Heart, Stethoscope, Sparkles, Shield, BookOpen];
 
@@ -151,7 +151,6 @@ export function HubFromArchive({
 
   return (
     <>
-      <FaqJsonLd items={practiceFaqs} />
       <BreadcrumbJsonLd
         items={[
           { name: "Start", href: "/" },

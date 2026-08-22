@@ -21,7 +21,6 @@ import {
 } from "@/components/site/Shared";
 import { FeatureRow, PhoneChip, QuotePanel } from "@/components/site/Design";
 import { HeroSlider } from "@/components/site/HeroSlider";
-import { FaqJsonLd } from "@/components/site/JsonLd";
 import { HomeAc } from "@/components/site/HomeAc";
 import { getArchiveBySlug } from "@/content/archive";
 import { guessTopicHref } from "@/lib/hub-blocks";
@@ -88,7 +87,6 @@ function Home() {
   const { ac } = useMusterSkin();
   return (
     <>
-      <FaqJsonLd items={practiceFaqs} />
       {ac ? <HomeAc /> : <HomeLegacy />}
     </>
   );

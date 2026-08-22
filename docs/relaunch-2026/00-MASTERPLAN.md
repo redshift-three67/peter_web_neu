@@ -337,9 +337,9 @@ test("one valid decision exists per live URL", () => {
 
 **Files:** Modify `src/content/site.ts`, `src/components/site/JsonLd.tsx`, FAQPage-Caller; create `scripts/seo-contract.test.mjs`.
 
-- [ ] Roten Test schreiben: kein `aggregateRating`, absolute Bild-URL, zwei Öffnungsintervalle, keine produktive FAQPage-Strategie.
-- [ ] `node --test scripts/seo-contract.test.mjs` muss zunächst fehlschlagen.
-- [ ] JSON-LD implementieren:
+- [x] Roten Test schreiben: kein `aggregateRating`, absolute Bild-URL, zwei Öffnungsintervalle, keine produktive FAQPage-Strategie.
+- [x] `node --test scripts/seo-contract.test.mjs` muss zunächst fehlschlagen.
+- [x] JSON-LD implementieren:
 
 ```ts
 image: "https://rauch-heilpraktiker.de/images/hero-praxis.jpg",
@@ -349,9 +349,11 @@ openingHoursSpecification: [
 ],
 ```
 
-- [ ] `aggregateRating` vollständig entfernen; sichtbare belegte Portalbewertungen dürfen bleiben.
+- [x] `aggregateRating` vollständig entfernen; sichtbare belegte Portalbewertungen dürfen bleiben.
 - [ ] Product Owner bestätigt E-Mail, Öffnungszeiten und Bewertungszahlen; sonst bleibt Gate geschlossen.
-- [ ] `npm test && npm run typecheck && npm run lint`; Commit `fix: align practice structured data with search policies`.
+- [x] `npm test && npm run typecheck && npm run lint`; Commit `fix: align practice structured data with search policies`.
+
+Code- und Teststand am 2026-08-22: 48/48 Tests, Typecheck Exit 0, Lint Exit 0 mit drei bekannten Warnungen. `STAT-017` und `STAT-026` bleiben bis zum externen Entwickler-/Validatorreview bewusst `bestätigt mit Einschränkungen`; die autoritative NAP-/Profilfreigabe wird separat unter `STAT-027` geführt.
 
 ### Task 5: Canonicals und Redirects
 

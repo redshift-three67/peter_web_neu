@@ -19,7 +19,7 @@ import {
 } from "@/components/site/Shared";
 import { PhoneChip, WarningNote } from "@/components/site/Design";
 import { PageHeroSlider } from "@/components/site/PageHeroSlider";
-import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/site/JsonLd";
+import { BreadcrumbJsonLd } from "@/components/site/JsonLd";
 
 function mediaSrc(local: string | null | undefined) {
   if (!local) return "";
@@ -105,7 +105,6 @@ export function NlsNeko({
 
   return (
     <>
-      <FaqJsonLd items={practiceFaqs} />
       <BreadcrumbJsonLd
         items={[
           { name: "Start", href: "/" },

@@ -74,7 +74,7 @@ Die neue Rauch-Website ist eine fortgeschrittene, lauffähige Relaunch-Codebasis
 1. Eine fachlich und GSC-gestützt freigegebene 64-URL-Migrationsmatrix fehlt.
 2. GSC-Baseline-Exporte liegen nicht im Workspace.
 3. Der Node-/Containervertrag für den bevorzugten `managed-container`-Betrieb fehlt.
-4. `MedicalBusiness`-JSON-LD enthält ein selbstbezogenes Rating, eine relative Bild-URL und unvollständige Öffnungsintervalle.
+4. Der Codevertrag für `MedicalBusiness`-JSON-LD ist korrigiert und mit 4/4 Vertragstests belegt; externe Schema-Validator-, Entwickler- und autoritative NAP-Freigaben stehen noch aus.
 5. Der Online-Anamnesebogen schreibt Gesundheitsdaten als Klartext-JSON in die allgemeine Datenbank.
 6. Ein vollständiges WXR-/WordPress-/Plesk-Abschalt- und Restorepaket fehlt.
 7. Vollständige fachlich-rechtliche Inhalts-, Accessibility-, Performance- und Cutover-Abnahmen fehlen.
@@ -193,9 +193,9 @@ Der Masterplan deckt Architektur, P0/P1-Risiken, Zielverträge, zwölf Umsetzung
 | 18 Hubpfade in drei Wellen         | `src/content/hubs.ts`         | bestätigt                                |
 | `npm test` = 0 Tests (Baseline)    | Ausgangsprüfung               | historisch bestätigt                     |
 | direkter Node-Test = 41/41         | Ausgangsprüfung               | historisch bestätigt                     |
-| `npm test` = 44/44 plus Null-Gate  | Task-1-Fortschreibung         | bestätigt                                |
+| `npm test` = 48/48 plus Null-Gate  | Task-4-Fortschreibung         | bestätigt                                |
 | Nitro-Preset Vercel                | `vite.config.ts:148-150`      | bestätigt                                |
-| Rating und relative Bild-URL       | `JsonLd.tsx:11,42-47`         | bestätigt                                |
+| Rating und relative Bild-URL       | historischer Ausgangsbefund; `practice-json-ld.ts` und SEO-Vertragstest | code-seitig geschlossen, externe Freigabe offen |
 | Gesundheits-JSON in allgemeiner DB | `actions.ts:33-72`, Migration | bestätigt                                |
 | Relaunch-Default                   | `design-skin.ts:27,39-46`     | bestätigt mit localStorage-Einschränkung |
 | WXR und GSC-Baseline fehlen        | Dateiinventar                 | bestätigt                                |
@@ -616,7 +616,7 @@ Zugangsdaten dürfen niemals im Chat oder Repository übermittelt werden.
 | R-01 | QA            | `npm test` kann mit null Tests grün wirken    | geschlossen        | 44/44 über Standardscript; Nulltreffer = 1  |
 | R-02 | SEO           | 64 Alt-URLs ohne freigegebene Matrix          | P0                 | 64 eindeutige Entscheidungen, keine Ketten  |
 | R-03 | GSC           | Ranking-/Indexdaten fehlen                    | P0                 | datierte private Baseline                   |
-| R-04 | Schema        | Rating, relative Bild-URL, Öffnungszeiten     | P0                 | getestetes freigegebenes JSON-LD            |
+| R-04 | Schema        | Rating, relative Bild-URL, Öffnungszeiten     | P0 externe Freigabe | Codevertrag 4/4; Validator-/Reviewfreigabe  |
 | R-05 | Datenschutz   | Gesundheits-JSON in allgemeiner DB            | P0                 | standardmäßig kein Schreibpfad              |
 | R-06 | Deployment    | kein Node-/Containervertrag                   | P0                 | produktionsnaher Container und `/healthz`   |
 | R-07 | WordPress     | kein vollständiges Abschaltarchiv             | P0 vor Abschaltung | isoliert getesteter Restore                 |
@@ -627,7 +627,7 @@ Zugangsdaten dürfen niemals im Chat oder Repository übermittelt werden.
 | R-12 | Medien        | Rechte/Varianten nicht vollständig belegt     | P1                 | Medienrechte- und Ableitungsmatrix          |
 | R-13 | CMS           | ContentProvider und Payload-Stufe 2 fehlen    | P2                 | Contract-getesteter Pilotinhalt             |
 | R-14 | SEO           | Slash-/Canonical-Vertrag nicht umgesetzt      | P0                 | direkte 301-Normalisierung ohne Ketten      |
-| R-15 | Schema        | FAQPage-Strategie nicht bereinigt             | P1                 | sichtbare FAQs ohne strategisches Markup    |
+| R-15 | Schema        | FAQPage-Strategie nicht bereinigt             | P1 externe Freigabe | Markup entfernt, sichtbare FAQs erhalten     |
 | R-16 | Local SEO     | NAP-/Öffnungszeiten nicht autoritativ geklärt | P1                 | bestätigte Stammdaten und Profilabgleich    |
 | R-17 | Inhalt        | NLS-Diagnostik/Kontakt/Linkprofil noch offen  | P1                 | fachlich abgenommene Welle 2                |
 | R-18 | Plattform     | External-App-Vertrag noch unversioniert       | P0 vor Integration | reproduzierbarer Plattform-Commit und Tests |
@@ -641,7 +641,7 @@ Der verbindliche Ausführungsplan ist `docs/relaunch-2026/00-MASTERPLAN.md`. Sei
 1. Test-Gate reparieren (geschlossen).
 2. GSC- und 64-URL-Matrix erzeugen.
 3. WordPress-/Plesk-Abschaltarchiv erfassen.
-4. NAP und strukturierte Daten korrigieren.
+4. NAP und strukturierte Daten korrigieren (Codevertrag umgesetzt; externe Validator-/NAP-Freigabe offen).
 5. Canonicals und Redirects implementieren.
 6. Welle 2, E-E-A-T und HWG-Review abschließen.
 7. Gesundheitsdaten-Submit begrenzen.
