@@ -54,6 +54,14 @@ test("legacy route and historical migration remain intact", () => {
   );
   assert.equal(existsSync(MIGRATION_PATH), true);
 });
+
+test("deployable prebuilt output is not tracked", () => {
+  const tracked = execFileSync("git", ["ls-files", "--", ".vercel/output"], {
+    cwd: ROOT,
+    encoding: "utf8",
+  }).trim();
+  assert.equal(tracked, "");
+});
 ```
 
 - [ ] **Step 2: Run the targeted test and verify RED**
@@ -166,6 +174,8 @@ Remove the incorrect claim that anamnesis data is transmitted through the relaun
 - Delete: `src/components/site/AnamneseWizard.tsx`
 - Modify: `src/lib/actions.ts`
 - Modify: `src/routes/praxis.tsx`
+- Modify: `.gitignore`
+- Remove from version control: generated `.vercel/output`
 - Verify unchanged: `migrations/0002_practice.sql`
 - Test: `scripts/health-data-boundary.test.mjs`
 
@@ -230,9 +240,13 @@ Run:
 node --test scripts/health-data-boundary.test.mjs
 ```
 
-Expected: all four boundary tests pass.
+Expected: all seven boundary tests pass.
 
-- [ ] **Step 6: Commit the focused source boundary**
+- [ ] **Step 6: Remove deployable generated output from Git**
+
+Add `.vercel/output/` to `.gitignore` and remove the generated directory from version control. The files are reproducible through `npm run build`; no historical prebuilt bundle may remain directly deployable from the repository.
+
+- [ ] **Step 7: Commit the focused source boundary**
 
 Stage the boundary test, external-link contract, route corrections, wizard deletion, action cleanup, and inbox cleanup. Commit with:
 
@@ -301,7 +315,7 @@ npm run build
 
 Expected: targeted tests and full suite pass; typecheck and build exit 0; lint has 0 errors and only the three documented baseline warnings.
 
-The build rewrites tracked generator output in this repository. After recording the successful build, restore only `.vercel/output` and `src/routeTree.gen.ts` to the current source commit; confirm no Task-7 source or documentation file is discarded.
+The build rewrites `src/routeTree.gen.ts` and creates ignored `.vercel/output`. After recording the successful build, restore only `src/routeTree.gen.ts` to the current source commit and remove the ignored generated output; confirm no Task-7 source or documentation file is discarded.
 
 - [ ] **Step 2: Inspect the local route in Chrome**
 

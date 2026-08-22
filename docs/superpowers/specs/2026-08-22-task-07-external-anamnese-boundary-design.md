@@ -99,6 +99,8 @@ Update `src/routes/datenschutzerklaerung.tsx` so the active privacy copy no long
 
 Any later database-retention or deletion decision requires a separate, authorized data-governance task with backup, retention, and recovery evidence.
 
+Generated deployable output is not a source artifact. `.vercel/output` must not be tracked because a historical prebuilt bundle could otherwise retain and redeploy removed health-data functionality. Release output is rebuilt from the verified source commit.
+
 ## Route and navigation behavior
 
 - `/online-anamnesebogen` remains a local 200 information page and remains in the sitemap.
@@ -121,6 +123,7 @@ The contract test reads the real production sources and verifies:
 6. `src/routes/praxis.tsx` contains no local anamnesis inbox section or `forms` access;
 7. the compatibility route `/anamnese` still redirects to `/online-anamnesebogen`;
 8. the historical migration file still exists.
+9. `.vercel/output` contains no tracked deployable files.
 
 The implementation diff is separately checked to prove that the historical migration was not modified. The source contract does not infer database history from file contents.
 

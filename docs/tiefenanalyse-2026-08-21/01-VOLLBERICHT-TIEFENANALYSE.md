@@ -195,7 +195,7 @@ Der Masterplan deckt Architektur, P0/P1-Risiken, Zielverträge, zwölf Umsetzung
 | `npm test` = 0 Tests (Baseline)    | Ausgangsprüfung               | historisch bestätigt                     |
 | direkter Node-Test = 41/41         | Ausgangsprüfung               | historisch bestätigt                     |
 | `npm test` = 48/48 plus Null-Gate  | Task-4-Fortschreibung         | bestätigt                                |
-| `npm test` = 53/53 plus Null-Gate  | Task-7-Fortschreibung         | bestätigt                                |
+| `npm test` = 55/55 plus Null-Gate  | Task-7-Fortschreibung         | bestätigt                                |
 | Nitro-Preset Vercel                | `vite.config.ts:148-150`      | bestätigt                                |
 | Rating und relative Bild-URL       | historischer Ausgangsbefund; `practice-json-ld.ts` und SEO-Vertragstest | code-seitig geschlossen, externe Freigabe offen |
 | Gesundheits-JSON in allgemeiner DB | historischer Ausgangsbefund; Boundary-Test und aktuelle Produktionsquellen | geschlossen; kein lokaler Anamnese-Schreib- oder Lesepfad |
@@ -480,16 +480,16 @@ Nicht abschließend belegt sind:
 
 ## 18. Datenschutz und Sicherheit
 
-### 18.1 Kritischer Gesundheitsdatenbefund
+### 18.1 Historischer Gesundheitsdatenbefund und geschlossene Website-Grenze
 
-`submitAnamnese` verarbeitet unter anderem Geburtsdatum, Anliegen, Diagnosen, Medikation, Allergien und weitere Gesundheitsinformationen. Die Funktion:
+Im geprüften Ausgangsstand verarbeitete `submitAnamnese` unter anderem Geburtsdatum, Anliegen, Diagnosen, Medikation, Allergien und weitere Gesundheitsinformationen. Die damalige Funktion:
 
 1. validiert die Eingabe;
 2. serialisiert sie vollständig mit `JSON.stringify`;
 3. schreibt sie in `anamnesis_submissions.payload` als `text`;
 4. besitzt im geprüften Code kein Auth-, Verschlüsselungs-, Retention- oder separates Freigabegate.
 
-Dies verletzt den im Masterplan festgelegten Gesundheitsdaten-Grenzvertrag. Der produktive Submit muss standardmäßig geschlossen bleiben, bis ein separater freigegebener Fachdienst existiert.
+Dieser historische Stand verletzte den Gesundheitsdaten-Grenzvertrag. Seit Task 7 enthält die Relaunch-Website keinen lokalen Anamnese-Wizard, Submit-, Tabellen- oder Inbox-Pfad mehr. `/online-anamnesebogen` informiert über die Grenze und verlinkt ausschließlich die eigenständige externe App; eine spätere lokale Reaktivierung ist nicht vorgesehen. Die externe App und ihre Datenschutz-, Authentisierungs-, Speicher-, Aufbewahrungs- und Löschprozesse wurden in diesem Repository-Task nicht abgenommen.
 
 ### 18.2 Weitere technische Prüfpunkte
 
@@ -556,7 +556,7 @@ Task 1 schließt das frühere npm-Nichtnull-Gate: `scripts/run-tests.mjs` ermitt
 - mobile Kernrouten-E2E;
 - Accessibility- und Performancegate.
 
-Der SEO-/Schema-Codevertrag ist seit Task 4 automatisiert (4/4 Zieltests); der aktuelle Gesamtstand umfasst 53/53 Tests. Der externe Entwicklerreview ist freigegeben. Schema-Validator- und autoritative NAP-Freigaben bleiben getrennte offene Abnahmen. Die eingecheckte historische `.vercel/output`-Momentaufnahme ist kein freigegebenes Prebuilt-Releaseartefakt; Releases müssen aus dem geprüften Quellstand neu gebaut werden, bis Task 8 den Deploymentvertrag verbindlich regelt.
+Der SEO-/Schema-Codevertrag ist seit Task 4 automatisiert (4/4 Zieltests); der aktuelle Gesamtstand umfasst 55/55 Tests. Der externe Entwicklerreview ist freigegeben. Schema-Validator- und autoritative NAP-Freigaben bleiben getrennte offene Abnahmen. Das historische `.vercel/output` wurde aus der Versionskontrolle entfernt und wird ignoriert; Releases müssen aus dem geprüften Quellstand neu gebaut werden, bis Task 8 den Deploymentvertrag verbindlich regelt.
 
 ## 21. Widersprüche und veraltete Informationen
 
@@ -615,11 +615,11 @@ Zugangsdaten dürfen niemals im Chat oder Repository übermittelt werden.
 
 | ID   | Bereich       | Risiko                                        | Prio               | Abnahme                                     |
 | ---- | ------------- | --------------------------------------------- | ------------------ | ------------------------------------------- |
-| R-01 | QA            | `npm test` kann mit null Tests grün wirken    | geschlossen        | aktuell 53/53 über Standardscript; Nulltreffer = 1 |
+| R-01 | QA            | `npm test` kann mit null Tests grün wirken    | geschlossen        | aktuell 55/55 über Standardscript; Nulltreffer = 1 |
 | R-02 | SEO           | 64 Alt-URLs ohne freigegebene Matrix          | P0                 | 64 eindeutige Entscheidungen, keine Ketten  |
 | R-03 | GSC           | Ranking-/Indexdaten fehlen                    | P0                 | datierte private Baseline                   |
 | R-04 | Schema        | Rating, relative Bild-URL, Öffnungszeiten     | P0 Validator/NAP   | Codevertrag 4/4 und Entwicklerreview freigegeben; Validator/NAP offen |
-| R-05 | Datenschutz   | Gesundheits-JSON in allgemeiner DB            | geschlossen        | lokale Anamnese-Funktion entfernt; 5/5 Boundary-Tests |
+| R-05 | Datenschutz   | Gesundheits-JSON in allgemeiner DB            | geschlossen        | lokale Funktion und getracktes Alt-Prebuild entfernt; 7/7 Boundary-Tests |
 | R-06 | Deployment    | kein Node-/Containervertrag                   | P0                 | produktionsnaher Container und `/healthz`   |
 | R-07 | WordPress     | kein vollständiges Abschaltarchiv             | P0 vor Abschaltung | isoliert getesteter Restore                 |
 | R-08 | Infrastruktur | interne Cutoverdaten fehlen                   | P0 vor Cutover     | freigegebenes Infrastruktur-/Rollbackpaket  |
@@ -646,7 +646,7 @@ Der verbindliche Ausführungsplan ist `docs/relaunch-2026/00-MASTERPLAN.md`. Sei
 4. NAP und strukturierte Daten korrigieren (Codevertrag umgesetzt; externe Validator-/NAP-Freigabe offen).
 5. Canonicals und Redirects implementieren.
 6. Welle 2, E-E-A-T und HWG-Review abschließen.
-7. Gesundheitsdaten-Submit begrenzen.
+7. Externe Online-Anamnese-Grenze herstellen (geschlossen; lokale Funktion entfernt).
 8. Node-/Containervertrag implementieren.
 9. Release-, Mobile-, Accessibility- und Performancegates etablieren.
 10. Rauch als external-app in der Plattform registrieren.

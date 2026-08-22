@@ -353,7 +353,7 @@ openingHoursSpecification: [
 - [ ] Product Owner bestätigt E-Mail, Öffnungszeiten und Bewertungszahlen; sonst bleibt Gate geschlossen.
 - [x] `npm test && npm run typecheck && npm run lint`; Commit `fix: align practice structured data with search policies`.
 
-Code- und Teststand am 2026-08-22 nach Task 7: 53/53 Tests, Typecheck Exit 0, Lint Exit 0 mit drei bekannten Warnungen und Build Exit 0. Der externe Entwicklerreview `RAUCH-TASK-04-REVIEW` ist ohne Findings freigegeben. `STAT-017` und `STAT-026` bleiben wegen ausstehender Schema-Validator-, NAP- beziehungsweise fachlich-redaktioneller Freigaben bewusst `bestätigt mit Einschränkungen`; die autoritative NAP-/Profilfreigabe wird separat unter `STAT-027` geführt.
+Code- und Teststand am 2026-08-22 nach Task 7: 55/55 Tests, Typecheck Exit 0, Lint Exit 0 mit drei bekannten Warnungen und Build Exit 0. Der externe Entwicklerreview `RAUCH-TASK-04-REVIEW` ist ohne Findings freigegeben. `STAT-017` und `STAT-026` bleiben wegen ausstehender Schema-Validator-, NAP- beziehungsweise fachlich-redaktioneller Freigaben bewusst `bestätigt mit Einschränkungen`; die autoritative NAP-/Profilfreigabe wird separat unter `STAT-027` geführt.
 
 ### Task 5: Canonicals und Redirects
 
@@ -390,14 +390,15 @@ test("slash variant redirects directly", async ({ request }) => {
 
 ### Task 7: Externe Online-Anamnese-Grenze
 
-**Files:** Create `scripts/health-data-boundary.test.mjs`, `src/content/external-links.ts`; delete `src/components/site/AnamneseWizard.tsx`; modify `src/lib/actions.ts`, `src/routes/online-anamnesebogen.tsx`, `src/routes/praxis.tsx` und aktive Grenztexte; verify unchanged `migrations/0002_practice.sql`.
+**Files:** Create `scripts/health-data-boundary.test.mjs`, `src/content/external-links.ts`; delete `src/components/site/AnamneseWizard.tsx`; modify `.gitignore`, `src/lib/actions.ts`, `src/routes/online-anamnesebogen.tsx`, `src/routes/praxis.tsx` und aktive Grenztexte; remove generated `.vercel/output` from version control; verify unchanged `migrations/0002_practice.sql`.
 
 - [x] Roten Boundary-Test gegen Wizard, Submit, Tabellenzugriff, lokalen Inbox-Pfad und unzutreffende aktive Grenztexte ausführen.
 - [x] Lokalen Wizard, Submit-Endpunkt und Anamnese-Inbox vollständig entfernen.
 - [x] Interne Informationsseite mit prominentem, sicherem externem Link zur eigenständigen Lovable-App ausgeben.
 - [x] `/anamnese` als Kompatibilitätsweiterleitung erhalten.
 - [x] Historische Migration und bestehende Daten unverändert lassen.
-- [x] 5/5 Boundary-Tests, 53/53 Gesamttests, Typecheck, Lint, Build und Chrome-Liveprüfung ausführen.
+- [x] Getracktes historisches `.vercel/output` entfernen und generierte Prebuilds ignorieren, damit kein alter Gesundheitsdatenpfad per `--prebuilt` deploybar bleibt.
+- [x] 7/7 Boundary-Tests, 55/55 Gesamttests, Typecheck, Lint, Build und Chrome-Liveprüfung ausführen.
 
 Die externe Lovable-App ist ein getrenntes System. Datenschutz, Authentisierung, Speicherung, Einwilligung, Aufbewahrung und Löschung innerhalb dieser App wurden in Task 7 nicht geprüft und dürfen aus dem bestätigten Website-Gate nicht abgeleitet werden.
 
