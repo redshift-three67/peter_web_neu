@@ -337,6 +337,10 @@ test("one valid decision exists per live URL", () => {
 - [x] Plesk/nginx-Paket aus §2.4 read-only erfassen; Secrets, Schlüssel und personenbezogene Logs ausschließen. Bereinigtes Inventar nur privat unter `data/private/plesk/2026-08-22/`; aktuelle Rollbackbasis und zeitlich abgegrenzte Logbaseline bleiben offen.
 - [x] Dokument je Paket mit `received`, `verified`, Datum und Prüfer aktualisieren.
 - [x] Updraft-Satz vom 14.08.2026 in Docker mit internem Netz und ohne Produktionszugriff wiederherstellen: 32.257 Nutzdateien, 166 Tabellen, HTTP 200, kein Redirect und `noindex` bestätigt. WXR-Differenz von einer Seite und drei Menüeinträgen dokumentiert; aktuelle Cutover-Rollbackbasis bleibt offen.
+- [x] Gate B extern ohne Findings freigegeben: `RAUCH-TASK-03-GATE-B-INFRA-REVIEW`; Nachweis `docs/developer-handoffs/2026-08-22-task-03-wordpress-archive/10-PLESK-INFRA-EXTERNES-REVIEW.json`.
+- [x] Gate C extern ohne Findings freigegeben: `RAUCH-TASK-03-GATE-C-RESTORE-REVIEW`; Nachweis `docs/developer-handoffs/2026-08-22-task-03-wordpress-archive/11-ISOLIERTER-RESTORE-EXTERNES-REVIEW.json`.
+- [ ] Unmittelbar vor Cutover eine tagesaktuelle WordPress-/Plesk-Sicherung erzeugen, erneut isoliert wiederherstellen und gegen den aktuellen Inhaltsstand abgleichen.
+- [ ] Zeitlich abgegrenzte anonymisierte 404-/Bot-/Error-Baseline und DevOps-Rollback-/Cutover-Freigabe dokumentieren. Bis dahin keine WordPress-Abschaltung oder Live-Umschaltung.
 - [x] Nur bereinigte Dokumentation committen: `docs: record verified migration evidence`; private Roharchive bleiben vollständig ignoriert.
 
 ### Task 4: NAP und strukturierte Daten

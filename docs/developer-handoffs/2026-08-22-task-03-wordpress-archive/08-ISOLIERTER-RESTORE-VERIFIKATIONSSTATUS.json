@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "document_id": "RAUCH-TASK-03-GATE-C-RESTORE-VERIFIKATIONSSTATUS-2026-08-22",
   "task": "Task 3: isolierter WordPress-Restore (Gate C)",
-  "status": "isolated_restore_implemented_verified_external_review_pending",
+  "status": "historical_isolated_restore_verified_external_reviews_approved_current_cutover_gates_open",
   "canonical_repository": "C:\\Users\\Hubert111\\Documents\\rauch_18_08_26_19_42\\repo-main",
   "canonical_branch": "relaunch-konzept",
   "commits": {
@@ -69,8 +69,8 @@
     "STAT-023": "teilweise bestätigt"
   },
   "open_gates": {
-    "gate_b_external_review_complete": false,
-    "gate_c_external_review_complete": false,
+    "gate_b_external_review_complete": true,
+    "gate_c_external_review_complete": true,
     "isolated_restore_tested": true,
     "current_cutover_rollback_basis_confirmed": false,
     "time_bounded_log_baseline_complete": false,
@@ -89,7 +89,9 @@
   "external_review": {
     "required": true,
     "review_id": "RAUCH-TASK-03-GATE-C-RESTORE-REVIEW",
-    "status": "pending"
+    "status": "approved",
+    "reviewed_commit": "eed8f137090be59df3131293278307bad82a6964",
+    "artifact": "docs/developer-handoffs/2026-08-22-task-03-wordpress-archive/11-ISOLIERTER-RESTORE-EXTERNES-REVIEW.json"
   },
-  "recommended_next_step": "Gate C extern prüfen lassen; danach unmittelbar vor Cutover eine aktuelle WordPress-/Plesk-Sicherung erzeugen, erneut isoliert wiederherstellen und zusammen mit Logbaseline und DevOps-Freigabe als Rollbackbasis bestätigen"
+  "recommended_next_step": "Unmittelbar vor Cutover eine aktuelle WordPress-/Plesk-Sicherung erzeugen, erneut isoliert wiederherstellen und zusammen mit zeitlich abgegrenzter anonymisierter Logbaseline und DevOps-Freigabe als Rollbackbasis bestätigen"
 }

@@ -52,6 +52,12 @@ Zulässige Statuswerte sind:
 | STAT-028 | SEO und Migration          | NLS-Diagnostik-, Kontakt- und Linkprofil-Welle 2 | nicht bestätigt               | P1                 |
 | STAT-029 | Headless-CMS-Integration   | Reproduzierbarer Plattform-Quellstand            | nicht bestätigt               | P0 vor Integration |
 
+**Task-3-Prüfgrenze:** Die externen Gate-B- und Gate-C-Reviews sind ohne
+Findings freigegeben. `STAT-014` und `STAT-023` bleiben dennoch `teilweise
+bestätigt`, weil eine tagesaktuelle Cutover-Rollbackbasis, deren erneuter
+isolierter Restore, die zeitlich abgegrenzte anonymisierte Logbaseline und die
+DevOps-Cutoverfreigabe weiterhin fehlen.
+
 ## Feldvertrag
 
 Die JSON-Datei enthält einen Provenienzblock mit `schema_version`, `document_id`, Prüfdatum, Quellreferenzen und erlaubten Status-/Prioritätswerten. Jedes Objekt unter `items` enthält vollständig:

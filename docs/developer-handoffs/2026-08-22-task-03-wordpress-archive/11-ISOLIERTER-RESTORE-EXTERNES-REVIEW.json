@@ -1,0 +1,53 @@
+{
+  "review_id": "RAUCH-TASK-03-GATE-C-RESTORE-REVIEW",
+  "reviewed_commit": "eed8f137090be59df3131293278307bad82a6964",
+  "verdict": "freigegeben",
+  "summary": "Der isolierte Restore des vorhandenen UpdraftPlus-Satzes vom 14.08.2026 auf E:\\Rauch-Restore-2026-08-22 wurde erfolgreich, regelkonform und isoliert (Docker-Netzwerk internal, keine Default-Route, keine Hostports, Plugins und MU-Plugins deaktiviert, lokale URLs, noindex, 166 Tabellen, HTTP 200) verifiziert. Die inhaltliche Differenz zum WXR-Export vom 22.08.2026 (+1 Seite, +3 Menüeinträge) ist transparent dokumentiert und schließt eine vorzeitige Cutover-Rollbackfreigabe korrekt aus. STAT-014 und STAT-023 bleiben teilweise bestätigt.",
+  "checks": {
+    "git_sync": "bestätigt",
+    "tracked_diff_scope": "bestätigt",
+    "private_evidence_ignored": "bestätigt",
+    "archive_path_safety": "bestätigt",
+    "archive_extraction_counts": "bestätigt",
+    "sql_copy_integrity": "bestätigt",
+    "database_restore_166_tables": "bestätigt",
+    "docker_internal_network": "bestätigt",
+    "no_default_route_or_effective_host_ports": "bestätigt",
+    "resource_limits": "bestätigt",
+    "plugins_and_mu_plugins_disabled": "bestätigt",
+    "local_url_and_noindex_contract": "bestätigt",
+    "core_table_url_rewrite": "bestätigt",
+    "container_internal_http_200": "bestätigt",
+    "no_auto_fetch_production_references": "bestätigt",
+    "wxr_database_age_difference": "bestätigt",
+    "status_documentation_consistency": "bestätigt",
+    "production_unchanged": "bestätigt",
+    "npm_test": "bestätigt",
+    "typecheck": "bestätigt",
+    "lint": "bestätigt",
+    "production_build": "bestätigt",
+    "containers_stopped_after_review": "bestätigt"
+  },
+  "findings": [],
+  "known_non_blocking_warnings": [
+    "scripts/wp-public-crawl.mjs: ungenutzter readFile-Import",
+    "src/components/site/DesignSkin.tsx: Fast-Refresh-Grenze",
+    "src/lib/auth/use-current-user.ts: ungenutzte ESLint-Deaktivierung",
+    "Vite-Build: Client-Hauptchunk überschreitet 500 kB nach Minifizierung (bekannte Warnung)"
+  ],
+  "gate_boundary": {
+    "gate_b_external_review_complete": true,
+    "historical_isolated_restore_complete": true,
+    "gate_c_external_review_complete": true,
+    "current_cutover_rollback_basis_confirmed": false,
+    "time_bounded_log_baseline_complete": false,
+    "wordpress_shutdown_authorized": false,
+    "cutover_authorized": false,
+    "task_3_fully_complete": false
+  },
+  "recommended_next_step": {
+    "task": "Task 3: aktuelle Cutover-Rollbackbasis und Logbaseline",
+    "decision": "vor_cutover_aktualisieren",
+    "reason": "Die technische Wiederherstellbarkeit des historischen Archivs ist belegt. Unmittelbar vor Cutover muss ein tagesaktueller Sicherungssatz erzeugt, isoliert verifiziert und zusammen mit der Logbaseline als Rollbackbasis bestätigt werden."
+  }
+}

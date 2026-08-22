@@ -79,12 +79,13 @@ Der WXR vom 22.08.2026 enthält 544 Attachments, 91 Seiten und 153
 Menüeinträge. Damit ist die technische Wiederherstellbarkeit des vorhandenen
 Satzes belegt, nicht aber seine Aktualität als Cutover-Rollbackbasis.
 
-`STAT-014` und `STAT-023` bleiben daher `teilweise bestätigt`. Offen bleiben:
+Die externen Reviews von Gate B und Gate C sind anschließend ohne Findings
+freigegeben worden. `STAT-014` und `STAT-023` bleiben dennoch `teilweise
+bestätigt`. Offen bleiben:
 
-1. externer Review von Gate B und Gate C;
-2. aktuelle WordPress-/Plesk-Sicherung unmittelbar vor Cutover;
-3. erneuter isolierter Restore dieser aktuellen Sicherung samt Inhaltsabgleich;
-4. zeitlich abgegrenzte anonymisierte 404-/Bot-/Error-Baseline;
-5. DevOps-Rollback- und Cutover-Freigabe.
+1. aktuelle WordPress-/Plesk-Sicherung unmittelbar vor Cutover;
+2. erneuter isolierter Restore dieser aktuellen Sicherung samt Inhaltsabgleich;
+3. zeitlich abgegrenzte anonymisierte 404-/Bot-/Error-Baseline;
+4. DevOps-Rollback- und Cutover-Freigabe.
 
 Eine WordPress-Abschaltung oder produktive Umschaltung ist nicht autorisiert.

@@ -1,0 +1,46 @@
+{
+  "review_id": "RAUCH-TASK-03-GATE-B-INFRA-REVIEW",
+  "reviewed_commit": "e22b715cd90739c6eb9406b231a4edb659a97055",
+  "verdict": "freigegeben",
+  "summary": "Plesk- und nginx-Infrastrukturdaten wurden vollständig read-only erfasst, bereinigt und strukturiert dokumentiert. Private Daten liegen ausschließlich unter data/private/ und sind durch .gitignore gesperrt. Die Grenzen (Plesk-Backups nur vom Juni, deaktivierter Zeitplan, noch keine aktuelle Rollbackbasis, noch keine zeitlich abgegrenzte Logbaseline) sind konsistent in allen Statusdokumenten, im Vollbericht und im Masterplan abgebildet. STAT-023 und STAT-014 stehen korrekt auf teilweise bestätigt.",
+  "checks": {
+    "git_sync": "bestätigt",
+    "tracked_diff_scope": "bestätigt",
+    "private_evidence_ignored": "bestätigt",
+    "private_inventory_json_valid": "bestätigt",
+    "hosting_and_redirect_inventory": "bestätigt",
+    "nginx_apache_php_inventory": "bestätigt",
+    "dns_ttl_soa_inventory": "bestätigt",
+    "tls_inventory_without_keys": "bestätigt",
+    "waf_cron_inventory": "bestätigt",
+    "backup_age_and_schedule_boundary": "bestätigt",
+    "anonymized_log_boundary": "bestätigt",
+    "status_documentation_consistency": "bestätigt",
+    "production_unchanged": "bestätigt",
+    "npm_test": "bestätigt",
+    "typecheck": "bestätigt",
+    "lint": "bestätigt",
+    "production_build": "bestätigt"
+  },
+  "findings": [],
+  "known_non_blocking_warnings": [
+    "scripts/wp-public-crawl.mjs: ungenutzter readFile-Import",
+    "src/components/site/DesignSkin.tsx: Fast-Refresh-Grenze",
+    "src/lib/auth/use-current-user.ts: ungenutzte ESLint-Deaktivierung",
+    "Vite-Build: Client-Hauptchunk überschreitet 500 kB nach Minifizierung (bekannte Warnung)"
+  ],
+  "gate_boundary": {
+    "plesk_configuration_inventory_complete": true,
+    "time_bounded_log_baseline_complete": false,
+    "isolated_restore_tested": false,
+    "current_cutover_rollback_basis_confirmed": false,
+    "wordpress_shutdown_authorized": false,
+    "cutover_authorized": false,
+    "task_3_fully_complete": false
+  },
+  "recommended_next_step": {
+    "task": "Task 3 Gate C: isolierter Restore und aktuelle Rollbackbasis",
+    "decision": "restore_umgebung_bereitstellen",
+    "reason": "Die Plesk-Inventarisierung ist vollständig; für Task 3 muss der isolierte Restore des WordPress-Archivsatzes nachgewiesen und die Rollbackbasis vor Cutover aktualisiert werden."
+  }
+}

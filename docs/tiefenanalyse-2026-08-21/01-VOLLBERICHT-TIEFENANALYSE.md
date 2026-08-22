@@ -76,7 +76,7 @@ Die neue Rauch-Website ist eine fortgeschrittene, lauffähige Relaunch-Codebasis
 2. Ein vorläufiger GSC-Performanceexport liegt privat vor, enthält trotz Dreimonatsfilter aber nur einen Datentag; eine belastbare Baseline und die weiteren GSC-Bereiche fehlen.
 3. Der Node-/Containervertrag für den bevorzugten `managed-container`-Betrieb fehlt.
 4. Der Codevertrag für `MedicalBusiness`-JSON-LD ist korrigiert, mit 4/4 Vertragstests und dem externen Entwicklerreview `RAUCH-TASK-04-REVIEW` belegt; Schema-Validator- und autoritative NAP-Freigaben stehen noch aus.
-5. WXR, WordPress-Updraft-Satz und Plesk-/nginx-Paket sind lokal verifiziert; der Updraft-Satz vom 14.08.2026 wurde isoliert wiederhergestellt. Eine aktuelle Cutover-Rollbackbasis und die zeitlich abgegrenzte Logbaseline fehlen.
+5. WXR, WordPress-Updraft-Satz und Plesk-/nginx-Paket sind lokal verifiziert; der Updraft-Satz vom 14.08.2026 wurde isoliert wiederhergestellt. Gate B und Gate C wurden extern ohne Findings freigegeben. Eine aktuelle Cutover-Rollbackbasis und die zeitlich abgegrenzte Logbaseline fehlen weiterhin.
 6. Vollständige fachlich-rechtliche Inhalts-, Accessibility-, Performance- und Cutover-Abnahmen fehlen.
 
 Das frühere P0-Gate zur lokalen Online-Anamnese ist am 2026-08-22 geschlossen worden: Der lokale Wizard, der Submit-/Tabellenpfad und die Anamnese-Inbox sind entfernt. Die Website zeigt eine Informationsroute und verlinkt ausschließlich die eigenständige externe App. Deren interne Datenschutz- und Speicherprozesse waren nicht Gegenstand dieser Repository-Prüfung.
@@ -150,9 +150,9 @@ Live-Werte sind zeitpunktbezogen und vor Cutover erneut zu prüfen.
 | Quelle                                             | Status                      | Auswirkung                                                                                           |
 | -------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
 | GSC-Performance- und Indexierungsexporte           | vorläufig und unvollständig | ein Performanceexport mit nur einem Datentag liegt privat vor; keine belastbare Baseline und keine vollständigen Indexierungs-/CWV-Nachweise |
-| Plesk/nginx-vHost-Konfiguration                    | read-only erfasst, Restgates offen | Hosting, Redirect, DNS/TTL, TLS, PHP, Proxy, Cache, WAF, Cron und vorhandene Backups intern dokumentiert; Plesk-Satz nur vom 03.–09.06.2026 und Abo-Zeitplan deaktiviert; zeitlich abgegrenzte Logbaseline und aktuelle Rollbackbasis fehlen |
+| Plesk/nginx-vHost-Konfiguration                    | read-only erfasst und extern freigegeben, Restgates offen | Hosting, Redirect, DNS/TTL, TLS, PHP, Proxy, Cache, WAF, Cron und vorhandene Backups intern dokumentiert; Gate B ohne Findings freigegeben; Plesk-Satz nur vom 03.–09.06.2026 und Abo-Zeitplan deaktiviert; zeitlich abgegrenzte Logbaseline und aktuelle Rollbackbasis fehlen |
 | WXR/XML-Export                                     | vorhanden und verifiziert   | 796 Objekte; XML-Wohlgeformtheit und SHA-256 bestätigt                                                |
-| WordPress-Datenbank-/Plugin-/Theme-/Snippet-Archiv | Restore mit Altersgrenze verifiziert | Updraft-Satz vom 14.08.2026 isoliert wiederhergestellt: 166 Tabellen und HTTP 200/noindex; gegenüber dem WXR vom 22.08.2026 fehlen eine Seite und drei Menüeinträge, daher keine aktuelle Cutover-Rollbackbasis |
+| WordPress-Datenbank-/Plugin-/Theme-/Snippet-Archiv | Restore mit Altersgrenze verifiziert und extern freigegeben | Updraft-Satz vom 14.08.2026 isoliert wiederhergestellt: 166 Tabellen und HTTP 200/noindex; Gate C ohne Findings freigegeben; gegenüber dem WXR vom 22.08.2026 fehlen eine Seite und drei Menüeinträge, daher keine aktuelle Cutover-Rollbackbasis |
 | Medienrechtsnachweise                              | nicht vollständig vorhanden | produktive Verwendung einzelner Bilder nicht abschließend freigabefähig                              |
 | fachmedizinische und rechtliche Einzelabnahme      | nicht vorhanden             | keine vollständige E-E-A-T-/HWG-/Inhaltsfreigabe                                                     |
 | produktionsnaher Node-Container                    | nicht implementiert         | kein abschließender E2E-, Performance- oder Cutovernachweis                                          |
@@ -514,7 +514,7 @@ Dies ist eine technische Risikobewertung. Rechtsgrundlage, Auftragsverarbeitung,
 
 ### 19.1 Alte Produktion
 
-Öffentlich verifiziert wurden nginx, PHP 8.2.33 und PleskLin. Plesk-vHost-Regeln, Cache, TLS-Konfiguration, DNS/TTL, WAF, Backups und Cronjobs sind read-only intern erfasst; der bestehende WordPress-Updraft-Satz ist privat integritäts- und restoregeprüft. Offen bleiben die aktuelle Cutover-Rollbackbasis, eine zeitlich abgegrenzte Logbaseline und die DevOps-Freigabe.
+Öffentlich verifiziert wurden nginx, PHP 8.2.33 und PleskLin. Plesk-vHost-Regeln, Cache, TLS-Konfiguration, DNS/TTL, WAF, Backups und Cronjobs sind read-only intern erfasst; der bestehende WordPress-Updraft-Satz ist privat integritäts- und restoregeprüft. Die externen Gate-B-/Gate-C-Reviews sind ohne Findings freigegeben. Offen bleiben die aktuelle Cutover-Rollbackbasis, eine zeitlich abgegrenzte Logbaseline und die DevOps-Freigabe.
 
 ### 19.2 Neue Zielumgebung
 

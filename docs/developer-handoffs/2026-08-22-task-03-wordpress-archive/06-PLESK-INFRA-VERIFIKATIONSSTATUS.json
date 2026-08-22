@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "document_id": "RAUCH-TASK-03-GATE-B-INFRA-VERIFIKATIONSSTATUS-2026-08-22",
   "task": "Task 3: Plesk-/nginx-Inventarisierung (Gate B)",
-  "status": "plesk_inventory_implemented_verified_external_review_pending",
+  "status": "plesk_inventory_implemented_verified_external_review_approved",
   "canonical_repository": "C:\\Users\\Hubert111\\Documents\\rauch_18_08_26_19_42\\repo-main",
   "canonical_branch": "relaunch-konzept",
   "commits": {
@@ -81,7 +81,9 @@
   "external_review": {
     "required": true,
     "review_id": "RAUCH-TASK-03-GATE-B-INFRA-REVIEW",
-    "status": "pending"
+    "status": "approved",
+    "reviewed_commit": "e22b715cd90739c6eb9406b231a4edb659a97055",
+    "artifact": "docs/developer-handoffs/2026-08-22-task-03-wordpress-archive/10-PLESK-INFRA-EXTERNES-REVIEW.json"
   },
-  "recommended_next_step": "Externen Gate-B-Infrastrukturreview durchführen; danach isolierte Restore-Umgebung festlegen und aktuellen WordPress-Archivsatz ohne Produktionszugriff wiederherstellen"
+  "recommended_next_step": "Gate B ist extern freigegeben; der anschließend ausgeführte historische Gate-C-Restore ist separat unter 11-ISOLIERTER-RESTORE-EXTERNES-REVIEW.json freigegeben. Aktuelle Rollbackbasis und zeitlich abgegrenzte Logbaseline bleiben bis unmittelbar vor Cutover offen"
 }
