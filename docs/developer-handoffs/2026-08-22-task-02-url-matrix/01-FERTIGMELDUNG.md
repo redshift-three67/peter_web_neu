@@ -18,7 +18,7 @@ Ausgangscommit:
 
 Zu prüfender Task-2-Implementierungscommit:
 
-`9a86e39d436a2d279fc96516d52ca6c9eaac372c`
+`f34c7fd5cee648ebdd65109fd324fe859fe14369`
 
 ## Commitfolge
 
@@ -32,7 +32,8 @@ Zu prüfender Task-2-Implementierungscommit:
 - `4664b0feaf0abcc3e784f67f2fa00da798f78088` – Verifikation und Paritätsbefund dokumentiert;
 - `f4393afa885bea31fe67bd5ee38f8859ea45f222` – interne Review-Härtung;
 - `36d2b58819aed08e1defd7a4ed2109229928922f` – Prüfprovenienz und Testzahlen konsolidiert.
-- `9a86e39d436a2d279fc96516d52ca6c9eaac372c` – plattformübergreifenden LF-Bytevertrag für die CSV erzwungen.
+- `9a86e39d436a2d279fc96516d52ca6c9eaac372c` – `eol=lf`-Policy und deren Attributvertrag ergänzt.
+- `f34c7fd5cee648ebdd65109fd324fe859fe14369` – Bytevergleich auf den versionierten Git-Blob statt die checkoutabhängige Arbeitskopie ausgerichtet.
 
 ## Umgesetzter Umfang
 
@@ -56,14 +57,14 @@ Zu prüfender Task-2-Implementierungscommit:
    - Selbstredirects, Root-Massenredirects, Ketten und Zyklen werden abgewiesen;
    - 301 und 410 verlangen GSC-Evidenz, `approval_status=approved` und eine reale Freigabeperson;
    - Pending-Zeilen dürfen weder Zielpfad/HTTP-Status noch Canonical/Sitemap-Felder deploybar setzen;
-   - die versionierte CSV muss byte-identisch zum Generatorergebnis sein.
-   - `.gitattributes` erzwingt für die Matrix `eol=lf`, damit der Bytevertrag auch bei `core.autocrlf=true` gilt.
+   - der versionierte CSV-Git-Blob muss byte-identisch zum Generatorergebnis sein;
+   - `.gitattributes` deklariert für künftige Materialisierungen `eol=lf`; der Bytevertrag selbst ist ausdrücklich unabhängig von der checkoutabhängigen Arbeitskopie.
 5. Statuskonsistenz
    - `STAT-011` steht auf `bestätigt mit Einschränkungen`;
    - `STAT-012` bleibt `derzeit nicht prüfbar`;
    - Masterplan, Vollbericht sowie JSON- und Markdown-Statusmatrix unterscheiden Gate A und Gate B ausdrücklich.
 
-## Frische Verifikation auf `9a86e39d436a2d279fc96516d52ca6c9eaac372c`
+## Frische Verifikation auf `f34c7fd5cee648ebdd65109fd324fe859fe14369`
 
 | Prüfung | Ergebnis |
 | --- | --- |
@@ -72,14 +73,14 @@ Zu prüfender Task-2-Implementierungscommit:
 | TDD RED – GSC-Import | 2/5; drei erwartete fehlende Parser-/CLI-Verträge |
 | TDD RED – Sicherheitsinvarianten | 5/13; acht erwartete Sicherheitsverletzungen noch akzeptiert |
 | TDD RED – Review-Härtung | 14/18, später 17/18; reproduzierbare Bypässe abgewiesen nach Implementierung |
-| TDD RED – Windows-Bytevertrag | 18/19; fehlendes `eol=lf` reproduzierte die CRLF-Abweichung im kanonischen Checkout |
+| TDD RED – Windows-Bytevertrag | 18/19; der Arbeitskopie-Vergleich reproduzierte die CRLF-Abweichung im kanonischen Checkout und belegte die notwendige Trennung von Git-Blob und Checkoutdarstellung |
 | Task-2-Vertragstest | 19/19 bestanden, Exit 0 |
 | `npm test` | 74/74 bestanden, 0 Fehler, Exit 0 |
 | `npm run typecheck` | Exit 0 |
 | `npm run lint` | Exit 0, 0 Fehler, 3 bekannte nicht blockierende Warnungen |
 | Generator | 64 Zeilen; 5 Keep; 59 Review; 0 Redirects; 0 Löschungen |
 | CSV-SHA-256 | `6B8B0A1E136ECCF6CA055817CDC5A426C4D2C5BB253555053A9E5D79C30A2A00` |
-| CSV-Bytevertrag | versioniertes Artefakt byte-identisch zum Generator |
+| CSV-Bytevertrag | versionierter Git-Blob byte-identisch zum Generator; `eol=lf` als Checkout-Policy bestätigt |
 | Statusmatrix-JSON | syntaktisch gültig |
 | Paritätsaudit gegen lokalen Server | 18 Seiten geprüft, Exit 0; weiterhin 49–95 % fehlende Merkmale, deshalb **keine** positive Inhaltsfreigabe; Task 6 |
 | `git diff --check` | Exit 0 |

@@ -10,17 +10,17 @@ Branch: `relaunch-konzept`
 
 Ausgangscommit: `35ad22503d6f4c67ced12df343bff7cbaa8ea346`
 
-Zu prüfender Task-2-Implementierungscommit: `9a86e39d436a2d279fc96516d52ca6c9eaac372c`
+Zu prüfender Task-2-Implementierungscommit: `f34c7fd5cee648ebdd65109fd324fe859fe14369`
 
 Verbindliche Entscheidungsgrenze: Gate A umfasst nur die deterministische 64-Zeilen-Struktur, den optionalen privaten GSC-Import und die Sicherheitsverträge. Gate B ist nicht erfüllt. Die 59 `temporary_noindex_review`-Zeilen sind keine Deindexierungsfreigabe und dürfen vor GSC- sowie Product-Owner-Freigabe nicht von Task 5 konsumiert werden.
 
 Prüfumfang:
 
-1. Führe `git fetch origin relaunch-konzept` aus und bestätige, dass der zu prüfende Implementierungscommit im aktuellen kanonischen Branch enthalten ist. Vergleiche den vollständigen Diff `35ad22503d6f4c67ced12df343bff7cbaa8ea346..9a86e39d436a2d279fc96516d52ca6c9eaac372c`.
+1. Führe `git fetch origin relaunch-konzept` aus und bestätige, dass der zu prüfende Implementierungscommit im aktuellen kanonischen Branch enthalten ist. Vergleiche den vollständigen Diff `35ad22503d6f4c67ced12df343bff7cbaa8ea346..f34c7fd5cee648ebdd65109fd324fe859fe14369`.
 2. Prüfe Design und Plan unter `docs/superpowers/specs/2026-08-22-task-02-url-matrix-design.md` und `docs/superpowers/plans/2026-08-22-task-02-url-matrix.md`.
 3. Prüfe `.gitignore` und bestätige, dass `data/private/gsc/`, `data/private/plesk/` und `data/private/wordpress-backup/` ignoriert werden. Suche nach versehentlich versionierten privaten Evidenzdateien.
 4. Führe `node scripts/build-url-matrix.mjs` aus. Bestätige exakt 64 Zeilen, 5 `keep_200_index`, 59 `temporary_noindex_review`, 0 `merge_301` und 0 `remove_410`.
-5. Bestätige, dass `docs/migration/url-migration-matrix.csv` byte-identisch zum Generatorergebnis ist, SHA-256 `6B8B0A1E136ECCF6CA055817CDC5A426C4D2C5BB253555053A9E5D79C30A2A00` besitzt und `.gitattributes` für diese Datei `text eol=lf` erzwingt.
+5. Bestätige, dass der versionierte Git-Blob `HEAD:docs/migration/url-migration-matrix.csv` byte-identisch zum Generatorergebnis ist und SHA-256 `6B8B0A1E136ECCF6CA055817CDC5A426C4D2C5BB253555053A9E5D79C30A2A00` besitzt. Bestätige getrennt, dass `.gitattributes` für künftige Checkouts `text eol=lf` deklariert; bewerte CRLF/LF der bereits materialisierten Arbeitskopie nicht als Änderung des Git-Blobs.
 6. Prüfe, dass jede `old_url` und jeder `old_path` eindeutig ist, die konkrete URL↔Pfad-Bindung dem Manifest entspricht und keine Manifest-URL fehlt oder fremde URL ergänzt wurde.
 7. Prüfe fehlende GSC-, Backlink-, Business- und Risikowerte auf `unknown` statt numerischer Null. Verifiziere mit synthetischer Eingabe, dass eine echte GSC-Null als `0` erhalten bleibt.
 8. Prüfe den GSC-Parser adversarial: deutsche/englische Pflichtspalten, Quotes, Dezimalkomma, Query/Fragment, fremder Host, doppelte Pfade, fehlende Pflichtspalten und ungültige Metriken.
@@ -39,7 +39,7 @@ Antworte ausschließlich mit einem syntaktisch gültigen JSON-Objekt nach diesem
 ```json
 {
   "review_id": "RAUCH-TASK-02-GATE-A-REVIEW",
-  "reviewed_commit": "9a86e39d436a2d279fc96516d52ca6c9eaac372c",
+  "reviewed_commit": "f34c7fd5cee648ebdd65109fd324fe859fe14369",
   "verdict": "freigegeben | freigegeben_mit_auflagen | nicht_freigegeben",
   "summary": "kurze, präzise Gesamtbewertung",
   "checks": {

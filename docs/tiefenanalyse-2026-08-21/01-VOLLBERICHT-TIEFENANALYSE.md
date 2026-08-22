@@ -4,7 +4,7 @@
 **Dokument-ID:** `TIEFENANALYSE-RAUCH-RELAUNCH-2026-08-21`<br>
 **Prüfdatum:** 2026-08-21, Zeitzone Europe/Berlin<br>
 **Geprüfter Rauch-Quellcommit:** `c6aa58ef980bdd4d84be3fcc9b237e1296693722`<br>
-**Statusfortschreibung:** 2026-08-22; Task-2-Implementierung geprüft bis `9a86e39` (die ursprüngliche Prüfprovenienz bleibt unverändert)<br>
+**Statusfortschreibung:** 2026-08-22; Task-2-Implementierung geprüft bis `f34c7fd` (die ursprüngliche Prüfprovenienz bleibt unverändert)<br>
 **Kanonischer Branch:** `relaunch-konzept`<br>
 **Repository:** `https://github.com/redshift-three67/peter_web_neu.git`<br>
 **Geprüfter Plattform-Basiscommit:** `2d233564ca98ed48a0a118a3165c242150448436`, ergänzt um einen nicht versionierten lokalen Arbeitsstand<br>
