@@ -76,7 +76,7 @@ Die neue Rauch-Website ist eine fortgeschrittene, lauffähige Relaunch-Codebasis
 2. Ein vorläufiger GSC-Performanceexport liegt privat vor, enthält trotz Dreimonatsfilter aber nur einen Datentag; eine belastbare Baseline und die weiteren GSC-Bereiche fehlen.
 3. Der Node-/Containervertrag für den bevorzugten `managed-container`-Betrieb fehlt.
 4. Der Codevertrag für `MedicalBusiness`-JSON-LD ist korrigiert, mit 4/4 Vertragstests und dem externen Entwicklerreview `RAUCH-TASK-04-REVIEW` belegt; Schema-Validator- und autoritative NAP-Freigaben stehen noch aus.
-5. WXR und ein vollständiger bestehender WordPress-Updraft-Satz sind lokal integritätsgeprüft; Plesk-/nginx-Paket und isolierter Restore fehlen.
+5. WXR, WordPress-Updraft-Satz und Plesk-/nginx-Paket sind lokal verifiziert; der Updraft-Satz vom 14.08.2026 wurde isoliert wiederhergestellt. Eine aktuelle Cutover-Rollbackbasis und die zeitlich abgegrenzte Logbaseline fehlen.
 6. Vollständige fachlich-rechtliche Inhalts-, Accessibility-, Performance- und Cutover-Abnahmen fehlen.
 
 Das frühere P0-Gate zur lokalen Online-Anamnese ist am 2026-08-22 geschlossen worden: Der lokale Wizard, der Submit-/Tabellenpfad und die Anamnese-Inbox sind entfernt. Die Website zeigt eine Informationsroute und verlinkt ausschließlich die eigenständige externe App. Deren interne Datenschutz- und Speicherprozesse waren nicht Gegenstand dieser Repository-Prüfung.
@@ -150,9 +150,9 @@ Live-Werte sind zeitpunktbezogen und vor Cutover erneut zu prüfen.
 | Quelle                                             | Status                      | Auswirkung                                                                                           |
 | -------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
 | GSC-Performance- und Indexierungsexporte           | vorläufig und unvollständig | ein Performanceexport mit nur einem Datentag liegt privat vor; keine belastbare Baseline und keine vollständigen Indexierungs-/CWV-Nachweise |
-| Plesk/nginx-vHost-Konfiguration                    | read-only erfasst, Restgates offen | Hosting, Redirect, DNS/TTL, TLS, PHP, Proxy, Cache, WAF, Cron und vorhandene Backups intern dokumentiert; Plesk-Satz nur vom 03.–09.06.2026 und Abo-Zeitplan deaktiviert; zeitlich abgegrenzte Logbaseline und isolierter Restore fehlen |
+| Plesk/nginx-vHost-Konfiguration                    | read-only erfasst, Restgates offen | Hosting, Redirect, DNS/TTL, TLS, PHP, Proxy, Cache, WAF, Cron und vorhandene Backups intern dokumentiert; Plesk-Satz nur vom 03.–09.06.2026 und Abo-Zeitplan deaktiviert; zeitlich abgegrenzte Logbaseline und aktuelle Rollbackbasis fehlen |
 | WXR/XML-Export                                     | vorhanden und verifiziert   | 796 Objekte; XML-Wohlgeformtheit und SHA-256 bestätigt                                                |
-| WordPress-Datenbank-/Plugin-/Theme-/Snippet-Archiv | vorhanden, Restore offen    | bestehender vollständiger Updraft-Satz und aktuelles Admininventar lokal verifiziert; isolierter Restore noch nicht protokolliert |
+| WordPress-Datenbank-/Plugin-/Theme-/Snippet-Archiv | Restore mit Altersgrenze verifiziert | Updraft-Satz vom 14.08.2026 isoliert wiederhergestellt: 166 Tabellen und HTTP 200/noindex; gegenüber dem WXR vom 22.08.2026 fehlen eine Seite und drei Menüeinträge, daher keine aktuelle Cutover-Rollbackbasis |
 | Medienrechtsnachweise                              | nicht vollständig vorhanden | produktive Verwendung einzelner Bilder nicht abschließend freigabefähig                              |
 | fachmedizinische und rechtliche Einzelabnahme      | nicht vorhanden             | keine vollständige E-E-A-T-/HWG-/Inhaltsfreigabe                                                     |
 | produktionsnaher Node-Container                    | nicht implementiert         | kein abschließender E2E-, Performance- oder Cutovernachweis                                          |
@@ -210,7 +210,7 @@ Der Masterplan deckt Architektur, P0/P1-Risiken, Zielverträge, zwölf Umsetzung
 - Die Catch-all-Route kann Archivseiten rendern, setzt aber `noindex,follow`; eine gerenderte Seite ist daher nicht automatisch ein freigegebenes Indexziel.
 - Der Build- und Hauptchunkbefund ist ein technischer Hinweis; reale CWV benötigen Release- und Felddaten.
 - Historische Browserläufe sind nützlich, ersetzen aber kein versioniertes Releasegate.
-- Der öffentliche Crawl wird inzwischen durch WXR, Datenbank-/Dateiarchive und Admininventar ergänzt; die isolierte Restoreprüfung bleibt unverzichtbar.
+- Der öffentliche Crawl wird inzwischen durch WXR, Datenbank-/Dateiarchive, Admininventar und den isolierten Restore des Satzes vom 14.08.2026 ergänzt; vor Cutover bleibt ein erneuter Restore der aktuellen Sicherung unverzichtbar.
 
 ## 8. Technische Architektur
 
@@ -353,11 +353,11 @@ Vorhanden und am 22.08.2026 lokal verifiziert:
 Weiterhin offen:
 
 - alle nicht öffentlichen URL-spezifischen Rank-Math-Felder, soweit sie einen zusätzlichen Migrationsnutzen besitzen;
-- isoliert getesteter und protokollierter Restore.
+- aktuelle WordPress-/Plesk-Cutover-Sicherung mit erneutem isolierten Restore und Inhaltsabgleich.
 
 ### 12.3 Einordnung
 
-Die vorhandenen Daten reichen für die Fortsetzung der Entwicklung und für eine integritätsgeprüfte WordPress-Archivbasis. Die Abschaltung bleibt bis zum isolierten Restore und zum Plesk-/nginx-/Rollbackpaket gesperrt.
+Die vorhandenen Daten reichen für die Fortsetzung der Entwicklung und für eine integritäts- sowie restoregeprüfte historische WordPress-Archivbasis. Die Abschaltung bleibt bis zur aktuellen WordPress-/Plesk-Rollbackbasis, zur zeitlich abgegrenzten Logbaseline und zur DevOps-Freigabe gesperrt.
 
 ## 13. Medieninventar
 
@@ -514,7 +514,7 @@ Dies ist eine technische Risikobewertung. Rechtsgrundlage, Auftragsverarbeitung,
 
 ### 19.1 Alte Produktion
 
-Öffentlich verifiziert wurden nginx, PHP 8.2.33 und PleskLin. Der bestehende WordPress-Updraft-Satz ist privat integritätsgeprüft. Nicht prüfbar bleiben Plesk-vHost-Regeln, Cache, TLS-Konfiguration, DNS/TTL, WAF/CDN, Plesk-Backups, Cronjobs und der isolierte Restore.
+Öffentlich verifiziert wurden nginx, PHP 8.2.33 und PleskLin. Plesk-vHost-Regeln, Cache, TLS-Konfiguration, DNS/TTL, WAF, Backups und Cronjobs sind read-only intern erfasst; der bestehende WordPress-Updraft-Satz ist privat integritäts- und restoregeprüft. Offen bleiben die aktuelle Cutover-Rollbackbasis, eine zeitlich abgegrenzte Logbaseline und die DevOps-Freigabe.
 
 ### 19.2 Neue Zielumgebung
 
@@ -606,7 +606,7 @@ Erhalten und integritätsgeprüft:
 
 Noch zwingend ausstehend:
 
-- isoliert getesteter und protokollierter Restore.
+- aktuelle Cutover-Sicherung mit erneutem isolierten Restore und Inhaltsabgleich.
 
 ### 22.3 Zwingend vor Cutover
 
@@ -635,7 +635,7 @@ Zugangsdaten dürfen niemals im Chat oder Repository übermittelt werden.
 | R-04 | Schema        | Rating, relative Bild-URL, Öffnungszeiten     | P0 Validator/NAP   | Codevertrag 4/4 und Entwicklerreview freigegeben; Validator/NAP offen |
 | R-05 | Datenschutz   | Gesundheits-JSON in allgemeiner DB            | geschlossen        | lokale Funktion und getracktes Alt-Prebuild entfernt; 7/7 Boundary-Tests |
 | R-06 | Deployment    | kein Node-/Containervertrag                   | P0                 | produktionsnaher Container und `/healthz`   |
-| R-07 | WordPress     | Archivdateien verifiziert, Restore ungetestet | P0 vor Abschaltung | isoliert getesteter Restore                 |
+| R-07 | WordPress     | historischer Restore verifiziert, aktuelle Basis fehlt | P0 vor Abschaltung | aktuelle Sicherung isoliert testen und freigeben |
 | R-08 | Infrastruktur | interne Cutoverdaten fehlen                   | P0 vor Cutover     | freigegebenes Infrastruktur-/Rollbackpaket  |
 | R-09 | Inhalt        | fachlich-rechtliche Welle 2/Governance offen  | P0 vor Go-live     | 19-Seiten-Reviewmatrix                      |
 | R-10 | Accessibility | kein vollständiges Releasegate                | P1                 | automatisierte und manuelle Abnahme         |
@@ -656,7 +656,7 @@ Der verbindliche Ausführungsplan ist `docs/relaunch-2026/00-MASTERPLAN.md`. Sei
 
 1. Test-Gate reparieren (geschlossen).
 2. GSC- und 64-URL-Matrix: strukturelle Baseline erzeugt; GSC-/Product-Owner-Gate für 59 Prüfzeilen offen.
-3. WordPress-Archiv ist dateiseitig erfasst; Plesk-Paket und isolierten Restore ergänzen.
+3. WordPress-Archiv und Plesk-Paket sind erfasst; historischer Restore ist verifiziert, aktuelle Cutover-Rollbackbasis und Logbaseline ergänzen.
 4. NAP und strukturierte Daten korrigieren (Codevertrag umgesetzt; externe Validator-/NAP-Freigabe offen).
 5. Canonicals und Redirects implementieren.
 6. Welle 2, E-E-A-T und HWG-Review abschließen.
@@ -734,13 +734,13 @@ Vor einer produktiven Freigabe müssen mindestens erfüllt sein:
 | Masterplan übergabefähig      | bestätigt mit Einschränkungen | mit diesem Bericht und Matrix eindeutig präzisiert            |
 | Entwickler kann beginnen      | bestätigt                     | lokale P0-Tasks sind ausführbar                               |
 | LLM kann ohne Chat übernehmen | bestätigt                     | Dokumentenhierarchie und strukturierte Statusmatrix vorhanden |
-| WordPress-Daten vollständig   | teilweise bestätigt           | WXR, vollständiger bestehender Updraft-Satz und Admininventar verifiziert; isolierter Restore und Plesk-Paket offen |
+| WordPress-Daten vollständig   | teilweise bestätigt           | WXR, bestehender Updraft-Satz, Admininventar und historischer Restore verifiziert; aktuelle Cutover-Sicherung mit Inhaltsabgleich offen |
 | SEO-Migration freigegeben     | nicht bestätigt               | Strukturmatrix vorhanden; GSC und fachliche Freigabe für 59 Prüfzeilen fehlen |
 | Headless-Stufe 1 fertig       | nicht bestätigt               | Container-/Health-/Plattformvertrag offen                     |
 | Headless-Stufe 2 fertig       | nicht bestätigt               | ContentProvider/Payload-Migration offen                       |
 | Go-live bereit                | nicht bestätigt               | mehrere P0-/P1-Gates offen                                    |
 
-**Nächste Maßnahme mit hohem Nutzen und geringem Risiko:** Für Task 2 nach ausreichender Datenreife einen vollständigen GSC-Export beschaffen und die 59 Prüfzeilen fachlich freigeben; Task 5 darf die Matrix vorher nicht konsumieren. Parallel ist Task 3 durch ein gültiges Plesk-/nginx-Paket und einen isolierten Restore zu schließen. JSON-LD und die Gesundheitsdatengrenze sind code-seitig bereits geschlossen und extern freigegeben.
+**Nächste Maßnahme mit hohem Nutzen und geringem Risiko:** Für Task 2 nach ausreichender Datenreife einen vollständigen GSC-Export beschaffen und die 59 Prüfzeilen fachlich freigeben; Task 5 darf die Matrix vorher nicht konsumieren. Task 3 benötigt vor Cutover eine aktuelle WordPress-/Plesk-Sicherung, deren erneuten isolierten Restore, die zeitlich abgegrenzte Logbaseline und die DevOps-Freigabe. JSON-LD und die Gesundheitsdatengrenze sind code-seitig bereits geschlossen und extern freigegeben.
 
 ## 28. Quellen- und Nachweisverzeichnis
 

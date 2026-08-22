@@ -165,7 +165,7 @@ Historische Detailakten bleiben verbindliche Ergänzungen, soweit dieser Masterp
 | Uploadinventar   | `content/wordpress/uploads-incoming-inventory.json` | 661 Dateien                                         |
 | Bildmapping      | `content/wordpress/image-map.json`                  | Quell-/Zielzuordnung                                |
 
-Der Rank-Math-Redirect-Array ist leer. URL-Level-Fokuskeywords und interne Einzelfelder fehlen; öffentlich wirksame Titles, Descriptions, Robots und Canonicals wurden gecrawlt. WXR/XML und ein vollständiger bestehender Updraft-Satz wurden am 22.08.2026 privat gesichert und integritätsgeprüft; der isolierte Restore bleibt vor WordPress-Abschaltung verpflichtend.
+Der Rank-Math-Redirect-Array ist leer. URL-Level-Fokuskeywords und interne Einzelfelder fehlen; öffentlich wirksame Titles, Descriptions, Robots und Canonicals wurden gecrawlt. WXR/XML und ein vollständiger bestehender Updraft-Satz wurden am 22.08.2026 privat gesichert und integritätsgeprüft. Der Updraft-Satz vom 14.08.2026 wurde am 22.08.2026 isoliert wiederhergestellt; wegen der Abweichung zum neueren WXR bleibt eine aktuelle Cutover-Sicherung mit erneutem Restore verpflichtend.
 
 `bilder.zip` enthält 666 Einträge, davon 657 Bilder. 607 Rasterdateien sind byteidentisch im Repo, alle 50 SVGs nach Textnormalisierung identisch; neue Bilder: 0. Sechs MP3 fehlen, werden aber nicht automatisch importiert. Log, Fortschritts-JSON und leere PHP-Debugdatei bleiben ausgeschlossen. Bildrechte müssen separat belegt werden.
 
@@ -175,7 +175,7 @@ Die Search-Console-Property wurde am 21.08.2026 neu verbunden. `gsc_property_con
 
 Von Plesk/nginx werden vor Cutover benötigt: Hosting/Document Root, Host-/HTTPS-Regeln, zusätzliche Direktiven und Redirects, DNS/TTLs, TLS-Metadaten ohne Schlüssel, PHP/Proxy/Cache, anonymisierte 404-/Bot-/Error-Auswertung, Backup-/Restoreweg, Cronjobs und WAF/CDN-Schicht.
 
-Read-only in Plesk 18.0.79 am 22.08.2026 bestätigt: Document Root `httpdocs`, kanonische Domain mit HTTP-zu-HTTPS-301, keine zusätzlichen Apache-Direktiven, nginx-Proxy und -Cache (64 MB/30 Tage), PHP 8.2.33 als dedizierte FPM-Anwendung, 18 DNS-Einträge mit Standard-TTL 1 Tag, Let’s Encrypt bis 13.10.2026 mit automatischer Verlängerung und HSTS, ModSecurity/Comodo im Blockiermodus, keine geplanten Aufgaben sowie sieben als gültig ausgewiesene Plesk-Backups. Der Plesk-Satz reicht nur vom 03. bis 09.06.2026; der abonnementspezifische Backupzeitplan ist deaktiviert und stellt daher keine aktuelle Cutover-Rollbackbasis dar. Die anonymisierte Logprüfung belegt die Verfügbarkeit von Access-/Warning-/Error-Daten und Fehler-/Bot-Vorkommen, ist aber keine zeitlich abgegrenzte Betriebsbaseline. Schlüssel, Kontokennungen und Logrohdaten wurden weder übernommen noch versioniert. Isolierter Restore, Rollback- und Cutover-Freigabe bleiben offen.
+Read-only in Plesk 18.0.79 am 22.08.2026 bestätigt: Document Root `httpdocs`, kanonische Domain mit HTTP-zu-HTTPS-301, keine zusätzlichen Apache-Direktiven, nginx-Proxy und -Cache (64 MB/30 Tage), PHP 8.2.33 als dedizierte FPM-Anwendung, 18 DNS-Einträge mit Standard-TTL 1 Tag, Let’s Encrypt bis 13.10.2026 mit automatischer Verlängerung und HSTS, ModSecurity/Comodo im Blockiermodus, keine geplanten Aufgaben sowie sieben als gültig ausgewiesene Plesk-Backups. Der Plesk-Satz reicht nur vom 03. bis 09.06.2026; der abonnementspezifische Backupzeitplan ist deaktiviert und stellt daher keine aktuelle Cutover-Rollbackbasis dar. Die anonymisierte Logprüfung belegt die Verfügbarkeit von Access-/Warning-/Error-Daten und Fehler-/Bot-Vorkommen, ist aber keine zeitlich abgegrenzte Betriebsbaseline. Schlüssel, Kontokennungen und Logrohdaten wurden weder übernommen noch versioniert. Der WordPress-Updraft-Satz vom 14.08.2026 wurde isoliert wiederhergestellt; aktuelle Rollbackbasis, Logbaseline und Cutover-Freigabe bleiben offen.
 
 ## 3. Kritische Befunde und Gates
 
@@ -334,8 +334,9 @@ test("one valid decision exists per live URL", () => {
 - [x] WXR unter `Werkzeuge -> Daten exportieren -> Alle Inhalte` erzeugen; XML-Wohlgeformtheit, 796 Objekte und SHA-256 `8AB2ABFB482EFD31621EE9FD47ED1A925107DC339C9BAB93C7EE085BD8DBF755` am 22.08.2026 verifiziert.
 - [x] Plugins/Themes/MU-Plugins/Snippets, Lesen-/Permalinkwerte und Seitenhierarchie read-only dokumentieren; bereinigtes Vollinventar ausschließlich privat abgelegt.
 - [x] Rank-Math global nicht erneut verlangen; vorhandener Export mit SHA-256 `DE3A7E86DF1ED7AE93ACBB32EB0839DAC1AE7888E80838B121EDBD502F68CCEC` bestätigt.
-- [x] Plesk/nginx-Paket aus §2.4 read-only erfassen; Secrets, Schlüssel und personenbezogene Logs ausschließen. Bereinigtes Inventar nur privat unter `data/private/plesk/2026-08-22/`; isolierter Restore und zeitlich abgegrenzte Logbaseline bleiben offen.
-- [x] Dokument je Paket mit `received`, `verified`, Datum und Prüfer aktualisieren; isolierten Restore ausdrücklich offen lassen.
+- [x] Plesk/nginx-Paket aus §2.4 read-only erfassen; Secrets, Schlüssel und personenbezogene Logs ausschließen. Bereinigtes Inventar nur privat unter `data/private/plesk/2026-08-22/`; aktuelle Rollbackbasis und zeitlich abgegrenzte Logbaseline bleiben offen.
+- [x] Dokument je Paket mit `received`, `verified`, Datum und Prüfer aktualisieren.
+- [x] Updraft-Satz vom 14.08.2026 in Docker mit internem Netz und ohne Produktionszugriff wiederherstellen: 32.257 Nutzdateien, 166 Tabellen, HTTP 200, kein Redirect und `noindex` bestätigt. WXR-Differenz von einer Seite und drei Menüeinträgen dokumentiert; aktuelle Cutover-Rollbackbasis bleibt offen.
 - [x] Nur bereinigte Dokumentation committen: `docs: record verified migration evidence`; private Roharchive bleiben vollständig ignoriert.
 
 ### Task 4: NAP und strukturierte Daten

@@ -5,11 +5,11 @@
 | Paket | Received | Verified | Datum | Prüfer | Nachweis und Grenze |
 |---|---:|---:|---|---|---|
 | Vollständiger WordPress-WXR-Export | ja | ja | 22.08.2026 | Codex | XML wohlgeformt; 796 Objekte, darunter 91 Seiten, 544 Anhänge und 153 Menüeinträge; SHA-256 `8AB2ABFB482EFD31621EE9FD47ED1A925107DC339C9BAB93C7EE085BD8DBF755` |
-| Bestehender UpdraftPlus-Satz vom 14.08.2026 | ja | ja, Dateiintegrität | 22.08.2026 | Codex | Datenbank, Plugins, Themes, MU-Plugins, sonstige Dateien und fünf Upload-Archive vollständig lokal; alle ZIP-/GZIP-Datenströme lesbar; Einzelhashes im privaten Inventar |
+| Bestehender UpdraftPlus-Satz vom 14.08.2026 | ja | ja, Dateiintegrität und isolierter Restore | 22.08.2026 | Codex | Datenbank, Plugins, Themes, MU-Plugins, sonstige Dateien und fünf Upload-Archive vollständig lokal; 32.257 Nutzdateien und 166 Tabellen isoliert wiederhergestellt; Einzelhashes im privaten Inventar |
 | WordPress-Admininventar | ja | ja | 22.08.2026 | Codex | 50 Plugins (34 aktiv, 16 inaktiv), 1 MU-Plugin, 3 Drop-ins, 4 Themes, 17 HFCM-Snippets (12 aktiv), Lesen-/Permalinkwerte, drei Administratorrollen ohne Personenangaben und flache Seitenhierarchie erfasst |
 | Rank-Math-Globalexport | ja | ja | 22.08.2026 | Codex | Vorhandener Export erneut gehasht; SHA-256 `DE3A7E86DF1ED7AE93ACBB32EB0839DAC1AE7888E80838B121EDBD502F68CCEC`; kein erneuter Export erforderlich |
-| Plesk-/nginx-/DNS-/TLS-Paket | ja | ja, mit Grenzen | 22.08.2026 | Codex | Read-only in Plesk 18.0.79 erfasst: `httpdocs`, HTTPS-301, leere zusätzliche Apache-Direktiven, nginx-Proxy/HTTP3/Static-Serving/Cache, PHP-FPM 8.2.33, 18 DNS-Einträge und TTL/SOA, TLS/HSTS ohne Schlüssel, WAF, keine Cronjobs, sieben gültige Plesk-Backups und vorhandener Restoreweg; Plesk-Satz nur vom 03.–09.06.2026 und Abo-Zeitplan deaktiviert; bereinigtes Inventar privat; zeitlich abgegrenzte Logbaseline und isolierter Restore offen |
-| Isolierter Restore | nein | nein | 22.08.2026 | – | Keine Wiederherstellung gegen Produktion ausführen; Test erst in einer isolierten Umgebung |
+| Plesk-/nginx-/DNS-/TLS-Paket | ja | ja, mit Grenzen | 22.08.2026 | Codex | Read-only in Plesk 18.0.79 erfasst: `httpdocs`, HTTPS-301, leere zusätzliche Apache-Direktiven, nginx-Proxy/HTTP3/Static-Serving/Cache, PHP-FPM 8.2.33, 18 DNS-Einträge und TTL/SOA, TLS/HSTS ohne Schlüssel, WAF, keine Cronjobs, sieben gültige Plesk-Backups und vorhandener Restoreweg; Plesk-Satz nur vom 03.–09.06.2026 und Abo-Zeitplan deaktiviert; bereinigtes Inventar privat; aktuelle Rollbackbasis und zeitlich abgegrenzte Logbaseline offen |
+| Isolierter Restore des Updraft-Satzes vom 14.08.2026 | ja | ja, mit Altersgrenze | 22.08.2026 | Codex | Docker-Netz `--internal`, keine Default-Route, DB ohne Hostport, WordPress-HTTP intern geprüft: 200, kein Redirect, `noindex`; 166 Tabellen, 544 Attachments, 90 Seiten und 150 Menüeinträge. WXR vom 22.08.2026 enthält 91 Seiten und 153 Menüeinträge; daher keine aktuelle Cutover-Rollbackfreigabe |
 
 Die Roharchive und die bereinigten Vollinventare liegen ausschließlich unter
 `data/private/wordpress-backup/2026-08-22/` und
@@ -17,12 +17,14 @@ Die Roharchive und die bereinigten Vollinventare liegen ausschließlich unter
 Keine Rohdatei, Datenbank, Benutzerangabe, Schlüssel, personenbezogene
 Logzeile oder interne Serverkennung wird in Git übernommen.
 
-Die erfolgreiche Datei- und Archivprüfung ist noch **keine Restore-Freigabe**.
-`STAT-014` bleibt bis zum isoliert protokollierten Restore nur teilweise
-bestätigt. `STAT-023` ist nach der read-only Plesk-Prüfung teilweise bestätigt;
-für eine vollständige Bestätigung fehlen weiterhin der isolierte
-Backup-/Rollbacktest, eine zeitlich abgegrenzte anonymisierte Logbaseline und
-die Cutover-Freigabe.
+Der bestehende Updraft-Satz wurde erfolgreich isoliert wiederhergestellt. Das
+ist noch **keine Abschalt- oder Cutover-Freigabe**: Die Datenbank stammt vom
+14.08.2026 und liegt gegenüber dem WXR vom 22.08.2026 um eine Seite und drei
+Menüeinträge zurück. `STAT-014` bleibt deshalb bis zu einer aktuellen,
+wiederhergestellten Cutover-Sicherung teilweise bestätigt. `STAT-023` bleibt
+ebenfalls teilweise bestätigt; zusätzlich fehlen die zeitlich abgegrenzte
+anonymisierte Logbaseline, eine aktuelle Rollbackbasis und die
+DevOps-Cutover-Freigabe.
 
 ## Erhalten
 
@@ -38,7 +40,7 @@ die Cutover-Freigabe.
 3. **PDFs** aus dem Downloadbereich – Binaries fehlten im Crawl, Seite `/downloadbereich-naturheilpraxis-rauch` ist vorbereitet.
 4. ProvenExpert-Widget (optional)
 5. Freigabe der **HWG-Texte** Seite für Seite (Wortlaut ist noch WP-Original)
-6. Freigabe einer **isolierten Restore-Umgebung**; niemals gegen die laufende Produktionswebsite testen
+6. Unmittelbar vor Cutover eine **aktuelle WordPress-/Plesk-Rollbackbasis** erzeugen, isoliert wiederherstellen und fachlich freigeben; niemals gegen die laufende Produktionswebsite testen
 7. Unmittelbar vor Cutover eine zeitlich abgegrenzte, anonymisierte **404-/Bot-/Error-Baseline** erzeugen; keine IPs, Referrer oder vollständigen Logzeilen versionieren
 
 ## Wiedervorlage / später

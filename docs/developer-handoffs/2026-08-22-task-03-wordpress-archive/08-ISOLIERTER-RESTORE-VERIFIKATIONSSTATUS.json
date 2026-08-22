@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "RAUCH-TASK-03-GATE-C-RESTORE-VERIFIKATIONSSTATUS-2026-08-22",
+  "task": "Task 3: isolierter WordPress-Restore (Gate C)",
+  "status": "isolated_restore_implemented_verified_external_review_pending",
+  "canonical_repository": "C:\\Users\\Hubert111\\Documents\\rauch_18_08_26_19_42\\repo-main",
+  "canonical_branch": "relaunch-konzept",
+  "commits": {
+    "base": "953450230120048f1175b5efd3e8794e5cb22940",
+    "evidence": null,
+    "handoff": null
+  },
+  "private_restore": {
+    "source_archive_date": "2026-08-14",
+    "source_path": "data/private/wordpress-backup/2026-08-22/updraft-2026-08-14/",
+    "restore_path": "E:\\Rauch-Restore-2026-08-22",
+    "tracked_by_git": false,
+    "production_data_exposed_in_report": false
+  },
+  "archive_verification": {
+    "zip_archives": 9,
+    "zip_entries": 35466,
+    "unsafe_payload_entries": 0,
+    "skipped_empty_windows_incompatible_directory_markers": 5,
+    "extracted_files": 32257,
+    "regular_directory_markers": 3204,
+    "extracted_file_mb": 2189.09,
+    "sql_mb": 66.89,
+    "sql_copy_sha256_match": true
+  },
+  "restore_verification": {
+    "database_tables": 166,
+    "database_check_passed": true,
+    "http_status": 200,
+    "redirect_location_empty": true,
+    "noindex_present": true,
+    "siteurl_local": true,
+    "home_local": true,
+    "normal_plugins_active": 0,
+    "mu_plugins_disabled": true,
+    "production_domain_occurrences_in_core_tables": 0,
+    "rendered_auto_fetch_production_references": 0,
+    "rendered_manual_production_href_references": 1
+  },
+  "isolation": {
+    "docker_network_internal": true,
+    "wordpress_default_route_present": false,
+    "database_published_ports": 0,
+    "wordpress_effective_published_ports": 0,
+    "container_memory_limit_mb_each": 768,
+    "container_cpu_limit_each": 2,
+    "wordpress_external_http_blocked": true,
+    "wordpress_cron_disabled": true,
+    "automatic_updates_disabled": true,
+    "restore_containers_stopped_cleanly": true,
+    "docker_desktop_and_wsl_stopped_after_verification": true
+  },
+  "content_comparison": {
+    "database_attachments": 544,
+    "wxr_attachments": 544,
+    "database_pages": 90,
+    "wxr_pages": 91,
+    "database_menu_items": 150,
+    "wxr_menu_items": 153,
+    "current_cutover_equivalence": false
+  },
+  "status_matrix": {
+    "STAT-014": "teilweise bestätigt",
+    "STAT-023": "teilweise bestätigt"
+  },
+  "open_gates": {
+    "gate_b_external_review_complete": false,
+    "gate_c_external_review_complete": false,
+    "isolated_restore_tested": true,
+    "current_cutover_rollback_basis_confirmed": false,
+    "time_bounded_log_baseline_complete": false,
+    "wordpress_shutdown_authorized": false,
+    "cutover_authorized": false,
+    "task_3_fully_complete": false
+  },
+  "production_actions": {
+    "wordpress_changed": false,
+    "plesk_changed": false,
+    "dns_changed": false,
+    "tls_changed": false,
+    "production_restore_executed": false,
+    "production_backup_created": false
+  },
+  "external_review": {
+    "required": true,
+    "review_id": "RAUCH-TASK-03-GATE-C-RESTORE-REVIEW",
+    "status": "pending"
+  },
+  "recommended_next_step": "Gate C extern prüfen lassen; danach unmittelbar vor Cutover eine aktuelle WordPress-/Plesk-Sicherung erzeugen, erneut isoliert wiederherstellen und zusammen mit Logbaseline und DevOps-Freigabe als Rollbackbasis bestätigen"
+}
