@@ -27,7 +27,7 @@ Zulässige Statuswerte sind:
 | STAT-003 | Qualitätssicherung         | npm-Testskript                                   | bestätigt                     | P0                 |
 | STAT-004 | Qualitätssicherung         | Direkte Node-Testsuite                           | bestätigt                     | Info               |
 | STAT-005 | Qualitätssicherung         | Typecheck und Lint                               | bestätigt mit Einschränkungen | P2                 |
-| STAT-006 | Deployment                 | Node-Containervertrag                            | nicht bestätigt               | P0                 |
+| STAT-006 | Deployment                 | Node-Containervertrag                            | bestätigt                     | P0                 |
 | STAT-007 | Headless-CMS-Integration   | Integrationsstufe 1 external-app                 | teilweise bestätigt           | P1                 |
 | STAT-008 | Headless-CMS-Integration   | Integrationsstufe 2 Payload-Content-Adapter      | nicht bestätigt               | P2                 |
 | STAT-009 | SEO und Migration          | Live-Seiten-Sitemap der alten Website            | bestätigt                     | Info               |

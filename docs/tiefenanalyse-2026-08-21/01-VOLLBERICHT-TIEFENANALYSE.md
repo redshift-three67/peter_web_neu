@@ -261,17 +261,20 @@ Diese Kopplungen verhindern die Integrationsstufe 1 nicht, müssen vor einer all
 
 **Status:** teilweise bestätigt.
 
-Das Architekturmodell ist klar: Rauch bleibt zunächst eine eigenständige TanStack-App und wird als Plattform-Workload registriert. Offen sind:
+Rauch bleibt zunächst eine eigenständige TanStack-App und wird als
+Plattform-Workload registriert. Der Website-seitige Vertrag ist seit Task 8
+produktionsnah bestätigt: `node-server`-Build, `start:node`, Dockerfile,
+`.dockerignore`, `/healthz`, automatisierter Node-Smoke und ein realer
+Non-root-Containerlauf sind grün. Offen bleiben die Plattform-Site-
+Registrierung, der Compose-Service, das Caddy-Routing und die Staging-Abnahme.
 
-- `node-server`-Build;
-- `start:node`;
-- Dockerfile und `.dockerignore`;
-- `/healthz`;
-- Plattform-Site-Seed;
-- Compose-Service;
-- Caddy-Routing und Staging-Abnahme.
-
-Read-only bestätigt ist, dass der lokale Plattform-Arbeitsbaum bereits `external-app`, `managed-container`, Upstream-Service/-Port, Healthcheckpfad, Runtime-Warnungen und Caddy-Fragmente modelliert. Diese Vertragsdateien sind dort jedoch noch unversioniert; außerdem fehlen ein Rauch-Site-Seed und ein Runtime-Manifest-Integrationstest. Damit ist die Architektur technisch konkret, aber noch nicht reproduzierbar abgenommen.
+Read-only bestätigt ist, dass der lokale Plattform-Arbeitsbaum bereits
+`external-app`, `managed-container`, Upstream-Service/-Port,
+Healthcheckpfad, Runtime-Warnungen und Caddy-Fragmente modelliert. Diese
+Vertragsdateien sind dort jedoch noch unversioniert; außerdem fehlen ein
+Rauch-Site-Seed und ein Runtime-Manifest-Integrationstest. Damit ist die
+Website-Workload reproduzierbar, die Integrationsstufe 1 insgesamt aber erst
+nach Task 10 abgenommen.
 
 ### 9.2 Stufe 2: Payload-Inhalte
 
@@ -528,7 +531,14 @@ Der bevorzugte Vertrag ist:
 - Routing beider Hosts über die Plattform;
 - Staging vor Live-Umschaltung.
 
-Der Quellcommit besitzt weder `Dockerfile` noch `/healthz` noch passende Build-/Startskripte. Die Plattformintegration ist daher noch nicht ausführbar abgeschlossen.
+Der Task-8-Feature-Branch besitzt den vollständigen Website-seitigen Vertrag.
+Ein echter Docker-Build und Containerlauf wurden am 2026-08-25 mit Docker
+29.7.2 verifiziert: Status `healthy`, Benutzer `node`/UID 1000, zwei CPUs,
+768 MiB RAM, `/healthz` HTTP 200 mit exakt `{"status":"ok"}` und
+`Cache-Control: no-store`; Startseite, Kontakt und
+`/online-anamnesebogen` lieferten ebenfalls HTTP 200. Die
+Plattformintegration bleibt bis zu Site-Seed, Compose/Caddy und
+Staging-Abnahme in Task 10 offen.
 
 ## 20. Tests und Qualitätssicherung
 
@@ -559,11 +569,18 @@ Task 1 schließt das frühere npm-Nichtnull-Gate: `scripts/run-tests.mjs` ermitt
 ### 20.3 Fehlende Releasegates
 
 - Redirect-/Canonical-E2E;
-- Node-Container- und Healthchecktest;
 - mobile Kernrouten-E2E;
 - Accessibility- und Performancegate.
 
-Der SEO-/Schema-Codevertrag ist seit Task 4 automatisiert (4/4 Zieltests); der aktuelle Gesamtstand umfasst 74/74 Tests, darunter 19/19 Task-2-Vertragstests. Der externe Entwicklerreview für Task 4 ist freigegeben. Schema-Validator- und autoritative NAP-Freigaben bleiben getrennte offene Abnahmen. Das historische `.vercel/output` wurde aus der Versionskontrolle entfernt und wird ignoriert; Releases müssen aus dem geprüften Quellstand neu gebaut werden, bis Task 8 den Deploymentvertrag verbindlich regelt.
+Der SEO-/Schema-Codevertrag ist seit Task 4 automatisiert (4/4 Zieltests); der
+aktuelle Gesamtstand umfasst 82/82 Tests, darunter 19/19 Task-2- und 8/8
+Task-8-Vertragstests. Zusätzlich bestehen `npm run test:node-smoke` und der
+reale Docker-Smoke. Der externe Entwicklerreview für Task 4 ist freigegeben;
+der Task-8-Review ist über den separaten Übergabeordner angefordert.
+Schema-Validator- und autoritative NAP-Freigaben bleiben getrennte offene
+Abnahmen. Das historische `.vercel/output` wurde aus der Versionskontrolle
+entfernt und wird ignoriert; Releases werden aus dem geprüften Quellstand neu
+gebaut.
 
 Gate A der 64-URL-Matrix ist durch den externen Review `RAUCH-TASK-02-GATE-A-REVIEW` ohne Findings freigegeben. Diese Freigabe umfasst ausschließlich Generator, Strukturmatrix und Sicherheitsverträge. Gate B bleibt mangels privater GSC-Baseline und Product-Owner-Freigaben für 59 Prüfzeilen geschlossen; Task 5 darf die Matrix weiterhin nicht konsumieren.
 
@@ -634,7 +651,7 @@ Zugangsdaten dürfen niemals im Chat oder Repository übermittelt werden.
 | R-03 | GSC           | Ranking-/Indexdaten fehlen                    | P0                 | datierte private Baseline                   |
 | R-04 | Schema        | Rating, relative Bild-URL, Öffnungszeiten     | P0 Validator/NAP   | Codevertrag 4/4 und Entwicklerreview freigegeben; Validator/NAP offen |
 | R-05 | Datenschutz   | Gesundheits-JSON in allgemeiner DB            | geschlossen        | lokale Funktion und getracktes Alt-Prebuild entfernt; 7/7 Boundary-Tests |
-| R-06 | Deployment    | kein Node-/Containervertrag                   | P0                 | produktionsnaher Container und `/healthz`   |
+| R-06 | Deployment    | kein Node-/Containervertrag                   | geschlossen        | Node-Smoke und realer Non-root-Container mit `/healthz` grün |
 | R-07 | WordPress     | historischer Restore verifiziert, aktuelle Basis fehlt | P0 vor Abschaltung | aktuelle Sicherung isoliert testen und freigeben |
 | R-08 | Infrastruktur | interne Cutoverdaten fehlen                   | P0 vor Cutover     | freigegebenes Infrastruktur-/Rollbackpaket  |
 | R-09 | Inhalt        | fachlich-rechtliche Welle 2/Governance offen  | P0 vor Go-live     | 19-Seiten-Reviewmatrix                      |
@@ -661,7 +678,7 @@ Der verbindliche Ausführungsplan ist `docs/relaunch-2026/00-MASTERPLAN.md`. Sei
 5. Canonicals und Redirects implementieren.
 6. Welle 2, E-E-A-T und HWG-Review abschließen.
 7. Externe Online-Anamnese-Grenze herstellen (geschlossen und extern ohne Findings freigegeben; lokale Funktion entfernt).
-8. Node-/Containervertrag implementieren.
+8. Node-/Containervertrag implementieren (technisch geschlossen; externer Read-only-Review und Integration in `relaunch-konzept` ausstehend).
 9. Release-, Mobile-, Accessibility- und Performancegates etablieren.
 10. Rauch als external-app in der Plattform registrieren.
 11. Payload-ContentProvider stufenweise einführen.
@@ -736,11 +753,20 @@ Vor einer produktiven Freigabe müssen mindestens erfüllt sein:
 | LLM kann ohne Chat übernehmen | bestätigt                     | Dokumentenhierarchie und strukturierte Statusmatrix vorhanden |
 | WordPress-Daten vollständig   | teilweise bestätigt           | WXR, bestehender Updraft-Satz, Admininventar und historischer Restore verifiziert; aktuelle Cutover-Sicherung mit Inhaltsabgleich offen |
 | SEO-Migration freigegeben     | nicht bestätigt               | Strukturmatrix vorhanden; GSC und fachliche Freigabe für 59 Prüfzeilen fehlen |
-| Headless-Stufe 1 fertig       | nicht bestätigt               | Container-/Health-/Plattformvertrag offen                     |
+| Headless-Stufe 1 fertig       | teilweise bestätigt           | Container-/Healthvertrag bestätigt; Plattformregistrierung und Staging offen |
 | Headless-Stufe 2 fertig       | nicht bestätigt               | ContentProvider/Payload-Migration offen                       |
 | Go-live bereit                | nicht bestätigt               | mehrere P0-/P1-Gates offen                                    |
 
-**Nächste Maßnahme mit hohem Nutzen und geringem Risiko:** Für Task 2 nach ausreichender Datenreife einen vollständigen GSC-Export beschaffen und die 59 Prüfzeilen fachlich freigeben; Task 5 darf die Matrix vorher nicht konsumieren. Task 3 benötigt vor Cutover eine aktuelle WordPress-/Plesk-Sicherung, deren erneuten isolierten Restore, die zeitlich abgegrenzte Logbaseline und die DevOps-Freigabe. JSON-LD und die Gesundheitsdatengrenze sind code-seitig bereits geschlossen und extern freigegeben.
+**Nächste Maßnahme mit hohem Nutzen und geringem Risiko:** Task 8 extern
+read-only prüfen lassen und bei Freigabe per Fast-Forward in
+`relaunch-konzept` integrieren. Danach folgen die Release-/Mobile-/A11y-Gates
+aus Task 9 und die Plattformregistrierung aus Task 10. Parallel ist für Task 2
+nach ausreichender Datenreife ein vollständiger GSC-Export zu beschaffen und
+die 59 Prüfzeilen fachlich freizugeben; Task 5 darf die Matrix vorher nicht
+konsumieren. Task 3 benötigt vor Cutover eine aktuelle WordPress-/Plesk-
+Sicherung, deren erneuten isolierten Restore, die zeitlich abgegrenzte
+Logbaseline und die DevOps-Freigabe. JSON-LD und die Gesundheitsdatengrenze
+sind code-seitig bereits geschlossen und extern freigegeben.
 
 ## 28. Quellen- und Nachweisverzeichnis
 

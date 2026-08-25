@@ -417,8 +417,8 @@ Die externe Lovable-App ist ein getrenntes System. Datenschutz, Authentisierung,
 
 **Files:** Modify `vite.config.ts`, `package.json`; create `src/routes/healthz.ts`, `Dockerfile`, `.dockerignore`.
 
-- [ ] Health-E2E-Test schreiben: `/healthz` = 200 und exakt `{status:"ok"}`.
-- [ ] Buildziele konfigurieren:
+- [x] Health-E2E-Test schreiben: `/healthz` = 200 und exakt `{status:"ok"}`.
+- [x] Buildziele konfigurieren:
 
 ```ts
 nitro({ preset: mode === "node" ? "node-server" : "vercel", serverDir: "./server" });
@@ -429,11 +429,24 @@ nitro({ preset: mode === "node" ? "node-server" : "vercel", serverDir: "./server
 "start:node": "node .output/server/index.mjs"
 ```
 
-- [ ] Tatsächlichen Nitro-Artefaktpfad prüfen; fehlender Startpfad ist hartes Stop-Gate.
-- [ ] `healthz.ts` als nicht sensitiven Serverhandler implementieren.
-- [ ] Multi-Stage-Dockerfile: `npm ci`, `build:node`, minimale Non-root-Runtime, Port 3000, Healthcheck.
-- [ ] `docker build`, Containerstart, Health/Startseite/kritische SSR-Routen prüfen.
-- [ ] Commit `feat: add managed Node container deployment`.
+- [x] Tatsächlichen Nitro-Artefaktpfad prüfen; fehlender Startpfad ist hartes Stop-Gate.
+- [x] `healthz.ts` als nicht sensitiven Serverhandler implementieren.
+- [x] Multi-Stage-Dockerfile: `npm ci`, `build:node`, minimale Non-root-Runtime, Port 3000, Healthcheck.
+- [x] `docker build`, Containerstart, Health/Startseite/kritische SSR-Routen prüfen.
+- [x] Commit `feat: add managed Node container deployment`.
+
+Abnahme 2026-08-25: Der Implementierungscommit `c2c9a1b` stellt den
+Node-/Containervertrag bereit. Der echte Clean-Build deckte zusätzlich einen
+inkonsistenten AJV-Peer im historischen Lockfile auf; ein Red-Green-Vertragstest
+und die Regenerierung mit npm 10.9.8 schließen diesen Befund ohne
+`legacy-peer-deps`. `npm run test:node-smoke` startet den gebauten Server auf
+einem freien Loopback-Port und prüft `/healthz`, `/`, `/kontakt` und
+`/online-anamnesebogen`. Der Docker-Container lief mit Docker 29.7.2 als
+Benutzer `node` (UID 1000), Status `healthy`, zwei CPUs und 768 MiB RAM;
+`/healthz` lieferte HTTP 200, exakt `{"status":"ok"}` und
+`Cache-Control: no-store`. Der externe Read-only-Review und die Integration in
+`relaunch-konzept` folgen über den Task-8-Übergabeordner; Live-Website, Plesk
+und DNS blieben unverändert.
 
 ### Task 9: Release-, Mobile- und Performancegates
 

@@ -104,3 +104,33 @@ test("generated Node output is ignored by Git", () => {
   ).trim();
   assert.equal(ignored, ".output/server/index.mjs");
 });
+
+test("lockfile satisfies the optional AJV 8 peer for clean Node 22 installs", () => {
+  const lock = JSON.parse(readSource("package-lock.json"));
+  const rootAjv = lock.packages?.["node_modules/ajv"];
+
+  assert.ok(rootAjv, "package-lock.json must resolve AJV at the root");
+  assert.match(
+    rootAjv.version,
+    /^8\./u,
+    "root AJV must satisfy @hookform/resolvers' optional AJV 8 peer",
+  );
+  assert.equal(rootAjv.dependencies?.["fast-uri"], "^3.0.1");
+  assert.equal(rootAjv.dependencies?.["json-schema-traverse"], "^1.0.0");
+  assert.equal(rootAjv.dependencies?.["require-from-string"], "^2.0.2");
+});
+
+test("package exposes a repeatable Node server smoke gate", () => {
+  const smokePath = pathFromRoot("scripts/node-server-smoke.mjs");
+  const pkg = JSON.parse(readSource("package.json"));
+
+  assert.equal(
+    existsSync(smokePath),
+    true,
+    "scripts/node-server-smoke.mjs must exist",
+  );
+  assert.equal(
+    pkg.scripts["test:node-smoke"],
+    "node scripts/node-server-smoke.mjs",
+  );
+});

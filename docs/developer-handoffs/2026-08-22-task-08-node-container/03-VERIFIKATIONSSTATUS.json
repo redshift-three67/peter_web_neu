@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "verification_id": "RAUCH-TASK-08-INTERNAL-VERIFICATION",
+  "verified_at": "2026-08-25",
+  "timezone": "Europe/Berlin",
+  "status": "intern_bestätigt_externer_review_ausstehend",
+  "repository": "C:\\Users\\Hubert111\\Documents\\rauch_18_08_26_19_42\\repo-main",
+  "branch": "codex/task-08-node-container",
+  "baseline_commit": "5403669650e365fd84aee78a9eb8e2f2be0e1eb0",
+  "implementation_commit": "c2c9a1be03a0e9cffeb3b91cf53b0df04b7fc529",
+  "review_target": {
+    "resolution": "git rev-parse origin/codex/task-08-node-container nach echtem git fetch",
+    "external_review_id": "RAUCH-TASK-08-REVIEW",
+    "external_review_complete": false
+  },
+  "checks": {
+    "focused_deployment_contract": "7/7 bestanden",
+    "focused_task_08_contracts": "8/8 bestanden",
+    "npm_test": "82/82 bestanden",
+    "typecheck": "Exit 0",
+    "lint": "Exit 0; 0 Fehler; 3 bekannte Warnungen",
+    "node_build": "Exit 0",
+    "node_server_smoke": "Exit 0; /healthz, /, /kontakt und /online-anamnesebogen HTTP 200",
+    "vercel_build": "Exit 0; preset vercel erhalten",
+    "docker_clean_build": "Exit 0 mit npm 10.9.8 ohne legacy-peer-deps",
+    "docker_health": "healthy",
+    "docker_user": "node; effektive UID 1000",
+    "docker_limits": "2 CPUs; 805306368 Bytes RAM",
+    "health_response": "HTTP 200; exakt {\"status\":\"ok\"}; Cache-Control no-store",
+    "container_logs": "keine PGlite-, Start- oder Laufzeitfehler"
+  },
+  "docker_evidence": {
+    "server_version": "29.7.2",
+    "image_tag": "rauch-site:task08",
+    "image_id": "sha256:8f0c716549b554f43926d53de9e676a4d6626a447497ba1121467428057761cf",
+    "image_size_bytes": 156550955,
+    "temporary_container_removed": true,
+    "docker_and_wsl_stopped_after_test": true,
+    "prune_executed": false
+  },
+  "known_non_blocking_warnings": [
+    "scripts/wp-public-crawl.mjs: ungenutzter readFile-Import",
+    "src/components/site/DesignSkin.tsx: Fast-Refresh-Grenze",
+    "src/lib/auth/use-current-user.ts: ungenutzte ESLint-Deaktivierung"
+  ],
+  "boundaries": {
+    "production_wordpress_changed": false,
+    "plesk_changed": false,
+    "dns_changed": false,
+    "task_10_platform_registration_complete": false,
+    "go_live_authorized": false
+  },
+  "next_gate": "Externer Read-only-Review; bei Freigabe Fast-Forward-Integration in relaunch-konzept"
+}
